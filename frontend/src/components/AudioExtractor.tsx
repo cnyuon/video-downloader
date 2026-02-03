@@ -32,6 +32,7 @@ export default function AudioExtractor() {
     const [videoInfo, setVideoInfo] = useState<VideoInfo | null>(null);
     const [error, setError] = useState<string | null>(null);
     const [success, setSuccess] = useState(false);
+    const [audioFormat, setAudioFormat] = useState<'mp3' | 'original'>('mp3');
 
     const formatDuration = (seconds: number) => {
         const mins = Math.floor(seconds / 60);
@@ -76,7 +77,9 @@ export default function AudioExtractor() {
         setSuccess(false);
 
         try {
-            const response = await fetch(`${API_URL}/api/audio`, {
+            // Use different endpoint based on format selection
+            const endpoint = audioFormat === 'original' ? '/api/audio-original' : '/api/audio';
+            const response = await fetch(`${API_URL}${endpoint}`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ url }),
@@ -91,7 +94,8 @@ export default function AudioExtractor() {
             const contentDisposition = response.headers.get('Content-Disposition');
             const xFilename = response.headers.get('X-Filename');
 
-            let filename = `${videoInfo.title.substring(0, 50)}.mp3`;
+            const defaultExt = audioFormat === 'original' ? '.m4a' : '.mp3';
+            let filename = `${videoInfo.title.substring(0, 50)}${defaultExt}`;
 
             if (xFilename) {
                 filename = xFilename;
@@ -203,6 +207,28 @@ export default function AudioExtractor() {
                             )}
                         </div>
 
+                        {/* Format Selection */}
+                        <div className="flex gap-2">
+                            <button
+                                onClick={() => setAudioFormat('mp3')}
+                                className={`flex-1 px-3 py-2 rounded-lg text-sm font-medium transition-all ${audioFormat === 'mp3'
+                                        ? 'bg-primary text-primary-foreground'
+                                        : 'bg-secondary text-secondary-foreground hover:bg-secondary/80'
+                                    }`}
+                            >
+                                MP3 (192kbps)
+                            </button>
+                            <button
+                                onClick={() => setAudioFormat('original')}
+                                className={`flex-1 px-3 py-2 rounded-lg text-sm font-medium transition-all ${audioFormat === 'original'
+                                        ? 'bg-primary text-primary-foreground'
+                                        : 'bg-secondary text-secondary-foreground hover:bg-secondary/80'
+                                    }`}
+                            >
+                                Original Quality
+                            </button>
+                        </div>
+
                         {/* Extract Button */}
                         <Button
                             onClick={handleExtract}
@@ -223,13 +249,16 @@ export default function AudioExtractor() {
                             ) : (
                                 <>
                                     <Download className="mr-2 h-5 w-5" />
-                                    Extract MP3
+                                    {audioFormat === 'original' ? 'Extract Original Audio' : 'Extract MP3'}
                                 </>
                             )}
                         </Button>
 
                         <p className="text-xs text-center text-muted-foreground">
-                            Audio will be extracted as MP3 (192kbps)
+                            {audioFormat === 'original'
+                                ? 'Original audio stream (no re-encoding, best quality)'
+                                : 'Converted to MP3 format (192kbps)'
+                            }
                         </p>
                     </div>
                 )}

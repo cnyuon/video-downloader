@@ -1,9 +1,10 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import App from '../components/App';
 ---
 
 <Layout>
-    <div id="app-root"></div>
+    <App client:only="react" />
     
     <!-- Supported Platforms -->
     <div class="py-10 text-center border-t" id="platforms-section">
@@ -94,12 +95,3 @@ import Layout from '../layouts/Layout.astro';
         </div>
     </footer>
 </Layout>
-
-<script>
-    import { createElement } from 'react';
-    import { createRoot } from 'react-dom/client';
-    import App from '../components/App';
-    
-    const root = createRoot(document.getElementById('app-root')!);
-    root.render(createElement(App));
-</script>

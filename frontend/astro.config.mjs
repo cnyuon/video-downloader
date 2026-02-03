@@ -10,4 +10,11 @@ export default defineConfig({
         }),
     ],
     output: 'static',
+    vite: {
+        server: {
+            fs: {
+                strict: false,
+            },
+        },
+    },
 });

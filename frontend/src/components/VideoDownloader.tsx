@@ -104,7 +104,13 @@ export default function VideoDownloader({ initialUrl = '' }: VideoDownloaderProp
 
             if (!response.ok) {
                 const data = await response.json();
-                throw new Error(data.detail || 'Failed to get video info');
+                // Handle 422 validation errors (Pydantic errors)
+                if (response.status === 422 && Array.isArray(data.detail)) {
+                    // URL validation error - show friendly message
+                    throw new Error('Please enter a valid URL (include https://)');
+                }
+                const errorMsg = typeof data.detail === 'string' ? data.detail : JSON.stringify(data.detail);
+                throw new Error(errorMsg || 'Failed to get video info');
             }
 
             const data: VideoInfo = await response.json();
@@ -132,7 +138,8 @@ export default function VideoDownloader({ initialUrl = '' }: VideoDownloaderProp
 
             if (!response.ok) {
                 const data = await response.json();
-                throw new Error(data.detail || 'Download failed');
+                const errorMsg = typeof data.detail === 'string' ? data.detail : JSON.stringify(data.detail);
+                throw new Error(errorMsg || 'Download failed');
             }
 
             // Try to get filename from various sources
@@ -332,6 +339,40 @@ export default function VideoDownloader({ initialUrl = '' }: VideoDownloaderProp
                                 <CheckCircle2 className="w-4 h-4" />
                                 Downloads without watermark
                             </p>
+                        )}
+
+                        {/* Subtitle Download (YouTube only) */}
+                        {videoInfo.platform === 'youtube' && (
+                            <button
+                                onClick={async () => {
+                                    try {
+                                        const response = await fetch(`${API_URL}/api/subtitles`, {
+                                            method: 'POST',
+                                            headers: { 'Content-Type': 'application/json' },
+                                            body: JSON.stringify({ url }),
+                                        });
+                                        if (!response.ok) {
+                                            const data = await response.json();
+                                            alert(data.detail || 'No subtitles available');
+                                            return;
+                                        }
+                                        const blob = await response.blob();
+                                        const blobUrl = window.URL.createObjectURL(blob);
+                                        const a = document.createElement('a');
+                                        a.href = blobUrl;
+                                        a.download = response.headers.get('X-Filename') || 'subtitles.srt';
+                                        document.body.appendChild(a);
+                                        a.click();
+                                        document.body.removeChild(a);
+                                        window.URL.revokeObjectURL(blobUrl);
+                                    } catch (err) {
+                                        alert('Failed to download subtitles');
+                                    }
+                                }}
+                                className="mt-3 w-full text-center text-sm text-muted-foreground hover:text-primary underline underline-offset-2"
+                            >
+                                Download Subtitles (.srt)
+                            </button>
                         )}
                     </CardContent>
                 </Card>

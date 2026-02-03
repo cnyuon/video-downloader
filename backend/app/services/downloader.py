@@ -26,6 +26,45 @@ def detect_platform(url: str) -> Optional[str]:
     return None
 
 
+def get_playlist_info(url: str) -> dict:
+    """
+    Extract playlist/channel info and list of videos.
+    Returns playlist title and list of video entries.
+    """
+    ydl_opts = {
+        'quiet': True,
+        'no_warnings': True,
+        'extract_flat': True,  # Don't download, just get info
+        'playlistend': 50,  # Limit to 50 videos for performance
+    }
+    
+    with yt_dlp.YoutubeDL(ydl_opts) as ydl:
+        try:
+            info = ydl.extract_info(url, download=False)
+        except yt_dlp.utils.DownloadError as e:
+            raise ValueError(f"Could not extract playlist info: {str(e)}")
+    
+    # Check if it's a playlist
+    if info.get('_type') != 'playlist':
+        raise ValueError("URL is not a playlist or channel")
+    
+    entries = []
+    for entry in info.get('entries', []):
+        if entry:
+            entries.append({
+                'id': entry.get('id'),
+                'title': entry.get('title', 'Untitled'),
+                'url': entry.get('url') or f"https://www.youtube.com/watch?v={entry.get('id')}",
+                'duration': entry.get('duration'),
+            })
+    
+    return {
+        'title': info.get('title', 'Playlist'),
+        'count': len(entries),
+        'entries': entries,
+    }
+
+
 def get_video_info(url: str) -> dict:
     """
     Extract video metadata without downloading.
@@ -182,6 +221,13 @@ def extract_audio(url: str) -> tuple[str, str, str]:
             base = os.path.splitext(base_filename)[0]
             mp3_filename = base + '.mp3'
             
+            # If the expected file doesn't exist, search for any mp3 in temp dir
+            import glob
+            if not os.path.exists(mp3_filename):
+                mp3_files = glob.glob(os.path.join(temp_dir, '*.mp3'))
+                if mp3_files:
+                    mp3_filename = mp3_files[0]
+            
             if not os.path.exists(mp3_filename):
                 raise ValueError("Audio extraction completed but file not found")
             
@@ -246,6 +292,9 @@ def get_transcript(url: str) -> dict:
                     # Skip numeric cue identifiers
                     if line.isdigit():
                         continue
+                    # Skip VTT metadata lines (Kind:, Language:, etc.)
+                    if line.startswith('Kind:') or line.startswith('Language:'):
+                        continue
                     # Remove VTT tags like <c> </c>
                     line = re.sub(r'<[^>]+>', '', line)
                     if line:
@@ -277,5 +326,117 @@ def get_transcript(url: str) -> dict:
             import shutil
             shutil.rmtree(temp_dir, ignore_errors=True)
             raise ValueError(f"Transcript extraction failed: {str(e)}")
+
+
+def download_subtitles(url: str, lang: str = 'en') -> tuple[str, str, str]:
+    """
+    Download subtitles as .srt file.
+    Returns (file_path, filename, content_type).
+    """
+    platform = detect_platform(url)
+    if not platform:
+        raise ValueError(f"Unsupported platform")
+    
+    temp_dir = tempfile.mkdtemp(prefix='subtitles_')
+    
+    ydl_opts = {
+        'quiet': True,
+        'no_warnings': True,
+        'skip_download': True,
+        'writesubtitles': True,
+        'writeautomaticsub': True,
+        'subtitleslangs': [lang, f'{lang}-US', f'{lang}-GB', 'en'],
+        'subtitlesformat': 'srt',
+        'outtmpl': os.path.join(temp_dir, '%(title).50s.%(ext)s'),
+    }
+    
+    with yt_dlp.YoutubeDL(ydl_opts) as ydl:
+        try:
+            info = ydl.extract_info(url, download=True)
+            title = info.get('title', 'video')
+            
+            # Look for subtitle files
+            import glob
+            srt_files = glob.glob(os.path.join(temp_dir, '*.srt'))
+            vtt_files = glob.glob(os.path.join(temp_dir, '*.vtt'))
+            
+            subtitle_file = None
+            ext = '.srt'
+            
+            if srt_files:
+                subtitle_file = srt_files[0]
+                ext = '.srt'
+            elif vtt_files:
+                subtitle_file = vtt_files[0]
+                ext = '.vtt'
+            
+            if not subtitle_file:
+                raise ValueError("No subtitles available for this video")
+            
+            clean_title = re.sub(r'[^\w\s-]', '', title)[:50]
+            download_filename = f"{clean_title}{ext}"
+            
+            return subtitle_file, download_filename, 'text/plain'
+            
+        except yt_dlp.utils.DownloadError as e:
+            import shutil
+            shutil.rmtree(temp_dir, ignore_errors=True)
+            raise ValueError(f"Subtitle download failed: {str(e)}")
+
+
+def extract_audio_original(url: str) -> tuple[str, str, str]:
+    """
+    Extract original audio without re-encoding (preserves quality).
+    Returns (file_path, filename, content_type) with .m4a or .opus extension.
+    """
+    platform = detect_platform(url)
+    if not platform:
+        raise ValueError(f"Unsupported platform")
+    
+    temp_dir = tempfile.mkdtemp(prefix='audio_orig_')
+    
+    # Download best audio without re-encoding
+    ydl_opts = {
+        'quiet': True,
+        'no_warnings': True,
+        'outtmpl': os.path.join(temp_dir, '%(title).50s.%(ext)s'),
+        'format': 'bestaudio[ext=m4a]/bestaudio[ext=webm]/bestaudio/best',
+        # No postprocessors - keep original format
+    }
+    
+    with yt_dlp.YoutubeDL(ydl_opts) as ydl:
+        try:
+            info = ydl.extract_info(url, download=True)
+            filename = ydl.prepare_filename(info)
+            
+            # Find the actual downloaded file
+            if not os.path.exists(filename):
+                import glob
+                files = glob.glob(os.path.join(temp_dir, '*'))
+                audio_files = [f for f in files if f.endswith(('.m4a', '.webm', '.opus', '.ogg', '.mp3'))]
+                if audio_files:
+                    filename = audio_files[0]
+            
+            if not os.path.exists(filename):
+                raise ValueError("Audio download completed but file not found")
+            
+            clean_title = re.sub(r'[^\w\s-]', '', info.get('title', 'audio'))[:50]
+            ext = os.path.splitext(filename)[1] or '.m4a'
+            download_filename = f"{clean_title}{ext}"
+            
+            # Determine content type
+            content_types = {
+                '.m4a': 'audio/mp4',
+                '.webm': 'audio/webm',
+                '.opus': 'audio/opus',
+                '.ogg': 'audio/ogg',
+                '.mp3': 'audio/mpeg',
+            }
+            content_type = content_types.get(ext.lower(), 'audio/mp4')
+            
+            return filename, download_filename, content_type
+            
+        except yt_dlp.utils.DownloadError as e:
+            raise ValueError(f"Audio extraction failed: {str(e)}")
 
 
