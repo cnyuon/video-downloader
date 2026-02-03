@@ -2,7 +2,7 @@
  * Video Downloader - Main React component
  * Handles URL input, video info fetching, and download initiation
  */
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Card, CardContent } from '@/components/ui/card';
@@ -64,8 +64,21 @@ function formatFileSize(bytes: number | null): string {
     return `${mb.toFixed(1)} MB`;
 }
 
-export default function VideoDownloader() {
-    const [url, setUrl] = useState('');
+interface VideoDownloaderProps {
+    initialUrl?: string;
+}
+
+export default function VideoDownloader({ initialUrl = '' }: VideoDownloaderProps) {
+    const [url, setUrl] = useState(initialUrl);
+
+    useEffect(() => {
+        if (initialUrl) {
+            setUrl(initialUrl);
+            // Optionally auto-fetch info if we have a URL?
+            // Let's just set it for now so user can verify before clicking
+        }
+    }, [initialUrl]);
+
     const [videoInfo, setVideoInfo] = useState<VideoInfo | null>(null);
     const [loading, setLoading] = useState(false);
     const [downloading, setDownloading] = useState(false);

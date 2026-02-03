@@ -1,7 +1,7 @@
 /**
  * Main App component - handles tool switching via navbar
  */
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Navbar from './Navbar';
 import VideoDownloader from './VideoDownloader';
 import AudioExtractor from './AudioExtractor';
@@ -31,6 +31,27 @@ const toolDescriptions: Record<string, { title: string; subtitle: string; note?:
 
 export default function App() {
     const [activeTool, setActiveTool] = useState('video');
+    const [initialUrl, setInitialUrl] = useState('');
+
+    useEffect(() => {
+        // Handle Shared URLs (Android Share Target)
+        const params = new URLSearchParams(window.location.search);
+        const urlParam = params.get('url');
+        const textParam = params.get('text');
+
+        if (urlParam) {
+            setInitialUrl(urlParam);
+            setActiveTool('video');
+        } else if (textParam) {
+            // Android often shares "Check out this video: https://..."
+            // Extract URL from text
+            const urlMatch = textParam.match(/https?:\/\/[^\s]+/);
+            if (urlMatch) {
+                setInitialUrl(urlMatch[0]);
+                setActiveTool('video');
+            }
+        }
+    }, []);
 
     const toolInfo = toolDescriptions[activeTool];
 
@@ -55,7 +76,7 @@ export default function App() {
                 </div>
 
                 {/* Tool Content */}
-                {activeTool === 'video' && <VideoDownloader />}
+                {activeTool === 'video' && <VideoDownloader initialUrl={initialUrl} />}
                 {activeTool === 'audio' && <AudioExtractor />}
                 {activeTool === 'thumbnail' && <ThumbnailGrabber />}
                 {activeTool === 'transcript' && <TranscriptExtractor />}
