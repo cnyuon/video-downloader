@@ -1,0 +1,19 @@
+{
+    "manifest_version": 3,
+    "name": "MediaTools Video Downloader",
+    "version": "1.0",
+    "description": "Download videos from TikTok, YouTube, X, and Facebook with one click.",
+    "icons": {
+        "16": "icon16.png",
+        "48": "icon48.png",
+        "128": "icon128.png"
+    },
+    "action": {
+        "default_popup": "popup.html",
+        "default_title": "Download Video"
+    },
+    "permissions": [
+        "activeTab",
+        "scripting"
+    ]
+}
