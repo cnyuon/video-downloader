@@ -1,0 +1,32 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar';
+import AudioExtractor from '../components/AudioExtractor';
+---
+
+<Layout title="Video to MP3 - MediaTools">
+    <Navbar client:load currentPage="audio" />
+    
+    <main class="container mx-auto px-4 pt-10 pb-4 max-w-2xl">
+        <div class="text-center mb-8">
+            <h1 class="text-3xl font-bold tracking-tight mb-2">
+                Video to MP3
+            </h1>
+            <p class="text-muted-foreground">
+                Extract audio from any video as MP3 or original format.
+            </p>
+            <p class="text-sm text-muted-foreground mt-2 px-4 py-2 bg-muted rounded-lg inline-block">
+                ℹ️ Works with all supported platforms: TikTok, YouTube, X/Twitter, Facebook
+            </p>
+        </div>
+
+        <AudioExtractor client:load />
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t py-6 mt-16">
+        <div class="text-center text-sm text-muted-foreground">
+            <p>© 2026 MediaTools</p>
+        </div>
+    </footer>
+</Layout>

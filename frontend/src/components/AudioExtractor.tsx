@@ -212,20 +212,20 @@ export default function AudioExtractor() {
                             <button
                                 onClick={() => setAudioFormat('mp3')}
                                 className={`flex-1 px-3 py-2 rounded-lg text-sm font-medium transition-all ${audioFormat === 'mp3'
-                                        ? 'bg-primary text-primary-foreground'
-                                        : 'bg-secondary text-secondary-foreground hover:bg-secondary/80'
+                                    ? 'bg-primary text-primary-foreground'
+                                    : 'bg-secondary text-secondary-foreground hover:bg-secondary/80'
                                     }`}
                             >
-                                MP3 (192kbps)
+                                MP3
                             </button>
                             <button
                                 onClick={() => setAudioFormat('original')}
                                 className={`flex-1 px-3 py-2 rounded-lg text-sm font-medium transition-all ${audioFormat === 'original'
-                                        ? 'bg-primary text-primary-foreground'
-                                        : 'bg-secondary text-secondary-foreground hover:bg-secondary/80'
+                                    ? 'bg-primary text-primary-foreground'
+                                    : 'bg-secondary text-secondary-foreground hover:bg-secondary/80'
                                     }`}
                             >
-                                Original Quality
+                                Original (M4A)
                             </button>
                         </div>
 
@@ -256,8 +256,8 @@ export default function AudioExtractor() {
 
                         <p className="text-xs text-center text-muted-foreground">
                             {audioFormat === 'original'
-                                ? 'Original audio stream (no re-encoding, best quality)'
-                                : 'Converted to MP3 format (192kbps)'
+                                ? 'Original audio stream (M4A, no re-encoding)'
+                                : 'Converted to MP3 format'
                             }
                         </p>
                     </div>

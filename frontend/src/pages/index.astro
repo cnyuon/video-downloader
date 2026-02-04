@@ -1,11 +1,25 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import App from '../components/App';
+import Navbar from '../components/Navbar';
+import VideoDownloader from '../components/VideoDownloader';
 ---
 
-<Layout>
-    <App client:only="react" />
+<Layout title="Video Downloader - MediaTools">
+    <Navbar client:load currentPage="video" />
     
+    <main class="container mx-auto px-4 pt-10 pb-4 max-w-2xl">
+        <div class="text-center mb-8">
+            <h1 class="text-3xl font-bold tracking-tight mb-2">
+                Download Videos
+            </h1>
+            <p class="text-muted-foreground">
+                Download videos from TikTok, YouTube, X/Twitter, and Facebook. TikTok videos are watermark-free.
+            </p>
+        </div>
+
+        <VideoDownloader client:load />
+    </main>
+
     <!-- Supported Platforms -->
     <div class="py-10 text-center border-t" id="platforms-section">
         <p class="text-sm text-muted-foreground mb-6">Supported Platforms</p>
@@ -52,37 +66,31 @@ import App from '../components/App';
     <!-- FAQ Section -->
     <div class="py-16 bg-muted/30 border-t">
         <div class="container mx-auto px-4 max-w-3xl">
-            <h2 class="text-2xl font-bold text-center mb-8">Frequently Asked Questions</h2>
+            <h2 class="text-2xl font-bold text-center mb-8">FAQ</h2>
             
             <div class="space-y-6">
-                <!-- Limit 1 -->
-                <div class="bg-card rounded-lg border p-6 shadow-sm">
-                    <h3 class="font-semibold text-lg mb-2">Is this service really free?</h3>
-                    <p class="text-muted-foreground">Yes, MediaTools is completely free to use. There are no hidden fees, subscriptions, or login requirements.</p>
-                </div>
-
-                <!-- Limit 2 -->
+                <!-- FAQ 1 -->
                 <div class="bg-card rounded-lg border p-6 shadow-sm">
                     <h3 class="font-semibold text-lg mb-2">Are TikTok videos watermark-free?</h3>
                     <p class="text-muted-foreground">Yes! Our downloader automatically removes the TikTok watermark, giving you the clean original video.</p>
                 </div>
 
-                <!-- Limit 3 -->
-                <div class="bg-card rounded-lg border p-6 shadow-sm">
-                    <h3 class="font-semibold text-lg mb-2">Why can't I download some YouTube videos?</h3>
-                    <p class="text-muted-foreground">We cannot download copyrighted music videos or age-restricted content due to platform restrictions. Standard videos should work fine.</p>
-                </div>
-
-                <!-- Limit 4 -->
+                <!-- FAQ 2 -->
                 <div class="bg-card rounded-lg border p-6 shadow-sm">
                     <h3 class="font-semibold text-lg mb-2">How do I get a video transcript?</h3>
-                    <p class="text-muted-foreground">Go to "Tools" > "Video Transcript" and paste a YouTube URL. Note: The video must have subtitles or auto-generated captions available.</p>
+                    <p class="text-muted-foreground">Go to "Transcript" and paste a YouTube URL. Note: The video must have subtitles or auto-generated captions available.</p>
                 </div>
                 
-                <!-- Limit 5 -->
+                <!-- FAQ 3 -->
                 <div class="bg-card rounded-lg border p-6 shadow-sm">
                     <h3 class="font-semibold text-lg mb-2">Can I use this on my phone?</h3>
                     <p class="text-muted-foreground">Absolutely! The site is fully mobile-responsive and works great on iOS and Android devices.</p>
+                </div>
+
+                <!-- FAQ 4 -->
+                <div class="bg-card rounded-lg border p-6 shadow-sm">
+                    <h3 class="font-semibold text-lg mb-2">Do you support bulk downloads?</h3>
+                    <p class="text-muted-foreground">Yes! We're actively working on bulk/playlist download support and it will be available soon.</p>
                 </div>
             </div>
         </div>
@@ -91,7 +99,7 @@ import App from '../components/App';
     <!-- Footer -->
     <footer class="border-t py-6">
         <div class="text-center text-sm text-muted-foreground">
-            <p>© 2026 MediaTools. For personal use only.</p>
+            <p>© 2026 MediaTools</p>
         </div>
     </footer>
 </Layout>

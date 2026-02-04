@@ -15,7 +15,7 @@ const toolDescriptions: Record<string, { title: string; subtitle: string; note?:
     },
     audio: {
         title: 'Video to MP3',
-        subtitle: 'Extract audio from any video as a high-quality MP3 file (192kbps).',
+        subtitle: 'Extract audio from any video as MP3 or original format.',
         note: 'Works with all supported platforms: TikTok, YouTube, X/Twitter, Facebook',
     },
     thumbnail: {

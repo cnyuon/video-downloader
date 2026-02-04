@@ -1,0 +1,33 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar';
+---
+
+<Layout title="Blog - MediaTools">
+    <Navbar client:load currentPage="blog" />
+    
+    <main class="container mx-auto px-4 pt-10 pb-4 max-w-2xl min-h-[60vh] flex flex-col items-center justify-center">
+        <div class="text-center">
+            <div class="text-6xl mb-6">📝</div>
+            <h1 class="text-3xl font-bold tracking-tight mb-4">
+                Blog Coming Soon
+            </h1>
+            <p class="text-muted-foreground mb-8">
+                We're working on helpful guides, tips, and updates. Check back soon!
+            </p>
+            <a 
+                href="/"
+                class="inline-flex items-center justify-center rounded-md text-sm font-medium bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2"
+            >
+                ← Back to Video Downloader
+            </a>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t py-6">
+        <div class="text-center text-sm text-muted-foreground">
+            <p>© 2026 MediaTools</p>
+        </div>
+    </footer>
+</Layout>
