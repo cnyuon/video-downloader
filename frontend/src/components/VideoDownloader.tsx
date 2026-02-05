@@ -117,7 +117,14 @@ export default function VideoDownloader({ initialUrl = '' }: VideoDownloaderProp
             setVideoInfo(data);
             setSelectedFormat('best');
         } catch (err) {
-            setError(err instanceof Error ? err.message : 'Something went wrong');
+            const errorMessage = err instanceof Error ? err.message : 'Something went wrong';
+
+            // Check if it's a YouTube bot detection error
+            if (errorMessage.includes('Sign in to confirm') || errorMessage.includes('bot')) {
+                setError('⚠️ YouTube downloads are temporarily unavailable due to high demand. Please try TikTok, Twitter/X, or Facebook instead!');
+            } else {
+                setError(errorMessage);
+            }
         } finally {
             setLoading(false);
         }
