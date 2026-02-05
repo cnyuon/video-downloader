@@ -17,6 +17,9 @@ PLATFORM_PATTERNS = {
     'facebook': r'(facebook\.com|fb\.watch)',
 }
 
+# Path to cookies file for YouTube authentication
+COOKIES_FILE = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(__file__))), 'cookies.txt')
+
 
 def detect_platform(url: str) -> Optional[str]:
     """Detect which platform a URL belongs to."""
@@ -26,17 +29,28 @@ def detect_platform(url: str) -> Optional[str]:
     return None
 
 
+def _get_base_opts() -> dict:
+    """Get base yt-dlp options with cookies if available."""
+    opts = {
+        'quiet': True,
+        'no_warnings': True,
+    }
+    # Add cookies file if it exists
+    if os.path.exists(COOKIES_FILE):
+        opts['cookiefile'] = COOKIES_FILE
+    return opts
+
+
 def get_playlist_info(url: str) -> dict:
     """
     Extract playlist/channel info and list of videos.
     Returns playlist title and list of video entries.
     """
-    ydl_opts = {
-        'quiet': True,
-        'no_warnings': True,
+    ydl_opts = _get_base_opts()
+    ydl_opts.update({
         'extract_flat': True,  # Don't download, just get info
         'playlistend': 50,  # Limit to 50 videos for performance
-    }
+    })
     
     with yt_dlp.YoutubeDL(ydl_opts) as ydl:
         try:
@@ -74,11 +88,8 @@ def get_video_info(url: str) -> dict:
     if not platform:
         raise ValueError(f"Unsupported platform. URL must be from: {', '.join(PLATFORM_PATTERNS.keys())}")
     
-    ydl_opts = {
-        'quiet': True,
-        'no_warnings': True,
-        'extract_flat': False,
-    }
+    ydl_opts = _get_base_opts()
+    ydl_opts['extract_flat'] = False
     
     with yt_dlp.YoutubeDL(ydl_opts) as ydl:
         try:
@@ -140,15 +151,14 @@ def download_video(url: str, format_id: str = 'best') -> tuple[str, str, str]:
     temp_dir = tempfile.mkdtemp(prefix='viddown_')
     
     # yt-dlp options for best quality without watermark
-    ydl_opts = {
-        'quiet': True,
-        'no_warnings': True,
+    ydl_opts = _get_base_opts()
+    ydl_opts.update({
         'outtmpl': os.path.join(temp_dir, '%(title).50s.%(ext)s'),
         # Prefer pre-merged formats to avoid ffmpeg requirement
         # Falls back to merging if ffmpeg is available
         'format': 'best[ext=mp4]/bestvideo[ext=mp4]+bestaudio[ext=m4a]/best',
         'merge_output_format': 'mp4',
-    }
+    })
     
     # TikTok-specific: get watermark-free version
     if platform == 'tiktok':
@@ -200,9 +210,8 @@ def extract_audio(url: str) -> tuple[str, str, str]:
     temp_dir = tempfile.mkdtemp(prefix='audioext_')
     
     # yt-dlp options for audio extraction
-    ydl_opts = {
-        'quiet': True,
-        'no_warnings': True,
+    ydl_opts = _get_base_opts()
+    ydl_opts.update({
         'outtmpl': os.path.join(temp_dir, '%(title).50s.%(ext)s'),
         'format': 'bestaudio/best',
         'postprocessors': [{
@@ -210,7 +219,7 @@ def extract_audio(url: str) -> tuple[str, str, str]:
             'preferredcodec': 'mp3',
             'preferredquality': '192',
         }],
-    }
+    })
     
     with yt_dlp.YoutubeDL(ydl_opts) as ydl:
         try:
@@ -253,16 +262,15 @@ def get_transcript(url: str) -> dict:
     temp_dir = tempfile.mkdtemp(prefix='transcript_')
     
     # yt-dlp options for subtitle extraction
-    ydl_opts = {
-        'quiet': True,
-        'no_warnings': True,
+    ydl_opts = _get_base_opts()
+    ydl_opts.update({
         'skip_download': True,  # Don't download the video
         'writesubtitles': True,
         'writeautomaticsub': True,  # Also get auto-generated subs
         'subtitleslangs': ['en', 'en-US', 'en-GB'],  # Prefer English
         'subtitlesformat': 'vtt',
         'outtmpl': os.path.join(temp_dir, '%(title).50s.%(ext)s'),
-    }
+    })
     
     with yt_dlp.YoutubeDL(ydl_opts) as ydl:
         try:
@@ -339,16 +347,15 @@ def download_subtitles(url: str, lang: str = 'en') -> tuple[str, str, str]:
     
     temp_dir = tempfile.mkdtemp(prefix='subtitles_')
     
-    ydl_opts = {
-        'quiet': True,
-        'no_warnings': True,
+    ydl_opts = _get_base_opts()
+    ydl_opts.update({
         'skip_download': True,
         'writesubtitles': True,
         'writeautomaticsub': True,
         'subtitleslangs': [lang, f'{lang}-US', f'{lang}-GB', 'en'],
         'subtitlesformat': 'srt',
         'outtmpl': os.path.join(temp_dir, '%(title).50s.%(ext)s'),
-    }
+    })
     
     with yt_dlp.YoutubeDL(ydl_opts) as ydl:
         try:
@@ -396,13 +403,12 @@ def extract_audio_original(url: str) -> tuple[str, str, str]:
     temp_dir = tempfile.mkdtemp(prefix='audio_orig_')
     
     # Download best audio without re-encoding
-    ydl_opts = {
-        'quiet': True,
-        'no_warnings': True,
+    ydl_opts = _get_base_opts()
+    ydl_opts.update({
         'outtmpl': os.path.join(temp_dir, '%(title).50s.%(ext)s'),
         'format': 'bestaudio[ext=m4a]/bestaudio[ext=webm]/bestaudio/best',
         # No postprocessors - keep original format
-    }
+    })
     
     with yt_dlp.YoutubeDL(ydl_opts) as ydl:
         try:
@@ -438,5 +444,3 @@ def extract_audio_original(url: str) -> tuple[str, str, str]:
             
         except yt_dlp.utils.DownloadError as e:
             raise ValueError(f"Audio extraction failed: {str(e)}")
-
-
