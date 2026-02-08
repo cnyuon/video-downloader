@@ -10,7 +10,19 @@ export default defineConfig({
         tailwind({
             applyBaseStyles: false,
         }),
-        sitemap(),
+        sitemap({
+            // Explicitly list all pages to avoid undefined routes issue
+            customPages: [
+                'https://getmediatools.com/',
+                'https://getmediatools.com/tiktok-downloader',
+                'https://getmediatools.com/twitter-downloader',
+                'https://getmediatools.com/instagram-downloader',
+                'https://getmediatools.com/video-to-mp3',
+                'https://getmediatools.com/thumbnail-grabber',
+                'https://getmediatools.com/transcript',
+                'https://getmediatools.com/blog',
+            ],
+        }),
     ],
     output: 'static',
     vite: {
