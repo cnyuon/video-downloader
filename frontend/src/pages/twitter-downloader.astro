@@ -1,0 +1,106 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar';
+import VideoDownloader from '../components/VideoDownloader';
+---
+
+<Layout 
+    title="Twitter Video Downloader - Save X Videos to MP4 Free"
+    description="Download Twitter/X videos and GIFs to MP4 free. Save tweets in HD quality instantly. Convert Twitter GIFs to video. No login, works on all devices."
+>
+    <!-- Target Keywords: twitter video downloader, download twitter video, save twitter video mp4, twitter gif downloader, x video downloader -->
+    <Navbar client:load currentPage="twitter" />
+    
+    <main class="container mx-auto px-4 pt-10 pb-4 max-w-2xl">
+        <div class="text-center mb-8">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-black text-white text-sm font-medium mb-4">
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                </svg>
+                X / Twitter
+            </div>
+            <h1 class="text-4xl font-bold tracking-tight mb-3">
+                Download Twitter Videos & GIFs to MP4
+            </h1>
+            <p class="text-lg text-muted-foreground max-w-xl mx-auto">
+                <strong>Save any tweet's video or GIF as an MP4 file.</strong> Works with X/Twitter videos, 
+                video replies, and animated GIFs. No account required.
+            </p>
+        </div>
+
+        <VideoDownloader client:load />
+        
+        <!-- Features Section -->
+        <div class="mt-12 grid gap-4 md:grid-cols-3">
+            <div class="text-center p-4 rounded-lg bg-muted/30">
+                <div class="text-2xl mb-2">📹</div>
+                <h3 class="font-semibold mb-1">MP4 Format</h3>
+                <p class="text-sm text-muted-foreground">All videos saved as universal MP4 files</p>
+            </div>
+            <div class="text-center p-4 rounded-lg bg-muted/30">
+                <div class="text-2xl mb-2">🔄</div>
+                <h3 class="font-semibold mb-1">GIF to Video</h3>
+                <p class="text-sm text-muted-foreground">Convert Twitter GIFs to playable MP4</p>
+            </div>
+            <div class="text-center p-4 rounded-lg bg-muted/30">
+                <div class="text-2xl mb-2">🎬</div>
+                <h3 class="font-semibold mb-1">HD Quality</h3>
+                <p class="text-sm text-muted-foreground">Download in 720p or 1080p when available</p>
+            </div>
+        </div>
+        
+        <!-- How To Section -->
+        <div class="mt-12 py-8 border-t">
+            <h2 class="text-2xl font-bold text-center mb-6">How to Download Twitter Videos</h2>
+            <div class="space-y-4">
+                <div class="flex gap-4 items-start">
+                    <div class="flex-shrink-0 w-8 h-8 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold">1</div>
+                    <div>
+                        <h3 class="font-semibold">Copy the tweet URL</h3>
+                        <p class="text-muted-foreground text-sm">Click the share button on any tweet with a video or GIF, then "Copy link"</p>
+                    </div>
+                </div>
+                <div class="flex gap-4 items-start">
+                    <div class="flex-shrink-0 w-8 h-8 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold">2</div>
+                    <div>
+                        <h3 class="font-semibold">Paste the URL above</h3>
+                        <p class="text-muted-foreground text-sm">Paste the copied link in the input box and click "Get Video"</p>
+                    </div>
+                </div>
+                <div class="flex gap-4 items-start">
+                    <div class="flex-shrink-0 w-8 h-8 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold">3</div>
+                    <div>
+                        <h3 class="font-semibold">Download as MP4</h3>
+                        <p class="text-muted-foreground text-sm">Select quality and save the MP4 file to your device instantly</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- FAQ Section for SEO -->
+        <div class="mt-12 py-8 border-t">
+            <h2 class="text-2xl font-bold text-center mb-6">Frequently Asked Questions</h2>
+            <div class="space-y-4">
+                <div class="p-4 rounded-lg bg-muted/30">
+                    <h3 class="font-semibold mb-2">Can I download Twitter GIFs?</h3>
+                    <p class="text-sm text-muted-foreground">Yes! Twitter GIFs are actually videos, and we convert them to MP4 format so you can save and share them anywhere.</p>
+                </div>
+                <div class="p-4 rounded-lg bg-muted/30">
+                    <h3 class="font-semibold mb-2">What quality can I download?</h3>
+                    <p class="text-sm text-muted-foreground">We offer the highest quality available from Twitter, typically 720p or 1080p for newer videos.</p>
+                </div>
+                <div class="p-4 rounded-lg bg-muted/30">
+                    <h3 class="font-semibold mb-2">Does this work with X (formerly Twitter)?</h3>
+                    <p class="text-sm text-muted-foreground">Yes, we support both twitter.com and x.com URLs. The tool works the same for both domains.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t py-6 mt-8">
+        <div class="text-center text-sm text-muted-foreground">
+            <p>© 2026 MediaTools</p>
+        </div>
+    </footer>
+</Layout>

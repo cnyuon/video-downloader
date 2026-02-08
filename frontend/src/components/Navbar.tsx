@@ -1,6 +1,6 @@
 /**
  * Navbar - Main navigation with all features visible (desktop) and hamburger menu (mobile)
- * Includes dark/light mode toggle and link to Blog
+ * Includes dark/light mode toggle
  */
 import { useState, useEffect } from 'react';
 import { Menu, X, Sun, Moon } from 'lucide-react';
@@ -10,11 +10,12 @@ interface NavbarProps {
 }
 
 const navItems = [
-    { id: 'video', name: 'Video Downloader', href: '/' },
+    { id: 'home', name: 'All Tools', href: '/' },
+    { id: 'video', name: 'TikTok', href: '/tiktok-downloader' },
+    { id: 'twitter', name: 'Twitter/X', href: '/twitter-downloader' },
     { id: 'audio', name: 'Video to MP3', href: '/video-to-mp3' },
     { id: 'thumbnail', name: 'Thumbnails', href: '/thumbnail-grabber' },
     { id: 'transcript', name: 'Transcript', href: '/transcript' },
-    { id: 'blog', name: 'Blog', href: '/blog' },
 ];
 
 export default function Navbar({ currentPage }: NavbarProps) {
@@ -64,8 +65,8 @@ export default function Navbar({ currentPage }: NavbarProps) {
                             key={item.id}
                             href={item.href}
                             className={`px-3 py-2 rounded-md transition-colors ${currentPage === item.id
-                                    ? 'bg-accent text-foreground'
-                                    : 'text-muted-foreground hover:text-foreground hover:bg-accent/50'
+                                ? 'bg-accent text-foreground'
+                                : 'text-muted-foreground hover:text-foreground hover:bg-accent/50'
                                 }`}
                         >
                             {item.name}
@@ -107,20 +108,21 @@ export default function Navbar({ currentPage }: NavbarProps) {
             {/* Mobile Menu */}
             {mobileMenuOpen && (
                 <div className="md:hidden border-t bg-background">
-                    <div className="py-2 px-4 space-y-1">
+                    <nav className="container mx-auto px-4 py-3 space-y-1">
                         {navItems.map((item) => (
                             <a
                                 key={item.id}
                                 href={item.href}
-                                className={`block w-full text-left px-3 py-2 rounded-md ${currentPage === item.id
-                                        ? 'bg-accent text-foreground font-medium'
-                                        : 'text-muted-foreground'
+                                className={`block px-3 py-2 rounded-md text-sm font-medium ${currentPage === item.id
+                                    ? 'bg-accent text-foreground'
+                                    : 'text-muted-foreground hover:text-foreground hover:bg-accent/50'
                                     }`}
+                                onClick={() => setMobileMenuOpen(false)}
                             >
                                 {item.name}
                             </a>
                         ))}
-                    </div>
+                    </nav>
                 </div>
             )}
         </header>

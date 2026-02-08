@@ -4,19 +4,22 @@ import Navbar from '../components/Navbar';
 import TranscriptExtractor from '../components/TranscriptExtractor';
 ---
 
-<Layout title="Video Transcript - MediaTools">
+<Layout 
+    title="Video Transcript Extractor - Get Subtitles as Text | MediaTools"
+    description="Extract video transcripts and subtitles as text. Download captions from YouTube videos with auto-generated or manual subtitles. Free online tool."
+>
     <Navbar client:load currentPage="transcript" />
     
     <main class="container mx-auto px-4 pt-10 pb-4 max-w-2xl">
         <div class="text-center mb-8">
             <h1 class="text-3xl font-bold tracking-tight mb-2">
-                Video Transcript
+                Video Transcript Extractor
             </h1>
             <p class="text-muted-foreground">
                 Extract the text transcript from videos with captions.
             </p>
             <p class="text-sm text-muted-foreground mt-2 px-4 py-2 bg-muted rounded-lg inline-block">
-                ℹ️ Only works with YouTube videos that have subtitles or auto-generated captions
+                ℹ️ Works with YouTube videos that have subtitles or auto-generated captions
             </p>
         </div>
 
