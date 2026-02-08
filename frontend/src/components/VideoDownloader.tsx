@@ -66,9 +66,10 @@ function formatFileSize(bytes: number | null): string {
 
 interface VideoDownloaderProps {
     initialUrl?: string;
+    placeholder?: string;
 }
 
-export default function VideoDownloader({ initialUrl = '' }: VideoDownloaderProps) {
+export default function VideoDownloader({ initialUrl = '', placeholder = 'Paste video URL here (TikTok, Twitter, Facebook)' }: VideoDownloaderProps) {
     const [url, setUrl] = useState(initialUrl);
 
     useEffect(() => {
@@ -201,7 +202,7 @@ export default function VideoDownloader({ initialUrl = '' }: VideoDownloaderProp
                     <div className="flex gap-3">
                         <Input
                             type="url"
-                            placeholder="Paste video URL here (TikTok, YouTube, Twitter, Facebook)"
+                            placeholder={placeholder}
                             value={url}
                             onChange={(e) => setUrl(e.target.value)}
                             onKeyDown={handleKeyDown}

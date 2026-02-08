@@ -1,0 +1,106 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar';
+import VideoDownloader from '../components/VideoDownloader';
+---
+
+<Layout 
+    title="Facebook Video Downloader - Save FB Videos Free"
+    description="Download Facebook videos and Reels for free. Save FB videos to MP4 in HD quality. No login required, works on all devices. Fast and easy."
+>
+    <!-- Target Keywords: facebook video downloader, download facebook video, save fb video, facebook reels downloader, fb video saver -->
+    <Navbar client:load currentPage="video" />
+    
+    <main class="container mx-auto px-4 pt-10 pb-4 max-w-2xl">
+        <div class="text-center mb-8">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-600 text-white text-sm font-medium mb-4">
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                </svg>
+                Facebook
+            </div>
+            <h1 class="text-4xl font-bold tracking-tight mb-3">
+                Download Facebook Videos & Reels
+            </h1>
+            <p class="text-lg text-muted-foreground max-w-xl mx-auto">
+                <strong>Save Facebook videos and Reels to your device in HD.</strong> Works with public posts, 
+                Reels, and video content. 100% free, no login needed.
+            </p>
+        </div>
+
+        <VideoDownloader client:load placeholder="Paste Facebook video URL here" />
+        
+        <!-- Features Section -->
+        <div class="mt-12 grid gap-4 md:grid-cols-3">
+            <div class="text-center p-4 rounded-lg bg-muted/30">
+                <div class="text-2xl mb-2">🎬</div>
+                <h3 class="font-semibold mb-1">HD Quality</h3>
+                <p class="text-sm text-muted-foreground">Download in the highest available quality</p>
+            </div>
+            <div class="text-center p-4 rounded-lg bg-muted/30">
+                <div class="text-2xl mb-2">📱</div>
+                <h3 class="font-semibold mb-1">Reels Support</h3>
+                <p class="text-sm text-muted-foreground">Download Facebook Reels too</p>
+            </div>
+            <div class="text-center p-4 rounded-lg bg-muted/30">
+                <div class="text-2xl mb-2">🔒</div>
+                <h3 class="font-semibold mb-1">No Login</h3>
+                <p class="text-sm text-muted-foreground">No Facebook account needed</p>
+            </div>
+        </div>
+        
+        <!-- How To Section -->
+        <div class="mt-12 py-8 border-t">
+            <h2 class="text-2xl font-bold text-center mb-6">How to Download Facebook Videos</h2>
+            <div class="space-y-4">
+                <div class="flex gap-4 items-start">
+                    <div class="flex-shrink-0 w-8 h-8 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold">1</div>
+                    <div>
+                        <h3 class="font-semibold">Copy the video URL</h3>
+                        <p class="text-muted-foreground text-sm">Open Facebook, click the three dots on a video post, then "Copy link"</p>
+                    </div>
+                </div>
+                <div class="flex gap-4 items-start">
+                    <div class="flex-shrink-0 w-8 h-8 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold">2</div>
+                    <div>
+                        <h3 class="font-semibold">Paste the URL above</h3>
+                        <p class="text-muted-foreground text-sm">Paste the copied link in the input box and click "Get Video"</p>
+                    </div>
+                </div>
+                <div class="flex gap-4 items-start">
+                    <div class="flex-shrink-0 w-8 h-8 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold">3</div>
+                    <div>
+                        <h3 class="font-semibold">Download in HD</h3>
+                        <p class="text-muted-foreground text-sm">Select quality and save the video to your device</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- FAQ Section for SEO -->
+        <div class="mt-12 py-8 border-t">
+            <h2 class="text-2xl font-bold text-center mb-6">Frequently Asked Questions</h2>
+            <div class="space-y-4">
+                <div class="p-4 rounded-lg bg-muted/30">
+                    <h3 class="font-semibold mb-2">Can I download private Facebook videos?</h3>
+                    <p class="text-sm text-muted-foreground">No, for privacy reasons we only support public Facebook videos. Make sure the video is set to public before downloading.</p>
+                </div>
+                <div class="p-4 rounded-lg bg-muted/30">
+                    <h3 class="font-semibold mb-2">Does this work with Facebook Reels?</h3>
+                    <p class="text-sm text-muted-foreground">Yes! Our tool supports Facebook Reels, regular video posts, and video content from pages.</p>
+                </div>
+                <div class="p-4 rounded-lg bg-muted/30">
+                    <h3 class="font-semibold mb-2">Is this free to use?</h3>
+                    <p class="text-sm text-muted-foreground">Yes, 100% free with no limits. No signup required, no hidden fees.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t py-6 mt-8">
+        <div class="text-center text-sm text-muted-foreground">
+            <p>© 2026 MediaTools</p>
+        </div>
+    </footer>
+</Layout>

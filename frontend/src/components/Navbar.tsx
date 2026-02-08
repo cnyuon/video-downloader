@@ -13,9 +13,9 @@ const navItems = [
     { id: 'home', name: 'All Tools', href: '/' },
     { id: 'video', name: 'TikTok', href: '/tiktok-downloader' },
     { id: 'twitter', name: 'Twitter/X', href: '/twitter-downloader' },
+    { id: 'facebook', name: 'Facebook', href: '/facebook-downloader' },
     { id: 'audio', name: 'Video to MP3', href: '/video-to-mp3' },
-    { id: 'thumbnail', name: 'Thumbnails', href: '/thumbnail-grabber' },
-    { id: 'transcript', name: 'Transcript', href: '/transcript' },
+    { id: 'blog', name: 'Blog', href: '#', disabled: true },
 ];
 
 export default function Navbar({ currentPage }: NavbarProps) {
@@ -61,16 +61,26 @@ export default function Navbar({ currentPage }: NavbarProps) {
                 {/* Desktop Navigation */}
                 <nav className="hidden md:flex items-center space-x-1 text-sm font-medium">
                     {navItems.map((item) => (
-                        <a
-                            key={item.id}
-                            href={item.href}
-                            className={`px-3 py-2 rounded-md transition-colors ${currentPage === item.id
-                                ? 'bg-accent text-foreground'
-                                : 'text-muted-foreground hover:text-foreground hover:bg-accent/50'
-                                }`}
-                        >
-                            {item.name}
-                        </a>
+                        item.disabled ? (
+                            <span
+                                key={item.id}
+                                className="px-3 py-2 rounded-md text-muted-foreground/50 cursor-not-allowed"
+                                title="Coming soon"
+                            >
+                                {item.name}
+                            </span>
+                        ) : (
+                            <a
+                                key={item.id}
+                                href={item.href}
+                                className={`px-3 py-2 rounded-md transition-colors ${currentPage === item.id
+                                    ? 'bg-accent text-foreground'
+                                    : 'text-muted-foreground hover:text-foreground hover:bg-accent/50'
+                                    }`}
+                            >
+                                {item.name}
+                            </a>
+                        )
                     ))}
 
                     {/* Dark Mode Toggle */}
@@ -110,17 +120,26 @@ export default function Navbar({ currentPage }: NavbarProps) {
                 <div className="md:hidden border-t bg-background">
                     <nav className="container mx-auto px-4 py-3 space-y-1">
                         {navItems.map((item) => (
-                            <a
-                                key={item.id}
-                                href={item.href}
-                                className={`block px-3 py-2 rounded-md text-sm font-medium ${currentPage === item.id
-                                    ? 'bg-accent text-foreground'
-                                    : 'text-muted-foreground hover:text-foreground hover:bg-accent/50'
-                                    }`}
-                                onClick={() => setMobileMenuOpen(false)}
-                            >
-                                {item.name}
-                            </a>
+                            item.disabled ? (
+                                <span
+                                    key={item.id}
+                                    className="block px-3 py-2 rounded-md text-sm font-medium text-muted-foreground/50 cursor-not-allowed"
+                                >
+                                    {item.name} (Coming Soon)
+                                </span>
+                            ) : (
+                                <a
+                                    key={item.id}
+                                    href={item.href}
+                                    className={`block px-3 py-2 rounded-md text-sm font-medium ${currentPage === item.id
+                                        ? 'bg-accent text-foreground'
+                                        : 'text-muted-foreground hover:text-foreground hover:bg-accent/50'
+                                        }`}
+                                    onClick={() => setMobileMenuOpen(false)}
+                                >
+                                    {item.name}
+                                </a>
+                            )
                         ))}
                     </nav>
                 </div>

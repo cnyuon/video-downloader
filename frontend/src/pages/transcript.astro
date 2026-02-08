@@ -5,21 +5,32 @@ import TranscriptExtractor from '../components/TranscriptExtractor';
 ---
 
 <Layout 
-    title="Video Transcript Extractor - Get Subtitles as Text | MediaTools"
-    description="Extract video transcripts and subtitles as text. Download captions from YouTube videos with auto-generated or manual subtitles. Free online tool."
+    title="YouTube Transcript Extractor - Get Subtitles as Text | MediaTools"
+    description="Extract YouTube video transcripts and subtitles as text. Download captions from YouTube videos with auto-generated or manual subtitles. Free online tool."
 >
     <Navbar client:load currentPage="transcript" />
     
     <main class="container mx-auto px-4 pt-10 pb-4 max-w-2xl">
         <div class="text-center mb-8">
             <h1 class="text-3xl font-bold tracking-tight mb-2">
-                Video Transcript Extractor
+                YouTube Transcript Extractor
             </h1>
             <p class="text-muted-foreground">
-                Extract the text transcript from videos with captions.
+                Extract the text transcript from YouTube videos with captions.
             </p>
-            <p class="text-sm text-muted-foreground mt-2 px-4 py-2 bg-muted rounded-lg inline-block">
-                ℹ️ Works with YouTube videos that have subtitles or auto-generated captions
+            
+            <!-- YouTube Only Notice -->
+            <div class="mt-4 inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-red-500/10 border border-red-500/20">
+                <div class="w-6 h-6 rounded bg-red-600 flex items-center justify-center">
+                    <svg class="w-3.5 h-3.5 text-white" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                    </svg>
+                </div>
+                <span class="text-sm text-red-600 dark:text-red-400">YouTube videos only</span>
+            </div>
+            
+            <p class="text-sm text-muted-foreground mt-3 px-4 py-2 bg-muted rounded-lg inline-block">
+                ℹ️ Works with videos that have subtitles or auto-generated captions enabled
             </p>
         </div>
 
