@@ -41,4 +41,9 @@
         <changefreq>monthly</changefreq>
         <priority>0.5</priority>
     </url>
+    <url>
+        <loc>https://getmediatools.com/blog/how-to-download-tiktok-without-watermark</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
 </urlset>
