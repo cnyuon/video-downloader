@@ -9,7 +9,14 @@ interface NavbarProps {
     currentPage: string;
 }
 
-const navItems = [
+interface NavItem {
+    id: string;
+    name: string;
+    href: string;
+    disabled?: boolean;
+}
+
+const navItems: NavItem[] = [
     { id: 'home', name: 'All Tools', href: '/' },
     { id: 'video', name: 'TikTok', href: '/tiktok-downloader' },
     { id: 'instagram', name: 'Instagram', href: '/instagram-downloader' },

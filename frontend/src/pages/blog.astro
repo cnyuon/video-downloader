@@ -4,7 +4,7 @@ import Layout from '../layouts/Layout.astro';
 import Navbar from '../components/Navbar';
 
 const allBlogPosts = await getCollection('blog');
-const sortedPosts = allBlogPosts.sort((a, b) => b.data.pubDate - a.data.pubDate);
+const sortedPosts = allBlogPosts.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 ---
 
 <Layout 
