@@ -42,7 +42,6 @@ const PLATFORM_COLORS: Record<string, string> = {
     youtube: 'bg-red-600',
     twitter: 'bg-black',
     facebook: 'bg-blue-600',
-    instagram: 'bg-gradient-to-r from-purple-500 via-pink-500 to-orange-500',
 };
 
 const PLATFORM_NAMES: Record<string, string> = {
@@ -50,7 +49,6 @@ const PLATFORM_NAMES: Record<string, string> = {
     youtube: 'YouTube',
     twitter: 'X / Twitter',
     facebook: 'Facebook',
-    instagram: 'Instagram',
 };
 
 // URL patterns for platform validation
@@ -59,7 +57,6 @@ const PLATFORM_PATTERNS: Record<string, RegExp> = {
     youtube: /youtube\.com|youtu\.be/i,
     twitter: /twitter\.com|x\.com/i,
     facebook: /facebook\.com|fb\.watch/i,
-    instagram: /instagram\.com|instagr\.am/i,
 };
 
 function formatDuration(seconds: number | null): string {
