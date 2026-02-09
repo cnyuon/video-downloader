@@ -42,6 +42,7 @@ const PLATFORM_COLORS: Record<string, string> = {
     youtube: 'bg-red-600',
     twitter: 'bg-black',
     facebook: 'bg-blue-600',
+    instagram: 'bg-gradient-to-r from-purple-500 via-pink-500 to-orange-500',
 };
 
 const PLATFORM_NAMES: Record<string, string> = {
@@ -49,6 +50,16 @@ const PLATFORM_NAMES: Record<string, string> = {
     youtube: 'YouTube',
     twitter: 'X / Twitter',
     facebook: 'Facebook',
+    instagram: 'Instagram',
+};
+
+// URL patterns for platform validation
+const PLATFORM_PATTERNS: Record<string, RegExp> = {
+    tiktok: /tiktok\.com|vm\.tiktok\.com/i,
+    youtube: /youtube\.com|youtu\.be/i,
+    twitter: /twitter\.com|x\.com/i,
+    facebook: /facebook\.com|fb\.watch/i,
+    instagram: /instagram\.com|instagr\.am/i,
 };
 
 function formatDuration(seconds: number | null): string {
@@ -67,9 +78,10 @@ function formatFileSize(bytes: number | null): string {
 interface VideoDownloaderProps {
     initialUrl?: string;
     placeholder?: string;
+    allowedPlatform?: string; // If set, only this platform is allowed
 }
 
-export default function VideoDownloader({ initialUrl = '', placeholder = 'Paste video URL here (TikTok, Twitter, Facebook)' }: VideoDownloaderProps) {
+export default function VideoDownloader({ initialUrl = '', placeholder = 'Paste video URL here (TikTok, Twitter, Facebook)', allowedPlatform }: VideoDownloaderProps) {
     const [url, setUrl] = useState(initialUrl);
 
     useEffect(() => {
@@ -90,6 +102,14 @@ export default function VideoDownloader({ initialUrl = '', placeholder = 'Paste 
         if (!url.trim()) {
             setError('Please enter a video URL');
             return;
+        }
+
+        // Validate platform if restricted to specific platform
+        if (allowedPlatform && PLATFORM_PATTERNS[allowedPlatform]) {
+            if (!PLATFORM_PATTERNS[allowedPlatform].test(url)) {
+                setError(`Please enter a valid ${PLATFORM_NAMES[allowedPlatform] || allowedPlatform} URL`);
+                return;
+            }
         }
 
         setLoading(true);

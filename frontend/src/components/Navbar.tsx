@@ -12,10 +12,11 @@ interface NavbarProps {
 const navItems = [
     { id: 'home', name: 'All Tools', href: '/' },
     { id: 'video', name: 'TikTok', href: '/tiktok-downloader' },
+    { id: 'instagram', name: 'Instagram', href: '/instagram-downloader' },
     { id: 'twitter', name: 'Twitter/X', href: '/twitter-downloader' },
     { id: 'facebook', name: 'Facebook', href: '/facebook-downloader' },
     { id: 'audio', name: 'Video to MP3', href: '/video-to-mp3' },
-    { id: 'blog', name: 'Blog', href: '#', disabled: true },
+    { id: 'blog', name: 'Blog', href: '/blog' },
 ];
 
 export default function Navbar({ currentPage }: NavbarProps) {

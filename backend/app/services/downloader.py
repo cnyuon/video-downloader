@@ -15,6 +15,7 @@ PLATFORM_PATTERNS = {
     'youtube': r'(youtube\.com|youtu\.be)',
     'twitter': r'(twitter\.com|x\.com)',
     'facebook': r'(facebook\.com|fb\.watch)',
+    'instagram': r'(instagram\.com|instagr\.am)',
 }
 
 # Path to cookies file for YouTube authentication

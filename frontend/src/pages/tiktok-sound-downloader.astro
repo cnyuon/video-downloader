@@ -1,0 +1,101 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar';
+import AudioExtractor from '../components/AudioExtractor';
+---
+
+<Layout 
+    title="TikTok Sound Downloader - Save TikTok Audio MP3 | MediaTools"
+    description="Download original sound and audio from TikTok videos as MP3. Extract music and voiceovers for free. Best TikTok to MP3 converter online."
+>
+    <!-- Target Keywords: tiktok sound downloader, download tiktok audio, save tiktok mp3, tiktok to mp3 converter, extract tiktok sound -->
+    <Navbar client:load currentPage="audio" />
+    
+    <main class="container mx-auto px-4 pt-10 pb-4 max-w-2xl">
+        <div class="text-center mb-8">
+            <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-black text-white text-sm font-medium mb-4">
+                <svg class="w-4 h-4 text-pink-500" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/>
+                </svg>
+                TikTok Audio
+            </div>
+            <h1 class="text-4xl font-bold tracking-tight mb-3">
+                Download TikTok Sounds & Audio (MP3)
+            </h1>
+            <p class="text-lg text-muted-foreground max-w-xl mx-auto">
+                <strong>Extract the original sound from any TikTok video.</strong> Save as high-quality MP3 for ringtones or editing.
+            </p>
+        </div>
+
+        <AudioExtractor client:load />
+        
+        <!-- Features Section -->
+        <div class="mt-12 grid gap-4 md:grid-cols-3">
+            <div class="text-center p-4 rounded-lg bg-muted/30">
+                <div class="text-2xl mb-2">🎵</div>
+                <h3 class="font-semibold mb-1">Original Sound</h3>
+                <p class="text-sm text-muted-foreground">Get the clean audio track from any video</p>
+            </div>
+            <div class="text-center p-4 rounded-lg bg-muted/30">
+                <div class="text-2xl mb-2">⚡</div>
+                <h3 class="font-semibold mb-1">Fast MP3</h3>
+                <p class="text-sm text-muted-foreground">Convert instantly to high-quality MP3</p>
+            </div>
+            <div class="text-center p-4 rounded-lg bg-muted/30">
+                <div class="text-2xl mb-2">🆓</div>
+                <h3 class="font-semibold mb-1">100% Free</h3>
+                <p class="text-sm text-muted-foreground">Unlimited audio downloads</p>
+            </div>
+        </div>
+        
+        <!-- How To Section -->
+        <div class="mt-12 py-8 border-t">
+            <h2 class="text-2xl font-bold text-center mb-6">How to Download TikTok Audio</h2>
+            <div class="space-y-4">
+                <div class="flex gap-4 items-start">
+                    <div class="flex-shrink-0 w-8 h-8 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold">1</div>
+                    <div>
+                        <h3 class="font-semibold">Copy the TikTok link</h3>
+                        <p class="text-muted-foreground text-sm">Open TikTok app, tap Share -> Copy Link</p>
+                    </div>
+                </div>
+                <div class="flex gap-4 items-start">
+                    <div class="flex-shrink-0 w-8 h-8 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold">2</div>
+                    <div>
+                        <h3 class="font-semibold">Paste and Extract</h3>
+                        <p class="text-muted-foreground text-sm">Paste link above and click "Get Info"</p>
+                    </div>
+                </div>
+                <div class="flex gap-4 items-start">
+                    <div class="flex-shrink-0 w-8 h-8 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold">3</div>
+                    <div>
+                        <h3 class="font-semibold">Download MP3</h3>
+                        <p class="text-muted-foreground text-sm">Select MP3 format and click Download</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- FAQ Section -->
+        <div class="mt-12 py-8 border-t">
+            <h2 class="text-2xl font-bold text-center mb-6">Frequently Asked Questions</h2>
+            <div class="space-y-4">
+                <div class="p-4 rounded-lg bg-muted/30">
+                    <h3 class="font-semibold mb-2">How to define a TikTok sound as ringtone?</h3>
+                    <p class="text-sm text-muted-foreground">Download the MP3 using our tool, then set it as ringtone in your phone settings (Android) or use GarageBand (iPhone).</p>
+                </div>
+                <div class="p-4 rounded-lg bg-muted/30">
+                    <h3 class="font-semibold mb-2">Can I download commercial sounds?</h3>
+                    <p class="text-sm text-muted-foreground">Our tool extracts audio from the video. Please respect copyright laws and use sounds for personal use only.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t py-6 mt-8">
+        <div class="text-center text-sm text-muted-foreground">
+            <p>© 2026 MediaTools</p>
+        </div>
+    </footer>
+</Layout>

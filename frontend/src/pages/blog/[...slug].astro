@@ -1,0 +1,73 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+import Navbar from '../../components/Navbar';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog');
+  return posts.map((post) => ({
+    params: { slug: post.slug },
+    props: post,
+  }));
+}
+
+const post = Astro.props;
+const { Content } = await post.render();
+---
+
+<Layout 
+	title={`${post.data.title} | MediaTools Blog`}
+	description={post.data.description}
+>
+	<Navbar client:load currentPage="blog" />
+	
+	<main class="container mx-auto px-4 pt-10 pb-16 max-w-3xl">
+		<article class="prose prose-lg dark:prose-invert mx-auto">
+			<div class="mb-8 text-center">
+				<h1 class="text-4xl font-bold tracking-tight mb-4">{post.data.title}</h1>
+				<div class="text-muted-foreground">
+					<time datetime={post.data.pubDate.toISOString()}>
+						{post.data.pubDate.toLocaleDateString('en-us', {
+							year: 'numeric',
+							month: 'long',
+							day: 'numeric',
+						})}
+					</time>
+				</div>
+			</div>
+			
+			{post.data.heroImage && (
+				<img 
+					src={post.data.heroImage} 
+					alt="" 
+					class="rounded-xl w-full object-cover aspect-video mb-8 shadow-lg"
+				/>
+			)}
+			
+			<div class="mt-8">
+				<Content />
+			</div>
+		</article>
+
+        <!-- Related Tools Section -->
+        <div class="mt-16 pt-8 border-t">
+            <h2 class="text-2xl font-bold text-center mb-6">Try Our Free Tools</h2>
+            <div class="grid gap-4 sm:grid-cols-2">
+                <a href="/tiktok-downloader" class="block p-4 rounded-lg border bg-card hover:border-primary/50 transition-all">
+                    <h3 class="font-semibold mb-1">TikTok Downloader</h3>
+                    <p class="text-sm text-muted-foreground">Download videos without watermark</p>
+                </a>
+                <a href="/instagram-downloader" class="block p-4 rounded-lg border bg-card hover:border-primary/50 transition-all">
+                    <h3 class="font-semibold mb-1">Instagram Downloader</h3>
+                    <p class="text-sm text-muted-foreground">Save Reels and videos in HD</p>
+                </a>
+            </div>
+        </div>
+	</main>
+
+    <footer class="border-t py-8 mt-8">
+        <div class="container mx-auto px-4 text-center text-sm text-muted-foreground">
+            <p>© 2026 MediaTools. All rights reserved.</p>
+        </div>
+    </footer>
+</Layout>
