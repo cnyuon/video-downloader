@@ -10,6 +10,10 @@ const {
     title = "MediaTools - Download Videos, Extract Audio & More",
     description = "Free online tools to download videos, extract audio, and more from TikTok, YouTube, Twitter, and Facebook."
 } = Astro.props;
+
+// Ensure canonical URLs always have trailing slashes (Cloudflare Pages enforces them)
+const pathname = Astro.url.pathname.endsWith('/') ? Astro.url.pathname : Astro.url.pathname + '/';
+const canonicalUrl = `https://getmediatools.com${pathname}`;
 ---
 
 <!doctype html>
@@ -28,12 +32,12 @@ const {
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
         
         <!-- SEO -->
-        <link rel="canonical" href={`https://getmediatools.com${Astro.url.pathname}`} />
+        <link rel="canonical" href={canonicalUrl} />
         <meta name="yandex-verification" content="cdcc6f25a321137f" />
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content={`https://getmediatools.com${Astro.url.pathname}`} />
+        <meta property="og:url" content={canonicalUrl} />
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:title" content={title} />
         <meta name="twitter:description" content={description} />
