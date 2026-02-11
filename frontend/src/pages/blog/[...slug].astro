@@ -51,7 +51,7 @@ const category = post.data.monetization?.primary_category
 			</div>
 			
 			{post.data.heroImage && (
-				<div class="rounded-2xl overflow-hidden shadow-xl mb-12 aspect-video bg-muted">
+				<div class="rounded-2xl overflow-hidden shadow-xl mb-12 aspect-square max-w-lg mx-auto bg-muted">
                     <img 
                         src={post.data.heroImage} 
                         alt={post.data.title} 
@@ -70,7 +70,7 @@ const category = post.data.monetization?.primary_category
 
         <!-- Related Tools Section -->
         <div class="mt-20 pt-12 border-t max-w-2xl mx-auto">
-            <h2 class="text-2xl font-bold mb-6">Tools Mentioned in This Post</h2>
+            <h2 class="text-2xl font-bold mb-6">Free Tools from MediaTools</h2>
             <div class="grid gap-4 sm:grid-cols-2">
                 <a href="/tiktok-downloader" class="group flex items-center gap-4 p-4 rounded-xl border bg-card hover:border-primary/50 hover:shadow-md transition-all">
                     <div class="w-10 h-10 rounded-lg bg-black flex items-center justify-center text-white shrink-0 group-hover:scale-110 transition-transform">
@@ -81,13 +81,31 @@ const category = post.data.monetization?.primary_category
                         <p class="text-sm text-muted-foreground">Download without watermark</p>
                     </div>
                 </a>
-                <a href="/instagram-downloader" class="group flex items-center gap-4 p-4 rounded-xl border bg-card hover:border-primary/50 hover:shadow-md transition-all">
-                    <div class="w-10 h-10 rounded-lg bg-gradient-to-tr from-yellow-400 to-purple-600 flex items-center justify-center text-white shrink-0 group-hover:scale-110 transition-transform">
-                        <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                <a href="/twitter-downloader" class="group flex items-center gap-4 p-4 rounded-xl border bg-card hover:border-primary/50 hover:shadow-md transition-all">
+                    <div class="w-10 h-10 rounded-lg bg-black flex items-center justify-center text-white shrink-0 group-hover:scale-110 transition-transform">
+                        <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
                     </div>
                     <div>
-                        <h3 class="font-semibold group-hover:text-primary transition-colors">Instagram Downloader</h3>
-                        <p class="text-sm text-muted-foreground">Save Reels in HD</p>
+                        <h3 class="font-semibold group-hover:text-primary transition-colors">Twitter/X Downloader</h3>
+                        <p class="text-sm text-muted-foreground">Save tweets as MP4</p>
+                    </div>
+                </a>
+                <a href="/video-to-mp3" class="group flex items-center gap-4 p-4 rounded-xl border bg-card hover:border-primary/50 hover:shadow-md transition-all">
+                    <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-green-500 to-emerald-600 flex items-center justify-center text-white shrink-0 group-hover:scale-110 transition-transform">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3"/></svg>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold group-hover:text-primary transition-colors">Video to MP3</h3>
+                        <p class="text-sm text-muted-foreground">Extract audio from any video</p>
+                    </div>
+                </a>
+                <a href="/tiktok-sound-downloader" class="group flex items-center gap-4 p-4 rounded-xl border bg-card hover:border-primary/50 hover:shadow-md transition-all">
+                    <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-pink-500 to-rose-600 flex items-center justify-center text-white shrink-0 group-hover:scale-110 transition-transform">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072M12 12h.01M18.364 5.636a9 9 0 010 12.728M5.636 18.364a9 9 0 010-12.728"/></svg>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold group-hover:text-primary transition-colors">TikTok Sound Downloader</h3>
+                        <p class="text-sm text-muted-foreground">Save TikTok sounds as MP3</p>
                     </div>
                 </a>
             </div>
