@@ -4,16 +4,21 @@ import '../styles/globals.css';
 interface Props {
     title?: string;
     description?: string;
+    ogImage?: string;
+    jsonLd?: Record<string, any>;
 }
 
 const { 
     title = "MediaTools - Download Videos, Extract Audio & More",
-    description = "Free online tools to download videos, extract audio, and more from TikTok, YouTube, Twitter, and Facebook."
+    description = "Free online tools to download videos, extract audio, and more from TikTok, YouTube, Twitter, and Facebook.",
+    ogImage = "/icon-512.png",
+    jsonLd,
 } = Astro.props;
 
 // Ensure canonical URLs always have trailing slashes (Cloudflare Pages enforces them)
 const pathname = Astro.url.pathname.endsWith('/') ? Astro.url.pathname : Astro.url.pathname + '/';
 const canonicalUrl = `https://getmediatools.com${pathname}`;
+const fullOgImage = ogImage.startsWith('http') ? ogImage : `https://getmediatools.com${ogImage}`;
 ---
 
 <!doctype html>
@@ -22,6 +27,7 @@ const canonicalUrl = `https://getmediatools.com${pathname}`;
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="description" content={description} />
+        <meta name="robots" content="index, follow" />
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
         <link rel="manifest" href="/manifest.json" />
         <meta name="theme-color" content="#ffffff" />
@@ -38,11 +44,19 @@ const canonicalUrl = `https://getmediatools.com${pathname}`;
         <meta property="og:description" content={description} />
         <meta property="og:type" content="website" />
         <meta property="og:url" content={canonicalUrl} />
-        <meta name="twitter:card" content="summary" />
+        <meta property="og:image" content={fullOgImage} />
+        <meta property="og:site_name" content="MediaTools" />
+        <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={title} />
         <meta name="twitter:description" content={description} />
+        <meta name="twitter:image" content={fullOgImage} />
 
         <title>{title}</title>
+
+        <!-- JSON-LD Structured Data -->
+        {jsonLd && (
+            <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+        )}
         
         <!-- Google Analytics -->
         <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-7GYZ72XSW7"></script>

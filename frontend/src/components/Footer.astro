@@ -1,0 +1,53 @@
+---
+/**
+ * Footer - Site-wide footer with tool links, blog, and legal
+ * Used on every page for consistent internal linking and crawlability
+ */
+---
+
+<footer class="border-t py-12 mt-8">
+    <div class="container mx-auto px-4 max-w-6xl">
+        <div class="grid gap-8 md:grid-cols-3 mb-8">
+            <!-- Brand -->
+            <div>
+                <a href="/" class="flex items-center space-x-2 mb-3">
+                    <div class="h-6 w-6 rounded-md bg-primary flex items-center justify-center">
+                        <svg class="w-4 h-4 text-primary-foreground" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                        </svg>
+                    </div>
+                    <span class="font-bold">MediaTools</span>
+                </a>
+                <p class="text-sm text-muted-foreground">Free online tools for downloading videos, extracting audio, and more.</p>
+            </div>
+
+            <!-- Tools -->
+            <div>
+                <h3 class="font-semibold mb-3 text-sm">Tools</h3>
+                <ul class="space-y-2 text-sm text-muted-foreground">
+                    <li><a href="/tiktok-downloader" class="hover:text-foreground transition-colors">TikTok Downloader</a></li>
+                    <li><a href="/twitter-downloader" class="hover:text-foreground transition-colors">Twitter/X Downloader</a></li>
+                    <li><a href="/facebook-downloader" class="hover:text-foreground transition-colors">Facebook Downloader</a></li>
+                    <li><a href="/tiktok-sound-downloader" class="hover:text-foreground transition-colors">TikTok Sound Downloader</a></li>
+                    <li><a href="/video-to-mp3" class="hover:text-foreground transition-colors">Video to MP3</a></li>
+                    <li><a href="/thumbnail-grabber" class="hover:text-foreground transition-colors">Thumbnail Grabber</a></li>
+                </ul>
+            </div>
+
+            <!-- Resources -->
+            <div>
+                <h3 class="font-semibold mb-3 text-sm">Resources</h3>
+                <ul class="space-y-2 text-sm text-muted-foreground">
+                    <li><a href="/blog" class="hover:text-foreground transition-colors">Blog</a></li>
+                    <li><a href="/blog/how-to-download-tiktok-without-watermark" class="hover:text-foreground transition-colors">TikTok Download Guide</a></li>
+                    <li><a href="/blog/5-best-ways-to-save-twitter-videos" class="hover:text-foreground transition-colors">Save Twitter Videos</a></li>
+                    <li><a href="/blog/best-free-video-editors-tiktok" class="hover:text-foreground transition-colors">Video Editors for TikTok</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="border-t pt-6 text-center text-sm text-muted-foreground">
+            <p>© 2026 MediaTools. All rights reserved.</p>
+        </div>
+    </div>
+</footer>

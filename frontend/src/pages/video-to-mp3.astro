@@ -1,12 +1,37 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Navbar from '../components/Navbar';
+import Footer from '../components/Footer.astro';
 import AudioExtractor from '../components/AudioExtractor';
+
+const jsonLd = {
+    "@context": "https://schema.org",
+    "@graph": [
+        {
+            "@type": "WebApplication",
+            "name": "Video to MP3 Converter",
+            "url": "https://getmediatools.com/video-to-mp3",
+            "description": "Convert video to MP3 online for free. Extract high-quality audio from TikTok, Twitter, and Facebook videos instantly.",
+            "applicationCategory": "MultimediaApplication",
+            "operatingSystem": "Any",
+            "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+        },
+        {
+            "@type": "FAQPage",
+            "mainEntity": [
+                { "@type": "Question", "name": "What video formats are supported?", "acceptedAnswer": { "@type": "Answer", "text": "Our tool works with videos from TikTok, Twitter/X, and Facebook. Just paste the video URL and we extract the audio automatically." } },
+                { "@type": "Question", "name": "What audio quality do I get?", "acceptedAnswer": { "@type": "Answer", "text": "We extract the best available audio quality. Most social media videos produce MP3 files at 128-320kbps, suitable for listening on any device." } },
+                { "@type": "Question", "name": "Can I use this on my phone?", "acceptedAnswer": { "@type": "Answer", "text": "Yes! Our converter works in any mobile browser on iPhone or Android. No app download needed." } }
+            ]
+        }
+    ]
+};
 ---
 
 <Layout 
     title="Video to MP3 Converter - Free Online Audio Extractor | MediaTools"
     description="Convert video to MP3 online for free. Extract high-quality audio from TikTok, Twitter, and Facebook videos instantly. No registration required."
+    jsonLd={jsonLd}
 >
     <Navbar client:load currentPage="audio" />
     
@@ -46,12 +71,88 @@ import AudioExtractor from '../components/AudioExtractor';
         </div>
 
         <AudioExtractor client:load />
+
+        <!-- Features Section -->
+        <div class="mt-12 grid gap-4 md:grid-cols-3">
+            <div class="text-center p-4 rounded-lg bg-muted/30">
+                <div class="text-2xl mb-2">🎵</div>
+                <h3 class="font-semibold mb-1">High-Quality MP3</h3>
+                <p class="text-sm text-muted-foreground">Extract audio at the best available bitrate</p>
+            </div>
+            <div class="text-center p-4 rounded-lg bg-muted/30">
+                <div class="text-2xl mb-2">⚡</div>
+                <h3 class="font-semibold mb-1">Instant Conversion</h3>
+                <p class="text-sm text-muted-foreground">Convert in seconds, no waiting</p>
+            </div>
+            <div class="text-center p-4 rounded-lg bg-muted/30">
+                <div class="text-2xl mb-2">🆓</div>
+                <h3 class="font-semibold mb-1">100% Free</h3>
+                <p class="text-sm text-muted-foreground">Unlimited conversions, no signup</p>
+            </div>
+        </div>
+
+        <!-- How To Section -->
+        <div class="mt-12 py-8 border-t">
+            <h2 class="text-2xl font-bold text-center mb-6">How to Convert Video to MP3</h2>
+            <div class="space-y-4">
+                <div class="flex gap-4 items-start">
+                    <div class="flex-shrink-0 w-8 h-8 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold">1</div>
+                    <div>
+                        <h3 class="font-semibold">Copy the video URL</h3>
+                        <p class="text-muted-foreground text-sm">Open TikTok, Twitter, or Facebook and copy the link to the video you want audio from</p>
+                    </div>
+                </div>
+                <div class="flex gap-4 items-start">
+                    <div class="flex-shrink-0 w-8 h-8 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold">2</div>
+                    <div>
+                        <h3 class="font-semibold">Paste and extract</h3>
+                        <p class="text-muted-foreground text-sm">Paste the link above and click "Get Info" to analyze the video</p>
+                    </div>
+                </div>
+                <div class="flex gap-4 items-start">
+                    <div class="flex-shrink-0 w-8 h-8 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold">3</div>
+                    <div>
+                        <h3 class="font-semibold">Download MP3</h3>
+                        <p class="text-muted-foreground text-sm">Select MP3 format and download the audio file to your device</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- FAQ Section -->
+        <div class="mt-12 py-8 border-t">
+            <h2 class="text-2xl font-bold text-center mb-6">Frequently Asked Questions</h2>
+            <div class="space-y-4">
+                <div class="p-4 rounded-lg bg-muted/30">
+                    <h3 class="font-semibold mb-2">What video formats are supported?</h3>
+                    <p class="text-sm text-muted-foreground">Our tool works with videos from TikTok, Twitter/X, and Facebook. Just paste the video URL and we extract the audio automatically.</p>
+                </div>
+                <div class="p-4 rounded-lg bg-muted/30">
+                    <h3 class="font-semibold mb-2">What audio quality do I get?</h3>
+                    <p class="text-sm text-muted-foreground">We extract the best available audio quality. Most social media videos produce MP3 files at 128-320kbps, suitable for listening on any device.</p>
+                </div>
+                <div class="p-4 rounded-lg bg-muted/30">
+                    <h3 class="font-semibold mb-2">Can I use this on my phone?</h3>
+                    <p class="text-sm text-muted-foreground">Yes! Our converter works in any mobile browser on iPhone or Android. No app download needed.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Related Guides Section -->
+        <div class="mt-12 py-8 border-t">
+            <h2 class="text-2xl font-bold text-center mb-6">Related Tools & Guides</h2>
+            <div class="grid gap-4 md:grid-cols-2">
+                <a href="/tiktok-sound-downloader" class="group p-4 rounded-xl border bg-card hover:border-primary/50 hover:shadow-md transition-all">
+                    <h3 class="font-semibold mb-1 group-hover:text-primary transition-colors">TikTok Sound Downloader →</h3>
+                    <p class="text-sm text-muted-foreground">Extract TikTok sounds and save as MP3.</p>
+                </a>
+                <a href="/tiktok-downloader" class="group p-4 rounded-xl border bg-card hover:border-primary/50 hover:shadow-md transition-all">
+                    <h3 class="font-semibold mb-1 group-hover:text-primary transition-colors">TikTok Video Downloader →</h3>
+                    <p class="text-sm text-muted-foreground">Download TikTok videos without watermark.</p>
+                </a>
+            </div>
+        </div>
     </main>
 
-    <!-- Footer -->
-    <footer class="border-t py-6 mt-16">
-        <div class="text-center text-sm text-muted-foreground">
-            <p>© 2026 MediaTools</p>
-        </div>
-    </footer>
+    <Footer />
 </Layout>

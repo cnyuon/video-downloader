@@ -21,7 +21,9 @@ const navItems: NavItem[] = [
     { id: 'video', name: 'TikTok', href: '/tiktok-downloader' },
     { id: 'twitter', name: 'Twitter/X', href: '/twitter-downloader' },
     { id: 'facebook', name: 'Facebook', href: '/facebook-downloader' },
+    { id: 'sound', name: 'TikTok Sound', href: '/tiktok-sound-downloader' },
     { id: 'audio', name: 'Video to MP3', href: '/video-to-mp3' },
+    { id: 'thumbnail', name: 'Thumbnails', href: '/thumbnail-grabber' },
     { id: 'blog', name: 'Blog', href: '/blog' },
 ];
 

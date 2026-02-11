@@ -1,12 +1,37 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Navbar from '../components/Navbar';
+import Footer from '../components/Footer.astro';
 import VideoDownloader from '../components/VideoDownloader';
+
+const jsonLd = {
+    "@context": "https://schema.org",
+    "@graph": [
+        {
+            "@type": "WebApplication",
+            "name": "Twitter/X Video Downloader",
+            "url": "https://getmediatools.com/twitter-downloader",
+            "description": "Download Twitter/X videos and GIFs to MP4 free. Save tweets in HD quality instantly.",
+            "applicationCategory": "MultimediaApplication",
+            "operatingSystem": "Any",
+            "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+        },
+        {
+            "@type": "FAQPage",
+            "mainEntity": [
+                { "@type": "Question", "name": "Can I download Twitter GIFs?", "acceptedAnswer": { "@type": "Answer", "text": "Yes! Twitter GIFs are actually videos, and we convert them to MP4 format so you can save and share them anywhere." } },
+                { "@type": "Question", "name": "What quality can I download?", "acceptedAnswer": { "@type": "Answer", "text": "We offer the highest quality available from Twitter, typically 720p or 1080p for newer videos." } },
+                { "@type": "Question", "name": "Does this work with X (formerly Twitter)?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, we support both twitter.com and x.com URLs. The tool works the same for both domains." } }
+            ]
+        }
+    ]
+};
 ---
 
 <Layout 
     title="Twitter Video Downloader - Save X Videos to MP4 Free"
     description="Download Twitter/X videos and GIFs to MP4 free. Save tweets in HD quality instantly. Convert Twitter GIFs to video. No login, works on all devices."
+    jsonLd={jsonLd}
 >
     <!-- Target Keywords: twitter video downloader, download twitter video, save twitter video mp4, twitter gif downloader, x video downloader -->
     <Navbar client:load currentPage="twitter" />
@@ -112,10 +137,5 @@ import VideoDownloader from '../components/VideoDownloader';
         </div>
     </main>
 
-    <!-- Footer -->
-    <footer class="border-t py-6 mt-8">
-        <div class="text-center text-sm text-muted-foreground">
-            <p>© 2026 MediaTools</p>
-        </div>
-    </footer>
+    <Footer />
 </Layout>

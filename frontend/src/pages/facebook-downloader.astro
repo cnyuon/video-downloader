@@ -1,12 +1,37 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Navbar from '../components/Navbar';
+import Footer from '../components/Footer.astro';
 import VideoDownloader from '../components/VideoDownloader';
+
+const jsonLd = {
+    "@context": "https://schema.org",
+    "@graph": [
+        {
+            "@type": "WebApplication",
+            "name": "Facebook Video Downloader",
+            "url": "https://getmediatools.com/facebook-downloader",
+            "description": "Download Facebook videos and Reels for free. Save FB videos to MP4 in HD quality.",
+            "applicationCategory": "MultimediaApplication",
+            "operatingSystem": "Any",
+            "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+        },
+        {
+            "@type": "FAQPage",
+            "mainEntity": [
+                { "@type": "Question", "name": "Can I download private Facebook videos?", "acceptedAnswer": { "@type": "Answer", "text": "No, for privacy reasons we only support public Facebook videos. Make sure the video is set to public before downloading." } },
+                { "@type": "Question", "name": "Does this work with Facebook Reels?", "acceptedAnswer": { "@type": "Answer", "text": "Yes! Our tool supports Facebook Reels, regular video posts, and video content from pages." } },
+                { "@type": "Question", "name": "Is this free to use?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, 100% free with no limits. No signup required, no hidden fees." } }
+            ]
+        }
+    ]
+};
 ---
 
 <Layout 
     title="Facebook Video Downloader - Save FB Videos Free"
     description="Download Facebook videos and Reels for free. Save FB videos to MP4 in HD quality. No login required, works on all devices. Fast and easy."
+    jsonLd={jsonLd}
 >
     <!-- Target Keywords: facebook video downloader, download facebook video, save fb video, facebook reels downloader, fb video saver -->
     <Navbar client:load currentPage="facebook" />
@@ -95,12 +120,22 @@ import VideoDownloader from '../components/VideoDownloader';
                 </div>
             </div>
         </div>
+
+        <!-- Related Guides Section -->
+        <div class="mt-12 py-8 border-t">
+            <h2 class="text-2xl font-bold text-center mb-6">Related Tools & Guides</h2>
+            <div class="grid gap-4 md:grid-cols-2">
+                <a href="/tiktok-downloader" class="group p-4 rounded-xl border bg-card hover:border-primary/50 hover:shadow-md transition-all">
+                    <h3 class="font-semibold mb-1 group-hover:text-primary transition-colors">TikTok Downloader →</h3>
+                    <p class="text-sm text-muted-foreground">Download TikTok videos without watermark in HD.</p>
+                </a>
+                <a href="/twitter-downloader" class="group p-4 rounded-xl border bg-card hover:border-primary/50 hover:shadow-md transition-all">
+                    <h3 class="font-semibold mb-1 group-hover:text-primary transition-colors">Twitter/X Downloader →</h3>
+                    <p class="text-sm text-muted-foreground">Save videos and GIFs from tweets to MP4.</p>
+                </a>
+            </div>
+        </div>
     </main>
 
-    <!-- Footer -->
-    <footer class="border-t py-6 mt-8">
-        <div class="text-center text-sm text-muted-foreground">
-            <p>© 2026 MediaTools</p>
-        </div>
-    </footer>
+    <Footer />
 </Layout>

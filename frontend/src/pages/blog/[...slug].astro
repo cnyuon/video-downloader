@@ -2,6 +2,7 @@
 import { getCollection } from 'astro:content';
 import Layout from '../../layouts/Layout.astro';
 import Navbar from '../../components/Navbar';
+import Footer from '../../components/Footer.astro';
 
 export async function getStaticPaths() {
   const posts = await getCollection('blog');
@@ -27,11 +28,25 @@ const CATEGORY_LABELS: Record<string, string> = {
 const category = post.data.monetization?.primary_category 
     ? CATEGORY_LABELS[post.data.monetization.primary_category] 
     : 'Guide';
+
+const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": post.data.title,
+    "description": post.data.description,
+    "datePublished": post.data.pubDate.toISOString(),
+    "image": post.data.heroImage ? `https://getmediatools.com${post.data.heroImage}` : undefined,
+    "author": { "@type": "Organization", "name": "MediaTools" },
+    "publisher": { "@type": "Organization", "name": "MediaTools", "url": "https://getmediatools.com" },
+    "mainEntityOfPage": `https://getmediatools.com/blog/${post.slug}`
+};
 ---
 
 <Layout 
 	title={`${post.data.title} | MediaTools Blog`}
 	description={post.data.description}
+	ogImage={post.data.heroImage || undefined}
+	jsonLd={jsonLd}
 >
 	<Navbar client:load currentPage="blog" />
 	
@@ -112,9 +127,5 @@ const category = post.data.monetization?.primary_category
         </div>
 	</main>
 
-    <footer class="border-t py-8 mt-8">
-        <div class="container mx-auto px-4 text-center text-sm text-muted-foreground">
-            <p>© 2026 MediaTools. All rights reserved.</p>
-        </div>
-    </footer>
+    <Footer />
 </Layout>

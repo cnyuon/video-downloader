@@ -1,12 +1,38 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Navbar from '../components/Navbar';
+import Footer from '../components/Footer.astro';
 import VideoDownloader from '../components/VideoDownloader';
+
+const jsonLd = {
+    "@context": "https://schema.org",
+    "@graph": [
+        {
+            "@type": "WebApplication",
+            "name": "TikTok Video Downloader",
+            "url": "https://getmediatools.com/tiktok-downloader",
+            "description": "Download TikTok videos without watermark for free. Save TikTok to MP4 in HD quality.",
+            "applicationCategory": "MultimediaApplication",
+            "operatingSystem": "Any",
+            "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+            "browserRequirements": "Requires JavaScript"
+        },
+        {
+            "@type": "FAQPage",
+            "mainEntity": [
+                { "@type": "Question", "name": "How do I remove the TikTok watermark?", "acceptedAnswer": { "@type": "Answer", "text": "Just paste the TikTok link above. Our tool automatically fetches the original video without the watermark overlay." } },
+                { "@type": "Question", "name": "Is this free to use?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, 100% free with no limits. No signup, no credit card, no hidden fees." } },
+                { "@type": "Question", "name": "Can I save TikToks on iPhone?", "acceptedAnswer": { "@type": "Answer", "text": "Yes! Our TikTok downloader works on iPhone, Android, PC, and Mac. No app needed - just use your browser." } }
+            ]
+        }
+    ]
+};
 ---
 
 <Layout 
     title="TikTok Video Downloader - No Watermark, Free"
     description="Download TikTok videos without watermark for free. Save TikTok to MP4 in HD quality. No login, no app required. Works on iPhone, Android, PC."
+    jsonLd={jsonLd}
 >
     <!-- Target Keywords: tiktok downloader, download tiktok video no watermark, tiktok video saver, save tiktok without watermark, tiktok to mp4 -->
     <Navbar client:load currentPage="video" />
@@ -129,10 +155,5 @@ import VideoDownloader from '../components/VideoDownloader';
         </div>
     </main>
 
-    <!-- Footer -->
-    <footer class="border-t py-6 mt-8">
-        <div class="text-center text-sm text-muted-foreground">
-            <p>© 2026 MediaTools</p>
-        </div>
-    </footer>
+    <Footer />
 </Layout>

@@ -1,12 +1,37 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Navbar from '../components/Navbar';
+import Footer from '../components/Footer.astro';
 import ThumbnailGrabberComponent from '../components/ThumbnailGrabber';
+
+const jsonLd = {
+    "@context": "https://schema.org",
+    "@graph": [
+        {
+            "@type": "WebApplication",
+            "name": "Video Thumbnail Downloader",
+            "url": "https://getmediatools.com/thumbnail-grabber",
+            "description": "Download video thumbnails in high quality from TikTok, Twitter, and Facebook videos instantly.",
+            "applicationCategory": "MultimediaApplication",
+            "operatingSystem": "Any",
+            "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+        },
+        {
+            "@type": "FAQPage",
+            "mainEntity": [
+                { "@type": "Question", "name": "What resolution are the thumbnails?", "acceptedAnswer": { "@type": "Answer", "text": "We grab the highest resolution thumbnail available from the platform, typically 720p or 1080p depending on the original video quality." } },
+                { "@type": "Question", "name": "What format do thumbnails download in?", "acceptedAnswer": { "@type": "Answer", "text": "Thumbnails are downloaded as JPEG or PNG images, depending on what the platform provides. Both formats work on all devices." } },
+                { "@type": "Question", "name": "Can I use thumbnails for my own videos?", "acceptedAnswer": { "@type": "Answer", "text": "If you're downloading thumbnails from your own videos, absolutely. For other creators' content, please respect copyright and use thumbnails only for personal reference." } }
+            ]
+        }
+    ]
+};
 ---
 
 <Layout 
     title="Video Thumbnail Downloader - Grab HD Thumbnails | MediaTools"
     description="Download video thumbnails in high quality. Get thumbnails from TikTok, Twitter, and Facebook videos instantly. Free online tool, no signup."
+    jsonLd={jsonLd}
 >
     <Navbar client:load currentPage="thumbnail" />
     
@@ -46,12 +71,88 @@ import ThumbnailGrabberComponent from '../components/ThumbnailGrabber';
         </div>
 
         <ThumbnailGrabberComponent client:load />
+
+        <!-- Features Section -->
+        <div class="mt-12 grid gap-4 md:grid-cols-3">
+            <div class="text-center p-4 rounded-lg bg-muted/30">
+                <div class="text-2xl mb-2">🖼️</div>
+                <h3 class="font-semibold mb-1">HD Quality</h3>
+                <p class="text-sm text-muted-foreground">Get the highest resolution thumbnail available</p>
+            </div>
+            <div class="text-center p-4 rounded-lg bg-muted/30">
+                <div class="text-2xl mb-2">⚡</div>
+                <h3 class="font-semibold mb-1">Instant Download</h3>
+                <p class="text-sm text-muted-foreground">Grab thumbnails in seconds</p>
+            </div>
+            <div class="text-center p-4 rounded-lg bg-muted/30">
+                <div class="text-2xl mb-2">📱</div>
+                <h3 class="font-semibold mb-1">Any Device</h3>
+                <p class="text-sm text-muted-foreground">Works on iPhone, Android, PC, Mac</p>
+            </div>
+        </div>
+
+        <!-- How To Section -->
+        <div class="mt-12 py-8 border-t">
+            <h2 class="text-2xl font-bold text-center mb-6">How to Download Video Thumbnails</h2>
+            <div class="space-y-4">
+                <div class="flex gap-4 items-start">
+                    <div class="flex-shrink-0 w-8 h-8 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold">1</div>
+                    <div>
+                        <h3 class="font-semibold">Copy the video URL</h3>
+                        <p class="text-muted-foreground text-sm">Find the video on TikTok, Twitter, or Facebook and copy its link</p>
+                    </div>
+                </div>
+                <div class="flex gap-4 items-start">
+                    <div class="flex-shrink-0 w-8 h-8 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold">2</div>
+                    <div>
+                        <h3 class="font-semibold">Paste and analyze</h3>
+                        <p class="text-muted-foreground text-sm">Paste the URL above and click "Get Info" to extract the thumbnail</p>
+                    </div>
+                </div>
+                <div class="flex gap-4 items-start">
+                    <div class="flex-shrink-0 w-8 h-8 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold">3</div>
+                    <div>
+                        <h3 class="font-semibold">Save the image</h3>
+                        <p class="text-muted-foreground text-sm">Right-click or long-press the thumbnail to save it to your device</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- FAQ Section -->
+        <div class="mt-12 py-8 border-t">
+            <h2 class="text-2xl font-bold text-center mb-6">Frequently Asked Questions</h2>
+            <div class="space-y-4">
+                <div class="p-4 rounded-lg bg-muted/30">
+                    <h3 class="font-semibold mb-2">What resolution are the thumbnails?</h3>
+                    <p class="text-sm text-muted-foreground">We grab the highest resolution thumbnail available from the platform, typically 720p or 1080p depending on the original video quality.</p>
+                </div>
+                <div class="p-4 rounded-lg bg-muted/30">
+                    <h3 class="font-semibold mb-2">What format do thumbnails download in?</h3>
+                    <p class="text-sm text-muted-foreground">Thumbnails are downloaded as JPEG or PNG images, depending on what the platform provides. Both formats work on all devices.</p>
+                </div>
+                <div class="p-4 rounded-lg bg-muted/30">
+                    <h3 class="font-semibold mb-2">Can I use thumbnails for my own videos?</h3>
+                    <p class="text-sm text-muted-foreground">If you're downloading thumbnails from your own videos, absolutely. For other creators' content, please respect copyright and use thumbnails only for personal reference.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Related Guides Section -->
+        <div class="mt-12 py-8 border-t">
+            <h2 class="text-2xl font-bold text-center mb-6">Related Tools</h2>
+            <div class="grid gap-4 md:grid-cols-2">
+                <a href="/tiktok-downloader" class="group p-4 rounded-xl border bg-card hover:border-primary/50 hover:shadow-md transition-all">
+                    <h3 class="font-semibold mb-1 group-hover:text-primary transition-colors">TikTok Video Downloader →</h3>
+                    <p class="text-sm text-muted-foreground">Download full TikTok videos without watermark.</p>
+                </a>
+                <a href="/video-to-mp3" class="group p-4 rounded-xl border bg-card hover:border-primary/50 hover:shadow-md transition-all">
+                    <h3 class="font-semibold mb-1 group-hover:text-primary transition-colors">Video to MP3 →</h3>
+                    <p class="text-sm text-muted-foreground">Extract audio from any video as MP3.</p>
+                </a>
+            </div>
+        </div>
     </main>
 
-    <!-- Footer -->
-    <footer class="border-t py-6 mt-16">
-        <div class="text-center text-sm text-muted-foreground">
-            <p>© 2026 MediaTools</p>
-        </div>
-    </footer>
+    <Footer />
 </Layout>

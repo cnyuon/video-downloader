@@ -1,11 +1,26 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Navbar from '../components/Navbar';
+import Footer from '../components/Footer.astro';
+
+const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "MediaTools",
+    "url": "https://getmediatools.com",
+    "description": "Free online tools to download videos from TikTok, Twitter, and Facebook. Extract audio to MP3 and grab thumbnails.",
+    "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://getmediatools.com/?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+    }
+};
 ---
 
 <Layout 
     title="MediaTools - Free Video Downloader & Media Tools"
     description="Free online tools to download videos from TikTok, Twitter, and Facebook. Extract audio to MP3 and grab thumbnails. No signup required."
+    jsonLd={jsonLd}
 >
     <Navbar client:load currentPage="home" />
     
@@ -129,13 +144,5 @@ import Navbar from '../components/Navbar';
         </div>
     </main>
 
-    <!-- Footer -->
-    <footer class="border-t py-8">
-        <div class="container mx-auto px-4">
-            <div class="text-center text-sm text-muted-foreground">
-                <p class="mb-2">© 2026 MediaTools. All rights reserved.</p>
-                <p>Made with ❤️ for content creators everywhere</p>
-            </div>
-        </div>
-    </footer>
+    <Footer />
 </Layout>

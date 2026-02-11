@@ -1,12 +1,37 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Navbar from '../components/Navbar';
+import Footer from '../components/Footer.astro';
 import AudioExtractor from '../components/AudioExtractor';
+
+const jsonLd = {
+    "@context": "https://schema.org",
+    "@graph": [
+        {
+            "@type": "WebApplication",
+            "name": "TikTok Sound Downloader",
+            "url": "https://getmediatools.com/tiktok-sound-downloader",
+            "description": "Download original sound and audio from TikTok videos as MP3. Extract music and voiceovers for free.",
+            "applicationCategory": "MultimediaApplication",
+            "operatingSystem": "Any",
+            "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+        },
+        {
+            "@type": "FAQPage",
+            "mainEntity": [
+                { "@type": "Question", "name": "What's the difference between this and Video to MP3?", "acceptedAnswer": { "@type": "Answer", "text": "This tool is specifically optimized for TikTok audio extraction, extracting the original sound including music and voiceovers. Video to MP3 is a general-purpose converter for multiple platforms." } },
+                { "@type": "Question", "name": "Can I download TikTok sounds with original quality?", "acceptedAnswer": { "@type": "Answer", "text": "Yes! We extract audio at the highest available quality from TikTok, typically in MP3 format at 128-320kbps." } },
+                { "@type": "Question", "name": "Is it legal to download TikTok sounds?", "acceptedAnswer": { "@type": "Answer", "text": "Downloading for personal use is generally acceptable. However, using copyrighted music commercially without permission may violate copyright laws." } }
+            ]
+        }
+    ]
+};
 ---
 
 <Layout 
     title="TikTok Sound Downloader - Save TikTok Audio MP3 | MediaTools"
     description="Download original sound and audio from TikTok videos as MP3. Extract music and voiceovers for free. Best TikTok to MP3 converter online."
+    jsonLd={jsonLd}
 >
     <!-- Target Keywords: tiktok sound downloader, download tiktok audio, save tiktok mp3, tiktok to mp3 converter, extract tiktok sound -->
     <Navbar client:load currentPage="audio" />
@@ -115,10 +140,5 @@ import AudioExtractor from '../components/AudioExtractor';
         </div>
     </main>
 
-    <!-- Footer -->
-    <footer class="border-t py-6 mt-8">
-        <div class="text-center text-sm text-muted-foreground">
-            <p>© 2026 MediaTools</p>
-        </div>
-    </footer>
+    <Footer />
 </Layout>
