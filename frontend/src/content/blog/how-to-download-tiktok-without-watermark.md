@@ -18,7 +18,7 @@ In this guide, we'll show you how to download TikTok videos **without the waterm
 
 ## Why Download TikToks Without Watermark?
 
-- **Reposting to other platforms:** If you're a creator, you might want to share your content on Instagram Reels or YouTube Shorts. Most algorithms deprioritize videos with watermarks from other apps.
+- **Reposting to other platforms:** If you're a creator, you might want to share your content on [Instagram Reels](https://help.instagram.com/270447560766967) or [YouTube Shorts](https://support.google.com/youtube/answer/10059070). Most algorithms deprioritize videos with watermarks from other apps.
 - **Offline viewing:** Save your favorite videos to watch when you don't have internet access.
 - **Editing:** Use clips for reaction videos or compilations without the distracting logo bouncing around.
 
@@ -43,7 +43,7 @@ That's it! The video will be saved to your device's gallery or downloads folder,
 ## Frequently Asked Questions
 
 **Is it legal to download TikTok videos?**
-It is generally legal to download videos for personal use. However, you should respect copyright laws and not repost content as your own without permission or proper credit.
+It is generally legal to download videos for personal use. However, you should respect copyright laws and not repost content as your own without permission or proper credit. See [TikTok's Terms of Service](https://www.tiktok.com/legal/terms-of-service) for their full policy.
 
 **Does this work on iPhone?**
 Yes! Our tool works directly in Safari or Chrome on iOS. You don't need to install any suspicious apps.

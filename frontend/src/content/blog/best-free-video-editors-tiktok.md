@@ -26,9 +26,9 @@ Here are the best free video editors for TikTok creators, ranked by ease of use 
 | **Canva Video** | Quick social content | Web, iOS, Android | Free tier | No |
 | **InShot** | Mobile-first editing | iOS, Android | Free (ads) | Removable |
 
-## 1. CapCut — Best Overall for TikTok
+## 1. [CapCut](https://www.capcut.com/) — Best Overall for TikTok
 
-CapCut is TikTok's official editor, and it shows. Built by ByteDance (TikTok's parent company), it has features specifically designed for short-form video.
+CapCut is TikTok's official editor, and it shows. Built by [ByteDance](https://www.bytedance.com/) (TikTok's parent company), it has features specifically designed for short-form video.
 
 **What makes it great:**
 - Auto-captions that sync perfectly with speech
@@ -43,9 +43,9 @@ CapCut is TikTok's official editor, and it shows. Built by ByteDance (TikTok's p
 
 **Best for:** Creators who primarily make TikTok content and want the fastest workflow.
 
-## 2. DaVinci Resolve — Best for Quality
+## 2. [DaVinci Resolve](https://www.blackmagicdesign.com/products/davinciresolve) — Best for Quality
 
-DaVinci Resolve is used by Hollywood professionals, and yet the free version is incredibly powerful. If you want cinema-grade color correction, audio editing, and visual effects — all free — this is it.
+[DaVinci Resolve](https://www.blackmagicdesign.com/products/davinciresolve) is used by Hollywood professionals, and yet the free version is incredibly powerful. If you want cinema-grade color correction, audio editing, and visual effects — all free — this is it.
 
 **What makes it great:**
 - Professional color grading tools (the best in the industry)
@@ -61,7 +61,7 @@ DaVinci Resolve is used by Hollywood professionals, and yet the free version is 
 
 **Best for:** Creators who want next-level quality and are willing to invest time learning.
 
-## 3. iMovie — Best for Apple Users
+## 3. [iMovie](https://www.apple.com/imovie/) — Best for Apple Users
 
 If you're on Mac or iPhone, iMovie is already installed and ready to go. It's simpler than the others but handles the basics well.
 
@@ -78,7 +78,7 @@ If you're on Mac or iPhone, iMovie is already installed and ready to go. It's si
 
 **Best for:** Beginners on Apple devices who want quick, clean edits.
 
-## 4. Canva Video — Best for Graphics-Heavy Content
+## 4. [Canva Video](https://www.canva.com/video-editor/) — Best for Graphics-Heavy Content
 
 If your TikToks rely on text overlays, infographics, or branded templates, Canva's video editor is surprisingly capable.
 
@@ -95,7 +95,7 @@ If your TikToks rely on text overlays, infographics, or branded templates, Canva
 
 **Best for:** Creators making educational, listicle, or text-heavy TikToks.
 
-## 5. InShot — Best for Quick Mobile Edits
+## 5. [InShot](https://inshot.com/) — Best for Quick Mobile Edits
 
 InShot is a mobile-first editor that's popular with TikTok creators who edit entirely on their phones.
 

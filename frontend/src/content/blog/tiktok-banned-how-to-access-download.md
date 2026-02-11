@@ -24,7 +24,7 @@ The situation varies widely by country. Here's what's actually happening based o
 
 These countries have completely blocked TikTok for all users:
 
-- **India** — Banned since June 2020 over national security concerns. The ban remains in effect with no signs of reversal.
+- **India** — [Banned since June 2020](https://www.reuters.com/technology/india-bans-tiktok-dozens-other-chinese-apps-2020-06-29/) over national security concerns. The ban remains in effect with no signs of reversal.
 - **Afghanistan** — Banned since April 2022 by the Taliban government, citing content inconsistent with Islamic law.
 - **Somalia** — Banned since August 2023 along with other social media platforms.
 - **Iran** — Blocked as part of broader internet censorship policies.
@@ -36,7 +36,7 @@ These countries have completely blocked TikTok for all users:
 
 Many Western countries have banned TikTok on government-issued devices only. Regular users can still access the app freely:
 
-- **United States** — TikTok is available to consumers. A divestiture deal was reached in January 2026 to move US operations to a US-based investor group. However, TikTok remains restricted on federal government devices.
+- **United States** — TikTok is available to consumers. A divestiture deal was reached in January 2026 to move US operations to a US-based investor group. However, TikTok remains [restricted on federal government devices](https://www.congress.gov/bill/117th-congress/senate-bill/1143).
 - **United Kingdom** — Banned on government devices since March 2023.
 - **Canada** — Banned on government devices since February 2023. Canada also ordered TikTok to close its Toronto and Vancouver offices in 2025.
 - **Australia** — Banned on federal government devices since April 2023.
@@ -48,7 +48,7 @@ Many Western countries have banned TikTok on government-issued devices only. Reg
 
 A growing trend in 2026 is social media age limits:
 
-- **Australia** — First nation to prohibit social media access for users under 16 (December 2025).
+- **Australia** — First nation to [prohibit social media access for users under 16](https://www.bbc.com/news/articles/c20m07d3npro) (December 2025).
 - **France** — Lower house voted to bar social media for users under 15 (January 2026).
 - **Norway, Spain, Greece** — Considering similar under-15/16 bans.
 
@@ -87,7 +87,7 @@ If TikTok is fully banned in your country, a **VPN (Virtual Private Network)** i
 - **Mobile app quality** — You'll primarily use TikTok on your phone.
 - **No-log policy** — Your browsing data should stay private.
 
-Popular options include NordVPN, Surfshark, and ExpressVPN. Do your own research to find the best fit for your needs and budget.
+Popular options include [NordVPN](https://nordvpn.com/), [Surfshark](https://surfshark.com/), and [ExpressVPN](https://www.expressvpn.com/). Do your own research to find the best fit for your needs and budget.
 
 ## Frequently Asked Questions
 

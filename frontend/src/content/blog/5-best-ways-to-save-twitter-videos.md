@@ -10,7 +10,7 @@ monetization:
   geo_restrictions: false
 ---
 
-Twitter (now X) is full of viral clips, breaking news footage, and hilarious moments you want to keep forever. But the app has no built-in download button.
+Twitter (now [X](https://x.com)) is full of viral clips, breaking news footage, and hilarious moments you want to keep forever. But the app has no built-in download button.
 
 **Skip the hassle — use our free [Twitter/X Video Downloader](/twitter-downloader) to save any tweet's video in seconds.**
 
@@ -40,7 +40,7 @@ Desktop extensions like "Twitter Video Downloader" add a download button to twee
 
 - They often contain **trackers and ads**.
 - They don't work on mobile.
-- Chrome frequently removes them from the Web Store.
+- Chrome frequently [removes them from the Web Store](https://developer.chrome.com/docs/webstore/program-policies/) for policy violations.
 
 **Verdict:** Risky and desktop-only.
 
@@ -72,7 +72,7 @@ No. You can only download videos from public tweets. Private/protected tweets re
 Twitter Spaces that have been recorded by the host can sometimes be downloaded, but it depends on how Twitter serves the audio. Our tool works best with standard video tweets.
 
 **Is downloading Twitter videos legal?**
-Downloading for personal use is generally fine. Don't repost someone else's content as your own or use it commercially without permission.
+Downloading for personal use is generally fine. Don't repost someone else's content as your own or use it commercially without permission. See [X's Terms of Service](https://x.com/en/tos) for their full policy on content usage.
 
 ## The Bottom Line
 
