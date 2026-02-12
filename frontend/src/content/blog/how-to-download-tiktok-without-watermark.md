@@ -22,23 +22,29 @@ In this guide, we'll show you how to download TikTok videos **without the waterm
 - **Offline viewing:** Save your favorite videos to watch when you don't have internet access.
 - **Editing:** Use clips for reaction videos or compilations without the distracting logo bouncing around.
 
-## Step-by-Step Guide
+## How to Remove TikTok Watermark on iPhone
 
-Here is the fastest way to save TikToks cleanly using MediaTools:
+Apple makes downloading files slightly tricky. Here is the exact method for iOS users:
 
-### Step 1: Find the Video
-Open the TikTok app or website and find the video you want to download. It can be any public video.
+1. **Copy Link:** Open TikTok, tap Share → Copy Link.
+2. **Open Safari:** Go to [MediaTools TikTok Downloader](/tiktok-downloader).
+3. **Paste & Download:** Paste the link, hit **Get Video**, then **Download Video**.
+4. **Save to Photos:** Tap the **Downloads icon** (blue arrow) in the Safari address bar. Tap the video, then tap Share → **Save Video**.
 
-### Step 2: Copy the Link
-Tap the **Share** button (the arrow icon) on the bottom right of the screen. In the share menu, tap **Copy Link**. The link will be copied to your clipboard.
+## How to Remove TikTok Watermark on Android
 
-### Step 3: Paste and Download
-1. Go to [MediaTools TikTok Downloader](/tiktok-downloader).
-2. Paste the link into the input box.
-3. Click the **Get Video** button.
-4. Wait a moment for the video to process, then click **Download Video**.
+Android is much simpler:
 
-That's it! The video will be saved to your device's gallery or downloads folder, completely free of any watermarks.
+1. Copy the video link from the TikTok app.
+2. Open Chrome and go to [MediaTools TikTok Downloader](/tiktok-downloader).
+3. Paste the link and tap **Get Video**.
+4. Tap **Download Video**. It will save directly to your Gallery.
+
+## How to Save TikToks on PC/Mac
+
+1. Right-click the TikTok video → Copy Link Address.
+2. Paste it into [MediaTools](/tiktok-downloader) on your desktop browser.
+3. Click Download. The MP4 file will save to your Downloads folder.
 
 ## Frequently Asked Questions
 

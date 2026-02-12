@@ -20,13 +20,21 @@ Here are the 5 best methods ranked from easiest to most effort.
 
 This is the simplest way — no apps, no extensions, just your browser.
 
-1. Open the tweet containing the video.
-2. Tap **Share → Copy Link**.
-3. Go to [MediaTools Twitter Downloader](/twitter-downloader).
-4. Paste the link and click **Get Video**.
-5. Tap **Download** — done.
+### How to Save Twitter Videos on iPhone
+1. Open the Twitter/X app and find the video.
+2. Tap the **Share icon** → **Copy Link**.
+3. Open Safari and go to [MediaTools Twitter Downloader](/twitter-downloader).
+4. Paste the link and tap **Get Video**.
+5. Tap **Download**.
+6. **Crucial Step:** Tap the **AA** or **Downloads icon** in the address bar → **Downloads** → Tap the video → **Share** → **Save Video**.
 
-Works on iPhone, Android, PC, and Mac. The video saves directly to your device in MP4 format.
+### How to Save Twitter Videos on Android
+1. Copy the tweet link.
+2. Open Chrome and visit [MediaTools Twitter Downloader](/twitter-downloader).
+3. Paste the link and tap **Get Video**.
+4. Tap **Download**. The video will automatically appear in your Gallery.
+
+Works on PC and Mac as well. The video saves directly to your device in MP4 format.
 
 ## Method 2: Browser Bookmark Trick
 

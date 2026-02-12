@@ -5,7 +5,7 @@ pubDate: 2026-02-12
 heroImage: "/blog-images/tiktok-thumbnail-download.png"
 keywords: ["download tiktok thumbnail", "save tiktok cover image", "get tiktok video thumbnail hd", "tiktok thumbnail grabber", "extract image from tiktok"]
 monetization:
-  primary_category: "tools"
+  primary_category: "creator-tools"
   affiliate_potential: "low"
   geo_restrictions: false
 ---
