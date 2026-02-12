@@ -5,15 +5,27 @@ import Footer from '../components/Footer.astro';
 
 const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "WebSite",
-    "name": "MediaTools",
-    "url": "https://getmediatools.com",
-    "description": "Free online tools to download videos from TikTok, Twitter, and Facebook. Extract audio to MP3 and grab thumbnails.",
-    "potentialAction": {
-        "@type": "SearchAction",
-        "target": "https://getmediatools.com/?q={search_term_string}",
-        "query-input": "required name=search_term_string"
-    }
+    "@graph": [
+        {
+            "@type": "WebSite",
+            "name": "MediaTools",
+            "url": "https://getmediatools.com",
+            "description": "Free online tools to download videos from TikTok, Twitter, and Facebook. Extract audio to MP3 and grab thumbnails.",
+            "potentialAction": {
+                "@type": "SearchAction",
+                "target": "https://getmediatools.com/?q={search_term_string}",
+                "query-input": "required name=search_term_string"
+            }
+        },
+        {
+            "@type": "Organization",
+            "name": "MediaTools",
+            "url": "https://getmediatools.com",
+            "logo": "https://getmediatools.com/icon-512.png",
+            "description": "Free online tools to download videos, extract audio, and grab thumbnails from social media platforms.",
+            "sameAs": []
+        }
+    ]
 };
 ---
 

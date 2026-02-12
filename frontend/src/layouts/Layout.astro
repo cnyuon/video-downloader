@@ -19,6 +19,39 @@ const {
 const pathname = Astro.url.pathname.endsWith('/') ? Astro.url.pathname : Astro.url.pathname + '/';
 const canonicalUrl = `https://getmediatools.com${pathname}`;
 const fullOgImage = ogImage.startsWith('http') ? ogImage : `https://getmediatools.com${ogImage}`;
+
+// Generate BreadcrumbList schema from URL path
+const pathSegments = pathname.split('/').filter(Boolean);
+const BREADCRUMB_LABELS: Record<string, string> = {
+    'tiktok-downloader': 'TikTok Downloader',
+    'twitter-downloader': 'Twitter/X Downloader',
+    'facebook-downloader': 'Facebook Downloader',
+    'tiktok-sound-downloader': 'TikTok Sound Downloader',
+    'video-to-mp3': 'Video to MP3',
+    'thumbnail-grabber': 'Thumbnail Grabber',
+    'blog': 'Blog',
+};
+
+const breadcrumbItems = [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://getmediatools.com/" }
+];
+
+let breadcrumbPath = '';
+pathSegments.forEach((segment, index) => {
+    breadcrumbPath += `/${segment}`;
+    breadcrumbItems.push({
+        "@type": "ListItem",
+        "position": index + 2,
+        "name": BREADCRUMB_LABELS[segment] || segment.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' '),
+        "item": `https://getmediatools.com${breadcrumbPath}/`
+    });
+});
+
+const breadcrumbSchema = pathSegments.length > 0 ? {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": breadcrumbItems
+} : null;
 ---
 
 <!doctype html>
@@ -36,6 +69,7 @@ const fullOgImage = ogImage.startsWith('http') ? ogImage : `https://getmediatool
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+        <style>@font-face { font-family: 'Inter'; font-display: swap; }</style>
         
         <!-- SEO -->
         <link rel="canonical" href={canonicalUrl} />
@@ -56,6 +90,9 @@ const fullOgImage = ogImage.startsWith('http') ? ogImage : `https://getmediatool
         <!-- JSON-LD Structured Data -->
         {jsonLd && (
             <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+        )}
+        {breadcrumbSchema && (
+            <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
         )}
         
         <!-- Google Analytics -->
