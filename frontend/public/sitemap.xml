@@ -100,4 +100,24 @@
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>
     </url>
+<url>
+        <loc>https://getmediatools.com/blog/how-to-download-reddit-videos-with-audio/</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://getmediatools.com/blog/mp3-juice-free-music-downloaders-safe/</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://getmediatools.com/blog/how-to-download-twitter-gifs-2026/</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://getmediatools.com/blog/anonymous-tiktok-story-viewer/</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+    </url>
 </urlset>
