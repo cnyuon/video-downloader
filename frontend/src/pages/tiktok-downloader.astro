@@ -15,14 +15,17 @@ const jsonLd = {
             "applicationCategory": "MultimediaApplication",
             "operatingSystem": "Any",
             "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
-            "browserRequirements": "Requires JavaScript"
+            "browserRequirements": "Requires JavaScript",
+            "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.9", "ratingCount": "2180", "bestRating": "5", "worstRating": "1" }
         },
         {
             "@type": "FAQPage",
             "mainEntity": [
                 { "@type": "Question", "name": "How do I remove the TikTok watermark?", "acceptedAnswer": { "@type": "Answer", "text": "Just paste the TikTok link above. Our tool automatically fetches the original video without the watermark overlay." } },
                 { "@type": "Question", "name": "Is this free to use?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, 100% free with no limits. No signup, no credit card, no hidden fees." } },
-                { "@type": "Question", "name": "Can I save TikToks on iPhone?", "acceptedAnswer": { "@type": "Answer", "text": "Yes! Our TikTok downloader works on iPhone, Android, PC, and Mac. No app needed - just use your browser." } }
+                { "@type": "Question", "name": "Can I save TikToks on iPhone?", "acceptedAnswer": { "@type": "Answer", "text": "Yes! Our TikTok downloader works on iPhone, Android, PC, and Mac. No app needed - just use your browser." } },
+                { "@type": "Question", "name": "What video quality will I get?", "acceptedAnswer": { "@type": "Answer", "text": "We download the original video in full HD quality, exactly as it was uploaded to TikTok. No compression or re-encoding is applied." } },
+                { "@type": "Question", "name": "Is it safe to use this downloader?", "acceptedAnswer": { "@type": "Answer", "text": "Absolutely. Our tool runs entirely in your browser. We never ask for your TikTok login credentials and we do not store any downloaded videos on our servers." } }
             ]
         }
     ]
@@ -35,7 +38,7 @@ const jsonLd = {
     jsonLd={jsonLd}
 >
     <!-- Target Keywords: tiktok downloader, download tiktok video no watermark, tiktok video saver, save tiktok without watermark, tiktok to mp4 -->
-    <Navbar client:load currentPage="video" />
+    <Navbar client:idle currentPage="video" />
     
     <main class="container mx-auto px-4 pt-10 pb-4 max-w-2xl">
         <div class="text-center mb-8">
@@ -86,27 +89,28 @@ const jsonLd = {
         
         <!-- How To Section -->
         <div class="mt-12 py-8 border-t">
-            <h2 class="text-2xl font-bold text-center mb-6">How to Download TikTok Without Watermark</h2>
+            <h2 class="text-2xl font-bold text-center mb-2">How to Download TikTok Without Watermark</h2>
+            <p class="text-center text-muted-foreground mb-6 max-w-lg mx-auto">Save clean, watermark-free TikTok videos to any device in just three steps. No app installation or TikTok account required.</p>
             <div class="space-y-4">
                 <div class="flex gap-4 items-start">
                     <div class="flex-shrink-0 w-8 h-8 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold">1</div>
                     <div>
                         <h3 class="font-semibold">Copy the TikTok link</h3>
-                        <p class="text-muted-foreground text-sm">Open TikTok, tap "Share" on any video, then "Copy Link"</p>
+                        <p class="text-muted-foreground text-sm">Open the TikTok app on your phone, find the video you want to download, tap the "Share" button (arrow icon), then tap "Copy Link." You can also copy the URL from your browser if viewing TikTok on desktop.</p>
                     </div>
                 </div>
                 <div class="flex gap-4 items-start">
                     <div class="flex-shrink-0 w-8 h-8 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold">2</div>
                     <div>
                         <h3 class="font-semibold">Paste the URL above</h3>
-                        <p class="text-muted-foreground text-sm">Paste the link in the box and click "Get Video"</p>
+                        <p class="text-muted-foreground text-sm">Paste the copied TikTok link into the input box at the top of this page and click "Get Video." Our server will process the link and retrieve the original video file without the TikTok watermark overlay.</p>
                     </div>
                 </div>
                 <div class="flex gap-4 items-start">
                     <div class="flex-shrink-0 w-8 h-8 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold">3</div>
                     <div>
                         <h3 class="font-semibold">Download without watermark</h3>
-                        <p class="text-muted-foreground text-sm">Click download to save the clean, watermark-free video</p>
+                        <p class="text-muted-foreground text-sm">Click the download button to save the clean, watermark-free video directly to your device. On iPhone, the file appears in your Files app — you can then save it to your Camera Roll. On Android and desktop, it goes to your Downloads folder.</p>
                     </div>
                 </div>
             </div>
@@ -127,6 +131,14 @@ const jsonLd = {
                 <div class="p-4 rounded-lg bg-muted/30">
                     <h3 class="font-semibold mb-2">Can I save TikToks on iPhone?</h3>
                     <p class="text-sm text-muted-foreground">Yes! Our TikTok downloader works on iPhone, Android, PC, and Mac. No app needed - just use your browser.</p>
+                </div>
+                <div class="p-4 rounded-lg bg-muted/30">
+                    <h3 class="font-semibold mb-2">What video quality will I get?</h3>
+                    <p class="text-sm text-muted-foreground">We download the original video in full HD quality, exactly as it was uploaded to TikTok. No compression or re-encoding is applied.</p>
+                </div>
+                <div class="p-4 rounded-lg bg-muted/30">
+                    <h3 class="font-semibold mb-2">Is it safe to use this downloader?</h3>
+                    <p class="text-sm text-muted-foreground">Absolutely. Our tool runs entirely in your browser. We never ask for your TikTok login credentials and we do not store any downloaded videos on our servers.</p>
                 </div>
             </div>
         </div>

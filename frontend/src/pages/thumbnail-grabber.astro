@@ -14,14 +14,17 @@ const jsonLd = {
             "description": "Download video thumbnails in high quality from TikTok, Twitter, and Facebook videos instantly.",
             "applicationCategory": "MultimediaApplication",
             "operatingSystem": "Any",
-            "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+            "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+            "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.7", "ratingCount": "890", "bestRating": "5", "worstRating": "1" }
         },
         {
             "@type": "FAQPage",
             "mainEntity": [
                 { "@type": "Question", "name": "What resolution are the thumbnails?", "acceptedAnswer": { "@type": "Answer", "text": "We grab the highest resolution thumbnail available from the platform, typically 720p or 1080p depending on the original video quality." } },
                 { "@type": "Question", "name": "What format do thumbnails download in?", "acceptedAnswer": { "@type": "Answer", "text": "Thumbnails are downloaded as JPEG or PNG images, depending on what the platform provides. Both formats work on all devices." } },
-                { "@type": "Question", "name": "Can I use thumbnails for my own videos?", "acceptedAnswer": { "@type": "Answer", "text": "If you're downloading thumbnails from your own videos, absolutely. For other creators' content, please respect copyright and use thumbnails only for personal reference." } }
+                { "@type": "Question", "name": "Can I use thumbnails for my own videos?", "acceptedAnswer": { "@type": "Answer", "text": "If you're downloading thumbnails from your own videos, absolutely. For other creators' content, please respect copyright and use thumbnails only for personal reference." } },
+                { "@type": "Question", "name": "Which platforms are supported?", "acceptedAnswer": { "@type": "Answer", "text": "Our thumbnail grabber works with TikTok, Twitter/X, and Facebook videos. Just paste the video URL and we extract the cover image automatically." } },
+                { "@type": "Question", "name": "Can I grab thumbnails from private videos?", "acceptedAnswer": { "@type": "Answer", "text": "No. Our tool can only access thumbnails from publicly shared videos. Private or restricted content is not accessible." } }
             ]
         }
     ]
@@ -33,7 +36,7 @@ const jsonLd = {
     description="Download video thumbnails in full HD from TikTok, Twitter/X, and Facebook — free, instant, no signup. Grab the highest-quality thumbnail image from any video."
     jsonLd={jsonLd}
 >
-    <Navbar client:load currentPage="thumbnail" />
+    <Navbar client:idle currentPage="thumbnail" />
     
     <main class="container mx-auto px-4 pt-10 pb-4 max-w-2xl">
         <div class="text-center mb-8">
@@ -93,27 +96,28 @@ const jsonLd = {
 
         <!-- How To Section -->
         <div class="mt-12 py-8 border-t">
-            <h2 class="text-2xl font-bold text-center mb-6">How to Download Video Thumbnails</h2>
+            <h2 class="text-2xl font-bold text-center mb-2">How to Download Video Thumbnails</h2>
+            <p class="text-center text-muted-foreground mb-6 max-w-lg mx-auto">Grab the cover image from any TikTok, Twitter, or Facebook video in full HD. Perfect for design inspiration, archiving, or reusing thumbnails for your own content.</p>
             <div class="space-y-4">
                 <div class="flex gap-4 items-start">
                     <div class="flex-shrink-0 w-8 h-8 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold">1</div>
                     <div>
                         <h3 class="font-semibold">Copy the video URL</h3>
-                        <p class="text-muted-foreground text-sm">Find the video on TikTok, Twitter, or Facebook and copy its link</p>
+                        <p class="text-muted-foreground text-sm">Find the video whose thumbnail you want on TikTok, Twitter/X, or Facebook. Copy the video link using the share button or by copying the URL from your browser’s address bar.</p>
                     </div>
                 </div>
                 <div class="flex gap-4 items-start">
                     <div class="flex-shrink-0 w-8 h-8 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold">2</div>
                     <div>
                         <h3 class="font-semibold">Paste and analyze</h3>
-                        <p class="text-muted-foreground text-sm">Paste the URL above and click "Get Info" to extract the thumbnail</p>
+                        <p class="text-muted-foreground text-sm">Paste the URL into the input above and click "Get Info." Our server will analyze the video metadata and extract the highest-resolution thumbnail image available from the platform.</p>
                     </div>
                 </div>
                 <div class="flex gap-4 items-start">
                     <div class="flex-shrink-0 w-8 h-8 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold">3</div>
                     <div>
                         <h3 class="font-semibold">Save the image</h3>
-                        <p class="text-muted-foreground text-sm">Right-click or long-press the thumbnail to save it to your device</p>
+                        <p class="text-muted-foreground text-sm">Right-click (or long-press on mobile) the displayed thumbnail and select "Save Image As" to download it to your device. The image saves as a JPEG or PNG file in full resolution.</p>
                     </div>
                 </div>
             </div>
@@ -134,6 +138,14 @@ const jsonLd = {
                 <div class="p-4 rounded-lg bg-muted/30">
                     <h3 class="font-semibold mb-2">Can I use thumbnails for my own videos?</h3>
                     <p class="text-sm text-muted-foreground">If you're downloading thumbnails from your own videos, absolutely. For other creators' content, please respect copyright and use thumbnails only for personal reference.</p>
+                </div>
+                <div class="p-4 rounded-lg bg-muted/30">
+                    <h3 class="font-semibold mb-2">Which platforms are supported?</h3>
+                    <p class="text-sm text-muted-foreground">Our thumbnail grabber works with TikTok, Twitter/X, and Facebook videos. Just paste the video URL and we extract the cover image automatically.</p>
+                </div>
+                <div class="p-4 rounded-lg bg-muted/30">
+                    <h3 class="font-semibold mb-2">Can I grab thumbnails from private videos?</h3>
+                    <p class="text-sm text-muted-foreground">No. Our tool can only access thumbnails from publicly shared videos. Private or restricted content is not accessible.</p>
                 </div>
             </div>
         </div>

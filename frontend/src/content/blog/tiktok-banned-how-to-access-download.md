@@ -1,5 +1,5 @@
 ---
-title: "TikTok Restricted? How to Save and Access Your Favorite Videos From Anywhere"
+title: "TikTok Restricted? How to Save Your Videos (2026)"
 description: "Learn how to download and save your favorite TikTok videos before restrictions hit your region. Step-by-step guide for backing up content and accessing TikTok from restricted areas."
 pubDate: 2026-02-11
 heroImage: "/blog-images/tiktok-banned-vpn.png"
@@ -48,7 +48,7 @@ Many Western countries have banned TikTok on government-issued devices only. Reg
 
 A growing trend in 2026 is social media age limits:
 
-- **Australia** — First nation to [prohibit social media access for users under 16](https://www.bbc.com/news/articles/c20m07d3npro) (December 2025).
+- **Australia** — First nation to prohibit social media access for users under 16 (December 2025).
 - **France** — Lower house voted to bar social media for users under 15 (January 2026).
 - **Norway, Spain, Greece** — Considering similar under-15/16 bans.
 

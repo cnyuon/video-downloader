@@ -43,12 +43,12 @@ const jsonLd = {
 ---
 
 <Layout 
-	title={`${post.data.title} | MediaTools Blog`}
+	title={`${post.data.title} | MediaTools`}
 	description={post.data.description}
 	ogImage={post.data.heroImage || undefined}
 	jsonLd={jsonLd}
 >
-	<Navbar client:load currentPage="blog" />
+	<Navbar client:idle currentPage="blog" />
 	
 	<main class="container mx-auto px-4 pt-10 pb-16 max-w-4xl">
         <!-- Back Link -->

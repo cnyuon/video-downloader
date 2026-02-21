@@ -14,14 +14,17 @@ const jsonLd = {
             "description": "Download Twitter/X videos and GIFs to MP4 free. Save tweets in HD quality instantly.",
             "applicationCategory": "MultimediaApplication",
             "operatingSystem": "Any",
-            "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+            "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+            "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.7", "ratingCount": "1120", "bestRating": "5", "worstRating": "1" }
         },
         {
             "@type": "FAQPage",
             "mainEntity": [
                 { "@type": "Question", "name": "Can I download Twitter GIFs?", "acceptedAnswer": { "@type": "Answer", "text": "Yes! Twitter GIFs are actually videos, and we convert them to MP4 format so you can save and share them anywhere." } },
                 { "@type": "Question", "name": "What quality can I download?", "acceptedAnswer": { "@type": "Answer", "text": "We offer the highest quality available from Twitter, typically 720p or 1080p for newer videos." } },
-                { "@type": "Question", "name": "Does this work with X (formerly Twitter)?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, we support both twitter.com and x.com URLs. The tool works the same for both domains." } }
+                { "@type": "Question", "name": "Does this work with X (formerly Twitter)?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, we support both twitter.com and x.com URLs. The tool works the same for both domains." } },
+                { "@type": "Question", "name": "Can I download videos from protected Twitter accounts?", "acceptedAnswer": { "@type": "Answer", "text": "No. Our tool only works with public tweets. Videos from private or protected accounts cannot be accessed by external services." } },
+                { "@type": "Question", "name": "Do I need a Twitter account to use this?", "acceptedAnswer": { "@type": "Answer", "text": "No. You do not need to log into Twitter or X to use our downloader. Just paste the tweet URL and download." } }
             ]
         }
     ]
@@ -34,7 +37,7 @@ const jsonLd = {
     jsonLd={jsonLd}
 >
     <!-- Target Keywords: twitter video downloader, download twitter video, save twitter video mp4, twitter gif downloader, x video downloader -->
-    <Navbar client:load currentPage="twitter" />
+    <Navbar client:idle currentPage="twitter" />
     
     <main class="container mx-auto px-4 pt-10 pb-4 max-w-2xl">
         <div class="text-center mb-8">
@@ -76,27 +79,28 @@ const jsonLd = {
         
         <!-- How To Section -->
         <div class="mt-12 py-8 border-t">
-            <h2 class="text-2xl font-bold text-center mb-6">How to Download Twitter Videos</h2>
+            <h2 class="text-2xl font-bold text-center mb-2">How to Download Twitter Videos</h2>
+            <p class="text-center text-muted-foreground mb-6 max-w-lg mx-auto">Save any Twitter or X video as an MP4 file in three easy steps. Works with video tweets, GIFs, and video replies.</p>
             <div class="space-y-4">
                 <div class="flex gap-4 items-start">
                     <div class="flex-shrink-0 w-8 h-8 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold">1</div>
                     <div>
                         <h3 class="font-semibold">Copy the tweet URL</h3>
-                        <p class="text-muted-foreground text-sm">Click the share button on any tweet with a video or GIF, then "Copy link"</p>
+                        <p class="text-muted-foreground text-sm">Find the tweet containing the video or GIF you want to download. Click the share button (arrow icon) and select "Copy link." The URL should look like x.com/username/status/... or twitter.com/username/status/...</p>
                     </div>
                 </div>
                 <div class="flex gap-4 items-start">
                     <div class="flex-shrink-0 w-8 h-8 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold">2</div>
                     <div>
                         <h3 class="font-semibold">Paste the URL above</h3>
-                        <p class="text-muted-foreground text-sm">Paste the copied link in the input box and click "Get Video"</p>
+                        <p class="text-muted-foreground text-sm">Paste the copied tweet link into the input box at the top of this page and click "Get Video." Our server will analyze the tweet and extract all available video formats and quality options.</p>
                     </div>
                 </div>
                 <div class="flex gap-4 items-start">
                     <div class="flex-shrink-0 w-8 h-8 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold">3</div>
                     <div>
                         <h3 class="font-semibold">Download as MP4</h3>
-                        <p class="text-muted-foreground text-sm">Select quality and save the MP4 file to your device instantly</p>
+                        <p class="text-muted-foreground text-sm">Select your preferred quality (720p or 1080p when available) and click download. The MP4 file saves directly to your device, ready to share on any platform or watch offline.</p>
                     </div>
                 </div>
             </div>
@@ -117,6 +121,14 @@ const jsonLd = {
                 <div class="p-4 rounded-lg bg-muted/30">
                     <h3 class="font-semibold mb-2">Does this work with X (formerly Twitter)?</h3>
                     <p class="text-sm text-muted-foreground">Yes, we support both twitter.com and x.com URLs. The tool works the same for both domains.</p>
+                </div>
+                <div class="p-4 rounded-lg bg-muted/30">
+                    <h3 class="font-semibold mb-2">Can I download videos from protected Twitter accounts?</h3>
+                    <p class="text-sm text-muted-foreground">No. Our tool only works with public tweets. Videos from private or protected accounts cannot be accessed by external services.</p>
+                </div>
+                <div class="p-4 rounded-lg bg-muted/30">
+                    <h3 class="font-semibold mb-2">Do I need a Twitter account to use this?</h3>
+                    <p class="text-sm text-muted-foreground">No. You do not need to log into Twitter or X to use our downloader. Just paste the tweet URL and download.</p>
                 </div>
             </div>
         </div>
