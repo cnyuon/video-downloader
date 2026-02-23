@@ -11,16 +11,27 @@ let cleanPath = currentUrl.pathname;
 if (pathSegments.length > 0 && Object.keys(languages).includes(pathSegments[0])) {
     cleanPath = '/' + pathSegments.slice(1).join('/');
 }
+
+// Enforce trailing slash
+if (!cleanPath.endsWith('/')) {
+    cleanPath += '/';
+}
 ---
 
 <!-- X-Default (Fallback for unidentified languages) -->
 <link rel="alternate" hreflang="x-default" href={`https://getmediatools.com${cleanPath}`} />
 
 <!-- Exact language mappings -->
-{Object.keys(languages).map((code) => (
-    <link 
-        rel="alternate" 
-        hreflang={code} 
-        href={`https://getmediatools.com${code === 'en' ? cleanPath : `/${code}${cleanPath}`}`} 
-    />
-))}
+{Object.keys(languages).map((code) => {
+    // If cleanPath is '/' and code is 'es', we want '/es/'
+    // If cleanPath is '/tiktok-downloader/' and code is 'es', we want '/es/tiktok-downloader/'
+    const finalPath = code === 'en' ? cleanPath : `/${code}${cleanPath === '/' ? '' : cleanPath}`;
+    const cleanFinalPath = finalPath.endsWith('/') ? finalPath : finalPath + '/';
+    return (
+        <link 
+            rel="alternate" 
+            hreflang={code} 
+            href={`https://getmediatools.com${cleanFinalPath}`} 
+        />
+    );
+})}

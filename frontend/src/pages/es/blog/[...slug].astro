@@ -41,7 +41,10 @@ const category = post.data.monetization?.primary_category
     : 'Guide';
 
 const lang = 'es';
-const getHref = (path: string) => `/${lang}${path === '/' ? '' : path}`;
+const getHref = (path: string) => {
+    let href = `/${lang}${path === '/' ? '' : path}`;
+    return href.endsWith('/') ? href : href + '/';
+};
 
 const jsonLd = {
     "@context": "https://schema.org",
