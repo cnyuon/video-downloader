@@ -1,0 +1,171 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar';
+import Footer from '../components/Footer.astro';
+import AudioExtractor from '../components/AudioExtractor';
+import { ui } from '../i18n/ui';
+
+const lang = 'en';
+
+const jsonLd = {
+    "@context": "https://schema.org",
+    "@graph": [
+        {
+            "@type": "WebApplication",
+            "name": "TikTok Sound Downloader",
+            "url": "https://getmediatools.com/tiktok-sound-downloader",
+            "description": ui.en['ts.meta.desc'],
+            "applicationCategory": "MultimediaApplication",
+            "operatingSystem": "Any",
+            "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+            "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.8", "ratingCount": "960", "bestRating": "5", "worstRating": "1" }
+        },
+        {
+            "@type": "FAQPage",
+            "mainEntity": [
+                { "@type": "Question", "name": ui.en['ts.faq.q1'], "acceptedAnswer": { "@type": "Answer", "text": ui.en['ts.faq.a1'] } },
+                { "@type": "Question", "name": ui.en['ts.faq.q2'], "acceptedAnswer": { "@type": "Answer", "text": ui.en['ts.faq.a2'] } },
+                { "@type": "Question", "name": ui.en['ts.faq.q3'], "acceptedAnswer": { "@type": "Answer", "text": ui.en['ts.faq.a3'] } },
+                { "@type": "Question", "name": ui.en['ts.faq.q4'], "acceptedAnswer": { "@type": "Answer", "text": ui.en['ts.faq.a4'] } },
+                { "@type": "Question", "name": ui.en['ts.faq.q5'], "acceptedAnswer": { "@type": "Answer", "text": ui.en['ts.faq.a5'] } }
+            ]
+        }
+    ]
+};
+---
+
+<Layout 
+    title={ui.en['ts.meta.title']}
+    description={ui.en['ts.meta.desc']}
+    jsonLd={jsonLd}
+>
+    <!-- Target Keywords: tiktok sound downloader, download tiktok audio, save tiktok mp3, tiktok to mp3 converter, extract tiktok sound -->
+    <Navbar client:idle currentPage="sound" lang={lang as keyof typeof ui} />
+    
+    <main class="container mx-auto px-4 pt-10 pb-4 max-w-2xl">
+        <div class="text-center mb-8">
+            <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-black text-white text-sm font-medium mb-4">
+                <svg class="w-4 h-4 text-pink-500" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/>
+                </svg>
+                {ui.en['ts.hero.badge']}
+            </div>
+            <h1 class="text-4xl font-bold tracking-tight mb-3">
+                {ui.en['ts.hero.title']}
+            </h1>
+            <p class="text-lg text-muted-foreground max-w-xl mx-auto" set:html={ui.en['ts.hero.desc']} />
+        </div>
+
+        <AudioExtractor 
+            client:load 
+            placeholderUrl={ui.en['ts.input.placeholder']}
+            buttonGetInfo={ui.en['btn.get_info']}
+            buttonExtracting={ui.en['btn.extracting']}
+            buttonDownloaded={ui.en['btn.downloaded']}
+            buttonExtractMp3={ui.en['btn.extract_mp3']}
+            buttonExtractOriginal={ui.en['btn.extract_original']}
+            textOriginalAudio={ui.en['text.original_audio']}
+            textConvertedMp3={ui.en['text.converted_mp3']}
+        />
+        
+        <!-- Features Section -->
+        <div class="mt-12 grid gap-4 md:grid-cols-3">
+            <div class="text-center p-4 rounded-lg bg-muted/30">
+                <div class="text-2xl mb-2">🎵</div>
+                <h3 class="font-semibold mb-1">{ui.en['ts.features.original.title']}</h3>
+                <p class="text-sm text-muted-foreground">{ui.en['ts.features.original.desc']}</p>
+            </div>
+            <div class="text-center p-4 rounded-lg bg-muted/30">
+                <div class="text-2xl mb-2">⚡</div>
+                <h3 class="font-semibold mb-1">{ui.en['ts.features.fast.title']}</h3>
+                <p class="text-sm text-muted-foreground">{ui.en['ts.features.fast.desc']}</p>
+            </div>
+            <div class="text-center p-4 rounded-lg bg-muted/30">
+                <div class="text-2xl mb-2">🆓</div>
+                <h3 class="font-semibold mb-1">{ui.en['ts.features.free.title']}</h3>
+                <p class="text-sm text-muted-foreground">{ui.en['ts.features.free.desc']}</p>
+            </div>
+        </div>
+        
+        <!-- How To Section -->
+        <div class="mt-12 py-8 border-t">
+            <h2 class="text-2xl font-bold text-center mb-2">{ui.en['ts.howto.title']}</h2>
+            <p class="text-center text-muted-foreground mb-6 max-w-lg mx-auto">{ui.en['ts.howto.desc']}</p>
+            <div class="space-y-4">
+                <div class="flex gap-4 items-start">
+                    <div class="flex-shrink-0 w-8 h-8 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold">1</div>
+                    <div>
+                        <h3 class="font-semibold">{ui.en['ts.howto.step1.title']}</h3>
+                        <p class="text-muted-foreground text-sm">{ui.en['ts.howto.step1.desc']}</p>
+                    </div>
+                </div>
+                <div class="flex gap-4 items-start">
+                    <div class="flex-shrink-0 w-8 h-8 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold">2</div>
+                    <div>
+                        <h3 class="font-semibold">{ui.en['ts.howto.step2.title']}</h3>
+                        <p class="text-muted-foreground text-sm">{ui.en['ts.howto.step2.desc']}</p>
+                    </div>
+                </div>
+                <div class="flex gap-4 items-start">
+                    <div class="flex-shrink-0 w-8 h-8 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold">3</div>
+                    <div>
+                        <h3 class="font-semibold">{ui.en['ts.howto.step3.title']}</h3>
+                        <p class="text-muted-foreground text-sm">{ui.en['ts.howto.step3.desc']}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- FAQ Section -->
+        <div class="mt-12 py-8 border-t">
+            <h2 class="text-2xl font-bold text-center mb-6">{ui.en['ts.faq.title']}</h2>
+            <div class="space-y-4">
+                <div class="p-4 rounded-lg bg-muted/30">
+                    <h3 class="font-semibold mb-2">{ui.en['ts.faq.q1']}</h3>
+                    <p class="text-sm text-muted-foreground">{ui.en['ts.faq.a1']}</p>
+                </div>
+                <div class="p-4 rounded-lg bg-muted/30">
+                    <h3 class="font-semibold mb-2">{ui.en['ts.faq.q2']}</h3>
+                    <p class="text-sm text-muted-foreground">{ui.en['ts.faq.a2']}</p>
+                </div>
+                <div class="p-4 rounded-lg bg-muted/30">
+                    <h3 class="font-semibold mb-2">{ui.en['ts.faq.q3']}</h3>
+                    <p class="text-sm text-muted-foreground">{ui.en['ts.faq.a3']}</p>
+                </div>
+                <div class="p-4 rounded-lg bg-muted/30">
+                    <h3 class="font-semibold mb-2">{ui.en['ts.faq.q4']}</h3>
+                    <p class="text-sm text-muted-foreground">{ui.en['ts.faq.a4']}</p>
+                </div>
+                <div class="p-4 rounded-lg bg-muted/30">
+                    <h3 class="font-semibold mb-2">{ui.en['ts.faq.q5']}</h3>
+                    <p class="text-sm text-muted-foreground">{ui.en['ts.faq.a5']}</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Related Guides Section -->
+        <div class="mt-12 py-8 border-t">
+            <h2 class="text-2xl font-bold text-center mb-6">{ui.en['ts.guides.title']}</h2>
+            <div class="grid gap-4 md:grid-cols-2">
+                <a href={lang === 'en' ? '/blog/how-to-download-tiktok-without-watermark' : `/${lang}/blog/how-to-download-tiktok-without-watermark`} class="group p-4 rounded-xl border bg-card hover:border-primary/50 hover:shadow-md transition-all">
+                    <h3 class="font-semibold mb-1 group-hover:text-primary transition-colors">{ui.en['ts.guides.1.title']}</h3>
+                    <p class="text-sm text-muted-foreground">{ui.en['ts.guides.1.desc']}</p>
+                </a>
+                <a href={lang === 'en' ? '/blog/best-free-video-editors-tiktok' : `/${lang}/blog/best-free-video-editors-tiktok`} class="group p-4 rounded-xl border bg-card hover:border-primary/50 hover:shadow-md transition-all">
+                    <h3 class="font-semibold mb-1 group-hover:text-primary transition-colors">{ui.en['ts.guides.2.title']}</h3>
+                    <p class="text-sm text-muted-foreground">{ui.en['ts.guides.2.desc']}</p>
+                </a>
+                <a href={lang === 'en' ? '/tiktok-downloader' : `/${lang}/tiktok-downloader`} class="group p-4 rounded-xl border bg-card hover:border-primary/50 hover:shadow-md transition-all">
+                    <h3 class="font-semibold mb-1 group-hover:text-primary transition-colors">{ui.en['ts.guides.3.title']}</h3>
+                    <p class="text-sm text-muted-foreground">{ui.en['ts.guides.3.desc']}</p>
+                </a>
+                <a href={lang === 'en' ? '/video-to-mp3' : `/${lang}/video-to-mp3`} class="group p-4 rounded-xl border bg-card hover:border-primary/50 hover:shadow-md transition-all">
+                    <h3 class="font-semibold mb-1 group-hover:text-primary transition-colors">{ui.en['ts.guides.4.title']}</h3>
+                    <p class="text-sm text-muted-foreground">{ui.en['ts.guides.4.desc']}</p>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <Footer />
+</Layout>
