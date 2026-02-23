@@ -4,6 +4,7 @@ import Layout from '../../layouts/Layout.astro';
 import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer.astro';
 import { getLangFromUrl, useTranslations } from '../../i18n/utils';
+import { Image } from 'astro:assets';
 
 export async function getStaticPaths() {
   return [
@@ -80,13 +81,14 @@ const t = useTranslations(lang);
                 <article class="group bg-card rounded-2xl border shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 h-full flex flex-col overflow-hidden">
                     <a href={getHref(`/blog/${post.slug}`)} class="block w-full aspect-square overflow-hidden bg-muted">
                         {post.data.heroImage ? (
-                            <img 
-                                src={post.data.heroImage} 
+                            <Image 
+                                src={post.data.heroImage as any} 
                                 alt={post.data.title} 
                                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                                 loading="lazy"
-                                width="400"
-                                height="400"
+                                width={800}
+                                height={800}
+                                format="webp"
                             />
                         ) : (
                             <div class="w-full h-full flex items-center justify-center bg-gradient-to-br from-gray-100 to-gray-200 dark:from-gray-800 dark:to-gray-900">

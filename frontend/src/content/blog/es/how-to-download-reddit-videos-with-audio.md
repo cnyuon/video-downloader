@@ -2,7 +2,7 @@
 title: "Cómo descargar videos de Reddit (con audio) en 2026"
 description: "¿Experimenta el error visual de videos sin sonido al compartir desde Reddit? Aprende la mejor manera gratuita de descargar y guardar aquellos videos con audio íntegro a su teléfono o PC."
 pubDate: 2026-02-21
-heroImage: "/blog-images/reddit_video_downloader_hero.png"
+heroImage: "../../../assets/blog-images/reddit_video_downloader_hero.png"
 tags: ["Reddit", "Guias", "Soluciones"]
 ---
 

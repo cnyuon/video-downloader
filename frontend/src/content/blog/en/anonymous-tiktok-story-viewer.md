@@ -2,7 +2,7 @@
 title: "Can You View TikTok Stories Anonymously? (How It Works)"
 description: "Wondering if someone can see that you viewed their TikTok profile or Story? Here is a complete guide to TikTok's view history and how to watch anonymously."
 pubDate: 2026-02-21
-heroImage: "/blog-images/tiktok_anonymous_viewer_hero.png"
+heroImage: "../../../assets/blog-images/tiktok_anonymous_viewer_hero.png"
 tags: ["TikTok", "Guides", "Privacy"]
 ---
 

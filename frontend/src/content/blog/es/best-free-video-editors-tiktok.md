@@ -2,7 +2,7 @@
 title: "Los mejores editores de video gratuitos para TikTok (2026)"
 description: "Descubra los mejores editores de video gratuitos para crear contenido viral en TikTok sin marcas de agua adheridas. Compare CapCut, DaVinci Resolve, iMovie y más alternativas."
 pubDate: 2026-02-11
-heroImage: "/blog-images/best-video-editors.png"
+heroImage: "../../../assets/blog-images/best-video-editors.png"
 keywords: ["el mejor editor de video gratis para principiantes de tiktok sin marca de agua", "editor de video tiktok gratis sin marca de agua 2026", "alternativas a capcut gratis sin marca de agua", "como editar videos de tiktok gratis en iphone", "la mejor aplicacion de edicion de video para tiktok android gratis"]
 monetization:
   primary_category: "software"

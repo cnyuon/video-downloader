@@ -2,7 +2,7 @@
 title: "How to Download GIFs from Twitter (X) in 2026"
 description: "Learn how to easily save GIFs from Twitter (X) to your iPhone, Android, or PC in seconds. Free, easy, and requires no app installation."
 pubDate: 2026-02-21
-heroImage: "/blog-images/twitter_gif_downloader_hero.png"
+heroImage: "../../../assets/blog-images/twitter_gif_downloader_hero.png"
 tags: ["Twitter", "Guides", "Social Media"]
 ---
 

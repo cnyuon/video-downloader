@@ -2,7 +2,7 @@
 title: "¿Puedes ver historias de TikTok de forma anónima? (Cómo funciona)"
 description: "¿Te preguntas si alguien puede ver que viste su perfil o historia de TikTok? Aquí tienes una guía completa del historial de vistas de TikTok y cómo mirar de forma anónima."
 pubDate: 2026-02-21
-heroImage: "/blog-images/tiktok_anonymous_viewer_hero.png"
+heroImage: "../../../assets/blog-images/tiktok_anonymous_viewer_hero.png"
 tags: ["TikTok", "Guías", "Privacidad"]
 ---
 

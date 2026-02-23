@@ -2,7 +2,7 @@
 title: "What is MP3 Juice? Are Free Music Downloaders Safe in 2026?"
 description: "A complete guide to MP3 juice, the history of free music downloading, and the safest ways to extract audio from videos without malware."
 pubDate: 2026-02-21
-heroImage: "/blog-images/mp3_juice_downloader_hero.png"
+heroImage: "../../../assets/blog-images/mp3_juice_downloader_hero.png"
 tags: ["Audio", "Guides", "Safety"]
 ---
 

@@ -2,7 +2,7 @@
 title: "Cómo descargar miniaturas de TikTok en HD (Gratis)"
 description: "Aprenda de cerca a preservar y capturar portadas (miniaturas) en extrema y alta pureza originada libres en TIKTOK. Sublime herramienta especial y concebida con mira en re subidas puros y afiladas estrategias visual."
 pubDate: 2026-02-12
-heroImage: "/blog-images/tiktok-thumbnail-download.png"
+heroImage: "../../../assets/blog-images/tiktok-thumbnail-download.png"
 keywords: ["descargar miniatura de videos tiktok", "guardar portada de videos libre tiktok", "obtener imagen hd de de cover tiktok video puros ", "extractor puros originarios limpios de miniatura tiktok", "sacar atrapar destilar puro y libre extraccion imagen inicio tiktok portada"]
 monetization:
   primary_category: "creator-tools"

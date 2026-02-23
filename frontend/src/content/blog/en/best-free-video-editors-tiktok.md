@@ -2,7 +2,7 @@
 title: "Best Free Video Editors for TikTok (2026)"
 description: "Discover the top free video editors for creating viral TikTok content without watermarks. Compare CapCut, DaVinci Resolve, iMovie, and more — find the perfect fit for beginners and pros."
 pubDate: 2026-02-11
-heroImage: "/blog-images/best-video-editors.png"
+heroImage: "../../../assets/blog-images/best-video-editors.png"
 keywords: ["best free video editor for tiktok beginners no watermark", "free tiktok video editor without watermark 2026", "capcut alternatives free no watermark", "how to edit tiktok videos for free on iphone", "best video editing app for tiktok android free"]
 monetization:
   primary_category: "software"

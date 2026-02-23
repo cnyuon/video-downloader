@@ -2,7 +2,7 @@
 title: "Cómo descargar videos de TikTok sin marca de agua (Guía 2026)"
 description: "Aprende la manera más fácil de eliminar las marcas de agua de TikTok y guardar videos en HD gratis. No se requiere instalar aplicaciones dudosas."
 pubDate: 2026-02-09
-heroImage: "/blog-images/tiktokwowatermark.png"
+heroImage: "../../../assets/blog-images/tiktokwowatermark.png"
 keywords: ["como descargar video de tiktok sin marca de agua gratis", "guardar video de tiktok sin marca de agua iphone", "eliminar marca de agua de tiktok online y gratis sin app", "tiktok a mp4 sin marca de agua en hd"]
 monetization:
   primary_category: "none"

@@ -2,7 +2,7 @@
 title: "Cómo descargar Facebook Reels en tu teléfono (Guía 2026)"
 description: "Guarde Reels y videos de Facebook en su iPhone o Android gratis. No necesita aplicaciones: descargue contenido de Facebook en HD con solo un navegador."
 pubDate: 2026-02-12
-heroImage: "/blog-images/facebook-reels-download.png"
+heroImage: "../../../assets/blog-images/facebook-reels-download.png"
 keywords: ["descargar facebook reels", "guardar video de facebook en el telefono", "descargador de facebook reel gratis", "como descargar facebook reels en iphone", "guardar videos de facebook android", "guardar facebook reels en la galeria"]
 monetization:
   primary_category: "none"

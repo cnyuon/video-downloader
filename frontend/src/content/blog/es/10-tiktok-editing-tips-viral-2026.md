@@ -2,7 +2,7 @@
 title: "10 Consejos de edición de video de TikTok para volverse viral en 2026"
 description: "Aprenda cómo editan sus TikToks los mejores creadores. Descubra el mejor ritmo, las transiciones y los ganchos para aumentar el tiempo de visualización y llegar a Para Ti."
 pubDate: 2026-02-12
-heroImage: "/blog-images/tiktok-editing-tips.png"
+heroImage: "../../../assets/blog-images/tiktok-editing-tips.png"
 keywords: ["consejos de edicion de tiktok 2026", "como editar tiktoks virales", "tutorial de transiciones de tiktok", "mejor hora para publicar tiktok 2026", "aumentar tiempo de visualizacion en tiktok"]
 monetization:
   primary_category: "creator-tools"

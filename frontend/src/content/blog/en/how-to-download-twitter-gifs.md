@@ -2,7 +2,7 @@
 title: "How to Download Twitter GIFs as MP4 or GIF (2026)"
 description: "Twitter doesn't let you save GIFs directly. Learn how to download GIFs from X/Twitter to your phone or computer in seconds."
 pubDate: 2026-02-12
-heroImage: "/blog-images/twitter-gif-download.png"
+heroImage: "../../../assets/blog-images/twitter-gif-download.png"
 keywords: ["download twitter gif", "save gif from twitter", "twitter to gif converter", "save twitter gif iphone", "download x gif"]
 monetization:
   primary_category: "none"
