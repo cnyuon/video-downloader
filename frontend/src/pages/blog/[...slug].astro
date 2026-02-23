@@ -54,7 +54,7 @@ const category = post.data.monetization?.primary_category
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
-const getHref = (path: string) => `/${lang}${path === '/' ? '' : path}`;
+const getHref = (path: string) => lang === 'en' ? path : `/${lang}${path === '/' ? '' : path}`;
 
 const jsonLd = {
     "@context": "https://schema.org",

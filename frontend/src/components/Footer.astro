@@ -9,8 +9,8 @@ import type { ui } from '../i18n/ui';
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 
-// Always prefix URLs with the language code
-const getHref = (path: string) => `/${lang}${path === '/' ? '' : path}`;
+// Always prefix URLs with the language code except 'en'
+const getHref = (path: string) => lang === 'en' ? path : `/${lang}${path === '/' ? '' : path}`;
 ---
 
 <footer class="border-t py-12 mt-8">

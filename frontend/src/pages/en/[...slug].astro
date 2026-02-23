@@ -1,0 +1,46 @@
+---
+import { getCollection } from 'astro:content';
+
+export async function getStaticPaths() {
+  const allPosts = await getCollection('blog');
+  const enPosts = allPosts.filter(post => post.slug.startsWith('en/'));
+  
+  const pages = [
+    { slug: undefined, redirect: '/' },
+    { slug: 'twitter-downloader', redirect: '/twitter-downloader' },
+    { slug: 'tiktok-sound-downloader', redirect: '/tiktok-sound-downloader' },
+    { slug: 'tiktok-downloader', redirect: '/tiktok-downloader' },
+    { slug: 'facebook-downloader', redirect: '/facebook-downloader' },
+    { slug: 'thumbnail-grabber', redirect: '/thumbnail-grabber' },
+    { slug: 'video-to-mp3', redirect: '/video-to-mp3' },
+    { slug: 'blog', redirect: '/blog' },
+  ];
+
+  enPosts.forEach(post => {
+    const trueSlug = post.slug.replace('en/', '');
+    pages.push({ slug: `blog/${trueSlug}`, redirect: `/blog/${trueSlug}` });
+  });
+
+  return pages.map(({ slug, redirect }) => ({
+    params: { slug },
+    props: { redirect },
+  }));
+}
+
+const { redirect } = Astro.props;
+---
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="refresh" content={`0;url=${redirect}`} />
+    <link rel="canonical" href={`https://getmediatools.com${redirect}`} />
+    <title>Redirecting...</title>
+  </head>
+  <body>
+    <p>Redirecting to <a href={redirect}>https://getmediatools.com{redirect}</a>...</p>
+    <script define:vars={{ redirect }}>
+        window.location.replace(redirect);
+    </script>
+  </body>
+</html>

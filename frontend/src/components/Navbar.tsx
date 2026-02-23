@@ -24,7 +24,9 @@ export default function Navbar({ currentPage, lang }: NavbarProps) {
     const t = useTranslations(lang);
 
     // Always prefix hrefs with /lang so the router works consistently
-    const getHref = (path: string) => `/${lang}${path === '/' ? '' : path}`;
+    const getHref = (path: string) => {
+        return lang === 'en' ? path : `/${lang}${path === '/' ? '' : path}`;
+    };
 
     const navItems: NavItem[] = [
         { id: 'home', nameKey: 'nav.home', href: '/' },
