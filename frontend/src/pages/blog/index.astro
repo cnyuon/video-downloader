@@ -6,13 +6,6 @@ import Footer from '../../components/Footer.astro';
 import { getLangFromUrl, useTranslations } from '../../i18n/utils';
 import { Image } from 'astro:assets';
 
-export async function getStaticPaths() {
-  return [
-    { params: { lang: 'en' } },
-    { params: { lang: 'es' } },
-  ];
-}
-
 const lang = getLangFromUrl(Astro.url);
 const allBlogPosts = await getCollection('blog');
 
@@ -23,9 +16,8 @@ const sortedBaseline = baselinePosts.sort((a, b) => b.data.pubDate.valueOf() - a
 // Map to localized versions if they exist
 const localizedPosts = sortedBaseline.map(enPost => {
     const trueSlug = enPost.slug.replace('en/', '');
-    const nativePost = allBlogPosts.find(p => p.slug === `${lang}/${trueSlug}`);
     return {
-        ...(nativePost || enPost),
+        ...enPost,
         slug: trueSlug
     };
 });

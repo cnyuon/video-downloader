@@ -8,35 +8,24 @@ import { Image } from 'astro:assets';
 
 export async function getStaticPaths() {
   const allPosts = await getCollection('blog');
-  const langs = ['en', 'es'];
-
-  return langs.flatMap((lang) => {
-    // Get all 'en' posts as the baseline
-    const enPosts = allPosts.filter(post => post.slug.startsWith('en/'));
+  
+  // Get all 'en' posts as the baseline
+  const enPosts = allPosts.filter(post => post.slug.startsWith('en/'));
+  
+  return enPosts.map((enPost) => {
+    // True slug is everything after 'en/'
+    const trueSlug = enPost.slug.replace('en/', '');
     
-    return enPosts.map((enPost) => {
-      // True slug is everything after 'en/'
-      const trueSlug = enPost.slug.replace('en/', '');
-      
-      // Check if a native translation exists for this language
-      const nativePost = allPosts.find(p => p.slug === `${lang}/${trueSlug}`);
-      
-      // Serve the native post if it exists, otherwise fallback to English post
-      const postToRender = nativePost || enPost;
-      
-      return {
-        params: { lang, slug: trueSlug },
-        props: {
-            post: postToRender,
-            isTranslated: !!nativePost,
-            originalSlug: trueSlug
-        },
-      };
-    });
+    return {
+      params: { slug: trueSlug },
+      props: {
+          post: enPost,
+          originalSlug: trueSlug
+      },
+    };
   });
 }
-
-const { post, isTranslated, originalSlug } = Astro.props;
+const { post, originalSlug } = Astro.props;
 const { Content } = await post.render();
 
 // Category mapping helper
