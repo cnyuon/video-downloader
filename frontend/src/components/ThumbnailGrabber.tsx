@@ -23,7 +23,19 @@ interface VideoInfo {
     platform: string;
 }
 
-export default function ThumbnailGrabber() {
+interface ThumbnailGrabberProps {
+    placeholderUrl?: string;
+    buttonGetThumbnail?: string;
+    buttonDownloaded?: string;
+    buttonDownloadThumbnail?: string;
+}
+
+export default function ThumbnailGrabber({
+    placeholderUrl = 'Paste video URL to get thumbnail...',
+    buttonGetThumbnail = 'Get Thumbnail',
+    buttonDownloaded = 'Downloaded!',
+    buttonDownloadThumbnail = 'Download Thumbnail'
+}: ThumbnailGrabberProps) {
     const [url, setUrl] = useState('');
     const [loading, setLoading] = useState(false);
     const [videoInfo, setVideoInfo] = useState<VideoInfo | null>(null);
@@ -103,7 +115,7 @@ export default function ThumbnailGrabber() {
                 <div className="flex gap-2">
                     <Input
                         type="url"
-                        placeholder="Paste video URL to get thumbnail..."
+                        placeholder={placeholderUrl}
                         value={url}
                         onChange={(e) => setUrl(e.target.value)}
                         onKeyDown={handleKeyDown}
@@ -116,7 +128,7 @@ export default function ThumbnailGrabber() {
                         {loading ? (
                             <Loader2 className="h-4 w-4 animate-spin" />
                         ) : (
-                            'Get Thumbnail'
+                            buttonGetThumbnail
                         )}
                     </Button>
                 </div>
@@ -168,12 +180,12 @@ export default function ThumbnailGrabber() {
                             {success ? (
                                 <>
                                     <CheckCircle2 className="mr-2 h-5 w-5" />
-                                    Downloaded!
+                                    {buttonDownloaded}
                                 </>
                             ) : (
                                 <>
                                     <Download className="mr-2 h-5 w-5" />
-                                    Download Thumbnail
+                                    {buttonDownloadThumbnail}
                                 </>
                             )}
                         </Button>

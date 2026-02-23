@@ -1,11 +1,33 @@
 ---
 import { getCollection } from 'astro:content';
-import Layout from '../layouts/Layout.astro';
-import Navbar from '../components/Navbar';
-import Footer from '../components/Footer.astro';
+import Layout from '../../../layouts/Layout.astro';
+import Navbar from '../../../components/Navbar';
+import Footer from '../../../components/Footer.astro';
+import { getLangFromUrl, useTranslations } from '../../../i18n/utils';
 
+export async function getStaticPaths() {
+  return [
+    { params: { lang: 'en' } },
+    { params: { lang: 'es' } },
+  ];
+}
+
+const lang = getLangFromUrl(Astro.url);
 const allBlogPosts = await getCollection('blog');
-const sortedPosts = allBlogPosts.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+
+// Get baseline posts and sort
+const baselinePosts = allBlogPosts.filter(post => post.slug.startsWith('en/'));
+const sortedBaseline = baselinePosts.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+
+// Map to localized versions if they exist
+const localizedPosts = sortedBaseline.map(enPost => {
+    const trueSlug = enPost.slug.replace('en/', '');
+    const nativePost = allBlogPosts.find(p => p.slug === `${lang}/${trueSlug}`);
+    return {
+        ...(nativePost || enPost),
+        slug: trueSlug
+    };
+});
 
 // Category helper
 const CATEGORY_LABELS: Record<string, string> = {
@@ -20,37 +42,40 @@ const CATEGORY_LABELS: Record<string, string> = {
 function getCategoryLabel(slug: string | undefined): string {
     return slug && CATEGORY_LABELS[slug] ? CATEGORY_LABELS[slug] : 'Guide';
 }
+
+const getHref = (path: string) => `/${lang}${path === '/' ? '' : path}`;
+const t = useTranslations(lang);
 ---
 
 <Layout 
-    title="MediaTools Blog — Video Download Guides, Tips & Creator Tools"
-    description="Expert guides on downloading TikTok videos without watermark, saving Twitter clips, extracting audio, and editing content for social media. Free tips for creators."
+    title={`${t('blog.title')} — Video Download Guides, Tips & Creator Tools`}
+    description={t('blog.desc')}
 >
     <!-- Target Keywords: video downloading tips, tiktok download guide, remove watermarks, free online tools blog -->
-    <Navbar client:idle currentPage="blog" />
+    <Navbar client:idle currentPage="blog" lang={lang as any} />
     
     <main class="container mx-auto px-4 pt-10 pb-16 max-w-6xl">
         <div class="text-center mb-16">
             <h1 class="text-4xl md:text-5xl font-bold tracking-tight mb-6">
-                MediaTools Blog
+                {t('blog.title')}
             </h1>
             <p class="text-lg text-muted-foreground max-w-2xl mx-auto">
-                Discover tips and tricks for content creation, video downloading, and social media growth.
+                {t('blog.desc')}
             </p>
         </div>
         
         <!-- Category Filter (Visual only for now) -->
         <div class="flex flex-wrap justify-center gap-2 mb-12">
-            <button class="px-4 py-2 rounded-full bg-primary text-primary-foreground text-sm font-medium">All Posts</button>
-            <button class="px-4 py-2 rounded-full bg-muted hover:bg-muted/80 text-sm font-medium transition-colors">TikTok Guides</button>
-            <button class="px-4 py-2 rounded-full bg-muted hover:bg-muted/80 text-sm font-medium transition-colors">Creator Tools</button>
-            <button class="px-4 py-2 rounded-full bg-muted hover:bg-muted/80 text-sm font-medium transition-colors">Video Editing</button>
+            <button class="px-4 py-2 rounded-full bg-primary text-primary-foreground text-sm font-medium">{t('blog.filter.all')}</button>
+            <button class="px-4 py-2 rounded-full bg-muted hover:bg-muted/80 text-sm font-medium transition-colors">{t('blog.filter.tiktok')}</button>
+            <button class="px-4 py-2 rounded-full bg-muted hover:bg-muted/80 text-sm font-medium transition-colors">{t('blog.filter.creator')}</button>
+            <button class="px-4 py-2 rounded-full bg-muted hover:bg-muted/80 text-sm font-medium transition-colors">{t('blog.filter.editing')}</button>
         </div>
 
         <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-            {sortedPosts.map((post) => (
+            {localizedPosts.map((post) => (
                 <article class="group bg-card rounded-2xl border shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 h-full flex flex-col overflow-hidden">
-                    <a href={`/blog/${post.slug}`} class="block w-full aspect-square overflow-hidden bg-muted">
+                    <a href={getHref(`/blog/${post.slug}`)} class="block w-full aspect-square overflow-hidden bg-muted">
                         {post.data.heroImage ? (
                             <img 
                                 src={post.data.heroImage} 
@@ -74,7 +99,7 @@ function getCategoryLabel(slug: string | undefined): string {
                         </div>
                         
                         <h2 class="text-xl font-bold mb-3 line-clamp-2 group-hover:text-primary transition-colors">
-                            <a href={`/blog/${post.slug}`}>
+                            <a href={getHref(`/blog/${post.slug}`)}>
                                 {post.data.title}
                             </a>
                         </h2>
@@ -83,8 +108,8 @@ function getCategoryLabel(slug: string | undefined): string {
                             {post.data.description}
                         </p>
                         
-                        <a href={`/blog/${post.slug}`} class="inline-flex items-center text-primary font-semibold text-sm group/link">
-                            Read Article
+                        <a href={getHref(`/blog/${post.slug}`)} class="inline-flex items-center text-primary font-semibold text-sm group/link">
+                            {t('btn.read_article')}
                             <svg class="w-4 h-4 ml-1 transform group-hover/link:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
                             </svg>

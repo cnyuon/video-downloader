@@ -25,7 +25,27 @@ interface VideoInfo {
     uploader: string | null;
 }
 
-export default function AudioExtractor() {
+interface AudioExtractorProps {
+    placeholderUrl?: string;
+    buttonGetInfo?: string;
+    buttonExtracting?: string;
+    buttonDownloaded?: string;
+    buttonExtractMp3?: string;
+    buttonExtractOriginal?: string;
+    textOriginalAudio?: string;
+    textConvertedMp3?: string;
+}
+
+export default function AudioExtractor({
+    placeholderUrl = 'Paste video URL to extract audio...',
+    buttonGetInfo = 'Get Info',
+    buttonExtracting = 'Extracting Audio...',
+    buttonDownloaded = 'Downloaded!',
+    buttonExtractMp3 = 'Extract MP3',
+    buttonExtractOriginal = 'Extract Original Audio',
+    textOriginalAudio = 'Original audio stream (M4A, no re-encoding)',
+    textConvertedMp3 = 'Converted to MP3 format'
+}: AudioExtractorProps) {
     const [url, setUrl] = useState('');
     const [loading, setLoading] = useState(false);
     const [extracting, setExtracting] = useState(false);
@@ -136,7 +156,7 @@ export default function AudioExtractor() {
                 <div className="flex gap-2">
                     <Input
                         type="url"
-                        placeholder="Paste video URL to extract audio..."
+                        placeholder={placeholderUrl}
                         value={url}
                         onChange={(e) => setUrl(e.target.value)}
                         onKeyDown={handleKeyDown}
@@ -149,7 +169,7 @@ export default function AudioExtractor() {
                         {loading ? (
                             <Loader2 className="h-4 w-4 animate-spin" />
                         ) : (
-                            'Get Info'
+                            buttonGetInfo
                         )}
                     </Button>
                 </div>
@@ -239,25 +259,25 @@ export default function AudioExtractor() {
                             {extracting ? (
                                 <>
                                     <Loader2 className="mr-2 h-5 w-5 animate-spin" />
-                                    Extracting Audio...
+                                    {buttonExtracting}
                                 </>
                             ) : success ? (
                                 <>
                                     <CheckCircle2 className="mr-2 h-5 w-5" />
-                                    Downloaded!
+                                    {buttonDownloaded}
                                 </>
                             ) : (
                                 <>
                                     <Download className="mr-2 h-5 w-5" />
-                                    {audioFormat === 'original' ? 'Extract Original Audio' : 'Extract MP3'}
+                                    {audioFormat === 'original' ? buttonExtractOriginal : buttonExtractMp3}
                                 </>
                             )}
                         </Button>
 
                         <p className="text-xs text-center text-muted-foreground">
                             {audioFormat === 'original'
-                                ? 'Original audio stream (M4A, no re-encoding)'
-                                : 'Converted to MP3 format'
+                                ? textOriginalAudio
+                                : textConvertedMp3
                             }
                         </p>
                     </div>

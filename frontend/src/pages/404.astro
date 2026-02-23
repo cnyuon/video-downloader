@@ -2,13 +2,16 @@
 import Layout from '../layouts/Layout.astro';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer.astro';
+
+// Use English as the default fallback for the global 404
+const lang = 'en';
 ---
 
 <Layout 
     title="Page Not Found | MediaTools"
     description="The page you're looking for doesn't exist. Browse our free tools for downloading videos, extracting audio, and more."
 >
-    <Navbar client:idle currentPage="" />
+    <Navbar client:idle currentPage="" lang={lang as any} />
     
     <main class="container mx-auto px-4 pt-20 pb-16 max-w-2xl text-center">
         <div class="text-6xl mb-6">🔍</div>
@@ -18,10 +21,10 @@ import Footer from '../components/Footer.astro';
         </p>
         
         <div class="grid gap-4 sm:grid-cols-2 max-w-md mx-auto mb-12">
-            <a href="/" class="px-6 py-3 rounded-xl bg-primary text-primary-foreground font-semibold hover:opacity-90 transition-opacity">
+            <a href="/en/" class="px-6 py-3 rounded-xl bg-primary text-primary-foreground font-semibold hover:opacity-90 transition-opacity">
                 All Tools
             </a>
-            <a href="/blog" class="px-6 py-3 rounded-xl border font-semibold hover:bg-accent transition-colors">
+            <a href="/en/blog" class="px-6 py-3 rounded-xl border font-semibold hover:bg-accent transition-colors">
                 Read Blog
             </a>
         </div>
@@ -29,19 +32,19 @@ import Footer from '../components/Footer.astro';
         <div class="text-left">
             <h2 class="text-xl font-bold mb-4">Popular Tools</h2>
             <div class="grid gap-3 sm:grid-cols-2">
-                <a href="/tiktok-downloader" class="p-3 rounded-lg border hover:border-primary/50 transition-colors text-sm">
+                <a href="/en/tiktok-downloader" class="p-3 rounded-lg border hover:border-primary/50 transition-colors text-sm">
                     <span class="font-semibold">TikTok Downloader</span>
                     <p class="text-muted-foreground">Download without watermark</p>
                 </a>
-                <a href="/twitter-downloader" class="p-3 rounded-lg border hover:border-primary/50 transition-colors text-sm">
+                <a href="/en/twitter-downloader" class="p-3 rounded-lg border hover:border-primary/50 transition-colors text-sm">
                     <span class="font-semibold">Twitter/X Downloader</span>
                     <p class="text-muted-foreground">Save videos and GIFs</p>
                 </a>
-                <a href="/facebook-downloader" class="p-3 rounded-lg border hover:border-primary/50 transition-colors text-sm">
+                <a href="/en/facebook-downloader" class="p-3 rounded-lg border hover:border-primary/50 transition-colors text-sm">
                     <span class="font-semibold">Facebook Downloader</span>
                     <p class="text-muted-foreground">Save FB videos & Reels</p>
                 </a>
-                <a href="/video-to-mp3" class="p-3 rounded-lg border hover:border-primary/50 transition-colors text-sm">
+                <a href="/en/video-to-mp3" class="p-3 rounded-lg border hover:border-primary/50 transition-colors text-sm">
                     <span class="font-semibold">Video to MP3</span>
                     <p class="text-muted-foreground">Extract audio from video</p>
                 </a>

@@ -5,29 +5,37 @@
 import { useState, useEffect } from 'react';
 import { Menu, X, Sun, Moon } from 'lucide-react';
 
+import { useTranslations } from '../i18n/utils';
+import type { ui } from '../i18n/ui';
+
 interface NavbarProps {
     currentPage: string;
+    lang: keyof typeof ui;
 }
 
 interface NavItem {
     id: string;
-    name: string;
+    nameKey: keyof typeof ui['en'];
     href: string;
     disabled?: boolean;
 }
 
-const navItems: NavItem[] = [
-    { id: 'home', name: 'All Tools', href: '/' },
-    { id: 'video', name: 'TikTok', href: '/tiktok-downloader' },
-    { id: 'twitter', name: 'Twitter/X', href: '/twitter-downloader' },
-    { id: 'facebook', name: 'Facebook', href: '/facebook-downloader' },
-    { id: 'sound', name: 'TikTok Sound', href: '/tiktok-sound-downloader' },
-    { id: 'audio', name: 'Video to MP3', href: '/video-to-mp3' },
-    { id: 'thumbnail', name: 'Thumbnails', href: '/thumbnail-grabber' },
-    { id: 'blog', name: 'Blog', href: '/blog' },
-];
+export default function Navbar({ currentPage, lang }: NavbarProps) {
+    const t = useTranslations(lang);
 
-export default function Navbar({ currentPage }: NavbarProps) {
+    // Always prefix hrefs with /lang so the router works consistently
+    const getHref = (path: string) => `/${lang}${path === '/' ? '' : path}`;
+
+    const navItems: NavItem[] = [
+        { id: 'home', nameKey: 'nav.home', href: '/' },
+        { id: 'video', nameKey: 'nav.tiktok', href: '/tiktok-downloader' },
+        { id: 'twitter', nameKey: 'nav.twitter', href: '/twitter-downloader' },
+        { id: 'facebook', nameKey: 'nav.facebook', href: '/facebook-downloader' },
+        { id: 'sound', nameKey: 'nav.sound', href: '/tiktok-sound-downloader' },
+        { id: 'audio', nameKey: 'nav.audio', href: '/video-to-mp3' },
+        { id: 'thumbnail', nameKey: 'nav.thumbnail', href: '/thumbnail-grabber' },
+        { id: 'blog', nameKey: 'nav.blog', href: '/blog' },
+    ];
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
     const [darkMode, setDarkMode] = useState(false);
 
@@ -76,21 +84,43 @@ export default function Navbar({ currentPage }: NavbarProps) {
                                 className="px-3 py-2 rounded-md text-muted-foreground/50 cursor-not-allowed"
                                 title="Coming soon"
                             >
-                                {item.name}
+                                {t(item.nameKey)}
                             </span>
                         ) : (
                             <a
                                 key={item.id}
-                                href={item.href}
+                                href={getHref(item.href)}
                                 className={`px-3 py-2 rounded-md transition-colors ${currentPage === item.id
                                     ? 'bg-accent text-foreground'
                                     : 'text-muted-foreground hover:text-foreground hover:bg-accent/50'
                                     }`}
                             >
-                                {item.name}
+                                {t(item.nameKey)}
                             </a>
                         )
                     ))}
+
+                    {/* Language Switcher */}
+                    <div className="flex items-center ml-2 pl-4 border-l border-border/50 h-6">
+                        <select
+                            value={lang}
+                            onChange={(e) => {
+                                const newLang = e.target.value;
+                                const path = window.location.pathname;
+                                if (path.startsWith(`/${lang}`)) {
+                                    window.location.href = path.replace(`/${lang}`, `/${newLang}`);
+                                } else {
+                                    window.location.href = `/${newLang}${path === '/' ? '' : path}`;
+                                }
+                            }}
+                            className="bg-transparent text-sm font-semibold text-foreground hover:text-primary cursor-pointer focus:outline-none transition-colors appearance-none pr-4 relative"
+                            style={{ backgroundImage: 'url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'currentColor\' stroke-width=\'2\' stroke-linecap=\'round\' stroke-linejoin=\'round\'%3e%3cpolyline points=\'6 9 12 15 18 9\'%3e%3c/polyline%3e%3c/svg%3e")', backgroundRepeat: 'no-repeat', backgroundPosition: 'right center', backgroundSize: '1em' }}
+                            aria-label="Select language"
+                        >
+                            <option value="en" className="bg-background text-foreground">🇺🇸 English</option>
+                            <option value="es" className="bg-background text-foreground">🇪🇸 Español</option>
+                        </select>
+                    </div>
 
                     {/* Dark Mode Toggle */}
                     <button
@@ -104,6 +134,25 @@ export default function Navbar({ currentPage }: NavbarProps) {
 
                 {/* Mobile: Theme toggle + Menu button */}
                 <div className="flex items-center gap-2 md:hidden">
+                    <div className="relative border border-border/50 rounded-md bg-accent/30 px-2 py-1">
+                        <select
+                            value={lang}
+                            onChange={(e) => {
+                                const newLang = e.target.value;
+                                const path = window.location.pathname;
+                                if (path.startsWith(`/${lang}`)) {
+                                    window.location.href = path.replace(`/${lang}`, `/${newLang}`);
+                                } else {
+                                    window.location.href = `/${newLang}${path === '/' ? '' : path}`;
+                                }
+                            }}
+                            className="bg-transparent text-sm font-semibold text-foreground focus:outline-none appearance-none pr-4 relative"
+                            style={{ backgroundImage: 'url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'currentColor\' stroke-width=\'2\' stroke-linecap=\'round\' stroke-linejoin=\'round\'%3e%3cpolyline points=\'6 9 12 15 18 9\'%3e%3c/polyline%3e%3c/svg%3e")', backgroundRepeat: 'no-repeat', backgroundPosition: 'right center', backgroundSize: '1em' }}
+                        >
+                            <option value="en" className="bg-background text-foreground">🇺🇸 EN</option>
+                            <option value="es" className="bg-background text-foreground">🇪🇸 ES</option>
+                        </select>
+                    </div>
                     <button
                         onClick={toggleDarkMode}
                         className="p-2 rounded-md hover:bg-accent"
@@ -134,19 +183,19 @@ export default function Navbar({ currentPage }: NavbarProps) {
                                     key={item.id}
                                     className="block px-3 py-2 rounded-md text-sm font-medium text-muted-foreground/50 cursor-not-allowed"
                                 >
-                                    {item.name} (Coming Soon)
+                                    {t(item.nameKey)} (Coming Soon)
                                 </span>
                             ) : (
                                 <a
                                     key={item.id}
-                                    href={item.href}
+                                    href={getHref(item.href)}
                                     className={`block px-3 py-2 rounded-md text-sm font-medium ${currentPage === item.id
                                         ? 'bg-accent text-foreground'
                                         : 'text-muted-foreground hover:text-foreground hover:bg-accent/50'
                                         }`}
                                     onClick={() => setMobileMenuOpen(false)}
                                 >
-                                    {item.name}
+                                    {t(item.nameKey)}
                                 </a>
                             )
                         ))}

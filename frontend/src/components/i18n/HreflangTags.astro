@@ -1,0 +1,26 @@
+---
+import { languages } from '../../i18n/ui';
+
+// This is the path WITHOUT the language prefix
+// e.g., if we are on /es/tiktok-downloader, this returns /tiktok-downloader
+// if we are on /tiktok-downloader, this returns /tiktok-downloader
+const currentUrl = new URL(Astro.request.url);
+const pathSegments = currentUrl.pathname.split('/').filter(Boolean);
+
+let cleanPath = currentUrl.pathname;
+if (pathSegments.length > 0 && Object.keys(languages).includes(pathSegments[0])) {
+    cleanPath = '/' + pathSegments.slice(1).join('/');
+}
+---
+
+<!-- X-Default (Fallback for unidentified languages) -->
+<link rel="alternate" hreflang="x-default" href={`https://getmediatools.com${cleanPath}`} />
+
+<!-- Exact language mappings -->
+{Object.keys(languages).map((code) => (
+    <link 
+        rel="alternate" 
+        hreflang={code} 
+        href={`https://getmediatools.com${code === 'en' ? cleanPath : `/${code}${cleanPath}`}`} 
+    />
+))}

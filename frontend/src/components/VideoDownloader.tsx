@@ -76,9 +76,19 @@ interface VideoDownloaderProps {
     initialUrl?: string;
     placeholder?: string;
     allowedPlatform?: string; // If set, only this platform is allowed
+    buttonGetVideo?: string;
+    buttonDownloading?: string;
+    buttonDownload?: string;
 }
 
-export default function VideoDownloader({ initialUrl = '', placeholder = 'Paste video URL here (TikTok, Twitter, Facebook)', allowedPlatform }: VideoDownloaderProps) {
+export default function VideoDownloader({
+    initialUrl = '',
+    placeholder = 'Paste video URL here (TikTok, Twitter, Facebook)',
+    allowedPlatform,
+    buttonGetVideo = 'Get Video',
+    buttonDownloading = 'Downloading...',
+    buttonDownload = 'Download Video'
+}: VideoDownloaderProps) {
     const [url, setUrl] = useState(initialUrl);
 
     useEffect(() => {
@@ -235,7 +245,7 @@ export default function VideoDownloader({ initialUrl = '', placeholder = 'Paste 
                             {loading ? (
                                 <Loader2 className="h-5 w-5 animate-spin" />
                             ) : (
-                                'Get Video'
+                                buttonGetVideo
                             )}
                         </Button>
                     </div>
@@ -347,12 +357,12 @@ export default function VideoDownloader({ initialUrl = '', placeholder = 'Paste 
                                 {downloading ? (
                                     <>
                                         <Loader2 className="mr-2 h-5 w-5 animate-spin" />
-                                        Downloading...
+                                        {buttonDownloading}
                                     </>
                                 ) : (
                                     <>
                                         <Download className="mr-2 h-5 w-5" />
-                                        Download Video
+                                        {buttonDownload}
                                     </>
                                 )}
                             </Button>

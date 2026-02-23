@@ -1,0 +1,169 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Navbar from '../../components/Navbar';
+import Footer from '../../components/Footer.astro';
+import VideoDownloader from '../../components/VideoDownloader';
+import { getLangFromUrl, useTranslations } from '../../i18n/utils';
+import type { ui } from '../../i18n/ui';
+
+export function getStaticPaths() {
+  return [
+    { params: { lang: 'en' } },
+    { params: { lang: 'es' } },
+  ];
+}
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
+const jsonLd = {
+    "@context": "https://schema.org",
+    "@graph": [
+        {
+            "@type": "WebApplication",
+            "name": "Facebook Video Downloader",
+            "url": "https://getmediatools.com/facebook-downloader",
+            "description": t('fb.meta.desc'),
+            "applicationCategory": "MultimediaApplication",
+            "operatingSystem": "Any",
+            "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+            "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.8", "ratingCount": "1340", "bestRating": "5", "worstRating": "1" }
+        },
+        {
+            "@type": "FAQPage",
+            "mainEntity": [
+                { "@type": "Question", "name": t('fb.faq.q1'), "acceptedAnswer": { "@type": "Answer", "text": t('fb.faq.a1') } },
+                { "@type": "Question", "name": t('fb.faq.q2'), "acceptedAnswer": { "@type": "Answer", "text": t('fb.faq.a2') } },
+                { "@type": "Question", "name": t('fb.faq.q3'), "acceptedAnswer": { "@type": "Answer", "text": t('fb.faq.a3') } },
+                { "@type": "Question", "name": t('fb.faq.q4'), "acceptedAnswer": { "@type": "Answer", "text": t('fb.faq.a4') } },
+                { "@type": "Question", "name": t('fb.faq.q5'), "acceptedAnswer": { "@type": "Answer", "text": t('fb.faq.a5') } }
+            ]
+        }
+    ]
+};
+---
+
+<Layout 
+    title={t('fb.meta.title')}
+    description={t('fb.meta.desc')}
+    jsonLd={jsonLd}
+>
+    <!-- Target Keywords: facebook video downloader, download facebook video, save fb video, facebook reels downloader, fb video saver -->
+    <Navbar client:idle currentPage="facebook" lang={lang as keyof typeof ui} />
+    
+    <main class="container mx-auto px-4 pt-10 pb-4 max-w-2xl">
+        <div class="text-center mb-8">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-600 text-white text-sm font-medium mb-4">
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                </svg>
+                {t('fb.hero.badge')}
+            </div>
+            <h1 class="text-4xl font-bold tracking-tight mb-3">
+                {t('fb.hero.title')}
+            </h1>
+            <p class="text-lg text-muted-foreground max-w-xl mx-auto" set:html={t('fb.hero.desc')} />
+        </div>
+
+        <VideoDownloader 
+            client:load 
+            placeholder={t('fb.input.placeholder')} 
+            allowedPlatform="facebook" 
+            buttonGetVideo={t('btn.get_video')}
+            buttonDownloading={t('btn.downloading')}
+            buttonDownload={t('btn.download_video')}
+        />
+        
+        <!-- Features Section -->
+        <div class="mt-12 grid gap-4 md:grid-cols-3">
+            <div class="text-center p-4 rounded-lg bg-muted/30">
+                <div class="text-2xl mb-2">🎬</div>
+                <h3 class="font-semibold mb-1">{t('fb.features.hd.title')}</h3>
+                <p class="text-sm text-muted-foreground">{t('fb.features.hd.desc')}</p>
+            </div>
+            <div class="text-center p-4 rounded-lg bg-muted/30">
+                <div class="text-2xl mb-2">📱</div>
+                <h3 class="font-semibold mb-1">{t('fb.features.reels.title')}</h3>
+                <p class="text-sm text-muted-foreground">{t('fb.features.reels.desc')}</p>
+            </div>
+            <div class="text-center p-4 rounded-lg bg-muted/30">
+                <div class="text-2xl mb-2">🔒</div>
+                <h3 class="font-semibold mb-1">{t('fb.features.nologin.title')}</h3>
+                <p class="text-sm text-muted-foreground">{t('fb.features.nologin.desc')}</p>
+            </div>
+        </div>
+        
+        <!-- How To Section -->
+        <div class="mt-12 py-8 border-t">
+            <h2 class="text-2xl font-bold text-center mb-2">{t('fb.howto.title')}</h2>
+            <p class="text-center text-muted-foreground mb-6 max-w-lg mx-auto">{t('fb.howto.desc')}</p>
+            <div class="space-y-4">
+                <div class="flex gap-4 items-start">
+                    <div class="flex-shrink-0 w-8 h-8 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold">1</div>
+                    <div>
+                        <h3 class="font-semibold">{t('fb.howto.step1.title')}</h3>
+                        <p class="text-muted-foreground text-sm">{t('fb.howto.step1.desc')}</p>
+                    </div>
+                </div>
+                <div class="flex gap-4 items-start">
+                    <div class="flex-shrink-0 w-8 h-8 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold">2</div>
+                    <div>
+                        <h3 class="font-semibold">{t('fb.howto.step2.title')}</h3>
+                        <p class="text-muted-foreground text-sm">{t('fb.howto.step2.desc')}</p>
+                    </div>
+                </div>
+                <div class="flex gap-4 items-start">
+                    <div class="flex-shrink-0 w-8 h-8 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold">3</div>
+                    <div>
+                        <h3 class="font-semibold">{t('fb.howto.step3.title')}</h3>
+                        <p class="text-muted-foreground text-sm">{t('fb.howto.step3.desc')}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- FAQ Section for SEO -->
+        <div class="mt-12 py-8 border-t">
+            <h2 class="text-2xl font-bold text-center mb-6">{t('fb.faq.title')}</h2>
+            <div class="space-y-4">
+                <div class="p-4 rounded-lg bg-muted/30">
+                    <h3 class="font-semibold mb-2">{t('fb.faq.q1')}</h3>
+                    <p class="text-sm text-muted-foreground">{t('fb.faq.a1')}</p>
+                </div>
+                <div class="p-4 rounded-lg bg-muted/30">
+                    <h3 class="font-semibold mb-2">{t('fb.faq.q2')}</h3>
+                    <p class="text-sm text-muted-foreground">{t('fb.faq.a2')}</p>
+                </div>
+                <div class="p-4 rounded-lg bg-muted/30">
+                    <h3 class="font-semibold mb-2">{t('fb.faq.q3')}</h3>
+                    <p class="text-sm text-muted-foreground">{t('fb.faq.a3')}</p>
+                </div>
+                <div class="p-4 rounded-lg bg-muted/30">
+                    <h3 class="font-semibold mb-2">{t('fb.faq.q4')}</h3>
+                    <p class="text-sm text-muted-foreground">{t('fb.faq.a4')}</p>
+                </div>
+                <div class="p-4 rounded-lg bg-muted/30">
+                    <h3 class="font-semibold mb-2">{t('fb.faq.q5')}</h3>
+                    <p class="text-sm text-muted-foreground">{t('fb.faq.a5')}</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Related Guides Section -->
+        <div class="mt-12 py-8 border-t">
+            <h2 class="text-2xl font-bold text-center mb-6">{t('fb.guides.title')}</h2>
+            <div class="grid gap-4 md:grid-cols-2">
+                <a href={lang === 'en' ? '/tiktok-downloader' : `/${lang}/tiktok-downloader`} class="group p-4 rounded-xl border bg-card hover:border-primary/50 hover:shadow-md transition-all">
+                    <h3 class="font-semibold mb-1 group-hover:text-primary transition-colors">{t('fb.guides.1.title')}</h3>
+                    <p class="text-sm text-muted-foreground">{t('fb.guides.1.desc')}</p>
+                </a>
+                <a href={lang === 'en' ? '/twitter-downloader' : `/${lang}/twitter-downloader`} class="group p-4 rounded-xl border bg-card hover:border-primary/50 hover:shadow-md transition-all">
+                    <h3 class="font-semibold mb-1 group-hover:text-primary transition-colors">{t('fb.guides.2.title')}</h3>
+                    <p class="text-sm text-muted-foreground">{t('fb.guides.2.desc')}</p>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <Footer />
+</Layout>
