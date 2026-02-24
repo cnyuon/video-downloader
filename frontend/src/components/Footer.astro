@@ -5,9 +5,23 @@
  */
 import { getLangFromUrl, useTranslations } from '../i18n/utils';
 import type { ui } from '../i18n/ui';
+import { getCollection } from 'astro:content';
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
+
+// Fetch recently updated blog posts for the current language
+const posts = await getCollection('blog', ({ id }) => {
+    return id.startsWith(`${lang}/`);
+});
+
+const recentPosts = posts
+    .sort((a, b) => {
+        const aDate = a.data.updatedDate || a.data.pubDate;
+        const bDate = b.data.updatedDate || b.data.pubDate;
+        return bDate.valueOf() - aDate.valueOf();
+    })
+    .slice(0, 3);
 
 // Always prefix URLs with the language code except 'en'
 const getHref = (path: string) => lang === 'en' ? path : `/${lang}${path === '/' ? '' : path}`;
@@ -47,9 +61,17 @@ const getHref = (path: string) => lang === 'en' ? path : `/${lang}${path === '/'
                 <h3 class="font-semibold mb-3 text-sm">{t('footer.resources')}</h3>
                 <ul class="space-y-2 text-sm text-muted-foreground">
                     <li><a href={getHref('/blog')} class="hover:text-foreground transition-colors">{t('nav.blog')}</a></li>
-                    <li><a href={getHref('/blog/how-to-download-tiktok-without-watermark')} class="hover:text-foreground transition-colors">TikTok Download Guide</a></li>
-                    <li><a href={getHref('/blog/5-best-ways-to-save-twitter-videos')} class="hover:text-foreground transition-colors">Save Twitter Videos</a></li>
-                    <li><a href={getHref('/blog/best-free-video-editors-tiktok')} class="hover:text-foreground transition-colors">Video Editors for TikTok</a></li>
+                    {recentPosts.map(post => {
+                        const [, ...slugParts] = post.id.split('/');
+                        const slug = slugParts.join('/');
+                        return (
+                            <li>
+                                <a href={getHref(`/blog/${slug}/`)} class="hover:text-foreground transition-colors line-clamp-1" title={post.data.title}>
+                                    {post.data.title}
+                                </a>
+                            </li>
+                        );
+                    })}
                 </ul>
             </div>
         </div>

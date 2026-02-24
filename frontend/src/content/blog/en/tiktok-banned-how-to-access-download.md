@@ -12,7 +12,14 @@ monetization:
 
 TikTok faces various levels of restrictions around the world. Whether it's a full ban, a government-device restriction, or age-based limits, millions of users risk losing access to their favorite content at any time.
 
-**The smartest move? [Save your favorite TikTok videos now](/tiktok-downloader) while you have full access.**
+import InContentCTA from '../../../components/InContentCTA.astro';
+
+<InContentCTA 
+  targetUrl="/tiktok-downloader/" 
+  keywordAnchorText="Download TikTok Videos Before the Ban" 
+  subText="Instantly back up your favorite TikTok videos to your phone or PC."
+  iconType="tiktok" 
+/>
 
 This guide covers the current global landscape and how to protect your content.
 

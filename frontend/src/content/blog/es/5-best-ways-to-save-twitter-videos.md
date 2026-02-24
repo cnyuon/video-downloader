@@ -12,7 +12,14 @@ monetization:
 
 Twitter (ahora [X](https://x.com)) está lleno de clips virales, imágenes de noticias de última hora y momentos divertidísimos que querrás conservar para siempre. Sin embargo, la aplicación no tiene un botón de descarga integrado.
 
-**Evítese complicaciones: use nuestro [Descargador de videos de Twitter/X](/twitter-downloader) gratuito para guardar el video de cualquier tweet en segundos.**
+import InContentCTA from '../../../../components/InContentCTA.astro';
+
+<InContentCTA 
+  targetUrl="/twitter-downloader/" 
+  keywordAnchorText="Descargar GIFs de Twitter como MP4" 
+  subText="Guarde instantáneamente videos y GIFs de Twitter directamente en la galería de su iPhone. No necesita aplicación."
+  iconType="twitter" 
+/>
 
 Aquí están los 5 mejores métodos, desde el más fácil hasta el que requiere más esfuerzo.
 

@@ -1,0 +1,55 @@
+---
+interface Props {
+    targetUrl: string;
+    keywordAnchorText: string;
+    subText?: string;
+    iconType?: 'tiktok' | 'twitter' | 'facebook' | 'audio' | 'thumbnail';
+}
+
+const { 
+    targetUrl, 
+    keywordAnchorText, 
+    subText = "Try it now—100% Free and Secure",
+    iconType = 'tiktok'
+} = Astro.props;
+
+// Select SVG icon based on the tool
+const getIcon = (type: string) => {
+    switch (type) {
+        case 'twitter':
+            return `<path d="M22 4.01c-1 .49-1.98.689-3 .99-1.121-1.265-2.783-1.335-4.38-.737S11.977 6.323 12 8v1c-3.245.083-6.135-1.395-8-4 0 0-4.182 7.433 4 11-1.872 1.247-3.739 2.088-6 2 3.308 1.803 6.913 2.423 10.034 1.517 3.58-1.04 6.522-3.723 7.651-7.742a13.84 13.84 0 0 0 .497-3.753C20.18 7.773 21.692 5.25 22 4.009z"></path>`;
+        case 'facebook':
+            return `<path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>`;
+        case 'audio':
+            return `<path d="M9 18V5l12-2v13"></path><circle cx="6" cy="18" r="3"></circle><circle cx="18" cy="16" r="3"></circle>`;
+        case 'thumbnail':
+            return `<rect width="18" height="18" x="3" y="3" rx="2" ry="2"></rect><circle cx="9" cy="9" r="2"></circle><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"></path>`;
+        case 'tiktok':
+        default:
+            return `<path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"></path>`;
+    }
+}
+---
+
+<div class="my-8 rounded-xl border border-primary/20 bg-gradient-to-r from-primary/5 to-transparent p-6 shadow-sm hover:shadow-md transition-shadow">
+    <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div class="flex items-center gap-4">
+            <div class="h-12 w-12 shrink-0 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" set:html={getIcon(iconType)}></svg>
+            </div>
+            <div>
+                <h3 class="text-lg font-bold text-foreground !mt-0 !mb-1">
+                    <!-- CRITICAL SEO: This is a pure HTML <a> tag to pass PageRank -->
+                    <a href={targetUrl} class="hover:underline text-primary decoration-primary/50 underline-offset-4">
+                        {keywordAnchorText}
+                    </a>
+                </h3>
+                <p class="text-sm text-muted-foreground !m-0">{subText}</p>
+            </div>
+        </div>
+        <a href={targetUrl} class="inline-flex shrink-0 items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-6 py-2">
+            Try Tool
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ml-2 rtl:rotate-180"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+        </a>
+    </div>
+</div>

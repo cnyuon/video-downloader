@@ -12,6 +12,15 @@ Si te topas con el perfil de un creador, o tocas accidentalmente su historia de 
 
 La respuesta es **sí**, pero depende completamente de tu propia configuración de privacidad, la configuración del creador y cómo elijas acceder al video.
 
+import InContentCTA from '../../../../components/InContentCTA.astro';
+
+<InContentCTA 
+  targetUrl="/es/tiktok-downloader/" 
+  keywordAnchorText="Ver y Descargar TikToks de Forma Anónima" 
+  subText="Guarda instantáneamente videos de TikTok en tu teléfono. El creador nunca lo sabrá."
+  iconType="tiktok" 
+/>
+
 Aquí te explicamos exactamente cómo funciona el historial de visualizaciones de TikTok en 2026, y las mejores formas de ver contenido de forma completamente anónima.
 
 ## Cómo funcionan las "Vistas de perfil" de TikTok

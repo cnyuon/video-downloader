@@ -12,6 +12,15 @@ No te estás volviendo loco. El "error de Reddit sin sonido" al guardar o compar
 
 Para comprender por qué sucede esto y cómo solucionarlo fácilmente descargando el video directamente, sigue leyendo.
 
+import InContentCTA from '../../../../components/InContentCTA.astro';
+
+<InContentCTA 
+  targetUrl="/" 
+  keywordAnchorText="Descargar videos de Reddit con audio" 
+  subText="Guarde cualquier video de Reddit directamente en su teléfono con el sonido original intacto."
+  iconType="audio" 
+/>
+
 ## ¿Por qué los videos de Reddit se descargan sin sonido?
 
 La razón por la que guardar un video desde la aplicación de Reddit a menudo da como resultado un clip silencioso se debe a la forma en que Reddit procesa los medios en sus servidores internos.

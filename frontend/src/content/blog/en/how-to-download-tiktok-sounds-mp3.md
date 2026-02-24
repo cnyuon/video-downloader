@@ -12,7 +12,14 @@ monetization:
 
 TikTok is home to millions of viral sounds — from catchy songs to hilarious audio clips and trending voiceovers. But the app doesn't give you a way to download just the audio.
 
-**Want the sound right now? Use our free [TikTok Sound Downloader](/tiktok-sound-downloader) — paste the link and save any TikTok audio as MP3 in seconds.**
+import InContentCTA from '../../../components/InContentCTA.astro';
+
+<InContentCTA 
+  targetUrl="/tiktok-sound-downloader/" 
+  keywordAnchorText="Convert TikTok Sounds to MP3" 
+  subText="Instantly extract high-quality audio from any TikTok video."
+  iconType="audio" 
+/>
 
 Whether you want to use a trending sound in your own videos, save a song you discovered on TikTok, or just listen offline, this guide covers everything you need to know.
 

@@ -14,6 +14,15 @@ A great thumbnail is often the difference between a viral video and a flop. But 
 
 Whether you want to analyze a competitor's thumbnail strategy, use the image for a YouTube repost, or just archive high-quality covers, you need a dedicated tool.
 
+import InContentCTA from '../../../components/InContentCTA.astro';
+
+<InContentCTA 
+  targetUrl="/thumbnail-grabber/" 
+  keywordAnchorText="Download TikTok Thumbnails in HD" 
+  subText="Instantly extract high-resolution cover images from any TikTok video."
+  iconType="thumbnail" 
+/>
+
 Here is how to grab any TikTok thumbnail in full HD using [MediaTools](/thumbnail-grabber).
 
 ## Why Download Thumbnails?

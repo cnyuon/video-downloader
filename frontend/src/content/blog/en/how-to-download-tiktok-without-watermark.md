@@ -12,7 +12,14 @@ monetization:
 
 TikTok is one of the most popular social media platforms in the world, filled with creative and entertaining videos. However, when you try to download a video directly from the app, it comes with a bouncing watermark that can cover important parts of the video.
 
-**Want to remove it instantly? Use our free [TikTok Downloader](/tiktok-downloader) right now.**
+import InContentCTA from '../../../components/InContentCTA.astro';
+
+<InContentCTA 
+  targetUrl="/tiktok-downloader/" 
+  keywordAnchorText="Download TikTok Videos Without Watermark" 
+  subText="Instantly save TikTok videos in HD for free. No app required."
+  iconType="tiktok" 
+/>
 
 In this guide, we'll show you how to download TikTok videos **without the watermark** in high definition, completely for free.
 

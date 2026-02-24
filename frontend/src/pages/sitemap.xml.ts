@@ -24,27 +24,42 @@ const staticPages = [
 export async function GET() {
     const allPosts = await getCollection('blog');
 
-    // Get all baseline "en" posts and form their English URLs
+    // Get all baseline "en" posts and form their English URLs with their authentic dates
     const enPostsUrls = allPosts
         .filter((post: any) => post.slug.startsWith('en/'))
-        .map((post: any) => `/blog/${post.slug.replace('en/', '')}/`);
+        .map((post: any) => ({
+            url: `/blog/${post.slug.replace('en/', '')}/`,
+            lastmod: (post.data.updatedDate || post.data.pubDate).toISOString(),
+            isBlog: true
+        }));
 
-    // All English posts ALSO have an expected Spanish route (due to fallback or native translation)
+    // All English posts ALSO have an expected Spanish route
     const esPostsUrls = allPosts
         .filter((post: any) => post.slug.startsWith('en/'))
-        .map((post: any) => `/es/blog/${post.slug.replace('en/', '')}/`);
+        .map((post: any) => ({
+            url: `/es/blog/${post.slug.replace('en/', '')}/`,
+            lastmod: (post.data.updatedDate || post.data.pubDate).toISOString(),
+            isBlog: true
+        }));
 
-    const allUrls = [...staticPages, ...enPostsUrls, ...esPostsUrls];
+    // Map static pages to objects
+    const staticPagesUrls = staticPages.map(url => ({
+        url,
+        lastmod: new Date().toISOString(),
+        isBlog: false
+    }));
+
+    const allUrls = [...staticPagesUrls, ...enPostsUrls, ...esPostsUrls];
 
     const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   ${allUrls
             .map(
-                (url) => `<url>
-    <loc>${BASE_URL}${url}</loc>
-    <lastmod>${new Date().toISOString()}</lastmod>
-    <changefreq>${url === '/' || url === '/es/' ? 'daily' : 'weekly'}</changefreq>
-    <priority>${url === '/' || url === '/es/' ? '1.0' : '0.8'}</priority>
+                (page) => `<url>
+    <loc>${BASE_URL}${page.url}</loc>
+    <lastmod>${page.lastmod}</lastmod>
+    <changefreq>${page.url === '/' || page.url === '/es/' ? 'daily' : page.isBlog ? 'monthly' : 'weekly'}</changefreq>
+    <priority>${page.url === '/' || page.url === '/es/' ? '1.0' : page.isBlog ? '0.7' : '0.9'}</priority>
   </url>`
             )
             .join('\n')}

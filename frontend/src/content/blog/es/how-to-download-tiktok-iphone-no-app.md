@@ -16,6 +16,15 @@ Las estrictas políticas de la App Store dificultan encontrar buenas aplicacione
 
 **La Solución:** No necesitas de ninguna aplicación. Puedes descargar videos totalmente limpios y sin marcas de agua directamente en tu Carrete (Photos) utilizando únicamente el navegador Safari.
 
+import InContentCTA from '../../../../components/InContentCTA.astro';
+
+<InContentCTA 
+  targetUrl="/es/tiktok-downloader/" 
+  keywordAnchorText="Descargar videos de TikTok a iPhone" 
+  subText="Guarde instantáneamente TikToks en su Carrete de fotos en alta definición sin marca de agua."
+  iconType="tiktok" 
+/>
+
 Aquí tienes el método más rápido y seguro garantizado para este 2026.
 
 ## El problema gigante con el botón "Guardar vídeo"
