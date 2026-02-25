@@ -14,15 +14,6 @@ En 2026, l'algorithme de TikTok ne se soucie que d'une seule chose par-dessus to
 
 Si les internautes ne regardent pas votre vidéo jusqu'au bout, elle n'apparaîtra pas sur la page « Pour toi ». Le secret de la fidélisation ne réside pas seulement dans le contenu, mais aussi dans le montage.
 
-import InContentCTA from '../../../components/InContentCTA.astro';
-
-<InContentCTA 
-  targetUrl="/fr/tiktok-downloader/" 
-  keywordAnchorText="Download viral TikToks without watermarks" 
-  subText="Analyze the edits of top creators in slow motion. 100% Free."
-  iconType="tiktok" 
-/>
-
 Voici 10 conseils de montage professionnels pour captiver vos spectateurs.
 
 ## 1. La règle des 3 secondes (L'accroche)

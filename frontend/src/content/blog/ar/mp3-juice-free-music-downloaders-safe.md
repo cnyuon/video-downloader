@@ -12,15 +12,6 @@ tags: ["Audio", "Guides", "Safety"]
 
 إليك كل ما تحتاج لمعرفته حول برامج تنزيل ملفات MP3، والمخاطر التي تنطوي عليها، والبدائل الحديثة الأكثر أمانًا.
 
-import InContentCTA from '../../../components/InContentCTA.astro';
-
-<InContentCTA 
-  targetUrl="/ar/video-to-mp3/" 
-  keywordAnchorText="Safely Extract Audio from Videos" 
-  subText="Instantly convert any TikTok or social media video into a high-quality MP3 file for free."
-  iconType="audio" 
-/>
-
 ## ما هو برنامج MP3 Juice؟
 
 كان موقع "MP3 Juice" (أو MP3Juices) في الأصل محرك بحث صوتي شهيرًا للغاية على الإنترنت. كان يسمح للمستخدمين بالبحث عن عنوان أغنية أو اسم فنان، ثم يقوم الموقع بالبحث في الإنترنت للعثور على دليل مفتوح أو خادم يستضيف ملف الصوت. بعد ذلك، يوفر رابط تنزيل مباشر لحفظ ملف `.mp3` على جهاز الكمبيوتر أو الهاتف.

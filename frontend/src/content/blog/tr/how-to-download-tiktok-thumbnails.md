@@ -14,15 +14,6 @@ Harika bir küçük resim, genellikle viral bir video ile başarısız olan aras
 
 İster bir rakibin küçük resim stratejisini analiz etmek, ister YouTube paylaşımı için resmi kullanmak, isterse yüksek kaliteli kapakları arşivlemek isteyin — özel bir araca ihtiyacınız var.
 
-import InContentCTA from '../../../components/InContentCTA.astro';
-
-<InContentCTA 
-  targetUrl="/tr/thumbnail-grabber/" 
-  keywordAnchorText="TikTok Küçük Resimlerini HD İndirin" 
-  subText="Herhangi bir TikTok videosundan yüksek çözünürlüklü kapak görsellerini anında çıkarın."
-  iconType="thumbnail" 
-/>
-
 İşte [MediaTools](/tr/thumbnail-grabber/) kullanarak herhangi bir TikTok küçük resmini Full HD olarak nasıl alacağınız.
 
 ## Neden Küçük Resim İndirmeliyiz?

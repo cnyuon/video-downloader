@@ -12,15 +12,6 @@ monetization:
 
 فيسبوك ريلز هو ردّ ميتا على تيك توك - مقاطع فيديو قصيرة وجذابة تحصد ملايين المشاهدات يوميًا. ولكن تمامًا مثل تيك توك، لا يُسهّل فيسبوك تحميل ريلز على هاتفك.
 
-import InContentCTA from '../../../components/InContentCTA.astro';
-
-<InContentCTA 
-  targetUrl="/ar/facebook-downloader/" 
-  keywordAnchorText="Download Facebook Reels to your Phone" 
-  subText="Instantly save Facebook videos in HD with our free online tool."
-  iconType="facebook" 
-/>
-
 سواء كنت ترغب في حفظ مقطع مضحك، أو الاحتفاظ بفيديو ملهم، أو عمل نسخة احتياطية من مقاطع الفيديو القصيرة الخاصة بك، فإن هذا الدليل يوضح لك كل الطرق المتاحة.
 
 ## لماذا تحميل فيديوهات فيسبوك ريلز؟

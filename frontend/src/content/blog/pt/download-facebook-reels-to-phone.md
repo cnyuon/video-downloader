@@ -12,15 +12,6 @@ monetization:
 
 O Facebook Reels é a resposta da Meta ao TikTok — vídeos curtos e envolventes que acumulam milhões de visualizações diariamente. Mas, assim como o TikTok, o Facebook não facilita o download do Reels para o seu celular.
 
-import InContentCTA from '../../../components/InContentCTA.astro';
-
-<InContentCTA 
-  targetUrl="/pt/facebook-downloader/" 
-  keywordAnchorText="Download Facebook Reels to your Phone" 
-  subText="Instantly save Facebook videos in HD with our free online tool."
-  iconType="facebook" 
-/>
-
 Seja para salvar um clipe hilário, guardar um vídeo inspirador ou fazer backup dos seus Reels, este guia mostra todos os métodos disponíveis.
 
 ## Por que baixar o Facebook Reels?

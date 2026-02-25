@@ -12,15 +12,6 @@ monetization:
 
 يتطلب إنشاء محتوى مميز على تيك توك أكثر من مجرد الضغط على زر التسجيل. يمكن لمحرر الفيديو الماهر تحويل اللقطات الخام إلى محتوى يجذب المشاهدين من اللحظة الأولى.
 
-import InContentCTA from '../../../components/InContentCTA.astro';
-
-<InContentCTA 
-  targetUrl="/ar/tiktok-downloader/" 
-  keywordAnchorText="Download TikTok videos to edit" 
-  subText="Save any TikTok video without a watermark to use as B-roll or reaction clips."
-  iconType="tiktok" 
-/>
-
 إليكم أفضل برامج تحرير الفيديو المجانية لمنشئي المحتوى على TikTok، مرتبة حسب سهولة الاستخدام والميزات.
 
 ## مقارنة سريعة

@@ -14,15 +14,6 @@ monetization:
 
 कुछ क्लिप के लिए एक-एक करके वीडियो डाउनलोड करना ठीक है, लेकिन अगर आपके पास सैकड़ों पोस्ट हैं, तो आपको एक बल्क सॉल्यूशन की आवश्यकता होगी।
 
-import InContentCTA from '../../../components/InContentCTA.astro';
-
-<InContentCTA 
-  targetUrl="/hi/tiktok-downloader/" 
-  keywordAnchorText="Download High-Quality TikTok Videos" 
-  subText="Manually saving your most important viral clips without watermarks."
-  iconType="tiktok" 
-/>
-
 यहां बताया गया है कि आप अपने पूरे TikTok खाते का सुरक्षित रूप से बैकअप कैसे ले सकते हैं।
 
 ## विधि 1: पूर्ण डेटा डाउनलोड का अनुरोध करें (आधिकारिक विधि)

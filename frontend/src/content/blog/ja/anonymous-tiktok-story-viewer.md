@@ -12,15 +12,6 @@ tags: ["TikTok", "Guides", "Privacy"]
 
 答えは **はい** ですが、これはあなた自身のプライバシー設定、作成者の設定、およびビデオへのアクセス方法によって完全に異なります。
 
-import InContentCTA from '../../../components/InContentCTA.astro';
-
-<InContentCTA 
-  targetUrl="/ja/tiktok-downloader/" 
-  keywordAnchorText="View and Download TikToks Anonymously" 
-  subText="Instantly save TikTok videos to your phone. The creator will never know."
-  iconType="tiktok" 
-/>
-
 ここでは、2026 年に TikTok の視聴履歴がどのように機能するか、そしてコンテンツを完全に匿名で視聴する最適な方法について説明します。
 
 ## TikTokの「プロフィールビュー」の仕組み

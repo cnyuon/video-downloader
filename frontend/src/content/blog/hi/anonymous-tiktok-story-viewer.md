@@ -12,15 +12,6 @@ tags: ["TikTok", "Guides", "Privacy"]
 
 इसका उत्तर हां है, लेकिन यह पूरी तरह से आपकी अपनी गोपनीयता सेटिंग्स, निर्माता की सेटिंग्स और आप वीडियो तक पहुंचने के लिए किस तरह का विकल्प चुनते हैं, इस पर निर्भर करता है।
 
-import InContentCTA from '../../../components/InContentCTA.astro';
-
-<InContentCTA 
-  targetUrl="/hi/tiktok-downloader/" 
-  keywordAnchorText="View and Download TikToks Anonymously" 
-  subText="Instantly save TikTok videos to your phone. The creator will never know."
-  iconType="tiktok" 
-/>
-
 यहां बताया गया है कि 2026 में टिकटॉक का व्यू हिस्ट्री कैसे काम करेगा, और पूरी तरह से गुमनाम रूप से कंटेंट देखने के सर्वोत्तम तरीके क्या हैं।
 
 ## टिकटॉक के "प्रोफ़ाइल व्यूज़" कैसे काम करते हैं

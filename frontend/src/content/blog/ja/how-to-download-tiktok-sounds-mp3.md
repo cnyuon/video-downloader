@@ -12,15 +12,6 @@ monetization:
 
 TikTokには、キャッチーな曲から面白いオーディオクリップ、話題のナレーションまで、数百万ものバイラルサウンドが揃っています。しかし、このアプリではオーディオだけをダウンロードすることはできません。
 
-import InContentCTA from '../../../components/InContentCTA.astro';
-
-<InContentCTA 
-  targetUrl="/ja/tiktok-sound-downloader/" 
-  keywordAnchorText="Convert TikTok Sounds to MP3" 
-  subText="Instantly extract high-quality audio from any TikTok video."
-  iconType="audio" 
-/>
-
 自分の動画でトレンドのサウンドを使用したい場合、TikTok で発見した曲を保存したい場合、または単にオフラインで聴きたい場合など、このガイドに必要な情報がすべて網羅されています。
 
 ## TikTok サウンドをダウンロードする理由

@@ -12,15 +12,6 @@ Vous n'êtes pas fou. Le bug du son sur Reddit lors de l'enregistrement ou du pa
 
 Pour comprendre pourquoi cela se produit et comment y remédier facilement en téléchargeant directement la vidéo, lisez la suite.
 
-import InContentCTA from '../../../components/InContentCTA.astro';
-
-<InContentCTA 
-  targetUrl="/" 
-  keywordAnchorText="Download Reddit Videos with Full Audio" 
-  subText="Instantly save Reddit videos in HD with perfect sound synchronization."
-  iconType="audio" 
-/>
-
 ## Pourquoi les vidéos Reddit se téléchargent-elles sans le son ?
 
 La raison pour laquelle l'enregistrement d'une vidéo depuis l'application Reddit aboutit souvent à un clip muet est due à la façon dont Reddit traite les médias sur ses serveurs.

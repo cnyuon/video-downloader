@@ -12,15 +12,6 @@ monetization:
 
 Facebook Reels, Meta'nın TikTok'a verdiği cevaptır — her gün milyonlarca izlenmeye ulaşan kısa, ilgi çekici videolar. Ancak tıpkı TikTok gibi, Facebook da Reels'leri telefonunuza indirmeyi kolaylaştırmaz.
 
-import InContentCTA from '../../../components/InContentCTA.astro';
-
-<InContentCTA 
-  targetUrl="/tr/facebook-downloader/" 
-  keywordAnchorText="Facebook Reels'leri Telefonunuza İndirin" 
-  subText="Ücretsiz çevrimiçi aracımızla Facebook videolarını anında HD kalitede kaydedin."
-  iconType="facebook" 
-/>
-
 İster komik bir klip kaydetmek, ister ilham verici bir videoyu saklamak, isterse kendi Reels'lerinizi yedeklemek isteyin, bu rehber mevcut her yöntemi gösterir.
 
 ## Neden Facebook Reels İndirmeliyiz?

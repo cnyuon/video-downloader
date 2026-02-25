@@ -12,15 +12,6 @@ monetization:
 
 틱톡은 전 세계적으로 다양한 수준의 제재를 받고 있습니다. 완전 금지, 정부의 기기 사용 제한, 연령 제한 등 여러 가지 이유로 수백만 명의 사용자가 언제든 좋아하는 콘텐츠에 대한 접근 권한을 잃을 위험에 처해 있습니다.
 
-import InContentCTA from '../../../components/InContentCTA.astro';
-
-<InContentCTA 
-  targetUrl="/ko/tiktok-downloader/" 
-  keywordAnchorText="Download TikTok Videos Before the Ban" 
-  subText="Instantly back up your favorite TikTok videos to your phone or PC."
-  iconType="tiktok" 
-/>
-
 이 가이드는 현재의 글로벌 상황과 콘텐츠 보호 방법에 대해 다룹니다.
 
 ## 2026년에는 틱톡의 이용이 어디에서 제한될까요?

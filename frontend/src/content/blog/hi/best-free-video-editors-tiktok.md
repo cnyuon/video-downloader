@@ -12,15 +12,6 @@ monetization:
 
 TikTok पर ऐसा कंटेंट बनाना जो सबसे अलग दिखे, सिर्फ रिकॉर्डिंग शुरू करने से कहीं ज़्यादा है। एक सही वीडियो एडिटर कच्चे फुटेज को ऐसे कंटेंट में बदल सकता है जो दर्शकों को पहले ही सेकंड में आकर्षित कर ले।
 
-import InContentCTA from '../../../components/InContentCTA.astro';
-
-<InContentCTA 
-  targetUrl="/hi/tiktok-downloader/" 
-  keywordAnchorText="Download TikTok videos to edit" 
-  subText="Save any TikTok video without a watermark to use as B-roll or reaction clips."
-  iconType="tiktok" 
-/>
-
 यहां TikTok क्रिएटर्स के लिए सर्वश्रेष्ठ मुफ्त वीडियो एडिटर दिए गए हैं, जिन्हें उपयोग में आसानी और सुविधाओं के आधार पर रैंक किया गया है।
 
 ## त्वरित तुलना

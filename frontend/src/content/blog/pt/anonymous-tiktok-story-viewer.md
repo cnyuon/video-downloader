@@ -12,15 +12,6 @@ Se você se deparar com o perfil de um criador de conteúdo — ou tocar acident
 
 A resposta é **sim**, mas depende inteiramente das suas configurações de privacidade, das configurações do criador e de como você escolhe acessar o vídeo.
 
-import InContentCTA from '../../../components/InContentCTA.astro';
-
-<InContentCTA 
-  targetUrl="/pt/tiktok-downloader/" 
-  keywordAnchorText="View and Download TikToks Anonymously" 
-  subText="Instantly save TikTok videos to your phone. The creator will never know."
-  iconType="tiktok" 
-/>
-
 Veja exatamente como funciona o histórico de visualizações do TikTok em 2026 e as melhores maneiras de visualizar conteúdo de forma completamente anônima.
 
 Como funcionam as "visualizações de perfil" do TikTok

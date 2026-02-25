@@ -16,15 +16,6 @@ monetization:
 
 समाधान: आपको किसी ऐप की आवश्यकता नहीं है। आप केवल सफारी का उपयोग करके साफ, वॉटरमार्क-मुक्त वीडियो सीधे अपने कैमरा रोल में डाउनलोड कर सकते हैं।
 
-import InContentCTA from '../../../components/InContentCTA.astro';
-
-<InContentCTA 
-  targetUrl="/hi/tiktok-downloader/" 
-  keywordAnchorText="Download TikToks to your iPhone Camera Roll" 
-  subText="Instantly save TikTok videos without watermarks using Safari."
-  iconType="tiktok" 
-/>
-
 यह 2026 के लिए सबसे तेज़ और सुरक्षित तरीका है।
 
 ## "वीडियो सेव करें" बटन के साथ समस्या

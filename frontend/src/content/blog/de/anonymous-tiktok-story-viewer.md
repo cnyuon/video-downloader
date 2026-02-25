@@ -12,15 +12,6 @@ Wenn man zufällig auf das Profil eines Creators stößt oder versehentlich auf 
 
 Die Antwort lautet **yes**, hängt aber vollständig von Ihren eigenen Datenschutzeinstellungen, den Einstellungen des Erstellers und der Art und Weise ab, wie Sie auf das Video zugreifen.
 
-import InContentCTA from '../../../components/InContentCTA.astro';
-
-<InContentCTA 
-  targetUrl="/de/tiktok-downloader/" 
-  keywordAnchorText="View and Download TikToks Anonymously" 
-  subText="Instantly save TikTok videos to your phone. The creator will never know."
-  iconType="tiktok" 
-/>
-
 Hier erfahren Sie genau, wie die Wiedergabehistorie von TikTok im Jahr 2026 funktioniert und wie Sie Inhalte am besten völlig anonym ansehen können.
 
 ## So funktionieren die „Profilaufrufe“ auf TikTok

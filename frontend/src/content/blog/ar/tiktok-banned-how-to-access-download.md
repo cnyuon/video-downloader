@@ -12,15 +12,6 @@ monetization:
 
 يواجه تطبيق تيك توك مستويات مختلفة من القيود حول العالم. سواء كان ذلك حظراً كاملاً، أو قيوداً حكومية على الأجهزة، أو قيوداً عمرية، فإن ملايين المستخدمين معرضون لخطر فقدان الوصول إلى محتواهم المفضل في أي وقت.
 
-import InContentCTA from '../../../components/InContentCTA.astro';
-
-<InContentCTA 
-  targetUrl="/ar/tiktok-downloader/" 
-  keywordAnchorText="Download TikTok Videos Before the Ban" 
-  subText="Instantly back up your favorite TikTok videos to your phone or PC."
-  iconType="tiktok" 
-/>
-
 يغطي هذا الدليل الوضع العالمي الحالي وكيفية حماية المحتوى الخاص بك.
 
 ## أين سيتم حظر تطبيق تيك توك في عام 2026؟

@@ -16,15 +16,6 @@ Les politiques de l'App Store rendent difficile la recherche de bonnes applicati
 
 **La solution :** Vous n’avez pas besoin d’application. Vous pouvez télécharger des vidéos nettes et sans filigrane directement dans votre pellicule en utilisant simplement Safari.
 
-import InContentCTA from '../../../components/InContentCTA.astro';
-
-<InContentCTA 
-  targetUrl="/fr/tiktok-downloader/" 
-  keywordAnchorText="Download TikToks to your iPhone Camera Roll" 
-  subText="Instantly save TikTok videos without watermarks using Safari."
-  iconType="tiktok" 
-/>
-
 Voici la méthode la plus rapide et la plus sûre pour 2026.
 
 ## Le problème avec le bouton « Enregistrer la vidéo »

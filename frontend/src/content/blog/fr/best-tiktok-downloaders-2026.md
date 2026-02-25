@@ -14,15 +14,6 @@ Des dizaines de sites prétendent permettre de télécharger des vidéos TikTok.
 
 Nous avons testé les 5 téléchargeurs TikTok les plus populaires en 2026 pour voir lequel fournit réellement des vidéos HD propres sans les maux de tête.
 
-import InContentCTA from '../../../components/InContentCTA.astro';
-
-<InContentCTA 
-  targetUrl="/fr/tiktok-downloader/" 
-  keywordAnchorText="Try the #1 Fastest TikTok Downloader" 
-  subText="Instantly save TikTok videos to your phone or PC. No ads. 100% Free."
-  iconType="tiktok" 
-/>
-
 Voici notre classement honnête.
 
 ## Les prétendants

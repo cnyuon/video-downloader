@@ -12,15 +12,6 @@ Aber was genau ist es? Handelt es sich um eine einzelne Website, eine App oder e
 
 Hier finden Sie alles Wissenswerte über MP3-Downloader, die damit verbundenen Risiken und die sichersten modernen Alternativen.
 
-import InContentCTA from '../../../components/InContentCTA.astro';
-
-<InContentCTA 
-  targetUrl="/de/video-to-mp3/" 
-  keywordAnchorText="Safely Extract Audio from Videos" 
-  subText="Instantly convert any TikTok or social media video into a high-quality MP3 file for free."
-  iconType="audio" 
-/>
-
 ## Was ist MP3 Juice?
 
 Ursprünglich war „MP3 Juice“ (oder MP3Juices) eine unglaublich beliebte webbasierte Suchmaschine für Audiodateien. Nutzer konnten nach einem Songtitel oder Interpreten suchen, woraufhin die Website das Internet durchsuchte, um ein offenes Verzeichnis oder einen Server zu finden, der die entsprechende Audiodatei hostete. Anschließend wurde ein direkter Download-Link bereitgestellt, um die Datei auf dem Computer oder Smartphone zu speichern.

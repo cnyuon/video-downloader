@@ -14,15 +14,6 @@ monetization:
 
 إذا لم يشاهد الناس الفيديو الخاص بك حتى النهاية، فلن يظهر في صفحة "لك". سرّ جذب المشاهدين ليس المحتوى فحسب، بل المونتاج أيضاً.
 
-import InContentCTA from '../../../components/InContentCTA.astro';
-
-<InContentCTA 
-  targetUrl="/ar/tiktok-downloader/" 
-  keywordAnchorText="Download viral TikToks without watermarks" 
-  subText="Analyze the edits of top creators in slow motion. 100% Free."
-  iconType="tiktok" 
-/>
-
 إليكم عشر نصائح احترافية في مجال التحرير للحفاظ على اهتمام المشاهدين.
 
 ## 1. قاعدة الثلاث ثوانٍ (الخطاف)

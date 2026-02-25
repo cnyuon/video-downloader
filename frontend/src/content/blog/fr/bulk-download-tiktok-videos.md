@@ -14,15 +14,6 @@ Avec l'interdiction de TikTok dans plusieurs régions, de nombreux créateurs pa
 
 Télécharger les vidéos une par une convient pour quelques extraits, mais si vous avez des centaines de vidéos, vous avez besoin d'une solution de téléchargement en masse.
 
-import InContentCTA from '../../../components/InContentCTA.astro';
-
-<InContentCTA 
-  targetUrl="/fr/tiktok-downloader/" 
-  keywordAnchorText="Download High-Quality TikTok Videos" 
-  subText="Manually saving your most important viral clips without watermarks."
-  iconType="tiktok" 
-/>
-
 Voici comment sauvegarder l'intégralité de votre compte TikTok en toute sécurité.
 
 ## Méthode 1 : Demander un téléchargement complet des données (Méthode officielle)

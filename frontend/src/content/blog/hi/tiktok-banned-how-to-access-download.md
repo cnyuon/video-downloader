@@ -12,15 +12,6 @@ monetization:
 
 TikTok को दुनिया भर में विभिन्न स्तरों के प्रतिबंधों का सामना करना पड़ रहा है। चाहे वह पूर्ण प्रतिबंध हो, सरकारी उपकरणों पर प्रतिबंध हो, या आयु-आधारित सीमाएं हों, लाखों उपयोगकर्ताओं को किसी भी समय अपनी पसंदीदा सामग्री तक पहुंच खोने का खतरा है।
 
-import InContentCTA from '../../../components/InContentCTA.astro';
-
-<InContentCTA 
-  targetUrl="/hi/tiktok-downloader/" 
-  keywordAnchorText="Download TikTok Videos Before the Ban" 
-  subText="Instantly back up your favorite TikTok videos to your phone or PC."
-  iconType="tiktok" 
-/>
-
 यह गाइड वर्तमान वैश्विक परिदृश्य और आपकी सामग्री की सुरक्षा कैसे करें, इस बारे में जानकारी प्रदान करती है।
 
 ## 2026 में TikTok किन-किन जगहों पर प्रतिबंधित रहेगा?

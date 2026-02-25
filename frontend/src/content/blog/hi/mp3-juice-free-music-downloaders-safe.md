@@ -12,15 +12,6 @@ tags: ["Audio", "Guides", "Safety"]
 
 यहां आपको एमपी3 डाउनलोडर के बारे में जानने के लिए आवश्यक सभी जानकारी, इससे जुड़े जोखिम और सबसे सुरक्षित आधुनिक विकल्प मिलेंगे।
 
-import InContentCTA from '../../../components/InContentCTA.astro';
-
-<InContentCTA 
-  targetUrl="/hi/video-to-mp3/" 
-  keywordAnchorText="Safely Extract Audio from Videos" 
-  subText="Instantly convert any TikTok or social media video into a high-quality MP3 file for free."
-  iconType="audio" 
-/>
-
 ## एमपी3 जूस क्या है?
 
 मूल रूप से, "MP3 Juice" (या MP3Juices) ऑडियो के लिए एक बेहद लोकप्रिय वेब-आधारित सर्च इंजन था। यह उपयोगकर्ताओं को गाने के शीर्षक या कलाकार को खोजने की अनुमति देता था, और साइट उस ऑडियो फ़ाइल को होस्ट करने वाली खुली निर्देशिका या सर्वर को खोजने के लिए इंटरनेट पर खोज करती थी। फिर यह आपके कंप्यूटर या फ़ोन पर फ़ाइल को सहेजने के लिए एक सीधा डाउनलोड लिंक प्रदान करता था।

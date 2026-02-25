@@ -12,15 +12,6 @@ Si vous tombez par hasard sur le profil d'un créateur ou si vous cliquez accide
 
 La réponse est **oui**, mais cela dépend entièrement de vos propres paramètres de confidentialité, des paramètres du créateur et de la façon dont vous choisissez d'accéder à la vidéo.
 
-import InContentCTA from '../../../components/InContentCTA.astro';
-
-<InContentCTA 
-  targetUrl="/fr/tiktok-downloader/" 
-  keywordAnchorText="View and Download TikToks Anonymously" 
-  subText="Instantly save TikTok videos to your phone. The creator will never know."
-  iconType="tiktok" 
-/>
-
 Voici précisément comment fonctionne l'historique de visionnage de TikTok en 2026, et les meilleures façons de visionner du contenu de manière totalement anonyme.
 
 ## Comment fonctionnent les « vues de profil » sur TikTok

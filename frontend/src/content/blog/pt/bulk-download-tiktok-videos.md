@@ -14,15 +14,6 @@ Com o TikTok enfrentando proibições em várias regiões, muitos criadores est�
 
 Baixar vídeos um por um funciona bem para poucos clipes, mas se você tiver centenas de vídeos, precisará de uma solução para download em lote.
 
-import InContentCTA from '../../../components/InContentCTA.astro';
-
-<InContentCTA 
-  targetUrl="/pt/tiktok-downloader/" 
-  keywordAnchorText="Download High-Quality TikTok Videos" 
-  subText="Manually saving your most important viral clips without watermarks."
-  iconType="tiktok" 
-/>
-
 Veja como fazer backup de toda a sua conta do TikTok com segurança.
 
 ## Método 1: Solicitar o download completo dos dados (Método oficial)

@@ -14,15 +14,6 @@ Une miniature réussie fait souvent la différence entre une vidéo virale et un
 
 Que vous souhaitiez analyser la stratégie de miniatures d'un concurrent, utiliser l'image pour une republication sur YouTube ou simplement archiver des couvertures de haute qualité, vous avez besoin d'un outil dédié.
 
-import InContentCTA from '../../../components/InContentCTA.astro';
-
-<InContentCTA 
-  targetUrl="/fr/thumbnail-grabber/" 
-  keywordAnchorText="Download TikTok Thumbnails in HD" 
-  subText="Instantly extract high-resolution cover images from any TikTok video."
-  iconType="thumbnail" 
-/>
-
 Voici comment capturer n'importe quelle miniature TikTok en Full HD en utilisant [MediaTools](/fr/thumbnail-grabber/).
 
 ## Pourquoi télécharger les miniatures ?

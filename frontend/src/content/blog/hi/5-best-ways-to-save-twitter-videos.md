@@ -12,15 +12,6 @@ monetization:
 
 ट्विटर (अब [X](https://x.com)]) वायरल क्लिप, ब्रेकिंग न्यूज़ फुटेज और मज़ेदार पलों से भरा हुआ है जिन्हें आप हमेशा के लिए सहेज कर रखना चाहेंगे। लेकिन ऐप में कोई बिल्ट-इन डाउनलोड बटन नहीं है।
 
-import InContentCTA from '../../../components/InContentCTA.astro';
-
-<InContentCTA 
-  targetUrl="/hi/twitter-downloader/" 
-  keywordAnchorText="Download Twitter GIFs as MP4" 
-  subText="Instantly save Twitter videos and GIFs directly to your iPhone camera roll. No app needed."
-  iconType="twitter" 
-/>
-
 यहां सबसे आसान से लेकर सबसे अधिक मेहनत वाले 5 सर्वोत्तम तरीके दिए गए हैं।
 
 ## विधि 1: मीडिया टूल्स (सबसे तेज़ और सबसे आसान)

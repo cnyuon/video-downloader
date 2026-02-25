@@ -12,15 +12,6 @@ Reddit で面白い動画を見つけて、それを保存したり友達にテ�
 
 なぜこのようなことが起こるのか、そしてビデオを直接ダウンロードすることでこれを簡単に修正する方法を理解するには、以下をお読みください。
 
-import InContentCTA from '../../../components/InContentCTA.astro';
-
-<InContentCTA 
-  targetUrl="/" 
-  keywordAnchorText="Download Reddit Videos with Full Audio" 
-  subText="Instantly save Reddit videos in HD with perfect sound synchronization."
-  iconType="audio" 
-/>
-
 ## Reddit ビデオが音なしでダウンロードされるのはなぜですか?
 
 Reddit アプリからビデオを保存すると無音のクリップになることが多いのは、Reddit がバックエンド サーバーでメディアを処理する方法によるものです。

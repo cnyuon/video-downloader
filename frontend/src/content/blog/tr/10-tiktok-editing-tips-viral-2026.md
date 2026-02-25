@@ -14,15 +14,6 @@ monetization:
 
 İnsanlar videonuzu sonuna kadar izlemiyorsa, Senin İçin Sayfası'na (FYP) çıkmayacaktır. İzleyici tutmanın sırrı sadece içerik değildir — *kurgu*dur.
 
-import InContentCTA from '../../../components/InContentCTA.astro';
-
-<InContentCTA 
-  targetUrl="/tr/tiktok-downloader/" 
-  keywordAnchorText="Viral TikTok'ları filigransız indirin" 
-  subText="En iyi içerik üreticilerinin kurgularını ağır çekimde analiz edin. %100 Ücretsiz."
-  iconType="tiktok" 
-/>
-
 İşte izleyicileri bağlı tutmak için 10 profesyonel düzenleme ipucu.
 
 ## 1. 3 Saniye Kuralı (Kanca)

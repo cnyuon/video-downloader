@@ -12,15 +12,6 @@ monetization:
 
 TikTok लाखों वायरल साउंड्स का घर है - जिनमें आकर्षक गाने, मजेदार ऑडियो क्लिप और ट्रेंडिंग वॉइसओवर शामिल हैं। लेकिन ऐप आपको सिर्फ ऑडियो डाउनलोड करने का विकल्प नहीं देता है।
 
-import InContentCTA from '../../../components/InContentCTA.astro';
-
-<InContentCTA 
-  targetUrl="/hi/tiktok-sound-downloader/" 
-  keywordAnchorText="Convert TikTok Sounds to MP3" 
-  subText="Instantly extract high-quality audio from any TikTok video."
-  iconType="audio" 
-/>
-
 चाहे आप अपने वीडियो में किसी ट्रेंडिंग साउंड का इस्तेमाल करना चाहते हों, टिकटॉक पर मिले किसी गाने को सेव करना चाहते हों, या बस ऑफलाइन सुनना चाहते हों, यह गाइड आपको वह सब कुछ बताएगी जो आपको जानना चाहिए।
 
 ## TikTok साउंड्स क्यों डाउनलोड करें?

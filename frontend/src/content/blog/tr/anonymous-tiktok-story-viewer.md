@@ -13,15 +13,6 @@ Bir içerik üreticisinin profiline denk gelirseniz veya yanlışlıkla TikTok H
 
 Cevap **evet**, ancak tamamen kendi gizlilik ayarlarınıza, içerik üreticisinin ayarlarına ve videoya nasıl erişmeyi seçtiğinize bağlıdır.
 
-import InContentCTA from '../../../components/InContentCTA.astro';
-
-<InContentCTA 
-  targetUrl="/tr/tiktok-downloader/" 
-  keywordAnchorText="TikTok'ları Anonim Görüntüle ve İndir" 
-  subText="TikTok videolarını anında telefonunuza kaydedin. İçerik üreticisi asla bilmeyecek."
-  iconType="tiktok" 
-/>
-
 İşte TikTok'un 2026'da görüntüleme geçmişinin tam olarak nasıl çalıştığı ve içerikleri tamamen anonim olarak görüntülemenin en iyi yolları.
 
 ## TikTok "Profil Görüntülemeleri" Nasıl Çalışır

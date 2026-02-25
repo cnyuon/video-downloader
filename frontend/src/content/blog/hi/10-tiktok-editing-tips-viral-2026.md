@@ -14,15 +14,6 @@ monetization:
 
 अगर लोग आपका वीडियो अंत तक नहीं देखते हैं, तो वह 'फॉर यू पेज' (FYP) पर नहीं दिखेगा। दर्शकों को वीडियो से जोड़े रखने का राज सिर्फ कंटेंट में नहीं है—बल्कि एडिटिंग में भी है।
 
-import InContentCTA from '../../../components/InContentCTA.astro';
-
-<InContentCTA 
-  targetUrl="/hi/tiktok-downloader/" 
-  keywordAnchorText="Download viral TikToks without watermarks" 
-  subText="Analyze the edits of top creators in slow motion. 100% Free."
-  iconType="tiktok" 
-/>
-
 दर्शकों को बांधे रखने के लिए यहां 10 पेशेवर एडिटिंग टिप्स दिए गए हैं।
 
 ## 1. 3-सेकंड का नियम (हुक)

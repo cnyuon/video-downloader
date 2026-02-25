@@ -12,15 +12,6 @@ monetization:
 
 TikTok, akılda kalan şarkılardan komik ses kliplerine ve trend seslendirmelere kadar milyonlarca viral sesin evidir. Ancak uygulama size sadece sesi indirmenin bir yolunu sunmaz.
 
-import InContentCTA from '../../../components/InContentCTA.astro';
-
-<InContentCTA 
-  targetUrl="/tr/tiktok-sound-downloader/" 
-  keywordAnchorText="TikTok Seslerini MP3'e Dönüştürün" 
-  subText="Herhangi bir TikTok videosundan anında yüksek kaliteli ses çıkarın."
-  iconType="audio" 
-/>
-
 İster kendi videolarınızda trend bir ses kullanmak, ister TikTok'ta keşfettiğiniz bir şarkıyı kaydetmek, isterse çevrimdışı dinlemek isteyin, bu rehber bilmeniz gereken her şeyi kapsıyor.
 
 ## Neden TikTok Seslerini İndirmeliyiz?

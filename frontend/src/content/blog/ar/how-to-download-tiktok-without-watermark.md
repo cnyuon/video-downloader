@@ -12,15 +12,6 @@ monetization:
 
 يُعدّ تطبيق تيك توك من أشهر منصات التواصل الاجتماعي في العالم، وهو مليء بمقاطع الفيديو الإبداعية والمسلية. مع ذلك، عند محاولة تحميل فيديو مباشرةً من التطبيق، يظهر عليه علامة مائية متحركة قد تُغطي أجزاءً مهمة منه.
 
-import InContentCTA from '../../../components/InContentCTA.astro';
-
-<InContentCTA 
-  targetUrl="/ar/tiktok-downloader/" 
-  keywordAnchorText="Download TikTok Videos Without Watermark" 
-  subText="Instantly save TikTok videos in HD for free. No app required."
-  iconType="tiktok" 
-/>
-
 في هذا الدليل، سنوضح لك كيفية تنزيل مقاطع فيديو TikTok **بدون العلامة المائية** بجودة عالية، مجانًا تمامًا.
 
 ## لماذا يتم تنزيل مقاطع تيك توك بدون علامة مائية؟

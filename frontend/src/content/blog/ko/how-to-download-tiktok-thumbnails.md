@@ -14,15 +14,6 @@ monetization:
 
 경쟁사의 썸네일 전략을 분석하든, 유튜브 리포스트에 이미지를 활용하든, 아니면 고품질 커버 이미지를 보관하든, 전용 도구가 필요합니다.
 
-import InContentCTA from '../../../components/InContentCTA.astro';
-
-<InContentCTA 
-  targetUrl="/ko/thumbnail-grabber/" 
-  keywordAnchorText="Download TikTok Thumbnails in HD" 
-  subText="Instantly extract high-resolution cover images from any TikTok video."
-  iconType="thumbnail" 
-/>
-
 [MediaTools](/ko/thumbnail-grabber/)]를 사용하여 모든 TikTok 썸네일을 풀 HD로 캡처하는 방법은 다음과 같습니다.
 
 ## 썸네일을 다운로드해야 하는 이유는 무엇일까요?

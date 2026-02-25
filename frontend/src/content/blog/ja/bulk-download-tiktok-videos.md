@@ -14,15 +14,6 @@ TikTokがさまざまな地域で禁止に直面しており、多くのクリ�
 
 数個のクリップであればビデオを 1 つずつダウンロードしても問題ありませんが、投稿が数百個ある場合は一括ソリューションが必要です。
 
-import InContentCTA from '../../../components/InContentCTA.astro';
-
-<InContentCTA 
-  targetUrl="/ja/tiktok-downloader/" 
-  keywordAnchorText="Download High-Quality TikTok Videos" 
-  subText="Manually saving your most important viral clips without watermarks."
-  iconType="tiktok" 
-/>
-
 **TikTok アカウント全体を安全にバックアップする方法** は次のとおりです。
 
 ## 方法 1: 完全なデータのダウンロードを要求する (公式の方法)

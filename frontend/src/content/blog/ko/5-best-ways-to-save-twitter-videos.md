@@ -12,15 +12,6 @@ monetization:
 
 트위터(현재 [X](https://x.com)])에는 바이럴 영상, 속보 영상, 그리고 영원히 간직하고 싶은 재미있는 순간들이 가득합니다. 하지만 이 앱에는 다운로드 버튼이 내장되어 있지 않습니다.
 
-import InContentCTA from '../../../components/InContentCTA.astro';
-
-<InContentCTA 
-  targetUrl="/ko/twitter-downloader/" 
-  keywordAnchorText="Download Twitter GIFs as MP4" 
-  subText="Instantly save Twitter videos and GIFs directly to your iPhone camera roll. No app needed."
-  iconType="twitter" 
-/>
-
 다음은 가장 쉬운 방법부터 가장 노력 많이 드는 방법 순으로 정리한 5가지 최고의 방법입니다.
 
 ## 방법 1: MediaTools (가장 빠르고 쉬운 방법)

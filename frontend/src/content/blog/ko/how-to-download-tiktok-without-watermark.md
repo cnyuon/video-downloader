@@ -12,15 +12,6 @@ monetization:
 
 틱톡은 창의적이고 재미있는 영상들로 가득한 세계에서 가장 인기 있는 소셜 미디어 플랫폼 중 하나입니다. 하지만 앱에서 직접 영상을 다운로드하려고 하면 영상의 중요한 부분을 가릴 수 있는 워터마크가 표시됩니다.
 
-import InContentCTA from '../../../components/InContentCTA.astro';
-
-<InContentCTA 
-  targetUrl="/ko/tiktok-downloader/" 
-  keywordAnchorText="Download TikTok Videos Without Watermark" 
-  subText="Instantly save TikTok videos in HD for free. No app required."
-  iconType="tiktok" 
-/>
-
 이 가이드에서는 워터마크 없이 고화질 틱톡 영상을 완전히 무료로 다운로드하는 방법을 알려드리겠습니다.
 
 ## 워터마크 없는 틱톡 영상을 다운로드하는 이유는 무엇일까요?

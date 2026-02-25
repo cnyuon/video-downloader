@@ -16,15 +16,6 @@ monetization:
 
 الحل: لست بحاجة إلى تطبيق. يمكنك تنزيل مقاطع فيديو نظيفة وخالية من العلامات المائية مباشرةً إلى ألبوم الكاميرا باستخدام متصفح سفاري فقط.
 
-import InContentCTA from '../../../components/InContentCTA.astro';
-
-<InContentCTA 
-  targetUrl="/ar/tiktok-downloader/" 
-  keywordAnchorText="Download TikToks to your iPhone Camera Roll" 
-  subText="Instantly save TikTok videos without watermarks using Safari."
-  iconType="tiktok" 
-/>
-
 إليكم أسرع وأسلم طريقة لعام 2026.
 
 ## مشكلة زر "حفظ الفيديو"

@@ -16,15 +16,6 @@ App Store politikaları iyi indirici uygulamaları bulmayı zorlaştırır — g
 
 **Çözüm:** Bir uygulamaya ihtiyacınız yok. Sadece Safari kullanarak temiz, filigransız videoları doğrudan Fotoğraflar uygulamanıza indirebilirsiniz.
 
-import InContentCTA from '../../../components/InContentCTA.astro';
-
-<InContentCTA 
-  targetUrl="/tr/tiktok-downloader/" 
-  keywordAnchorText="TikTok'ları iPhone Fotoğraflarınıza İndirin" 
-  subText="Safari kullanarak TikTok videolarını filigransız anında kaydedin."
-  iconType="tiktok" 
-/>
-
 İşte 2026 için en hızlı, en güvenli yöntem.
 
 ## "Videoyu Kaydet" Düğmesinin Sorunu

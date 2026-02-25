@@ -14,15 +14,6 @@ monetization:
 
 視聴者が動画を最後まで視聴しなければ、「おすすめページ」（FYP）には表示されません。視聴者維持の秘訣はコンテンツだけでなく、編集にあります。
 
-import InContentCTA from '../../../components/InContentCTA.astro';
-
-<InContentCTA 
-  targetUrl="/ja/tiktok-downloader/" 
-  keywordAnchorText="Download viral TikToks without watermarks" 
-  subText="Analyze the edits of top creators in slow motion. 100% Free."
-  iconType="tiktok" 
-/>
-
 視聴者を魅了し続けるためのプロによる編集のヒントを 10 個紹介します。
 
 ## 1. 3秒ルール（フック）

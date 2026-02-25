@@ -12,15 +12,6 @@ monetization:
 
 TikTok ist eine der beliebtesten Social-Media-Plattformen weltweit und bietet eine Fülle kreativer und unterhaltsamer Videos. Versucht man jedoch, ein Video direkt aus der App herunterzuladen, wird es mit einem animierten Wasserzeichen versehen, das wichtige Teile des Videos verdecken kann.
 
-import InContentCTA from '../../../components/InContentCTA.astro';
-
-<InContentCTA 
-  targetUrl="/de/tiktok-downloader/" 
-  keywordAnchorText="Download TikTok Videos Without Watermark" 
-  subText="Instantly save TikTok videos in HD for free. No app required."
-  iconType="tiktok" 
-/>
-
 In diesem Leitfaden zeigen wir Ihnen, wie Sie TikTok-Videos ohne Wasserzeichen in hoher Auflösung und völlig kostenlos herunterladen können.
 
 ## Warum TikToks ohne Wasserzeichen herunterladen?

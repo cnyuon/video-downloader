@@ -12,15 +12,6 @@ monetization:
 
 TikTok, yaratıcı ve eğlenceli videolarla dolu, dünyanın en popüler sosyal medya platformlarından biridir. Ancak uygulamadan doğrudan bir video indirmeye çalıştığınızda, videonun önemli kısımlarını kapatabilecek zıplayan bir filigranla birlikte gelir.
 
-import InContentCTA from '../../../components/InContentCTA.astro';
-
-<InContentCTA 
-  targetUrl="/tr/tiktok-downloader/" 
-  keywordAnchorText="TikTok Videolarını Filigransız İndir" 
-  subText="TikTok videolarını anında ücretsiz HD kalitede kaydedin. Uygulama gerekmez."
-  iconType="tiktok" 
-/>
-
 Bu rehberde, TikTok videolarını yüksek çözünürlükte ve tamamen ücretsiz olarak **filigransız nasıl indireceğinizi** göstereceğiz.
 
 ## Neden TikTok'ları Filigransız İndirmeliyiz?

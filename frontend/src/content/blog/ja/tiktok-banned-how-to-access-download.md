@@ -12,15 +12,6 @@ monetization:
 
 TikTokは世界中で様々なレベルの制限に直面しています。完全な禁止、政府によるデバイス制限、年齢制限など、何百万人ものユーザーがいつでもお気に入りのコンテンツにアクセスできなくなるリスクがあります。
 
-import InContentCTA from '../../../components/InContentCTA.astro';
-
-<InContentCTA 
-  targetUrl="/ja/tiktok-downloader/" 
-  keywordAnchorText="Download TikTok Videos Before the Ban" 
-  subText="Instantly back up your favorite TikTok videos to your phone or PC."
-  iconType="tiktok" 
-/>
-
 このガイドでは、現在の世界情勢とコンテンツを保護する方法について説明します。
 
 ## 2026 年に TikTok が制限されるのはどこですか?

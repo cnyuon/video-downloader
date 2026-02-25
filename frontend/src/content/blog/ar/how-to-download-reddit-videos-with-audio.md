@@ -12,15 +12,6 @@ tags: ["Reddit", "Guides", "Fixes"]
 
 لفهم سبب حدوث ذلك، وكيفية إصلاحه بسهولة عن طريق تنزيل الفيديو مباشرة، تابع القراءة.
 
-import InContentCTA from '../../../components/InContentCTA.astro';
-
-<InContentCTA 
-  targetUrl="/" 
-  keywordAnchorText="Download Reddit Videos with Full Audio" 
-  subText="Instantly save Reddit videos in HD with perfect sound synchronization."
-  iconType="audio" 
-/>
-
 ## لماذا يتم تنزيل مقاطع الفيديو على موقع Reddit بدون صوت؟
 
 إن السبب في أن حفظ مقطع فيديو من تطبيق Reddit غالباً ما ينتج عنه مقطع صامت هو الطريقة التي يعالج بها Reddit الوسائط على خوادمه الخلفية.

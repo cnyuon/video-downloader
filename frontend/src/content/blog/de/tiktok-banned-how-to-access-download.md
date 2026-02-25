@@ -12,15 +12,6 @@ monetization:
 
 TikTok ist weltweit mit unterschiedlichen Einschränkungen konfrontiert. Ob vollständiges Verbot, staatliche Gerätebeschränkungen oder Altersgrenzen – Millionen von Nutzern riskieren jederzeit den Zugriff auf ihre Lieblingsinhalte.
 
-import InContentCTA from '../../../components/InContentCTA.astro';
-
-<InContentCTA 
-  targetUrl="/de/tiktok-downloader/" 
-  keywordAnchorText="Download TikTok Videos Before the Ban" 
-  subText="Instantly back up your favorite TikTok videos to your phone or PC."
-  iconType="tiktok" 
-/>
-
 Dieser Leitfaden behandelt die aktuelle globale Landschaft und wie Sie Ihre Inhalte schützen können.
 
 ## Wo wird TikTok im Jahr 2026 eingeschränkt sein?

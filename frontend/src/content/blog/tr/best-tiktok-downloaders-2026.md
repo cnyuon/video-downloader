@@ -14,15 +14,6 @@ TikTok videolarını indirdiğini iddia eden düzinelerce site var. Çoğu güve
 
 2026'da en popüler 5 TikTok indiricisini test ettik ve hangisinin gerçekten **temiz, HD videolar** sunduğunu gördük — baş ağrısı olmadan.
 
-import InContentCTA from '../../../components/InContentCTA.astro';
-
-<InContentCTA 
-  targetUrl="/tr/tiktok-downloader/" 
-  keywordAnchorText="1 Numaralı En Hızlı TikTok İndiricisini Deneyin" 
-  subText="TikTok videolarını anında telefonunuza veya bilgisayarınıza kaydedin. Reklam yok. %100 Ücretsiz."
-  iconType="tiktok" 
-/>
-
 İşte dürüst sıralamamız.
 
 ## Yarışmacılar

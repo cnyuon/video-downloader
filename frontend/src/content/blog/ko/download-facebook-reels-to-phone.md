@@ -12,15 +12,6 @@ monetization:
 
 페이스북 릴스는 메타(Meta)가 틱톡에 대응하여 내놓은 짧고 매력적인 동영상 플랫폼으로, 매일 수백만 건의 조회수를 기록하고 있습니다. 하지만 틱톡과 마찬가지로 페이스북은 릴스를 휴대전화에 쉽게 다운로드할 수 있도록 지원하지 않습니다.
 
-import InContentCTA from '../../../components/InContentCTA.astro';
-
-<InContentCTA 
-  targetUrl="/ko/facebook-downloader/" 
-  keywordAnchorText="Download Facebook Reels to your Phone" 
-  subText="Instantly save Facebook videos in HD with our free online tool."
-  iconType="facebook" 
-/>
-
 재밌는 클립을 저장하고 싶든, 감동적인 영상을 보관하고 싶든, 아니면 나만의 릴스 영상을 백업하고 싶든, 이 가이드는 모든 가능한 방법을 알려줍니다.
 
 ## 페이스북 릴스를 다운로드해야 하는 이유는 무엇일까요?

@@ -12,15 +12,6 @@ monetization:
 
 TikTokは、クリエイティブで楽しい動画が満載の、世界で最も人気のあるソーシャルメディアプラットフォームの一つです。しかし、アプリから直接動画をダウンロードしようとすると、動画の重要な部分が隠れてしまう、バウンスするウォーターマークが付いてしまうことがあります。
 
-import InContentCTA from '../../../components/InContentCTA.astro';
-
-<InContentCTA 
-  targetUrl="/ja/tiktok-downloader/" 
-  keywordAnchorText="Download TikTok Videos Without Watermark" 
-  subText="Instantly save TikTok videos in HD for free. No app required."
-  iconType="tiktok" 
-/>
-
 このガイドでは、TikTok ビデオ ** をウォーターマークなしで ** 高解像度で完全に無料でダウンロードする方法を説明します。
 
 ## 透かしなしでTikTokをダウンロードする理由

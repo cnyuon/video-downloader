@@ -12,15 +12,6 @@ monetization:
 
 TikTok est l'une des plateformes de médias sociaux les plus populaires au monde, regorgeant de vidéos créatives et divertissantes. Cependant, lorsqu'on tente de télécharger une vidéo directement depuis l'application, un filigrane animé apparaît et peut masquer des parties importantes de la vidéo.
 
-import InContentCTA from '../../../components/InContentCTA.astro';
-
-<InContentCTA 
-  targetUrl="/fr/tiktok-downloader/" 
-  keywordAnchorText="Download TikTok Videos Without Watermark" 
-  subText="Instantly save TikTok videos in HD for free. No app required."
-  iconType="tiktok" 
-/>
-
 Dans ce guide, nous allons vous montrer comment télécharger des vidéos TikTok **sans le filigrane** en haute définition, entièrement gratuitement.
 
 ## Pourquoi télécharger des vidéos TikTok sans filigrane ?

@@ -14,15 +14,6 @@ monetization:
 
 चाहे आप किसी प्रतियोगी की थंबनेल रणनीति का विश्लेषण करना चाहते हों, YouTube पर रीपोस्ट के लिए छवि का उपयोग करना चाहते हों, या केवल उच्च-गुणवत्ता वाले कवर को संग्रहित करना चाहते हों, आपको एक समर्पित टूल की आवश्यकता है।
 
-import InContentCTA from '../../../components/InContentCTA.astro';
-
-<InContentCTA 
-  targetUrl="/hi/thumbnail-grabber/" 
-  keywordAnchorText="Download TikTok Thumbnails in HD" 
-  subText="Instantly extract high-resolution cover images from any TikTok video."
-  iconType="thumbnail" 
-/>
-
 यहां बताया गया है कि [MediaTools](/hi/thumbnail-grabber/) का उपयोग करके किसी भी TikTok थंबनेल को फुल एचडी में कैसे कैप्चर करें।
 
 ## थंबनेल क्यों डाउनलोड करें?

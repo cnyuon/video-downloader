@@ -12,15 +12,6 @@ monetization:
 
 Créer du contenu TikTok qui se démarque ne se résume pas à appuyer sur le bouton d'enregistrement. Un bon logiciel de montage vidéo peut transformer des images brutes en une vidéo qui captive les spectateurs dès la première seconde.
 
-import InContentCTA from '../../../components/InContentCTA.astro';
-
-<InContentCTA 
-  targetUrl="/fr/tiktok-downloader/" 
-  keywordAnchorText="Download TikTok videos to edit" 
-  subText="Save any TikTok video without a watermark to use as B-roll or reaction clips."
-  iconType="tiktok" 
-/>
-
 Voici les meilleurs logiciels de montage vidéo gratuits pour les créateurs TikTok, classés selon leur facilité d'utilisation et leurs fonctionnalités.
 
 ## Comparaison rapide

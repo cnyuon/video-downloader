@@ -14,15 +14,6 @@ monetization:
 
 사람들이 영상을 끝까지 보지 않으면 추천 페이지(FYP)에 올라가지 않습니다. 시청자 유지의 비결은 콘텐츠뿐만 아니라 편집에도 있습니다.
 
-import InContentCTA from '../../../components/InContentCTA.astro';
-
-<InContentCTA 
-  targetUrl="/ko/tiktok-downloader/" 
-  keywordAnchorText="Download viral TikToks without watermarks" 
-  subText="Analyze the edits of top creators in slow motion. 100% Free."
-  iconType="tiktok" 
-/>
-
 시청자의 몰입도를 유지하는 데 도움이 되는 전문가 편집 팁 10가지를 소개합니다.
 
 ## 1. 3초 법칙 (후크)

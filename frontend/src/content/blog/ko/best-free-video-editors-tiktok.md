@@ -12,15 +12,6 @@ monetization:
 
 눈길을 사로잡는 틱톡 콘텐츠를 만들려면 단순히 녹화 버튼을 누르는 것 이상의 노력이 필요합니다. 실력 있는 영상 편집자는 원본 영상을 시청자의 시선을 단번에 사로잡는 영상으로 탈바꿈시킬 수 있습니다.
 
-import InContentCTA from '../../../components/InContentCTA.astro';
-
-<InContentCTA 
-  targetUrl="/ko/tiktok-downloader/" 
-  keywordAnchorText="Download TikTok videos to edit" 
-  subText="Save any TikTok video without a watermark to use as B-roll or reaction clips."
-  iconType="tiktok" 
-/>
-
 틱톡 크리에이터를 위한 최고의 무료 동영상 편집 앱들을 사용 편의성과 기능 순으로 소개합니다.
 
 ## 빠른 비교

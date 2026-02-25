@@ -12,15 +12,6 @@ monetization:
 
 फेसबुक रील्स, मेटा का टिकटॉक का जवाब है — छोटे, आकर्षक वीडियो जो रोजाना लाखों व्यूज बटोरते हैं। लेकिन टिकटॉक की तरह ही, फेसबुक पर रील्स को फोन में डाउनलोड करना आसान नहीं है।
 
-import InContentCTA from '../../../components/InContentCTA.astro';
-
-<InContentCTA 
-  targetUrl="/hi/facebook-downloader/" 
-  keywordAnchorText="Download Facebook Reels to your Phone" 
-  subText="Instantly save Facebook videos in HD with our free online tool."
-  iconType="facebook" 
-/>
-
 चाहे आप कोई मजेदार क्लिप सेव करना चाहते हों, कोई प्रेरणादायक वीडियो रखना चाहते हों, या अपनी रील्स का बैकअप लेना चाहते हों, यह गाइड आपको उपलब्ध हर तरीका दिखाती है।
 
 ## फेसबुक रील्स क्यों डाउनलोड करें?

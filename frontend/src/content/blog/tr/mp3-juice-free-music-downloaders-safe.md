@@ -13,15 +13,6 @@ Peki tam olarak nedir? Tek bir web sitesi mi, bir uygulama mı, yoksa tamamen ba
 
 İşte MP3 indiriciler, ilgili riskler ve en güvenli modern alternatifler hakkında bilmeniz gereken her şey.
 
-import InContentCTA from '../../../components/InContentCTA.astro';
-
-<InContentCTA 
-  targetUrl="/tr/video-to-mp3/" 
-  keywordAnchorText="Videolardan Güvenle Ses Çıkarın" 
-  subText="Herhangi bir TikTok veya sosyal medya videosunu anında ücretsiz yüksek kaliteli MP3 dosyasına dönüştürün."
-  iconType="audio" 
-/>
-
 ## MP3 Juice Nedir?
 
 Başlangıçta "MP3 Juice" (veya MP3Juices), ses dosyaları için inanılmaz popüler bir web tabanlı arama motoruydu. Kullanıcıların bir şarkı adı veya sanatçı aramasına izin veriyordu ve site, o ses dosyasını barındıran açık bir dizin veya sunucu bulmak için interneti tarıyordu. Ardından `.mp3` dosyasını bilgisayarınıza veya telefonunuza kaydetmeniz için doğrudan bir indirme bağlantısı sağlıyordu.

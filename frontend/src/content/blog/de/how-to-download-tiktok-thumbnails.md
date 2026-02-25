@@ -14,15 +14,6 @@ Ein gelungenes Vorschaubild entscheidet oft über Erfolg oder Misserfolg eines V
 
 Egal ob Sie die Thumbnail-Strategie eines Konkurrenten analysieren, das Bild für einen YouTube-Repost verwenden oder einfach nur hochwertige Cover archivieren möchten, Sie benötigen ein spezielles Tool.
 
-import InContentCTA from '../../../components/InContentCTA.astro';
-
-<InContentCTA 
-  targetUrl="/de/thumbnail-grabber/" 
-  keywordAnchorText="Download TikTok Thumbnails in HD" 
-  subText="Instantly extract high-resolution cover images from any TikTok video."
-  iconType="thumbnail" 
-/>
-
 Hier erfahren Sie, wie Sie mit [MediaTools](/de/thumbnail-grabber/)] beliebige TikTok-Thumbnails in Full HD aufnehmen können.
 
 ## Warum Thumbnails herunterladen?

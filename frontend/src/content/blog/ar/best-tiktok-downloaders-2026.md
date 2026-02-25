@@ -14,15 +14,6 @@ monetization:
 
 لقد اختبرنا أكثر 5 برامج تنزيل TikTok شيوعًا في عام 2026 لمعرفة أي منها يقدم بالفعل مقاطع فيديو عالية الدقة ونظيفة بدون مشاكل.
 
-import InContentCTA from '../../../components/InContentCTA.astro';
-
-<InContentCTA 
-  targetUrl="/ar/tiktok-downloader/" 
-  keywordAnchorText="Try the #1 Fastest TikTok Downloader" 
-  subText="Instantly save TikTok videos to your phone or PC. No ads. 100% Free."
-  iconType="tiktok" 
-/>
-
 إليكم تصنيفنا الصادق.
 
 # المتنافسون

@@ -16,15 +16,6 @@ As políticas da App Store dificultam a busca por bons aplicativos de download �
 
 **A Solução:** Você não precisa de um aplicativo. Você pode baixar vídeos limpos e sem marca d'água diretamente para o seu Rolo da Câmera usando apenas o Safari.
 
-import InContentCTA from '../../../components/InContentCTA.astro';
-
-<InContentCTA 
-  targetUrl="/pt/tiktok-downloader/" 
-  keywordAnchorText="Download TikToks to your iPhone Camera Roll" 
-  subText="Instantly save TikTok videos without watermarks using Safari."
-  iconType="tiktok" 
-/>
-
 Aqui está o método mais rápido e seguro para 2026.
 
 ## O problema com o botão "Salvar vídeo"

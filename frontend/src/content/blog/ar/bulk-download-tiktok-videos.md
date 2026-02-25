@@ -14,15 +14,6 @@ monetization:
 
 يُعد تنزيل مقاطع الفيديو واحداً تلو الآخر مناسباً لعدد قليل من المقاطع، ولكن إذا كان لديك مئات المنشورات، فأنت بحاجة إلى حل جماعي.
 
-import InContentCTA from '../../../components/InContentCTA.astro';
-
-<InContentCTA 
-  targetUrl="/ar/tiktok-downloader/" 
-  keywordAnchorText="Download High-Quality TikTok Videos" 
-  subText="Manually saving your most important viral clips without watermarks."
-  iconType="tiktok" 
-/>
-
 إليك كيفية عمل نسخة احتياطية آمنة لحساب TikTok بالكامل.
 
 ## الطريقة الأولى: طلب تنزيل البيانات الكاملة (الطريقة الرسمية)

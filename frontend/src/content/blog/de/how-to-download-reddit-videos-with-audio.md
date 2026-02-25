@@ -12,15 +12,6 @@ Du bist nicht verrückt. Der „Reddit-Ton-Bug“ beim Speichern oder Teilen von
 
 Um zu verstehen, warum das passiert und wie man das Problem einfach beheben kann, indem man das Video direkt herunterlädt, lesen Sie weiter.
 
-import InContentCTA from '../../../components/InContentCTA.astro';
-
-<InContentCTA 
-  targetUrl="/" 
-  keywordAnchorText="Download Reddit Videos with Full Audio" 
-  subText="Instantly save Reddit videos in HD with perfect sound synchronization."
-  iconType="audio" 
-/>
-
 Warum werden Reddit-Videos ohne Ton heruntergeladen?
 
 Der Grund dafür, dass das Speichern eines Videos aus der Reddit-App oft zu einem stummen Clip führt, liegt in der Art und Weise, wie Reddit Medien auf seinen Backend-Servern verarbeitet.

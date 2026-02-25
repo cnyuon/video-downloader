@@ -12,15 +12,6 @@ monetization:
 
 TikTok es una de las plataformas de redes sociales más populares del mundo, llena de videos creativos y entretenidos. Sin embargo, cuando intentas descargar un video directamente desde la aplicación, viene con una marca de agua en movimiento que puede cubrir o tapar por completo partes importantes del video.
 
-import InContentCTA from '../../../../components/InContentCTA.astro';
-
-<InContentCTA 
-  targetUrl="/es/tiktok-downloader/" 
-  keywordAnchorText="Descargar videos de TikTok sin marca de agua" 
-  subText="Guarde instantáneamente videos de TikTok en HD de forma gratuita. No requiere aplicación."
-  iconType="tiktok" 
-/>
-
 En esta guía, le mostraremos exactamente cómo descargar videos de TikTok **sin la molesta marca de agua** en alta definición, y de manera completamente gratuita.
 
 ## ¿Por qué descargar TikToks sin marca de agua?

@@ -12,15 +12,6 @@ You aren't going crazy. The "Reddit no sound bug" when saving or sharing videos 
 
 To understand why this happens, and how to easily fix it by downloading the video directly, read on.
 
-import InContentCTA from '../../../components/InContentCTA.astro';
-
-<InContentCTA 
-  targetUrl="/" 
-  keywordAnchorText="Download Reddit Videos with Full Audio" 
-  subText="Instantly save Reddit videos in HD with perfect sound synchronization."
-  iconType="audio" 
-/>
-
 ## Why Do Reddit Videos Download Without Sound?
 
 The reason why saving a video from the Reddit app often results in a silent clip is because of how Reddit processes media on its backend servers.

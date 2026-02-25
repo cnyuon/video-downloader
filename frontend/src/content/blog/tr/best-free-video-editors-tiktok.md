@@ -12,15 +12,6 @@ monetization:
 
 Göze çarpan TikTok içeriği oluşturmak sadece kayıt düğmesine basmaktan daha fazlasını gerektirir. Doğru video düzenleyici, ham görüntüleri ilk saniyede izleyicileri yakalayan bir şeye dönüştürebilir.
 
-import InContentCTA from '../../../components/InContentCTA.astro';
-
-<InContentCTA 
-  targetUrl="/tr/tiktok-downloader/" 
-  keywordAnchorText="Düzenlemek için TikTok videolarını indirin" 
-  subText="Herhangi bir TikTok videosunu B-roll veya tepki klipleri olarak kullanmak için filigransız kaydedin."
-  iconType="tiktok" 
-/>
-
 İşte TikTok içerik üreticileri için kullanım kolaylığı ve özelliklere göre sıralanmış en iyi ücretsiz video düzenleyiciler.
 
 ## Hızlı Karşılaştırma

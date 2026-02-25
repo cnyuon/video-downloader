@@ -14,15 +14,6 @@ monetization:
 
 동영상 클립 몇 개라면 하나씩 다운로드하는 것도 괜찮지만, 수백 개의 게시물이 있다면 일괄 다운로드 솔루션이 필요합니다.
 
-import InContentCTA from '../../../components/InContentCTA.astro';
-
-<InContentCTA 
-  targetUrl="/ko/tiktok-downloader/" 
-  keywordAnchorText="Download High-Quality TikTok Videos" 
-  subText="Manually saving your most important viral clips without watermarks."
-  iconType="tiktok" 
-/>
-
 틱톡 계정 전체를 안전하게 백업하는 방법은 다음과 같습니다.
 
 ## 방법 1: 전체 데이터 다운로드 요청 (공식 방법)

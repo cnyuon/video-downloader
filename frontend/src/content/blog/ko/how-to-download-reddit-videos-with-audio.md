@@ -12,15 +12,6 @@ tags: ["Reddit", "Guides", "Fixes"]
 
 이 현상이 발생하는 이유와 동영상을 직접 다운로드하여 쉽게 해결하는 방법을 알아보려면 계속 읽어보세요.
 
-import InContentCTA from '../../../components/InContentCTA.astro';
-
-<InContentCTA 
-  targetUrl="/" 
-  keywordAnchorText="Download Reddit Videos with Full Audio" 
-  subText="Instantly save Reddit videos in HD with perfect sound synchronization."
-  iconType="audio" 
-/>
-
 레딧 동영상이 소리 없이 다운로드되는 이유는 무엇인가요?
 
 레딧 앱에서 동영상을 저장할 때 소리가 나지 않는 경우가 많은 이유는 레딧이 백엔드 서버에서 미디어를 처리하는 방식 때문입니다.

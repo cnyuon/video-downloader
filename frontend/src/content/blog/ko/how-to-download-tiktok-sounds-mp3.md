@@ -12,15 +12,6 @@ monetization:
 
 틱톡에는 중독성 있는 노래부터 재미있는 오디오 클립, 유행하는 음성 해설까지 수백만 개의 인기 있는 사운드가 있습니다. 하지만 이 앱은 오디오만 따로 다운로드할 수 있는 기능을 제공하지 않습니다.
 
-import InContentCTA from '../../../components/InContentCTA.astro';
-
-<InContentCTA 
-  targetUrl="/ko/tiktok-sound-downloader/" 
-  keywordAnchorText="Convert TikTok Sounds to MP3" 
-  subText="Instantly extract high-quality audio from any TikTok video."
-  iconType="audio" 
-/>
-
 내 영상에 유행하는 사운드를 사용하고 싶거나, 틱톡에서 발견한 노래를 저장하고 싶거나, 단순히 오프라인에서 듣고 싶을 때, 이 가이드는 필요한 모든 정보를 담고 있습니다.
 
 ## 틱톡 사운드를 다운로드해야 하는 이유는 무엇일까요?

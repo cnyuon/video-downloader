@@ -12,15 +12,6 @@ monetization:
 
 TikTok dünya genelinde çeşitli düzeylerde kısıtlamalarla karşı karşıyadır. İster tam bir yasak, ister devlet cihazı kısıtlaması, isterse yaş bazlı sınırlamalar olsun, milyonlarca kullanıcı herhangi bir anda favori içeriklerine erişimi kaybetme riskiyle karşı karşıyadır.
 
-import InContentCTA from '../../../components/InContentCTA.astro';
-
-<InContentCTA 
-  targetUrl="/tr/tiktok-downloader/" 
-  keywordAnchorText="Yasaktan Önce TikTok Videolarını İndirin" 
-  subText="Favori TikTok videolarınızı anında telefonunuza veya bilgisayarınıza yedekleyin."
-  iconType="tiktok" 
-/>
-
 Bu rehber mevcut küresel durumu ve içeriklerinizi nasıl koruyacağınızı açıklar.
 
 ## 2026'da TikTok Nerelerde Kısıtlı?

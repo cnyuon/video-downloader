@@ -12,15 +12,6 @@ tags: ["Audio", "Guides", "Safety"]
 
 MP3 ダウンローダー、それに伴うリスク、そして最も安全な最新の代替手段について知っておくべきことをすべてここに示します。
 
-import InContentCTA from '../../../components/InContentCTA.astro';
-
-<InContentCTA 
-  targetUrl="/ja/video-to-mp3/" 
-  keywordAnchorText="Safely Extract Audio from Videos" 
-  subText="Instantly convert any TikTok or social media video into a high-quality MP3 file for free."
-  iconType="audio" 
-/>
-
 ## MP3 Juice とは何ですか?
 
 もともと「MP3 Juice」（またはMP3Juices）は、非常に人気の高いウェブベースのオーディオ検索エンジンでした。ユーザーが曲名やアーティスト名を検索すると、サイトはインターネット上を検索し、そのオーディオファイルをホストしているオープンディレクトリまたはサーバーを見つけます。そして、`.mp3`ファイルをコンピュータまたはスマートフォンに保存するための直接ダウンロードリンクを提供していました。

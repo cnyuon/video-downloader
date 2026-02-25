@@ -12,15 +12,6 @@ monetization:
 
 Creating TikTok content that stands out requires more than just hitting record. The right video editor can transform raw footage into something that hooks viewers in the first second.
 
-import InContentCTA from '../../../components/InContentCTA.astro';
-
-<InContentCTA 
-  targetUrl="/tiktok-downloader/" 
-  keywordAnchorText="Download TikTok videos to edit" 
-  subText="Save any TikTok video without a watermark to use as B-roll or reaction clips."
-  iconType="tiktok" 
-/>
-
 Here are the best free video editors for TikTok creators, ranked by ease of use and features.
 
 ## Quick Comparison

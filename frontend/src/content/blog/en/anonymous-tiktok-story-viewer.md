@@ -12,15 +12,6 @@ If you stumble across a creator's profile—or accidentally tap on their TikTok 
 
 The answer is **yes**, but it depends entirely on your own privacy settings, the creator's settings, and how you choose to access the video.
 
-import InContentCTA from '../../../components/InContentCTA.astro';
-
-<InContentCTA 
-  targetUrl="/tiktok-downloader/" 
-  keywordAnchorText="View and Download TikToks Anonymously" 
-  subText="Instantly save TikTok videos to your phone. The creator will never know."
-  iconType="tiktok" 
-/>
-
 Here is exactly how TikTok's view history works in 2026, and the best ways to view content completely anonymously.
 
 ## How TikTok "Profile Views" Work

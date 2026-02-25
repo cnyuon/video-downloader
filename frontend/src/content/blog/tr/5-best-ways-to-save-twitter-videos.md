@@ -12,15 +12,6 @@ monetization:
 
 Twitter (artık [X](https://x.com)) viral klipler, son dakika haberleri ve sonsuza kadar saklamak isteyeceğiniz komik anlarla doludur. Ancak uygulamanın yerleşik bir indirme düğmesi yoktur.
 
-import InContentCTA from '../../../components/InContentCTA.astro';
-
-<InContentCTA 
-  targetUrl="/tr/twitter-downloader/" 
-  keywordAnchorText="Twitter GIF'lerini MP4 Olarak İndirin" 
-  subText="Twitter videolarını ve GIF'leri anında iPhone fotoğraf albümünüze kaydedin. Uygulama gerekmez."
-  iconType="twitter" 
-/>
-
 İşte en kolaydan en zahmetliye sıralanan 5 en iyi yöntem.
 
 ## Yöntem 1: MediaTools (En Hızlı ve En Kolay)

@@ -14,15 +14,6 @@ Uma ótima miniatura costuma ser o diferencial entre um vídeo viral e um fracas
 
 Seja para analisar a estratégia de miniaturas de um concorrente, usar a imagem para republicá-la no YouTube ou simplesmente arquivar capas de alta qualidade, você precisa de uma ferramenta específica.
 
-import InContentCTA from '../../../components/InContentCTA.astro';
-
-<InContentCTA 
-  targetUrl="/pt/thumbnail-grabber/" 
-  keywordAnchorText="Download TikTok Thumbnails in HD" 
-  subText="Instantly extract high-resolution cover images from any TikTok video."
-  iconType="thumbnail" 
-/>
-
 Veja como capturar qualquer miniatura do TikTok em Full HD usando [MediaTools](/pt/thumbnail-grabber/).
 
 ## Por que baixar miniaturas?

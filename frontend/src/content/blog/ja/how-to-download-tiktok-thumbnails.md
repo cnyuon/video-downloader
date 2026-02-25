@@ -14,15 +14,6 @@ monetization:
 
 競合他社のサムネイル戦略を分析したり、YouTube の再投稿に画像を使用したり、高品質のカバーをアーカイブしたりするには、専用のツールが必要です。
 
-import InContentCTA from '../../../components/InContentCTA.astro';
-
-<InContentCTA 
-  targetUrl="/ja/thumbnail-grabber/" 
-  keywordAnchorText="Download TikTok Thumbnails in HD" 
-  subText="Instantly extract high-resolution cover images from any TikTok video."
-  iconType="thumbnail" 
-/>
-
 [MediaTools](/ja/thumbnail-grabber/)] を使用して、TikTok サムネイルをフル HD で取得する方法は次のとおりです。
 
 ## サムネイルをダウンロードする理由

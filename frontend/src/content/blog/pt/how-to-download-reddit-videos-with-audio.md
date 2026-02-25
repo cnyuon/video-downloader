@@ -12,15 +12,6 @@ Você não está ficando louco. O "bug de ausência de som do Reddit" ao salvar 
 
 Para entender por que isso acontece e como corrigir facilmente baixando o vídeo diretamente, continue lendo.
 
-import InContentCTA from '../../../components/InContentCTA.astro';
-
-<InContentCTA 
-  targetUrl="/" 
-  keywordAnchorText="Download Reddit Videos with Full Audio" 
-  subText="Instantly save Reddit videos in HD with perfect sound synchronization."
-  iconType="audio" 
-/>
-
 Por que os vídeos do Reddit são baixados sem som?
 
 O motivo pelo qual salvar um vídeo do aplicativo Reddit geralmente resulta em um clipe sem som é devido à forma como o Reddit processa a mídia em seus servidores.

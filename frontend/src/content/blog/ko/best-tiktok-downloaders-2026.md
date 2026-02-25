@@ -14,15 +14,6 @@ monetization:
 
 2026년 가장 인기 있는 틱톡 다운로더 5개를 테스트하여 어떤 앱이 문제없이 깨끗하고 고화질의 영상을 제공하는지 알아보았습니다.
 
-import InContentCTA from '../../../components/InContentCTA.astro';
-
-<InContentCTA 
-  targetUrl="/ko/tiktok-downloader/" 
-  keywordAnchorText="Try the #1 Fastest TikTok Downloader" 
-  subText="Instantly save TikTok videos to your phone or PC. No ads. 100% Free."
-  iconType="tiktok" 
-/>
-
 저희가 솔직하게 평가한 순위는 다음과 같습니다.
 
 ## 경쟁자들

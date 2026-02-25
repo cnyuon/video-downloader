@@ -16,15 +16,6 @@ monetization:
 
 해결책: 앱이 필요 없습니다. 사파리만 있으면 워터마크 없는 깨끗한 동영상을 카메라 롤에 바로 다운로드할 수 있습니다.
 
-import InContentCTA from '../../../components/InContentCTA.astro';
-
-<InContentCTA 
-  targetUrl="/ko/tiktok-downloader/" 
-  keywordAnchorText="Download TikToks to your iPhone Camera Roll" 
-  subText="Instantly save TikTok videos without watermarks using Safari."
-  iconType="tiktok" 
-/>
-
 2026년을 위한 가장 빠르고 안전한 방법은 다음과 같습니다.
 
 ## "동영상 저장" 버튼의 문제점

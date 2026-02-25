@@ -14,15 +14,6 @@ In 2026, TikTok's algorithm cares about one thing above all else: **Watch Time**
 
 If people aren't watching your video until the end, it won't hit the For You Page (FYP). The secret to retention isn't just the content—it's the *edit*.
 
-import InContentCTA from '../../../components/InContentCTA.astro';
-
-<InContentCTA 
-  targetUrl="/tiktok-downloader/" 
-  keywordAnchorText="Download viral TikToks without watermarks" 
-  subText="Analyze the edits of top creators in slow motion. 100% Free."
-  iconType="tiktok" 
-/>
-
 Here are 10 pro editing tips to keep viewers hooked.
 
 ## 1. The 3-Second Rule (The Hook)

@@ -14,15 +14,6 @@ Em 2026, o algoritmo do TikTok se importa com uma coisa acima de todas as outras
 
 Se as pessoas não assistirem ao seu vídeo até o final, ele não aparecerá na página "Para Você" (FYP). O segredo da retenção não está apenas no conteúdo, mas na *edição*.
 
-import InContentCTA from '../../../components/InContentCTA.astro';
-
-<InContentCTA 
-  targetUrl="/pt/tiktok-downloader/" 
-  keywordAnchorText="Download viral TikToks without watermarks" 
-  subText="Analyze the edits of top creators in slow motion. 100% Free."
-  iconType="tiktok" 
-/>
-
 Aqui estão 10 dicas profissionais de edição para manter os espectadores interessados.
 
 ## 1. A Regra dos 3 Segundos (O Gancho)

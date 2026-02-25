@@ -14,15 +14,6 @@ TikTok動画のダウンロードを謳うサイトは数多く存在します�
 
 2026 年に最も人気のある 5 つの TikTok ダウンローダーをテストし、どれが実際に ** きれいな HD 動画 ** を問題なく配信できるかを調べました。
 
-import InContentCTA from '../../../components/InContentCTA.astro';
-
-<InContentCTA 
-  targetUrl="/ja/tiktok-downloader/" 
-  keywordAnchorText="Try the #1 Fastest TikTok Downloader" 
-  subText="Instantly save TikTok videos to your phone or PC. No ads. 100% Free."
-  iconType="tiktok" 
-/>
-
 これが私たちの正直なランキングです。
 
 ## 候補者たち

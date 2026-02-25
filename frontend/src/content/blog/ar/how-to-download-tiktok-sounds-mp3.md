@@ -12,15 +12,6 @@ monetization:
 
 يضم تطبيق تيك توك ملايين المقاطع الصوتية الرائجة، من الأغاني الجذابة إلى المقاطع الصوتية المضحكة والتعليقات الصوتية الشائعة. لكن التطبيق لا يتيح لك تحميل الصوت فقط.
 
-import InContentCTA from '../../../components/InContentCTA.astro';
-
-<InContentCTA 
-  targetUrl="/ar/tiktok-sound-downloader/" 
-  keywordAnchorText="Convert TikTok Sounds to MP3" 
-  subText="Instantly extract high-quality audio from any TikTok video."
-  iconType="audio" 
-/>
-
 سواء كنت ترغب في استخدام صوت رائج في مقاطع الفيديو الخاصة بك، أو حفظ أغنية اكتشفتها على TikTok، أو مجرد الاستماع إليها دون اتصال بالإنترنت، فإن هذا الدليل يغطي كل ما تحتاج إلى معرفته.
 
 ## لماذا يتم تحميل أصوات تيك توك؟

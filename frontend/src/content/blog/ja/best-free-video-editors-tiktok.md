@@ -12,15 +12,6 @@ monetization:
 
 TikTokで注目を集めるコンテンツを作るには、ただ録画するだけでは不十分です。適切な動画編集ソフトを使えば、生々しい映像でも視聴者を最初の1秒で虜にするコンテンツに変えることができます。
 
-import InContentCTA from '../../../components/InContentCTA.astro';
-
-<InContentCTA 
-  targetUrl="/ja/tiktok-downloader/" 
-  keywordAnchorText="Download TikTok videos to edit" 
-  subText="Save any TikTok video without a watermark to use as B-roll or reaction clips."
-  iconType="tiktok" 
-/>
-
 ここでは、使いやすさと機能に基づいてランク付けされた、TikTok クリエイター向けの最高の無料ビデオエディターを紹介します。
 
 ## 簡単な比較

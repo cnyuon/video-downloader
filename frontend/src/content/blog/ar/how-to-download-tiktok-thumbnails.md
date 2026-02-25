@@ -14,15 +14,6 @@ monetization:
 
 سواء كنت ترغب في تحليل استراتيجية الصور المصغرة للمنافس، أو استخدام الصورة لإعادة نشرها على يوتيوب، أو مجرد أرشفة أغلفة عالية الجودة، فأنت بحاجة إلى أداة مخصصة.
 
-import InContentCTA from '../../../components/InContentCTA.astro';
-
-<InContentCTA 
-  targetUrl="/ar/thumbnail-grabber/" 
-  keywordAnchorText="Download TikTok Thumbnails in HD" 
-  subText="Instantly extract high-resolution cover images from any TikTok video."
-  iconType="thumbnail" 
-/>
-
 إليك كيفية الحصول على أي صورة مصغرة من TikTok بجودة عالية الوضوح باستخدام [MediaTools](/ar/thumbnail-grabber/).
 
 ## لماذا تحميل الصور المصغرة؟

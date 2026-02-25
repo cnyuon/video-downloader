@@ -14,15 +14,6 @@ monetization:
 
 Birkaç klip için videoları tek tek indirmek gayet iyi, ancak yüzlerce gönderiniz varsa toplu bir çözüme ihtiyacınız var.
 
-import InContentCTA from '../../../components/InContentCTA.astro';
-
-<InContentCTA 
-  targetUrl="/tr/tiktok-downloader/" 
-  keywordAnchorText="Yüksek Kaliteli TikTok Videoları İndirin" 
-  subText="En önemli viral kliplerinizi filigransız olarak manuel kaydedin."
-  iconType="tiktok" 
-/>
-
 İşte **tüm TikTok hesabınızı** güvenle nasıl yedekleyeceğiniz.
 
 ## Yöntem 1: Tam Veri İndirme Talebi (Resmi Yöntem)

@@ -16,15 +16,6 @@ App Store のポリシーにより、良質なダウンローダー アプリを
 
 **解決策:** アプリは必要ありません。Safari だけで、透かしのないきれいな動画をカメラロールに直接ダウンロードできます。
 
-import InContentCTA from '../../../components/InContentCTA.astro';
-
-<InContentCTA 
-  targetUrl="/ja/tiktok-downloader/" 
-  keywordAnchorText="Download TikToks to your iPhone Camera Roll" 
-  subText="Instantly save TikTok videos without watermarks using Safari."
-  iconType="tiktok" 
-/>
-
 2026 年における最速かつ最も安全な方法をご紹介します。
 
 ## 「ビデオを保存」ボタンの問題

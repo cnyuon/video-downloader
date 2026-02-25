@@ -13,15 +13,6 @@ Hayal görmüyorsunuz. Videoları kaydederken veya paylaşırken yaşanan "Reddi
 
 Bunun neden olduğunu anlamak ve videoyu doğrudan indirerek kolayca düzeltmek için okumaya devam edin.
 
-import InContentCTA from '../../../components/InContentCTA.astro';
-
-<InContentCTA 
-  targetUrl="/" 
-  keywordAnchorText="Reddit Videolarını Tam Sesli İndirin" 
-  subText="Reddit videolarını anında mükemmel ses senkronizasyonuyla HD kalitede kaydedin."
-  iconType="audio" 
-/>
-
 ## Reddit Videoları Neden Sessiz İndiriliyor?
 
 Reddit uygulamasından bir video kaydetmenin genellikle sessiz bir kliple sonuçlanmasının nedeni, Reddit'in medyayı arka plan sunucularında nasıl işlediğiyle ilgilidir.
