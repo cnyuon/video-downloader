@@ -12,7 +12,7 @@ export async function getStaticPaths() {
   
   return enPosts.map((enPost) => {
     const trueSlug = enPost.slug.replace('en/', '');
-    const nativePost = allPosts.find(p => p.slug === `es/${trueSlug}`);
+    const nativePost = allPosts.find(p => p.slug === `tr/${trueSlug}`);
     
     return {
       params: { slug: trueSlug },
