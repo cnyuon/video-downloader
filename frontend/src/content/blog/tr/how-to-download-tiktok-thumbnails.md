@@ -3,81 +3,81 @@ title: "TikTok Küçük Resimlerini HD İndirme (Ücretsiz)"
 description: "Herhangi bir TikTok videosundan yüksek çözünürlüklü küçük resimleri/kapakları nasıl kaydedeceğinizi öğrenin."
 pubDate: 2026-02-12
 heroImage: "../../../assets/blog-images/tiktok-thumbnail-download.png"
-keywords: ["tiktok küçük resim indir", "tiktok kapak resmi kaydet", "tiktok thumbnail indir hd"]
+keywords: ["tiktok küçük resim indir", "tiktok kapak resmi kaydet", "tiktok thumbnail indir hd", "tiktok küçük resim indirici"]
 monetization:
   primary_category: "creator-tools"
   affiliate_potential: "low"
   geo_restrictions: false
 ---
 
-A great thumbnail is often the difference between a viral video and a flop. But TikTok doesn't give you a way to save the cover image of a video.
+Harika bir küçük resim, genellikle viral bir video ile başarısız olan arasındaki farktır. Ancak TikTok, bir videonun kapak resmini kaydetmeniz için bir yol sunmaz.
 
-Whether you want to analyze a competitor's thumbnail strategy, use the image for a YouTube repost, or just archive high-quality covers, you need a dedicated tool.
+İster bir rakibin küçük resim stratejisini analiz etmek, ister YouTube paylaşımı için resmi kullanmak, isterse yüksek kaliteli kapakları arşivlemek isteyin — özel bir araca ihtiyacınız var.
 
 import InContentCTA from '../../../components/InContentCTA.astro';
 
 <InContentCTA 
   targetUrl="/tr/thumbnail-grabber/" 
-  keywordAnchorText="Download TikTok Thumbnails in HD" 
-  subText="Instantly extract high-resolution cover images from any TikTok video."
+  keywordAnchorText="TikTok Küçük Resimlerini HD İndirin" 
+  subText="Herhangi bir TikTok videosundan yüksek çözünürlüklü kapak görsellerini anında çıkarın."
   iconType="thumbnail" 
 />
 
-Here is how to grab any TikTok thumbnail in full HD using [MediaTools](/tr/thumbnail-grabber/).
+İşte [MediaTools](/tr/thumbnail-grabber/) kullanarak herhangi bir TikTok küçük resmini Full HD olarak nasıl alacağınız.
 
-## Why Download Thumbnails?
+## Neden Küçük Resim İndirmeliyiz?
 
-- **YouTube Shorts / Reels:** If you repost TikToks to YouTube, you need a high-quality custom thumbnail. Reusing the blurry screenshot isn't enough.
-- **Design Inspiration:** Create a "swipe file" of viral thumbnails to study text placement and facial expressions.
-- **Social Sharing:** Sharing a link often generates a generic preview. Uploading a custom image increases click-through rates.
+- **YouTube Shorts / Reels:** TikTok'ları YouTube'a yeniden paylaşıyorsanız, yüksek kaliteli özel bir küçük resme ihtiyacınız var. Bulanık ekran görüntüsünü kullanmak yeterli değil.
+- **Tasarım İlhamı:** Metin yerleşimi ve yüz ifadelerini incelemek için viral küçük resimlerin bir referans dosyası oluşturun.
+- **Sosyal Paylaşım:** Bir bağlantı paylaşmak genellikle genel bir önizleme oluşturur. Özel bir görsel yüklemek tıklama oranlarını artırır.
 
-## How to Save Thumbnails with MediaTools
+## MediaTools ile Küçük Resimler Nasıl Kaydedilir
 
-We built a dedicated **Thumbnail Grabber** tool specifically for this.
+Bu iş için özel bir **Küçük Resim İndirici** aracı oluşturduk.
 
-### Step 1: Copy the Link
-Find the TikTok video (or YouTube video!) and copy its link.
+### Adım 1: Bağlantıyı Kopyalayın
+TikTok videosunu (veya YouTube videosunu!) bulun ve bağlantısını kopyalayın.
 
-### Step 2: Open Thumbnail Grabber
-Go to our [Thumbnail Grabber Tool](/tr/thumbnail-grabber/).
+### Adım 2: Küçük Resim İndiriciyi Açın
+[Küçük Resim İndirici Aracımıza](/tr/thumbnail-grabber/) gidin.
 
-### Step 3: Paste and View
-Paste the link and hit **Get Thumbnail**.
+### Adım 3: Yapıştırın ve Görüntüleyin
+Bağlantıyı yapıştırın ve **Küçük Resim Al** düğmesine basın.
 
-### Step 4: Download Highest Quality
-We extract all available resolutions.
-- **Max / HD:** consistently the best quality available.
-- **Standard:** Great for small previews.
-- **Low:** Good for placeholders.
+### Adım 4: En Yüksek Kaliteyi İndirin
+Mevcut tüm çözünürlükleri çıkarıyoruz.
+- **Max / HD:** Sürekli olarak mevcut en iyi kalite.
+- **Standart:** Küçük önizlemeler için harika.
+- **Düşük:** Yer tutucu görüntüler için uygun.
 
-Click **Download** on the version you want.
+İstediğiniz versiyonda **İndir** düğmesine tıklayın.
 
-## Alternative: Taking a Screenshot (The Bad Way)
+## Alternatif: Ekran Görüntüsü Almak (Kötü Yöntem)
 
-You *could* just screenshot your phone screen. But:
-- **Play Buttons:** The UI elements (play button, user icon, captions) will block the image.
-- **Resolution:** Screenshots are limited to your screen size, not the source file quality.
-- **Cropping:** You have to manually crop out the phone status bar.
+Telefon ekranınızdan ekran görüntüsü *alabilirsiniz*. Ancak:
+- **Oynat Düğmeleri:** Arayüz elemanları (oynat düğmesi, kullanıcı simgesi, altyazılar) görseli engeller.
+- **Çözünürlük:** Ekran görüntüleri kaynak dosya kalitesiyle değil, ekran boyutunuzla sınırlıdır.
+- **Kırpma:** Telefon durum çubuğunu manuel olarak kırpmanız gerekir.
 
-**Our tool extracts the clean background image directly from the server.**
+**Aracımız temiz arka plan görselini doğrudan sunucudan çıkarır.**
 
-## Common Questions
+## Sık Sorulan Sorular
 
-**Does this work for YouTube?**
-Yes! Our [Thumbnail Grabber](/tr/thumbnail-grabber/) works for both TikTok and YouTube videos. Get 4K YouTube thumbnails instantly.
+**Bu YouTube için de çalışıyor mu?**
+Evet! [Küçük Resim İndiricimiz](/tr/thumbnail-grabber/) hem TikTok hem de YouTube videoları için çalışır. 4K YouTube küçük resimlerini anında alın.
 
-**Can I use these thumbnails for my own videos?**
-Be careful. Using someone else's face or exact artwork can lead to copyright strikes. We recommend using them for inspiration or reference, not direct copying.
+**Bu küçük resimleri kendi videolarım için kullanabilir miyim?**
+Dikkatli olun. Başka birinin yüzünü veya tam eserini kullanmak telif hakkı ihlallerine yol açabilir. Doğrudan kopyalama yerine ilham veya referans olarak kullanmanızı öneririz.
 
-**Is it free?**
-Yes, 100% free and unlimited.
+**Ücretsiz mi?**
+Evet, %100 ücretsiz ve sınırsız.
 
-## Start Grabbing Thumbnails
+## Küçük Resimleri İndirmeye Başlayın
 
-Don't settle for blurry screenshots. Get the original HD file.
+Bulanık ekran görüntüleriyle yetinmeyin. Orijinal HD dosyayı alın.
 
-**[Open Thumbnail Grabber](/tr/thumbnail-grabber/)**
+**[Küçük Resim İndiriciyi Aç](/tr/thumbnail-grabber/)**
 
-**Related Tools:**
-- [TikTok Video Downloader](/tr/tiktok-downloader/)
-- [TikTok Sound Downloader](/tr/tiktok-sound-downloader/)
+**İlgili Araçlar:**
+- [TikTok Video İndirici](/tr/tiktok-downloader/)
+- [TikTok Ses İndirici](/tr/tiktok-sound-downloader/)
