@@ -6,7 +6,7 @@ export default defineConfig({
     site: 'https://getmediatools.com',
     i18n: {
         defaultLocale: "en",
-        locales: ["en", "es"],
+        locales: ["en", "es", "tr"],
         routing: {
             prefixDefaultLocale: false
         }

@@ -121,6 +121,7 @@ export default function Navbar({ currentPage, lang }: NavbarProps) {
                         >
                             <option value="en" className="bg-background text-foreground">🇺🇸 English</option>
                             <option value="es" className="bg-background text-foreground">🇪🇸 Español</option>
+                            <option value="tr" className="bg-background text-foreground">🇹🇷 Türkçe</option>
                         </select>
                     </div>
 
@@ -153,6 +154,7 @@ export default function Navbar({ currentPage, lang }: NavbarProps) {
                         >
                             <option value="en" className="bg-background text-foreground">🇺🇸 EN</option>
                             <option value="es" className="bg-background text-foreground">🇪🇸 ES</option>
+                            <option value="tr" className="bg-background text-foreground">🇹🇷 TR</option>
                         </select>
                     </div>
                     <button

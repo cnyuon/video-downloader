@@ -1,0 +1,201 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Navbar from '../../components/Navbar';
+import Footer from '../../components/Footer.astro';
+import AudioExtractor from '../../components/AudioExtractor';
+import { getLangFromUrl, useTranslations } from '../../i18n/utils';
+import type { ui } from '../../i18n/ui';
+
+export function getStaticPaths() {
+  return [
+    { params: { lang: 'en' } },
+    { params: { lang: 'es' } },
+  ];
+}
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
+const jsonLd = {
+    "@context": "https://schema.org",
+    "@graph": [
+        {
+            "@type": "WebApplication",
+            "name": "Video to MP3 Converter",
+            "url": "https://getmediatools.com/video-to-mp3",
+            "description": t('mp3.meta.desc'),
+            "applicationCategory": "MultimediaApplication",
+            "operatingSystem": "Any",
+            "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+        },
+        {
+            "@type": "HowTo",
+            "name": t('mp3.howto.title'),
+            "description": t('mp3.howto.desc'),
+            "step": [
+                { "@type": "HowToStep", "position": 1, "name": t('mp3.howto.step1.title'), "text": t('mp3.howto.step1.desc') },
+                { "@type": "HowToStep", "position": 2, "name": t('mp3.howto.step2.title'), "text": t('mp3.howto.step2.desc') },
+                { "@type": "HowToStep", "position": 3, "name": t('mp3.howto.step3.title'), "text": t('mp3.howto.step3.desc') }
+            ]
+        },
+        {
+            "@type": "FAQPage",
+            "mainEntity": [
+                { "@type": "Question", "name": t('mp3.faq.q1'), "acceptedAnswer": { "@type": "Answer", "text": t('mp3.faq.a1') } },
+                { "@type": "Question", "name": t('mp3.faq.q2'), "acceptedAnswer": { "@type": "Answer", "text": t('mp3.faq.a2') } },
+                { "@type": "Question", "name": t('mp3.faq.q3'), "acceptedAnswer": { "@type": "Answer", "text": t('mp3.faq.a3') } },
+                { "@type": "Question", "name": t('mp3.faq.q4'), "acceptedAnswer": { "@type": "Answer", "text": t('mp3.faq.a4') } },
+                { "@type": "Question", "name": t('mp3.faq.q5'), "acceptedAnswer": { "@type": "Answer", "text": t('mp3.faq.a5') } }
+            ]
+        }
+    ]
+};
+---
+
+<Layout 
+    title={t('mp3.meta.title')}
+    description={t('mp3.meta.desc')}
+    jsonLd={jsonLd}
+>
+    <Navbar client:idle currentPage="audio" lang={lang as keyof typeof ui} />
+    
+    <main class="container mx-auto px-4 pt-10 pb-4 max-w-2xl">
+        <div class="text-center mb-8">
+            <h1 class="text-3xl font-bold tracking-tight mb-2">
+                {t('mp3.hero.title')}
+            </h1>
+            <p class="text-muted-foreground">
+                {t('mp3.hero.desc')}
+            </p>
+            
+            <!-- Supported Platforms -->
+            <div class="flex items-center justify-center gap-3 mt-4">
+                <span class="text-sm text-muted-foreground">{t('mp3.hero.works_with')}</span>
+                <div class="flex items-center gap-2">
+                    <!-- TikTok -->
+                    <div class="w-6 h-6 rounded bg-gradient-to-r from-[#ff0050] to-[#00f2ea] flex items-center justify-center" title="TikTok">
+                        <svg class="w-3.5 h-3.5 text-white" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/>
+                        </svg>
+                    </div>
+                    <!-- Twitter/X -->
+                    <div class="w-6 h-6 rounded bg-black flex items-center justify-center" title="Twitter/X">
+                        <svg class="w-3.5 h-3.5 text-white" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                        </svg>
+                    </div>
+                    <!-- Facebook -->
+                    <div class="w-6 h-6 rounded bg-blue-600 flex items-center justify-center" title="Facebook">
+                        <svg class="w-3.5 h-3.5 text-white" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <AudioExtractor 
+            client:load 
+            placeholderUrl={t('mp3.input.placeholder')}
+            buttonGetInfo={t('btn.get_info')}
+            buttonExtracting={t('btn.extracting')}
+            buttonDownloaded={t('btn.downloaded')}
+            buttonExtractMp3={t('btn.extract_mp3')}
+            buttonExtractOriginal={t('btn.extract_original')}
+            textOriginalAudio={t('text.original_audio')}
+            textConvertedMp3={t('text.converted_mp3')}
+        />
+
+        <!-- Features Section -->
+        <div class="mt-12 grid gap-4 md:grid-cols-3">
+            <div class="text-center p-4 rounded-lg bg-muted/30">
+                <div class="text-2xl mb-2">🎵</div>
+                <h3 class="font-semibold mb-1">{t('mp3.features.hq.title')}</h3>
+                <p class="text-sm text-muted-foreground">{t('mp3.features.hq.desc')}</p>
+            </div>
+            <div class="text-center p-4 rounded-lg bg-muted/30">
+                <div class="text-2xl mb-2">⚡</div>
+                <h3 class="font-semibold mb-1">{t('mp3.features.instant.title')}</h3>
+                <p class="text-sm text-muted-foreground">{t('mp3.features.instant.desc')}</p>
+            </div>
+            <div class="text-center p-4 rounded-lg bg-muted/30">
+                <div class="text-2xl mb-2">🆓</div>
+                <h3 class="font-semibold mb-1">{t('mp3.features.free.title')}</h3>
+                <p class="text-sm text-muted-foreground">{t('mp3.features.free.desc')}</p>
+            </div>
+        </div>
+
+        <!-- How To Section -->
+        <div class="mt-12 py-8 border-t">
+            <h2 class="text-2xl font-bold text-center mb-2">{t('mp3.howto.title')}</h2>
+            <p class="text-center text-muted-foreground mb-6 max-w-lg mx-auto">{t('mp3.howto.desc')}</p>
+            <div class="space-y-4">
+                <div class="flex gap-4 items-start">
+                    <div class="flex-shrink-0 w-8 h-8 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold">1</div>
+                    <div>
+                        <h3 class="font-semibold">{t('mp3.howto.step1.title')}</h3>
+                        <p class="text-muted-foreground text-sm">{t('mp3.howto.step1.desc')}</p>
+                    </div>
+                </div>
+                <div class="flex gap-4 items-start">
+                    <div class="flex-shrink-0 w-8 h-8 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold">2</div>
+                    <div>
+                        <h3 class="font-semibold">{t('mp3.howto.step2.title')}</h3>
+                        <p class="text-muted-foreground text-sm">{t('mp3.howto.step2.desc')}</p>
+                    </div>
+                </div>
+                <div class="flex gap-4 items-start">
+                    <div class="flex-shrink-0 w-8 h-8 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold">3</div>
+                    <div>
+                        <h3 class="font-semibold">{t('mp3.howto.step3.title')}</h3>
+                        <p class="text-muted-foreground text-sm">{t('mp3.howto.step3.desc')}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- FAQ Section -->
+        <div class="mt-12 py-8 border-t">
+            <h2 class="text-2xl font-bold text-center mb-6">{t('mp3.faq.title')}</h2>
+            <div class="space-y-4">
+                <div class="p-4 rounded-lg bg-muted/30">
+                    <h3 class="font-semibold mb-2">{t('mp3.faq.q1')}</h3>
+                    <p class="text-sm text-muted-foreground">{t('mp3.faq.a1')}</p>
+                </div>
+                <div class="p-4 rounded-lg bg-muted/30">
+                    <h3 class="font-semibold mb-2">{t('mp3.faq.q2')}</h3>
+                    <p class="text-sm text-muted-foreground">{t('mp3.faq.a2')}</p>
+                </div>
+                <div class="p-4 rounded-lg bg-muted/30">
+                    <h3 class="font-semibold mb-2">{t('mp3.faq.q3')}</h3>
+                    <p class="text-sm text-muted-foreground">{t('mp3.faq.a3')}</p>
+                </div>
+                <div class="p-4 rounded-lg bg-muted/30">
+                    <h3 class="font-semibold mb-2">{t('mp3.faq.q4')}</h3>
+                    <p class="text-sm text-muted-foreground">{t('mp3.faq.a4')}</p>
+                </div>
+                <div class="p-4 rounded-lg bg-muted/30">
+                    <h3 class="font-semibold mb-2">{t('mp3.faq.q5')}</h3>
+                    <p class="text-sm text-muted-foreground">{t('mp3.faq.a5')}</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Related Guides Section -->
+        <div class="mt-12 py-8 border-t">
+            <h2 class="text-2xl font-bold text-center mb-6">{t('mp3.guides.title')}</h2>
+            <div class="grid gap-4 md:grid-cols-2">
+                <a href={lang === 'en' ? '/tiktok-sound-downloader' : `/${lang}/tiktok-sound-downloader`} class="group p-4 rounded-xl border bg-card hover:border-primary/50 hover:shadow-md transition-all">
+                    <h3 class="font-semibold mb-1 group-hover:text-primary transition-colors">{t('mp3.guides.1.title')}</h3>
+                    <p class="text-sm text-muted-foreground">{t('mp3.guides.1.desc')}</p>
+                </a>
+                <a href={lang === 'en' ? '/tiktok-downloader' : `/${lang}/tiktok-downloader`} class="group p-4 rounded-xl border bg-card hover:border-primary/50 hover:shadow-md transition-all">
+                    <h3 class="font-semibold mb-1 group-hover:text-primary transition-colors">{t('mp3.guides.2.title')}</h3>
+                    <p class="text-sm text-muted-foreground">{t('mp3.guides.2.desc')}</p>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <Footer />
+</Layout>
