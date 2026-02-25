@@ -1,0 +1,196 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Navbar from '../../components/Navbar';
+import Footer from '../../components/Footer.astro';
+import VideoDownloader from '../../components/VideoDownloader';
+import { getLangFromUrl, useTranslations } from '../../i18n/utils';
+import type { ui } from '../../i18n/ui';
+
+export function getStaticPaths() {
+  return [
+    { params: { lang: 'en' } },
+    { params: { lang: 'fr' } },
+  ];
+}
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
+const jsonLd = {
+    "@context": "https://schema.org",
+    "@graph": [
+        {
+            "@type": "WebApplication",
+            "name": "TikTok Video Downloader",
+            "url": "https://getmediatools.com/tiktok-downloader",
+            "description": t('tt.hero.desc'),
+            "applicationCategory": "MultimediaApplication",
+            "operatingSystem": "Any",
+            "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+            "browserRequirements": "Requires JavaScript",
+        },
+        {
+            "@type": "HowTo",
+            "name": t('tt.howto.title'),
+            "description": t('tt.howto.desc'),
+            "step": [
+                { "@type": "HowToStep", "position": 1, "name": t('tt.howto.step1.title'), "text": t('tt.howto.step1.desc') },
+                { "@type": "HowToStep", "position": 2, "name": t('tt.howto.step2.title'), "text": t('tt.howto.step2.desc') },
+                { "@type": "HowToStep", "position": 3, "name": t('tt.howto.step3.title'), "text": t('tt.howto.step3.desc') }
+            ]
+        },
+        {
+            "@type": "FAQPage",
+            "mainEntity": [
+                { "@type": "Question", "name": t('tt.faq.q1'), "acceptedAnswer": { "@type": "Answer", "text": t('tt.faq.a1') } },
+                { "@type": "Question", "name": t('tt.faq.q2'), "acceptedAnswer": { "@type": "Answer", "text": t('tt.faq.a2') } },
+                { "@type": "Question", "name": t('tt.faq.q3'), "acceptedAnswer": { "@type": "Answer", "text": t('tt.faq.a3') } },
+                { "@type": "Question", "name": t('tt.faq.q4'), "acceptedAnswer": { "@type": "Answer", "text": t('tt.faq.a4') } },
+                { "@type": "Question", "name": t('tt.faq.q5'), "acceptedAnswer": { "@type": "Answer", "text": t('tt.faq.a5') } }
+            ]
+        }
+    ]
+};
+---
+
+<Layout 
+    title={t('tt.hero.title')}
+    description="Download TikTok videos without watermark in HD quality — 100% free, no app needed. Save to iPhone, Android, or PC in seconds. Paste the link and download."
+    jsonLd={jsonLd}
+>
+    <!-- Target Keywords: tiktok downloader, download tiktok video no watermark, tiktok video saver, save tiktok without watermark, tiktok to mp4 -->
+    <Navbar client:idle currentPage="video" lang={lang as keyof typeof ui} />
+    
+    <main class="container mx-auto px-4 pt-10 pb-4 max-w-2xl">
+        <div class="text-center mb-8">
+            <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-black text-white text-sm font-medium mb-4">
+                <!-- TikTok logo with offset effect -->
+                <div class="relative w-4 h-4">
+                    <svg class="w-4 h-4 absolute" style="left: -1px; top: -1px;" viewBox="0 0 24 24" fill="#00f2ea">
+                        <path d="M19.321 5.562a5.124 5.124 0 0 1-.443-.258 6.228 6.228 0 0 1-1.137-.966c-.849-.849-1.18-1.69-1.333-2.338h.003c-.11-.467-.073-.77-.066-.77h-3.547v13.473c0 .181 0 .359-.008.534a3.874 3.874 0 0 1-.022.287l-.001.021v.011a2.9 2.9 0 0 1-.881 1.838 2.87 2.87 0 0 1-2.028.824 2.9 2.9 0 0 1-2.9-2.9 2.9 2.9 0 0 1 2.9-2.9c.304 0 .596.049.868.138v-3.6a6.391 6.391 0 0 0-.868-.059 6.45 6.45 0 0 0-4.568 1.868A6.387 6.387 0 0 0 3.4 15.9a6.4 6.4 0 0 0 .389 2.187 6.452 6.452 0 0 0 1.5 2.1 6.437 6.437 0 0 0 4.568 1.88 6.45 6.45 0 0 0 4.568-1.88 6.394 6.394 0 0 0 1.89-4.568V9.55a9.372 9.372 0 0 0 5.49 1.77V7.77s-2.485.097-4.484-2.208z"/>
+                    </svg>
+                    <svg class="w-4 h-4 absolute" style="left: 1px; top: 1px;" viewBox="0 0 24 24" fill="#ff0050">
+                        <path d="M19.321 5.562a5.124 5.124 0 0 1-.443-.258 6.228 6.228 0 0 1-1.137-.966c-.849-.849-1.18-1.69-1.333-2.338h.003c-.11-.467-.073-.77-.066-.77h-3.547v13.473c0 .181 0 .359-.008.534a3.874 3.874 0 0 1-.022.287l-.001.021v.011a2.9 2.9 0 0 1-.881 1.838 2.87 2.87 0 0 1-2.028.824 2.9 2.9 0 0 1-2.9-2.9 2.9 2.9 0 0 1 2.9-2.9c.304 0 .596.049.868.138v-3.6a6.391 6.391 0 0 0-.868-.059 6.45 6.45 0 0 0-4.568 1.868A6.387 6.387 0 0 0 3.4 15.9a6.4 6.4 0 0 0 .389 2.187 6.452 6.452 0 0 0 1.5 2.1 6.437 6.437 0 0 0 4.568 1.88 6.45 6.45 0 0 0 4.568-1.88 6.394 6.394 0 0 0 1.89-4.568V9.55a9.372 9.372 0 0 0 5.49 1.77V7.77s-2.485.097-4.484-2.208z"/>
+                    </svg>
+                    <svg class="w-4 h-4 relative z-10" viewBox="0 0 24 24" fill="white">
+                        <path d="M19.321 5.562a5.124 5.124 0 0 1-.443-.258 6.228 6.228 0 0 1-1.137-.966c-.849-.849-1.18-1.69-1.333-2.338h.003c-.11-.467-.073-.77-.066-.77h-3.547v13.473c0 .181 0 .359-.008.534a3.874 3.874 0 0 1-.022.287l-.001.021v.011a2.9 2.9 0 0 1-.881 1.838 2.87 2.87 0 0 1-2.028.824 2.9 2.9 0 0 1-2.9-2.9 2.9 2.9 0 0 1 2.9-2.9c.304 0 .596.049.868.138v-3.6a6.391 6.391 0 0 0-.868-.059 6.45 6.45 0 0 0-4.568 1.868A6.387 6.387 0 0 0 3.4 15.9a6.4 6.4 0 0 0 .389 2.187 6.452 6.452 0 0 0 1.5 2.1 6.437 6.437 0 0 0 4.568 1.88 6.45 6.45 0 0 0 4.568-1.88 6.394 6.394 0 0 0 1.89-4.568V9.55a9.372 9.372 0 0 0 5.49 1.77V7.77s-2.485.097-4.484-2.208z"/>
+                    </svg>
+                </div>
+                {t('tt.hero.badge')}
+            </div>
+            <h1 class="text-4xl font-bold tracking-tight mb-3">
+                {t('tt.hero.title')}
+            </h1>
+            <p class="text-lg text-muted-foreground max-w-xl mx-auto" set:html={t('tt.hero.desc')} />
+        </div>
+
+        <VideoDownloader 
+            client:load 
+            placeholder={t('tt.input.placeholder')} 
+            allowedPlatform="tiktok" 
+            buttonGetVideo={t('btn.get_video')}
+            buttonDownloading={t('btn.downloading')}
+            buttonDownload={t('btn.download_video')}
+        />
+        
+        <!-- Features Section -->
+        <div class="mt-12 grid gap-4 md:grid-cols-3">
+            <div class="text-center p-4 rounded-lg bg-muted/30">
+                <div class="text-2xl mb-2">✨</div>
+                <h3 class="font-semibold mb-1">{t('tt.features.no_wm.title')}</h3>
+                <p class="text-sm text-muted-foreground">{t('tt.features.no_wm.desc')}</p>
+            </div>
+            <div class="text-center p-4 rounded-lg bg-muted/30">
+                <div class="text-2xl mb-2">📹</div>
+                <h3 class="font-semibold mb-1">{t('tt.features.hd.title')}</h3>
+                <p class="text-sm text-muted-foreground">{t('tt.features.hd.desc')}</p>
+            </div>
+            <div class="text-center p-4 rounded-lg bg-muted/30">
+                <div class="text-2xl mb-2">📱</div>
+                <h3 class="font-semibold mb-1">{t('tt.features.devices.title')}</h3>
+                <p class="text-sm text-muted-foreground">{t('tt.features.devices.desc')}</p>
+            </div>
+        </div>
+        
+        <!-- How To Section -->
+        <div class="mt-12 py-8 border-t">
+            <h2 class="text-2xl font-bold text-center mb-2">{t('tt.howto.title')}</h2>
+            <p class="text-center text-muted-foreground mb-6 max-w-lg mx-auto">{t('tt.howto.desc')}</p>
+            <div class="space-y-4">
+                <div class="flex gap-4 items-start">
+                    <div class="flex-shrink-0 w-8 h-8 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold">1</div>
+                    <div>
+                        <h3 class="font-semibold">{t('tt.howto.step1.title')}</h3>
+                        <p class="text-muted-foreground text-sm">{t('tt.howto.step1.desc')}</p>
+                    </div>
+                </div>
+                <div class="flex gap-4 items-start">
+                    <div class="flex-shrink-0 w-8 h-8 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold">2</div>
+                    <div>
+                        <h3 class="font-semibold">{t('tt.howto.step2.title')}</h3>
+                        <p class="text-muted-foreground text-sm">{t('tt.howto.step2.desc')}</p>
+                    </div>
+                </div>
+                <div class="flex gap-4 items-start">
+                    <div class="flex-shrink-0 w-8 h-8 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold">3</div>
+                    <div>
+                        <h3 class="font-semibold">{t('tt.howto.step3.title')}</h3>
+                        <p class="text-muted-foreground text-sm">{t('tt.howto.step3.desc')}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- FAQ Section for SEO -->
+        <div class="mt-12 py-8 border-t">
+            <h2 class="text-2xl font-bold text-center mb-6">{t('tt.faq.title')}</h2>
+            <div class="space-y-4">
+                <div class="p-4 rounded-lg bg-muted/30">
+                    <h3 class="font-semibold mb-2">{t('tt.faq.q1')}</h3>
+                    <p class="text-sm text-muted-foreground">{t('tt.faq.a1')}</p>
+                </div>
+                <div class="p-4 rounded-lg bg-muted/30">
+                    <h3 class="font-semibold mb-2">{t('tt.faq.q2')}</h3>
+                    <p class="text-sm text-muted-foreground">{t('tt.faq.a2')}</p>
+                </div>
+                <div class="p-4 rounded-lg bg-muted/30">
+                    <h3 class="font-semibold mb-2">{t('tt.faq.q3')}</h3>
+                    <p class="text-sm text-muted-foreground">{t('tt.faq.a3')}</p>
+                </div>
+                <div class="p-4 rounded-lg bg-muted/30">
+                    <h3 class="font-semibold mb-2">{t('tt.faq.q4')}</h3>
+                    <p class="text-sm text-muted-foreground">{t('tt.faq.a4')}</p>
+                </div>
+                <div class="p-4 rounded-lg bg-muted/30">
+                    <h3 class="font-semibold mb-2">{t('tt.faq.q5')}</h3>
+                    <p class="text-sm text-muted-foreground">{t('tt.faq.a5')}</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Related Guides Section -->
+        <div class="mt-12 py-8 border-t">
+            <h2 class="text-2xl font-bold text-center mb-6">{t('tt.guides.title')}</h2>
+            <div class="grid gap-4 md:grid-cols-2">
+                <a href="/blog/how-to-download-tiktok-without-watermark" class="group p-4 rounded-xl border bg-card hover:border-primary/50 hover:shadow-md transition-all">
+                    <h3 class="font-semibold mb-1 group-hover:text-primary transition-colors">{t('tt.guides.1.title')}</h3>
+                    <p class="text-sm text-muted-foreground">{t('tt.guides.1.desc')}</p>
+                </a>
+                <a href="/blog/tiktok-banned-how-to-access-download" class="group p-4 rounded-xl border bg-card hover:border-primary/50 hover:shadow-md transition-all">
+                    <h3 class="font-semibold mb-1 group-hover:text-primary transition-colors">{t('tt.guides.2.title')}</h3>
+                    <p class="text-sm text-muted-foreground">{t('tt.guides.2.desc')}</p>
+                </a>
+                <a href="/blog/best-free-video-editors-tiktok" class="group p-4 rounded-xl border bg-card hover:border-primary/50 hover:shadow-md transition-all">
+                    <h3 class="font-semibold mb-1 group-hover:text-primary transition-colors">{t('tt.guides.3.title')}</h3>
+                    <p class="text-sm text-muted-foreground">{t('tt.guides.3.desc')}</p>
+                </a>
+                <a href={lang === 'en' ? '/tiktok-sound-downloader' : `/${lang}/tiktok-sound-downloader`} class="group p-4 rounded-xl border bg-card hover:border-primary/50 hover:shadow-md transition-all">
+                    <h3 class="font-semibold mb-1 group-hover:text-primary transition-colors">{t('tt.guides.4.title')}</h3>
+                    <p class="text-sm text-muted-foreground">{t('tt.guides.4.desc')}</p>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <Footer />
+</Layout>

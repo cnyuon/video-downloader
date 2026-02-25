@@ -42,7 +42,7 @@ export async function GET() {
         }));
 
     // All English posts ALSO have expected Spanish and Turkish routes
-    const localizedPostsUrls = ['es', 'tr'].flatMap(lang =>
+    const localizedPostsUrls = ['es', 'tr', 'pt'].flatMap(lang =>
         allPosts
             .filter((post: any) => post.slug.startsWith('en/'))
             .map((post: any) => ({
@@ -68,8 +68,8 @@ export async function GET() {
                 (page) => `<url>
     <loc>${BASE_URL}${page.url}</loc>
     <lastmod>${page.lastmod}</lastmod>
-    <changefreq>${page.url === '/' || page.url === '/es/' || page.url === '/tr/' ? 'daily' : page.isBlog ? 'monthly' : 'weekly'}</changefreq>
-    <priority>${page.url === '/' || page.url === '/es/' || page.url === '/tr/' ? '1.0' : page.isBlog ? '0.7' : '0.9'}</priority>
+    <changefreq>${page.url === '/' || page.url === '/es/' || page.url === '/tr/' || page.url === '/fr/' || page.url === '/pt/' ? 'daily' : page.isBlog ? 'monthly' : 'weekly'}</changefreq>
+    <priority>${page.url === '/' || page.url === '/es/' || page.url === '/tr/' || page.url === '/fr/' || page.url === '/pt/' ? '1.0' : page.isBlog ? '0.7' : '0.9'}</priority>
   </url>`
             )
             .join('\n')}

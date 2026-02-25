@@ -1,0 +1,189 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Navbar from '../../components/Navbar';
+import Footer from '../../components/Footer.astro';
+import AudioExtractor from '../../components/AudioExtractor';
+import { getLangFromUrl, useTranslations } from '../../i18n/utils';
+import type { ui } from '../../i18n/ui';
+
+export function getStaticPaths() {
+  return [
+    { params: { lang: 'en' } },
+    { params: { lang: 'fr' } },
+  ];
+}
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
+const jsonLd = {
+    "@context": "https://schema.org",
+    "@graph": [
+        {
+            "@type": "WebApplication",
+            "name": "TikTok Sound Downloader",
+            "url": "https://getmediatools.com/tiktok-sound-downloader",
+            "description": t('ts.meta.desc'),
+            "applicationCategory": "MultimediaApplication",
+            "operatingSystem": "Any",
+            "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+        },
+        {
+            "@type": "HowTo",
+            "name": t('ts.howto.title'),
+            "description": t('ts.howto.desc'),
+            "step": [
+                { "@type": "HowToStep", "position": 1, "name": t('ts.howto.step1.title'), "text": t('ts.howto.step1.desc') },
+                { "@type": "HowToStep", "position": 2, "name": t('ts.howto.step2.title'), "text": t('ts.howto.step2.desc') },
+                { "@type": "HowToStep", "position": 3, "name": t('ts.howto.step3.title'), "text": t('ts.howto.step3.desc') }
+            ]
+        },
+        {
+            "@type": "FAQPage",
+            "mainEntity": [
+                { "@type": "Question", "name": t('ts.faq.q1'), "acceptedAnswer": { "@type": "Answer", "text": t('ts.faq.a1') } },
+                { "@type": "Question", "name": t('ts.faq.q2'), "acceptedAnswer": { "@type": "Answer", "text": t('ts.faq.a2') } },
+                { "@type": "Question", "name": t('ts.faq.q3'), "acceptedAnswer": { "@type": "Answer", "text": t('ts.faq.a3') } },
+                { "@type": "Question", "name": t('ts.faq.q4'), "acceptedAnswer": { "@type": "Answer", "text": t('ts.faq.a4') } },
+                { "@type": "Question", "name": t('ts.faq.q5'), "acceptedAnswer": { "@type": "Answer", "text": t('ts.faq.a5') } }
+            ]
+        }
+    ]
+};
+---
+
+<Layout 
+    title={t('ts.meta.title')}
+    description={t('ts.meta.desc')}
+    jsonLd={jsonLd}
+>
+    <!-- Target Keywords: tiktok sound downloader, download tiktok audio, save tiktok mp3, tiktok to mp3 converter, extract tiktok sound -->
+    <Navbar client:idle currentPage="sound" lang={lang as keyof typeof ui} />
+    
+    <main class="container mx-auto px-4 pt-10 pb-4 max-w-2xl">
+        <div class="text-center mb-8">
+            <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-black text-white text-sm font-medium mb-4">
+                <svg class="w-4 h-4 text-pink-500" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/>
+                </svg>
+                {t('ts.hero.badge')}
+            </div>
+            <h1 class="text-4xl font-bold tracking-tight mb-3">
+                {t('ts.hero.title')}
+            </h1>
+            <p class="text-lg text-muted-foreground max-w-xl mx-auto" set:html={t('ts.hero.desc')} />
+        </div>
+
+        <AudioExtractor 
+            client:load 
+            placeholderUrl={t('ts.input.placeholder')}
+            buttonGetInfo={t('btn.get_info')}
+            buttonExtracting={t('btn.extracting')}
+            buttonDownloaded={t('btn.downloaded')}
+            buttonExtractMp3={t('btn.extract_mp3')}
+            buttonExtractOriginal={t('btn.extract_original')}
+            textOriginalAudio={t('text.original_audio')}
+            textConvertedMp3={t('text.converted_mp3')}
+        />
+        
+        <!-- Features Section -->
+        <div class="mt-12 grid gap-4 md:grid-cols-3">
+            <div class="text-center p-4 rounded-lg bg-muted/30">
+                <div class="text-2xl mb-2">🎵</div>
+                <h3 class="font-semibold mb-1">{t('ts.features.original.title')}</h3>
+                <p class="text-sm text-muted-foreground">{t('ts.features.original.desc')}</p>
+            </div>
+            <div class="text-center p-4 rounded-lg bg-muted/30">
+                <div class="text-2xl mb-2">⚡</div>
+                <h3 class="font-semibold mb-1">{t('ts.features.fast.title')}</h3>
+                <p class="text-sm text-muted-foreground">{t('ts.features.fast.desc')}</p>
+            </div>
+            <div class="text-center p-4 rounded-lg bg-muted/30">
+                <div class="text-2xl mb-2">🆓</div>
+                <h3 class="font-semibold mb-1">{t('ts.features.free.title')}</h3>
+                <p class="text-sm text-muted-foreground">{t('ts.features.free.desc')}</p>
+            </div>
+        </div>
+        
+        <!-- How To Section -->
+        <div class="mt-12 py-8 border-t">
+            <h2 class="text-2xl font-bold text-center mb-2">{t('ts.howto.title')}</h2>
+            <p class="text-center text-muted-foreground mb-6 max-w-lg mx-auto">{t('ts.howto.desc')}</p>
+            <div class="space-y-4">
+                <div class="flex gap-4 items-start">
+                    <div class="flex-shrink-0 w-8 h-8 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold">1</div>
+                    <div>
+                        <h3 class="font-semibold">{t('ts.howto.step1.title')}</h3>
+                        <p class="text-muted-foreground text-sm">{t('ts.howto.step1.desc')}</p>
+                    </div>
+                </div>
+                <div class="flex gap-4 items-start">
+                    <div class="flex-shrink-0 w-8 h-8 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold">2</div>
+                    <div>
+                        <h3 class="font-semibold">{t('ts.howto.step2.title')}</h3>
+                        <p class="text-muted-foreground text-sm">{t('ts.howto.step2.desc')}</p>
+                    </div>
+                </div>
+                <div class="flex gap-4 items-start">
+                    <div class="flex-shrink-0 w-8 h-8 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold">3</div>
+                    <div>
+                        <h3 class="font-semibold">{t('ts.howto.step3.title')}</h3>
+                        <p class="text-muted-foreground text-sm">{t('ts.howto.step3.desc')}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- FAQ Section -->
+        <div class="mt-12 py-8 border-t">
+            <h2 class="text-2xl font-bold text-center mb-6">{t('ts.faq.title')}</h2>
+            <div class="space-y-4">
+                <div class="p-4 rounded-lg bg-muted/30">
+                    <h3 class="font-semibold mb-2">{t('ts.faq.q1')}</h3>
+                    <p class="text-sm text-muted-foreground">{t('ts.faq.a1')}</p>
+                </div>
+                <div class="p-4 rounded-lg bg-muted/30">
+                    <h3 class="font-semibold mb-2">{t('ts.faq.q2')}</h3>
+                    <p class="text-sm text-muted-foreground">{t('ts.faq.a2')}</p>
+                </div>
+                <div class="p-4 rounded-lg bg-muted/30">
+                    <h3 class="font-semibold mb-2">{t('ts.faq.q3')}</h3>
+                    <p class="text-sm text-muted-foreground">{t('ts.faq.a3')}</p>
+                </div>
+                <div class="p-4 rounded-lg bg-muted/30">
+                    <h3 class="font-semibold mb-2">{t('ts.faq.q4')}</h3>
+                    <p class="text-sm text-muted-foreground">{t('ts.faq.a4')}</p>
+                </div>
+                <div class="p-4 rounded-lg bg-muted/30">
+                    <h3 class="font-semibold mb-2">{t('ts.faq.q5')}</h3>
+                    <p class="text-sm text-muted-foreground">{t('ts.faq.a5')}</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Related Guides Section -->
+        <div class="mt-12 py-8 border-t">
+            <h2 class="text-2xl font-bold text-center mb-6">{t('ts.guides.title')}</h2>
+            <div class="grid gap-4 md:grid-cols-2">
+                <a href={lang === 'en' ? '/blog/how-to-download-tiktok-without-watermark' : `/${lang}/blog/how-to-download-tiktok-without-watermark`} class="group p-4 rounded-xl border bg-card hover:border-primary/50 hover:shadow-md transition-all">
+                    <h3 class="font-semibold mb-1 group-hover:text-primary transition-colors">{t('ts.guides.1.title')}</h3>
+                    <p class="text-sm text-muted-foreground">{t('ts.guides.1.desc')}</p>
+                </a>
+                <a href={lang === 'en' ? '/blog/best-free-video-editors-tiktok' : `/${lang}/blog/best-free-video-editors-tiktok`} class="group p-4 rounded-xl border bg-card hover:border-primary/50 hover:shadow-md transition-all">
+                    <h3 class="font-semibold mb-1 group-hover:text-primary transition-colors">{t('ts.guides.2.title')}</h3>
+                    <p class="text-sm text-muted-foreground">{t('ts.guides.2.desc')}</p>
+                </a>
+                <a href={lang === 'en' ? '/tiktok-downloader' : `/${lang}/tiktok-downloader`} class="group p-4 rounded-xl border bg-card hover:border-primary/50 hover:shadow-md transition-all">
+                    <h3 class="font-semibold mb-1 group-hover:text-primary transition-colors">{t('ts.guides.3.title')}</h3>
+                    <p class="text-sm text-muted-foreground">{t('ts.guides.3.desc')}</p>
+                </a>
+                <a href={lang === 'en' ? '/video-to-mp3' : `/${lang}/video-to-mp3`} class="group p-4 rounded-xl border bg-card hover:border-primary/50 hover:shadow-md transition-all">
+                    <h3 class="font-semibold mb-1 group-hover:text-primary transition-colors">{t('ts.guides.4.title')}</h3>
+                    <p class="text-sm text-muted-foreground">{t('ts.guides.4.desc')}</p>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <Footer />
+</Layout>
