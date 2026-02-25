@@ -1,9 +1,9 @@
 ---
-title: "5 Best Ways to Save Twitter Videos to Your Phone (2026)"
-description: "Learn how to download Twitter/X videos to your iPhone or Android camera roll for free. No app needed — save tweets with video in seconds using a browser."
+title: "Twitter Videolarını Telefonunuza Kaydetmenin 5 Yolu (2026)"
+description: "Twitter/X videolarını ücretsiz olarak iPhone veya Android telefonunuza nasıl indireceğinizi öğrenin. Uygulama gerekmez — tarayıcı ile saniyeler içinde kaydedin."
 pubDate: 2026-02-11
 heroImage: "../../../assets/blog-images/save-twitter-videos.png"
-keywords: ["how to save twitter video to camera roll iphone", "download tweet video without app", "save twitter video to phone android free", "twitter x video downloader no login", "how to download twitter gif as mp4"]
+keywords: ["twitter video indir", "tweet video kaydet", "x video indirme", "twitter video mp4 kaydet"]
 monetization:
   primary_category: "none"
   affiliate_potential: "low"

@@ -1,9 +1,9 @@
 ---
-title: "10 TikTok Video Editing Tips to Go Viral in 2026"
-description: "Learn how the top creators edit their TikToks. Discover the best pacing, transitions, and hooks to increase watch time and get on the FYP."
+title: "2026'da Viral Olmak İçin 10 TikTok Video Düzenleme İpucu"
+description: "En iyi içerik üreticilerinin TikTok'larını nasıl düzenlediğini öğrenin. İzlenme süresini artırmak ve FYP'ye çıkmak için en iyi tempo, geçişler ve kancaları keşfedin."
 pubDate: 2026-02-12
 heroImage: "../../../assets/blog-images/tiktok-editing-tips.png"
-keywords: ["tiktok editing tips 2026", "how to edit viral tiktoks", "tiktok transitions tutorial", "best time to post tiktok 2026", "increase tiktok watch time"]
+keywords: ["tiktok video düzenleme ipuçları", "tiktok viral olma", "tiktok düzenleme teknikleri 2026"]
 monetization:
   primary_category: "creator-tools"
   affiliate_potential: "high"
