@@ -62,7 +62,7 @@ const getHref = (path: string) => lang === 'en' ? path : `/${lang}${path === '/'
                 <ul class="space-y-2 text-sm text-muted-foreground">
                     <li><a href={getHref('/blog')} class="hover:text-foreground transition-colors">{t('nav.blog')}</a></li>
                     {recentPosts.map(post => {
-                        const slug = post.slug.replace(/^(en|es|tr|pt|fr|ja|ko|hi)\//, '');
+                        const slug = post.slug.replace(/^[a-z]{2}\//, '');
                         return (
                             <li>
                                 <a href={getHref(`/blog/${slug}/`)} class="hover:text-foreground transition-colors line-clamp-1" title={post.data.title}>
