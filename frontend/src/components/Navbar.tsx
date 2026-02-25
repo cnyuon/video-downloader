@@ -122,9 +122,14 @@ export default function Navbar({ currentPage, lang }: NavbarProps) {
                             <option value="en" className="bg-background text-foreground">🇺🇸 English</option>
                             <option value="es" className="bg-background text-foreground">🇪🇸 Español</option>
                             <option value="tr" className="bg-background text-foreground">🇹🇷 Türkçe</option>
-                                      <option value="pt">Português</option>
-                          <option value="fr">Français</option>
-            </select>
+                            <option value="pt" className="bg-background text-foreground">🇧🇷 Português</option>
+                            <option value="fr" className="bg-background text-foreground">🇫🇷 Français</option>
+                            <option value="de" className="bg-background text-foreground">🇩🇪 Deutsch</option>
+                            <option value="ja" className="bg-background text-foreground">🇯🇵 日本語</option>
+                            <option value="ko" className="bg-background text-foreground">🇰🇷 한국어</option>
+                            <option value="ar" className="bg-background text-foreground">🇸🇦 العربية</option>
+                            <option value="hi" className="bg-background text-foreground">🇮🇳 हिन्दी</option>
+                        </select>
                     </div>
 
                     {/* Dark Mode Toggle */}
@@ -157,9 +162,14 @@ export default function Navbar({ currentPage, lang }: NavbarProps) {
                             <option value="en" className="bg-background text-foreground">🇺🇸 EN</option>
                             <option value="es" className="bg-background text-foreground">🇪🇸 ES</option>
                             <option value="tr" className="bg-background text-foreground">🇹🇷 TR</option>
-                                      <option value="pt">Português</option>
-                          <option value="fr">Français</option>
-            </select>
+                            <option value="pt" className="bg-background text-foreground">🇧🇷 PT</option>
+                            <option value="fr" className="bg-background text-foreground">🇫🇷 FR</option>
+                            <option value="de" className="bg-background text-foreground">🇩🇪 DE</option>
+                            <option value="ja" className="bg-background text-foreground">🇯🇵 JA</option>
+                            <option value="ko" className="bg-background text-foreground">🇰🇷 KO</option>
+                            <option value="ar" className="bg-background text-foreground">🇸🇦 AR</option>
+                            <option value="hi" className="bg-background text-foreground">🇮🇳 HI</option>
+                        </select>
                     </div>
                     <button
                         onClick={toggleDarkMode}

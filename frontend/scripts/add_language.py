@@ -1,24 +1,26 @@
 #!/usr/bin/env python3
 """
 Reusable script to add a new language to the video-downloader site.
-Handles all infrastructure: config, navbar, pages, sitemap, footer.
+Handles all infrastructure: config, navbar, pages, sitemap, footer, ui.ts languages, blog dir.
 
-Usage: python3 scripts/add_language.py <lang_code> <lang_name>
-Example: python3 scripts/add_language.py pt Português
+Usage: python3 scripts/add_language.py <lang_code> <lang_name> <flag_emoji>
+Example: python3 scripts/add_language.py de Deutsch 🇩🇪
 """
 import sys, os, re, shutil
 
-if len(sys.argv) < 3:
-    print("Usage: python3 scripts/add_language.py <lang_code> <lang_name>")
-    print("Example: python3 scripts/add_language.py pt Português")
+if len(sys.argv) < 4:
+    print("Usage: python3 scripts/add_language.py <lang_code> <lang_name> <flag_emoji>")
+    print("Example: python3 scripts/add_language.py de Deutsch 🇩🇪")
     sys.exit(1)
 
 LANG = sys.argv[1]
 LANG_NAME = sys.argv[2]
+FLAG = sys.argv[3]
+LANG_CODE_UPPER = LANG.upper()
 BASE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 print(f"\n{'='*60}")
-print(f"  Adding language: {LANG} ({LANG_NAME})")
+print(f"  Adding language: {FLAG} {LANG} ({LANG_NAME})")
 print(f"  Base: {BASE}")
 print(f"{'='*60}\n")
 
@@ -42,24 +44,28 @@ else:
     print(f"⏭️  '{LANG}' already in astro.config.mjs")
 
 # ───────────────────────────────────────────────────
-# 2. Navbar.tsx — add language option
+# 2. Navbar.tsx — add language option with flag
 # ───────────────────────────────────────────────────
 navbar_path = os.path.join(BASE, 'src', 'components', 'Navbar.tsx')
 with open(navbar_path, 'r') as f:
     navbar = f.read()
 
-option_tag = f'<option value="{LANG}">{LANG_NAME}</option>'
 if f'value="{LANG}"' not in navbar:
-    # Add to both desktop and mobile selects (after the last existing option)
-    # Find all </select> and insert before them
-    navbar = navbar.replace(
-        '</select>',
-        f'              {option_tag}\n            </select>',
-        2  # Replace in both desktop and mobile
-    )
+    # Desktop dropdown - full name
+    desktop_option = f'                            <option value="{LANG}" className="bg-background text-foreground">{FLAG} {LANG_NAME}</option>\n                        </select>'
+    # Mobile dropdown - code
+    mobile_option = f'                            <option value="{LANG}" className="bg-background text-foreground">{FLAG} {LANG_CODE_UPPER}</option>\n                        </select>'
+
+    # Replace first </select> with desktop option, second with mobile option
+    parts = navbar.split('</select>')
+    if len(parts) >= 3:
+        navbar = parts[0] + desktop_option + parts[1] + mobile_option
+        # Join remaining parts
+        for i in range(2, len(parts)):
+            navbar += '</select>' + parts[i]
     with open(navbar_path, 'w') as f:
         f.write(navbar)
-    print(f"✅ Added {LANG_NAME} to Navbar.tsx (desktop + mobile)")
+    print(f"✅ Added {FLAG} {LANG_NAME} to Navbar.tsx (desktop + mobile)")
 else:
     print(f"⏭️  {LANG_NAME} already in Navbar.tsx")
 
@@ -81,25 +87,25 @@ tool_pages = [
 ]
 
 es_dir = os.path.join(pages_dir, 'es')
+pages_created = 0
 for page in tool_pages:
     src = os.path.join(es_dir, page)
     dst = os.path.join(lang_dir, page)
     if os.path.exists(dst):
-        print(f"⏭️  {LANG}/{page} already exists")
         continue
     if not os.path.exists(src):
         print(f"⚠️  Source es/{page} not found, skipping")
         continue
     with open(src, 'r') as f:
         content = f.read()
-    # Replace 'es' language references with new lang
     content = content.replace("'es'", f"'{LANG}'")
     content = content.replace('"es"', f'"{LANG}"')
     content = re.sub(r'/es/', f'/{LANG}/', content)
     content = content.replace("ui.es", f"ui.{LANG}")
     with open(dst, 'w') as f:
         f.write(content)
-    print(f"✅ Created {LANG}/{page}")
+    pages_created += 1
+print(f"✅ Created {pages_created} tool pages in {LANG}/")
 
 # ───────────────────────────────────────────────────
 # 4. Create blog pages
@@ -112,10 +118,8 @@ for blog_page in ['index.astro', '[...slug].astro']:
     src = os.path.join(es_blog_dir, blog_page)
     dst = os.path.join(blog_dir, blog_page)
     if os.path.exists(dst):
-        print(f"⏭️  {LANG}/blog/{blog_page} already exists")
         continue
     if not os.path.exists(src):
-        print(f"⚠️  Source es/blog/{blog_page} not found, skipping")
         continue
     with open(src, 'r') as f:
         content = f.read()
@@ -123,59 +127,35 @@ for blog_page in ['index.astro', '[...slug].astro']:
     content = content.replace('"es"', f'"{LANG}"')
     content = re.sub(r'/es/', f'/{LANG}/', content)
     content = content.replace("ui.es", f"ui.{LANG}")
-    # Fix the nativePost slug lookup
-    content = re.sub(
-        r"p\.slug === `es/",
-        f"p.slug === `{LANG}/",
-        content
-    )
+    content = re.sub(r"p\.slug === `es/", f"p.slug === `{LANG}/", content)
     with open(dst, 'w') as f:
         f.write(content)
-    print(f"✅ Created {LANG}/blog/{blog_page}")
+print(f"✅ Created {LANG}/blog/ pages")
 
 # ───────────────────────────────────────────────────
-# 5. Update sitemap.xml.ts
+# 5. Update sitemap.xml.ts — add to LANGS array
 # ───────────────────────────────────────────────────
 sitemap_path = os.path.join(pages_dir, 'sitemap.xml.ts')
 with open(sitemap_path, 'r') as f:
     sitemap = f.read()
 
-if f"'/{LANG}/'" not in sitemap:
-    # Add static pages after the last /tr/ or /es/ block
-    new_pages = f"""    '/{LANG}/',
-    '/{LANG}/tiktok-downloader/',
-    '/{LANG}/facebook-downloader/',
-    '/{LANG}/twitter-downloader/',
-    '/{LANG}/video-to-mp3/',
-    '/{LANG}/thumbnail-grabber/',
-    '/{LANG}/tiktok-sound-downloader/',
-    '/{LANG}/blog/',"""
-
-    # Insert before the closing bracket of staticPages
-    sitemap = sitemap.replace(
-        "  ];",
-        f"{new_pages}\n  ];",
-        1
-    )
-
-    # Add to localized blog posts array if 'es', 'tr' pattern exists
-    if "['es', 'tr']" in sitemap:
-        sitemap = sitemap.replace("['es', 'tr']", f"['es', 'tr', '{LANG}']")
-    elif "['es']" in sitemap:
-        sitemap = sitemap.replace("['es']", f"['es', '{LANG}']")
-
-    # Add to changefreq/priority checks
+if f"'{LANG}'" not in sitemap:
     sitemap = re.sub(
-        r"(page\.url === '/tr/')",
+        r"(const LANGS = \[.*?)(];)",
+        rf"\1, '{LANG}'\2",
+        sitemap
+    )
+    # Also add to changefreq/priority checks
+    sitemap = re.sub(
+        r"(page\.url === '/fr/')",
         rf"\1 || page.url === '/{LANG}/'",
         sitemap
     )
-
     with open(sitemap_path, 'w') as f:
         f.write(sitemap)
-    print(f"✅ Updated sitemap.xml.ts with /{LANG}/ pages")
+    print(f"✅ Updated sitemap.xml.ts LANGS array")
 else:
-    print(f"⏭️  /{LANG}/ already in sitemap")
+    print(f"⏭️  '{LANG}' already in sitemap")
 
 # ───────────────────────────────────────────────────
 # 6. Update Footer.astro regex
@@ -184,8 +164,8 @@ footer_path = os.path.join(BASE, 'src', 'components', 'Footer.astro')
 with open(footer_path, 'r') as f:
     footer = f.read()
 
-# Add lang to the slug-stripping regex
-if LANG not in re.findall(r'\^\\?\(([^)]+)\)', footer)[0] if re.findall(r'\^\\?\(([^)]+)\)', footer) else '':
+if LANG not in footer:
+    # Add lang to the slug-stripping regex: (en|es|tr|pt|fr) -> add |LANG
     footer = re.sub(
         r'\(en\|es\|([^)]+)\)',
         rf'(en|es|\1|{LANG})',
@@ -193,7 +173,7 @@ if LANG not in re.findall(r'\^\\?\(([^)]+)\)', footer)[0] if re.findall(r'\^\\?\
     )
     with open(footer_path, 'w') as f:
         f.write(footer)
-    print(f"✅ Updated Footer.astro regex with '{LANG}'")
+    print(f"✅ Updated Footer.astro regex")
 else:
     print(f"⏭️  '{LANG}' already in Footer regex")
 
@@ -202,7 +182,7 @@ else:
 # ───────────────────────────────────────────────────
 blog_content_dir = os.path.join(BASE, 'src', 'content', 'blog', LANG)
 os.makedirs(blog_content_dir, exist_ok=True)
-print(f"✅ Created blog content directory: src/content/blog/{LANG}/")
+print(f"✅ Created blog content directory")
 
 # ───────────────────────────────────────────────────
 # 8. Add language to ui.ts languages object
@@ -211,8 +191,7 @@ ui_path = os.path.join(BASE, 'src', 'i18n', 'ui.ts')
 with open(ui_path, 'r') as f:
     ui = f.read()
 
-if f"  {LANG}:" not in ui.split('} as const')[0]:
-    # Add to languages object
+if f"  {LANG}:" not in ui.split('} as const')[0].split('export const ui')[0]:
     ui = re.sub(
         r"(export const languages = \{[^}]*)(})",
         rf"\1  {LANG}: '{LANG_NAME}',\n\2",
@@ -220,14 +199,8 @@ if f"  {LANG}:" not in ui.split('} as const')[0]:
     )
     with open(ui_path, 'w') as f:
         f.write(ui)
-    print(f"✅ Added {LANG}: '{LANG_NAME}' to ui.ts languages object")
+    print(f"✅ Added {LANG}: '{LANG_NAME}' to ui.ts languages")
 else:
     print(f"⏭️  '{LANG}' already in ui.ts languages")
 
-print(f"\n{'='*60}")
-print(f"  Infrastructure complete for {LANG} ({LANG_NAME})!")
-print(f"  Remaining manual steps:")
-print(f"    1. Add {LANG} translations to ui.ts (324 keys)")
-print(f"    2. Run translate_blogs.py for blog content")
-print(f"    3. Build and verify")
-print(f"{'='*60}\n")
+print(f"\n✅ Infrastructure complete for {FLAG} {LANG} ({LANG_NAME})!\n")

@@ -1,0 +1,155 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '../../../layouts/Layout.astro';
+import Navbar from '../../../components/Navbar';
+import Footer from '../../../components/Footer.astro';
+import { ui } from '../../../i18n/ui';
+import { Image } from 'astro:assets';
+
+export async function getStaticPaths() {
+  const allPosts = await getCollection('blog');
+  const enPosts = allPosts.filter(post => post.slug.startsWith('en/'));
+  
+  return enPosts.map((enPost) => {
+    const trueSlug = enPost.slug.replace('en/', '');
+    const nativePost = allPosts.find(p => p.slug === `de/${trueSlug}`);
+    
+    return {
+      params: { slug: trueSlug },
+      props: {
+          post: nativePost || enPost,
+          originalSlug: trueSlug
+      },
+    };
+  });
+}
+
+const { post, originalSlug } = Astro.props;
+const { Content } = await post.render();
+
+// Category mapping helper
+const CATEGORY_LABELS: Record<string, string> = {
+    'vpn': 'Privacy & VPN',
+    'software': 'Video Editing',
+    'hosting': 'Creator Tech',
+    'storage': 'Storage',
+    'creator-tools': 'Growth Tools',
+    'none': 'Guide'
+};
+
+const category = post.data.monetization?.primary_category 
+    ? CATEGORY_LABELS[post.data.monetization.primary_category] 
+    : 'Guide';
+
+const lang = 'de';
+const getHref = (path: string) => {
+    let href = `/${lang}${path === '/' ? '' : path}`;
+    return href.endsWith('/') ? href : href + '/';
+};
+
+const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": post.data.title,
+    "description": post.data.description,
+    "datePublished": post.data.pubDate.toISOString(),
+    "image": post.data.heroImage ? `https://getmediatools.com${(post.data.heroImage as any).src}` : undefined,
+    "author": { "@type": "Organization", "name": "MediaTools" },
+    "publisher": { "@type": "Organization", "name": "MediaTools", "url": "https://getmediatools.com" },
+    "mainEntityOfPage": `https://getmediatools.com/${lang}/blog/${originalSlug}`
+};
+---
+
+<Layout 
+	title={`${post.data.title} | MediaTools`}
+	description={post.data.description}
+	ogImage={post.data.heroImage ? (post.data.heroImage as any).src : undefined}
+	jsonLd={jsonLd}
+>
+	<Navbar client:idle currentPage="blog" lang={lang as any} />
+	
+	<main class="container mx-auto px-4 pt-10 pb-16 max-w-4xl">
+        <!-- Back Link -->
+        <a href={getHref('/blog')} class="inline-flex items-center text-sm text-muted-foreground hover:text-primary mb-8 transition-colors">
+            <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+            {ui.de['btn.back_to_blog']}
+        </a>
+
+		<article class="mx-auto">
+
+			<div class="mb-8 text-center max-w-2xl mx-auto">
+                <span class="inline-block px-3 py-1 bg-primary/10 text-primary rounded-full text-sm font-medium mb-4">
+                    {category}
+                </span>
+				<h1 class="text-4xl md:text-5xl font-bold tracking-tight mb-6 leading-tight">{post.data.title}</h1>
+			</div>
+			
+			{post.data.heroImage && (
+				<div class="rounded-2xl overflow-hidden shadow-xl mb-12 aspect-square max-w-lg mx-auto bg-muted">
+                    <Image 
+                        src={post.data.heroImage as any} 
+                        alt={post.data.title} 
+                        class="w-full h-full object-cover transform hover:scale-105 transition-transform duration-700"
+                        loading="eager"
+                        width={1200}
+                        height={1200}
+                        format="webp"
+                    />
+                </div>
+			)}
+			
+            <div class="prose prose-lg dark:prose-invert mx-auto max-w-2xl 
+                prose-headings:font-bold prose-headings:tracking-tight 
+                prose-a:font-medium prose-a:underline prose-a:underline-offset-2 prose-a:decoration-1 hover:prose-a:decoration-2 
+                prose-img:rounded-xl prose-img:shadow-lg"
+                style="--tw-prose-links: hsl(var(--link)); --tw-prose-invert-links: hsl(var(--link));">
+				<Content />
+			</div>
+		</article>
+
+        <!-- Related Tools Section -->
+        <div class="mt-20 pt-12 border-t max-w-2xl mx-auto">
+            <h2 class="text-2xl font-bold mb-6">{ui.de['tools.free_tools']}</h2>
+            <div class="grid gap-4 sm:grid-cols-2">
+                <a href={getHref('/tiktok-downloader')} class="group flex items-center gap-4 p-4 rounded-xl border bg-card hover:border-primary/50 hover:shadow-md transition-all">
+                    <div class="w-10 h-10 rounded-lg bg-black flex items-center justify-center text-white shrink-0 group-hover:scale-110 transition-transform">
+                        <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M19.321 5.562a5.124 5.124 0 0 1-.443-.258 6.228 6.228 0 0 1-1.137-.966c-.849-.849-1.18-1.69-1.333-2.338h.003c-.11-.467-.073-.77-.066-.77h-3.547v13.473c0 .181 0 .359-.008.534a3.874 3.874 0 0 1-.022.287l-.001.021v.011a2.9 2.9 0 0 1-.881 1.838 2.87 2.87 0 0 1-2.028.824 2.9 2.9 0 0 1-2.9-2.9 2.9 2.9 0 0 1 2.9-2.9c.304 0 .596.049.868.138v-3.6a6.391 6.391 0 0 0-.868-.059 6.45 6.45 0 0 0-4.568 1.868A6.387 6.387 0 0 0 3.4 15.9a6.4 6.4 0 0 0 .389 2.187 6.452 6.452 0 0 0 1.5 2.1 6.437 6.437 0 0 0 4.568 1.88 6.45 6.45 0 0 0 4.568-1.88 6.394 6.394 0 0 0 1.89-4.568V9.55a9.372 9.372 0 0 0 5.49 1.77V7.77s-2.485.097-4.484-2.208z"/></svg>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold group-hover:text-primary transition-colors">{ui.de['nav.tiktok']}</h3>
+                        <p class="text-sm text-muted-foreground">{ui.de['index.tools.tt.desc']}</p>
+                    </div>
+                </a>
+                <a href={getHref('/twitter-downloader')} class="group flex items-center gap-4 p-4 rounded-xl border bg-card hover:border-primary/50 hover:shadow-md transition-all">
+                    <div class="w-10 h-10 rounded-lg bg-black flex items-center justify-center text-white shrink-0 group-hover:scale-110 transition-transform">
+                        <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold group-hover:text-primary transition-colors">{ui.de['nav.twitter']}</h3>
+                        <p class="text-sm text-muted-foreground">{ui.de['index.tools.tw.desc']}</p>
+                    </div>
+                </a>
+                <a href={getHref('/video-to-mp3')} class="group flex items-center gap-4 p-4 rounded-xl border bg-card hover:border-primary/50 hover:shadow-md transition-all">
+                    <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-green-500 to-emerald-600 flex items-center justify-center text-white shrink-0 group-hover:scale-110 transition-transform">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3"/></svg>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold group-hover:text-primary transition-colors">{ui.de['nav.audio']}</h3>
+                        <p class="text-sm text-muted-foreground">{ui.de['index.tools.mp3.desc']}</p>
+                    </div>
+                </a>
+                <a href={getHref('/tiktok-sound-downloader')} class="group flex items-center gap-4 p-4 rounded-xl border bg-card hover:border-primary/50 hover:shadow-md transition-all">
+                    <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-pink-500 to-rose-600 flex items-center justify-center text-white shrink-0 group-hover:scale-110 transition-transform">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072M12 12h.01M18.364 5.636a9 9 0 010 12.728M5.636 18.364a9 9 0 010-12.728"/></svg>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold group-hover:text-primary transition-colors">{ui.de['nav.sound']}</h3>
+                        <p class="text-sm text-muted-foreground">{ui.de['ts.hero.desc']?.replace(/<[^>]*>?/gm, '').split('.')[0]}</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+	</main>
+
+    <Footer />
+</Layout>

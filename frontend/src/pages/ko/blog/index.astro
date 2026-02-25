@@ -1,0 +1,121 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '../../../layouts/Layout.astro';
+import Navbar from '../../../components/Navbar';
+import Footer from '../../../components/Footer.astro';
+import { ui } from '../../../i18n/ui';
+import { Image } from 'astro:assets';
+
+const lang = 'ko';
+const allBlogPosts = await getCollection('blog');
+
+// Get baseline posts and sort
+const baselinePosts = allBlogPosts.filter(post => post.slug.startsWith('en/'));
+const sortedBaseline = baselinePosts.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+
+// Map to localized versions if they exist
+const localizedPosts = sortedBaseline.map(enPost => {
+    const trueSlug = enPost.slug.replace('en/', '');
+    const nativePost = allBlogPosts.find(p => p.slug === `${lang}/${trueSlug}`);
+    return {
+        ...(nativePost || enPost),
+        slug: trueSlug
+    };
+});
+
+// Category helper
+const CATEGORY_LABELS: Record<string, string> = {
+    'vpn': 'Privacy & VPN',
+    'software': 'Video Editing',
+    'hosting': 'Creator Tech',
+    'storage': 'Storage',
+    'creator-tools': 'Growth Tools',
+    'none': 'Guide'
+};
+
+function getCategoryLabel(slug: string | undefined): string {
+    return slug && CATEGORY_LABELS[slug] ? CATEGORY_LABELS[slug] : 'Guide';
+}
+
+const getHref = (path: string) => {
+    let href = `/${lang}${path === '/' ? '' : path}`;
+    return href.endsWith('/') ? href : href + '/';
+};
+---
+
+<Layout 
+    title={`${ui.ko['blog.title']} — Video Download Guides, Tips & Creator Tools`}
+    description={ui.ko['blog.desc']}
+>
+    <!-- Target Keywords: video downloading tips, tiktok download guide, remove watermarks, free online tools blog -->
+    <Navbar client:idle currentPage="blog" lang={lang as any} />
+    
+    <main class="container mx-auto px-4 pt-10 pb-16 max-w-6xl">
+        <div class="text-center mb-16">
+            <h1 class="text-4xl md:text-5xl font-bold tracking-tight mb-6">
+                {ui.ko['blog.title']}
+            </h1>
+            <p class="text-lg text-muted-foreground max-w-2xl mx-auto">
+                {ui.ko['blog.desc']}
+            </p>
+        </div>
+        
+        <!-- Category Filter (Visual only for now) -->
+        <div class="flex flex-wrap justify-center gap-2 mb-12">
+            <button class="px-4 py-2 rounded-full bg-primary text-primary-foreground text-sm font-medium">{ui.ko['blog.filter.all']}</button>
+            <button class="px-4 py-2 rounded-full bg-muted hover:bg-muted/80 text-sm font-medium transition-colors">{ui.ko['blog.filter.tiktok']}</button>
+            <button class="px-4 py-2 rounded-full bg-muted hover:bg-muted/80 text-sm font-medium transition-colors">{ui.ko['blog.filter.creator']}</button>
+            <button class="px-4 py-2 rounded-full bg-muted hover:bg-muted/80 text-sm font-medium transition-colors">{ui.ko['blog.filter.editing']}</button>
+        </div>
+
+        <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+            {localizedPosts.map((post) => (
+                <article class="group bg-card rounded-2xl border shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 h-full flex flex-col overflow-hidden">
+                    <a href={getHref(`/blog/${post.slug}`)} class="block w-full aspect-square overflow-hidden bg-muted">
+                        {post.data.heroImage ? (
+                            <Image 
+                                src={post.data.heroImage as any} 
+                                alt={post.data.title} 
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                                loading="lazy"
+                                width={800}
+                                height={800}
+                                format="webp"
+                            />
+                        ) : (
+                            <div class="w-full h-full flex items-center justify-center bg-gradient-to-br from-gray-100 to-gray-200 dark:from-gray-800 dark:to-gray-900">
+                                <span class="text-4xl">📄</span>
+                            </div>
+                        )}
+                    </a>
+                    <div class="p-6 flex-1 flex flex-col">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-secondary text-secondary-foreground">
+                                {getCategoryLabel(post.data.monetization?.primary_category)}
+                            </span>
+                        </div>
+                        
+                        <h2 class="text-xl font-bold mb-3 line-clamp-2 group-hover:text-primary transition-colors">
+                            <a href={getHref(`/blog/${post.slug}`)}>
+                                {post.data.title}
+                            </a>
+                        </h2>
+                        
+                        <p class="text-muted-foreground mb-6 line-clamp-3 flex-1 text-sm leading-relaxed">
+                            {post.data.description}
+                        </p>
+                        
+                        <a href={getHref(`/blog/${post.slug}`)} class="inline-flex items-center text-primary font-semibold text-sm group/link">
+                            {ui.ko['btn.read_article']}
+                            <svg class="w-4 h-4 ml-1 transform group-hover/link:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                            </svg>
+                        </a>
+                    </div>
+                </article>
+            ))}
+        </div>
+    </main>
+
+    <Footer />
+</Layout>

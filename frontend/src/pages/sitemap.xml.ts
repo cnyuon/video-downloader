@@ -2,31 +2,29 @@ import { getCollection } from 'astro:content';
 
 const BASE_URL = 'https://getmediatools.com';
 
+// All supported languages (add new ones here)
+const LANGS = ['es', 'tr', 'pt', 'fr', 'de', 'ja', 'ko', 'ar', 'hi'];
+
 const staticPages = [
     '/',
-    '/es/',
-    '/tr/',
-    '/tiktok-downloader/',
-    '/es/tiktok-downloader/',
-    '/tr/tiktok-downloader/',
-    '/facebook-downloader/',
-    '/es/facebook-downloader/',
-    '/tr/facebook-downloader/',
-    '/twitter-downloader/',
-    '/es/twitter-downloader/',
-    '/tr/twitter-downloader/',
-    '/video-to-mp3/',
-    '/es/video-to-mp3/',
-    '/tr/video-to-mp3/',
-    '/thumbnail-grabber/',
-    '/es/thumbnail-grabber/',
-    '/tr/thumbnail-grabber/',
-    '/tiktok-sound-downloader/',
-    '/es/tiktok-sound-downloader/',
-    '/tr/tiktok-sound-downloader/',
     '/blog/',
-    '/es/blog/',
-    '/tr/blog/',
+    '/tiktok-downloader/',
+    '/facebook-downloader/',
+    '/twitter-downloader/',
+    '/video-to-mp3/',
+    '/thumbnail-grabber/',
+    '/tiktok-sound-downloader/',
+    // Generate all localized static pages
+    ...LANGS.flatMap(lang => [
+        `/${lang}/`,
+        `/${lang}/tiktok-downloader/`,
+        `/${lang}/facebook-downloader/`,
+        `/${lang}/twitter-downloader/`,
+        `/${lang}/video-to-mp3/`,
+        `/${lang}/thumbnail-grabber/`,
+        `/${lang}/tiktok-sound-downloader/`,
+        `/${lang}/blog/`,
+    ]),
 ];
 
 export async function GET() {
@@ -41,8 +39,8 @@ export async function GET() {
             isBlog: true
         }));
 
-    // All English posts ALSO have expected Spanish and Turkish routes
-    const localizedPostsUrls = ['es', 'tr', 'pt'].flatMap(lang =>
+    // All English posts ALSO have localized routes
+    const localizedPostsUrls = LANGS.flatMap(lang =>
         allPosts
             .filter((post: any) => post.slug.startsWith('en/'))
             .map((post: any) => ({
@@ -68,8 +66,8 @@ export async function GET() {
                 (page) => `<url>
     <loc>${BASE_URL}${page.url}</loc>
     <lastmod>${page.lastmod}</lastmod>
-    <changefreq>${page.url === '/' || page.url === '/es/' || page.url === '/tr/' || page.url === '/fr/' || page.url === '/pt/' ? 'daily' : page.isBlog ? 'monthly' : 'weekly'}</changefreq>
-    <priority>${page.url === '/' || page.url === '/es/' || page.url === '/tr/' || page.url === '/fr/' || page.url === '/pt/' ? '1.0' : page.isBlog ? '0.7' : '0.9'}</priority>
+    <changefreq>${page.url === '/' || page.url === '/es/' || page.url === '/tr/' || page.url === '/fr/' || page.url === '/hi/' || page.url === '/ar/' || page.url === '/ko/' || page.url === '/ja/' || page.url === '/de/' || page.url === '/pt/' ? 'daily' : page.isBlog ? 'monthly' : 'weekly'}</changefreq>
+    <priority>${page.url === '/' || page.url === '/es/' || page.url === '/tr/' || page.url === '/fr/' || page.url === '/hi/' || page.url === '/ar/' || page.url === '/ko/' || page.url === '/ja/' || page.url === '/de/' || page.url === '/pt/' ? '1.0' : page.isBlog ? '0.7' : '0.9'}</priority>
   </url>`
             )
             .join('\n')}
