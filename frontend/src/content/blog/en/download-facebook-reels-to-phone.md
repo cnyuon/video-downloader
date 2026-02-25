@@ -45,7 +45,7 @@ Open the Facebook app or website and find the Reel you want to download.
 
 ### Step 3: Download
 
-1. Go to [MediaTools Facebook Downloader](/facebook-downloader).
+1. Go to [MediaTools Facebook Downloader](/facebook-downloader/).
 2. Paste the Facebook link into the input box.
 3. Click **Get Video**.
 4. Choose your preferred quality and click **Download**.
@@ -83,7 +83,7 @@ Tech-savvy users can sometimes extract video URLs through browser developer tool
 - Desktop-only (impossible on mobile)
 - Breaks frequently with Facebook updates
 
-**Verdict:** Too complicated. Use [MediaTools](/facebook-downloader) instead.
+**Verdict:** Too complicated. Use [MediaTools](/facebook-downloader/) instead.
 
 ## Method 4: Third-Party Apps (Risky)
 
@@ -101,7 +101,7 @@ Various apps claim to download Facebook videos. Most come with serious problems:
 iPhone users often struggle with video downloads because iOS restricts file downloads. Here's the exact process:
 
 1. Copy the Reel link from the Facebook app
-2. Open Safari and go to [getmediatools.com/facebook-downloader](/facebook-downloader)
+2. Open Safari and go to [getmediatools.com/facebook-downloader](/facebook-downloader/)
 3. Paste the link and click **Get Video**
 4. Tap **Download** — the video will appear in your **Files** app
 5. Open Files, find the video, tap it, then tap the **Share** button → **Save Video**
@@ -114,14 +114,14 @@ iPhone users often struggle with video downloads because iOS restricts file down
 Android makes it slightly easier:
 
 1. Copy the Reel link from the Facebook app
-2. Open Chrome and go to [getmediatools.com/facebook-downloader](/facebook-downloader)
+2. Open Chrome and go to [getmediatools.com/facebook-downloader](/facebook-downloader/)
 3. Paste the link and tap **Get Video**
 4. Tap **Download** — the file saves to your Downloads folder
 5. Open your Gallery app — the video should appear automatically
 
 ## Can I Download Facebook Live Videos?
 
-Yes, but only **after** the Live broadcast has ended and been saved as a regular video. While a broadcast is live, it can't be downloaded. Once it's converted to a regular video post, you can use the same [Facebook Downloader](/facebook-downloader) process.
+Yes, but only **after** the Live broadcast has ended and been saved as a regular video. While a broadcast is live, it can't be downloaded. Once it's converted to a regular video post, you can use the same [Facebook Downloader](/facebook-downloader/) process.
 
 ## What About Private Videos or Groups?
 
@@ -142,22 +142,22 @@ Respecting privacy is important. Only download content that's been shared public
 Most Facebook Reels are available in HD (720p) or Full HD (1080p), depending on the original upload quality. Our tool downloads the highest quality available.
 
 **Does this work with regular Facebook videos too?**
-Yes! Our [Facebook Downloader](/facebook-downloader) works with Reels, regular video posts, videos shared in groups (public only), and Facebook Watch content.
+Yes! Our [Facebook Downloader](/facebook-downloader/) works with Reels, regular video posts, videos shared in groups (public only), and Facebook Watch content.
 
 **Will the video have a watermark?**
 No. Our tool downloads the original video file as uploaded to Facebook. We don't add any watermarks or branding.
 
 **Can I download Facebook Reels on iPad?**
-Yes, the process is the same as iPhone. Use Safari to visit our [Facebook Downloader](/facebook-downloader), paste the link, and download.
+Yes, the process is the same as iPhone. Use Safari to visit our [Facebook Downloader](/facebook-downloader/), paste the link, and download.
 
 **Why isn't my download working?**
 Make sure you've copied the correct link. The URL should start with `https://www.facebook.com/` or `https://fb.watch/`. If the video is from a private profile or group, it won't be accessible.
 
 ## Save Your Favorite Facebook Reels
 
-Don't rely on Facebook keeping your favorite content available forever. [Download your Facebook Reels now](/facebook-downloader) — it's free, fast, and works on every device.
+Don't rely on Facebook keeping your favorite content available forever. [Download your Facebook Reels now](/facebook-downloader/) — it's free, fast, and works on every device.
 
 **Related guides:**
-- [5 Best Ways to Save Twitter Videos](/blog/5-best-ways-to-save-twitter-videos)
-- [How to Download TikTok Videos Without Watermark](/blog/how-to-download-tiktok-without-watermark)
-- [How to Download TikTok Sounds to MP3](/blog/how-to-download-tiktok-sounds-mp3)
+- [5 Best Ways to Save Twitter Videos](/blog/5-best-ways-to-save-twitter-videos/)
+- [How to Download TikTok Videos Without Watermark](/blog/how-to-download-tiktok-without-watermark/)
+- [How to Download TikTok Sounds to MP3](/blog/how-to-download-tiktok-sounds-mp3/)

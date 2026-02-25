@@ -10,7 +10,7 @@ monetization:
   geo_restrictions: false
 ---
 
-Con [TikTok enfrentando prohibiciones](/blog/tiktok-banned-how-to-access-download) en varias regiones, muchos creadores entran en pánico: *"¿Qué pasa con mis miles de videos si la aplicación desaparece?"*
+Con [TikTok enfrentando prohibiciones](/blog/tiktok-banned-how-to-access-download/) en varias regiones, muchos creadores entran en pánico: *"¿Qué pasa con mis miles de videos si la aplicación desaparece?"*
 
 Descargar los videos uno por uno está bien para unos pocos clips, pero si tienes cientos de publicaciones, necesitas una solución masiva.
 
@@ -44,7 +44,7 @@ La forma más segura de archivar tu contenido en **verdadera alta definición (H
 
 **El flujo de trabajo:**
 1. Abre tu perfil de TikTok en una computadora (es más rápido).
-2. Abre el [Descargador de TikTok de MediaTools](/tiktok-downloader) en una segunda pestaña.
+2. Abre el [Descargador de TikTok de MediaTools](/tiktok-downloader/) en una segunda pestaña.
 3. Haz clic en **Copiar enlace** en un video → **Pegar** en MediaTools → **Enter**.
 4. Repite el proceso.
 
@@ -83,9 +83,9 @@ Una vez que hayas descargado tus videos, no los dejes simplemente en una carpeta
 
 No esperes a que caiga el martillo de la prohibición. Comienza a hacer copias de seguridad de tu contenido más viral y querido hoy mismo.
 
-**Comience a guardar ahora: [Descargador de TikTok de MediaTools](/tiktok-downloader)**
+**Comience a guardar ahora: [Descargador de TikTok de MediaTools](/tiktok-downloader/)**
 
 **Guías relacionadas:**
-- [¿TikTok restingido? Cómo acceder y guardar videos](/blog/tiktok-banned-how-to-access-download)
-- [Cómo descargar TikToks en iPhone sin aplicaciones](/blog/how-to-download-tiktok-iphone-no-app)
-- [Los mejores editores de video gratuitos](/blog/best-free-video-editors-tiktok)
+- [¿TikTok restingido? Cómo acceder y guardar videos](/blog/tiktok-banned-how-to-access-download/)
+- [Cómo descargar TikToks en iPhone sin aplicaciones](/blog/how-to-download-tiktok-iphone-no-app/)
+- [Los mejores editores de video gratuitos](/blog/best-free-video-editors-tiktok/)

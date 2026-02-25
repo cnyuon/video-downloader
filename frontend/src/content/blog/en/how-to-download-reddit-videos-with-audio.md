@@ -39,7 +39,7 @@ However, when you press "Save Video" on your phone, the app often only processes
 
 Since the native app is unreliable, the best way to ensure you get the full media file is to use an external downloader that knows how to stitch the audio and video streams together before handing you the file.
 
-While MediaTools specializes in platforms like [Twitter](/twitter-downloader), [TikTok](/tiktok-downloader), and [Facebook](/facebook-downloader), the process for downloading Reddit videos works similarly across the most popular free web tools. 
+While MediaTools specializes in platforms like [Twitter](/twitter-downloader/), [TikTok](/tiktok-downloader/), and [Facebook](/facebook-downloader/), the process for downloading Reddit videos works similarly across the most popular free web tools. 
 
 Here is exactly how you do it:
 
@@ -78,4 +78,4 @@ Always double-check the post to see if there is a tiny speaker icon with an "X" 
 
 ***
 
-Want to save videos from other platforms? Try our free [TikTok Downloader (No Watermark)](/tiktok-downloader) or our [Facebook Video Saver](/facebook-downloader) today.
+Want to save videos from other platforms? Try our free [TikTok Downloader (No Watermark)](/tiktok-downloader/) or our [Facebook Video Saver](/facebook-downloader/) today.

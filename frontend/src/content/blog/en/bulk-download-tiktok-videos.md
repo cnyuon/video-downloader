@@ -10,7 +10,7 @@ monetization:
   geo_restrictions: false
 ---
 
-With [TikTok facing bans](/blog/tiktok-banned-how-to-access-download) in various regions, many creators are panicking: *"What happens to my thousands of videos if the app disappears?"*
+With [TikTok facing bans](/blog/tiktok-banned-how-to-access-download/) in various regions, many creators are panicking: *"What happens to my thousands of videos if the app disappears?"*
 
 Downloading videos one by one is fine for a few clips, but if you have hundreds of posts, you need a bulk solution.
 
@@ -44,7 +44,7 @@ The safest way to archive your content in **true HD** is to batch-process them u
 
 **The Workflow:**
 1. Open your TikTok profile on a computer content (it's faster).
-2. Open [MediaTools TikTok Downloader](/tiktok-downloader) in a second tab.
+2. Open [MediaTools TikTok Downloader](/tiktok-downloader/) in a second tab.
 3. **Copy Link** on a video → **Paste** in MediaTools → **Enter**.
 4. Repeat.
 
@@ -83,9 +83,9 @@ Once you've downloaded your videos, don't just dump them in a folder. Organize t
 
 Don't wait until the ban hammer drops. Start backing up your most viral and sentimental content today.
 
-**Start saving now: [MediaTools TikTok Downloader](/tiktok-downloader)**
+**Start saving now: [MediaTools TikTok Downloader](/tiktok-downloader/)**
 
 **Related Guides:**
-- [TikTok Restricted? How to Access & Save](/blog/tiktok-banned-how-to-access-download)
-- [How to Download TikToks on iPhone](/blog/how-to-download-tiktok-iphone-no-app)
-- [Best Free Video Editors](/blog/best-free-video-editors-tiktok)
+- [TikTok Restricted? How to Access & Save](/blog/tiktok-banned-how-to-access-download/)
+- [How to Download TikToks on iPhone](/blog/how-to-download-tiktok-iphone-no-app/)
+- [Best Free Video Editors](/blog/best-free-video-editors-tiktok/)

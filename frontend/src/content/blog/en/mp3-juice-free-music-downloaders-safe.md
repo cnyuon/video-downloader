@@ -48,11 +48,11 @@ If you want to save a specific viral song, a funny voiceover, or a cover perform
 
 For example, if you hear a great remix playing in the background of a TikTok video, you don't need to risk searching for it on shady third-party indexing sites. You can simply rip the audio directly from the source video.
 
-Here is how you can safely extract audio using the clean, free **[MediaTools Video to MP3 Converter](/video-to-mp3)**:
+Here is how you can safely extract audio using the clean, free **[MediaTools Video to MP3 Converter](/video-to-mp3/)**:
 
 1. **Find the Video:** Locate the video containing the audio you want on TikTok, Twitter/X, or Facebook.
 2. **Copy the Link:** Tap the "Share" button and select "Copy Link".
-3. **Paste & Convert:** Go to the [Video to MP3 Converter](/video-to-mp3) on MediaTools, paste your URL, and click **Get Info**.
+3. **Paste & Convert:** Go to the [Video to MP3 Converter](/video-to-mp3/) on MediaTools, paste your URL, and click **Get Info**.
 4. **Download:** The server securely extracts only the audio track from the media file. Click download to properly save the MP3 directly to your device.
 
 Because MediaTools is built securely without aggressive pop-ups, fake buttons, or weird redirects, it is infinitely safer than navigating the murky waters of music pirating clones.
@@ -67,4 +67,4 @@ Once you have downloaded the MP3 file securely using our tool:
 
 ***
 
-Skip the sketchy downloads. Start extracting high-quality audio safely from your favorite social media clips today using the free **[Video to MP3 Converter](/video-to-mp3)**.
+Skip the sketchy downloads. Start extracting high-quality audio safely from your favorite social media clips today using the free **[Video to MP3 Converter](/video-to-mp3/)**.

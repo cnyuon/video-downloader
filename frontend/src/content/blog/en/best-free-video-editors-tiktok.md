@@ -124,8 +124,8 @@ InShot is a mobile-first editor that's popular with TikTok creators who edit ent
 
 The best workflow for repurposing content across platforms:
 
-1. **Download** your existing TikToks using [MediaTools](/tiktok-downloader) — clean, no watermark.
-2. **Extract audio** with our [Video to MP3 tool](/video-to-mp3) if you need the sound separately.
+1. **Download** your existing TikToks using [MediaTools](/tiktok-downloader/) — clean, no watermark.
+2. **Extract audio** with our [Video to MP3 tool](/video-to-mp3/) if you need the sound separately.
 3. **Edit** in your preferred editor from this list.
 4. **Export** optimized for each platform (TikTok, Reels, YouTube Shorts).
 
@@ -149,9 +149,9 @@ DaVinci Resolve for quality, CapCut for speed. Both handle vertical video export
 
 You don't need to spend money to create great TikTok content. Start with **CapCut** for the easiest TikTok-native workflow, or **DaVinci Resolve** if you're serious about video quality.
 
-And remember — always start with clean source material. Use [MediaTools](/tiktok-downloader) to download videos without watermarks before bringing them into any editor.
+And remember — always start with clean source material. Use [MediaTools](/tiktok-downloader/) to download videos without watermarks before bringing them into any editor.
 
 **Related guides:**
-- [How to Download TikTok Videos Without Watermark](/blog/how-to-download-tiktok-without-watermark)
-- [TikTok Restricted? How to Save Your Videos](/blog/tiktok-banned-how-to-access-download)
-- [5 Best Ways to Save Twitter Videos](/blog/5-best-ways-to-save-twitter-videos)
+- [How to Download TikTok Videos Without Watermark](/blog/how-to-download-tiktok-without-watermark/)
+- [TikTok Restricted? How to Save Your Videos](/blog/tiktok-banned-how-to-access-download/)
+- [5 Best Ways to Save Twitter Videos](/blog/5-best-ways-to-save-twitter-videos/)

@@ -47,7 +47,7 @@ Tap the **Share** button (the arrow icon) → **Copy Link**. The link is now on 
 
 ### Step 3: Download the Audio
 
-1. Go to [MediaTools TikTok Sound Downloader](/tiktok-sound-downloader).
+1. Go to [MediaTools TikTok Sound Downloader](/tiktok-sound-downloader/).
 2. Paste the TikTok link into the input box.
 3. Click **Get Video** — our tool will extract the audio automatically.
 4. Click **Download as MP3**.
@@ -58,8 +58,8 @@ That's it! The audio file saves directly to your device. No app installation, no
 
 If you also want the video along with the audio:
 
-1. Download the video using our [TikTok Video Downloader](/tiktok-downloader) (no watermark).
-2. Use our [Video to MP3](/video-to-mp3) tool to extract the audio from the downloaded video.
+1. Download the video using our [TikTok Video Downloader](/tiktok-downloader/) (no watermark).
+2. Use our [Video to MP3](/video-to-mp3/) tool to extract the audio from the downloaded video.
 
 This two-step method gives you both the clean video file AND the audio file.
 
@@ -120,22 +120,22 @@ Downloading for **personal use** is generally fine. However:
 Yes, as long as the video is public. Our tool extracts the audio track from the video itself, so any sound playing in a public TikTok can be downloaded.
 
 **Does this work on iPhone?**
-Absolutely. Our [TikTok Sound Downloader](/tiktok-sound-downloader) works in Safari and Chrome on iOS. No app needed — the MP3 file saves directly to your Files app.
+Absolutely. Our [TikTok Sound Downloader](/tiktok-sound-downloader/) works in Safari and Chrome on iOS. No app needed — the MP3 file saves directly to your Files app.
 
 **Can I use downloaded TikTok sounds in my own videos?**
 For personal, non-commercial use, generally yes. If you're creating monetized content, be careful with copyrighted music — platforms like YouTube may flag it via Content ID.
 
 **What's the difference between TikTok Sound Downloader and Video to MP3?**
-The [TikTok Sound Downloader](/tiktok-sound-downloader) extracts audio directly from a TikTok link in one step. The [Video to MP3](/video-to-mp3) tool works with any video file or URL from multiple platforms — it's more versatile but requires a video source.
+The [TikTok Sound Downloader](/tiktok-sound-downloader/) extracts audio directly from a TikTok link in one step. The [Video to MP3](/video-to-mp3/) tool works with any video file or URL from multiple platforms — it's more versatile but requires a video source.
 
 **Can I download the original full song, not just the TikTok clip?**
 No — our tool downloads the audio exactly as it appears in the TikTok video. TikTok clips are usually 15-60 seconds. For the full song, check streaming platforms like [Spotify](https://www.spotify.com/) or [Apple Music](https://music.apple.com/).
 
 ## Start Downloading TikTok Sounds Now
 
-Stop losing your favorite TikTok sounds. [Save them as MP3 files](/tiktok-sound-downloader) in seconds — completely free, no signup required.
+Stop losing your favorite TikTok sounds. [Save them as MP3 files](/tiktok-sound-downloader/) in seconds — completely free, no signup required.
 
 **Related guides:**
-- [How to Download TikTok Videos Without Watermark](/blog/how-to-download-tiktok-without-watermark)
-- [TikTok Restricted? How to Save Your Videos](/blog/tiktok-banned-how-to-access-download)
-- [Best Free Video Editors for TikTok Creators](/blog/best-free-video-editors-tiktok)
+- [How to Download TikTok Videos Without Watermark](/blog/how-to-download-tiktok-without-watermark/)
+- [TikTok Restricted? How to Save Your Videos](/blog/tiktok-banned-how-to-access-download/)
+- [Best Free Video Editors for TikTok Creators](/blog/best-free-video-editors-tiktok/)

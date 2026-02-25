@@ -41,7 +41,7 @@ El silencio es la muerte en TikTok.
 Ver a la misma persona hablando durante 60 segundos es aburrido.
 - Cada 5 a 10 segundos, cambia la imagen.
 - Usa escenas de archivo, efectos de pantalla verde o "B-roll" (imágenes complementarias) para ilustrar lo que estás diciendo.
-- **Consejo Pro:** [Descarga otros TikToks virales](/tiktok-downloader) (sin marcas de agua) para usarlos como clips de reacción o ejemplos.
+- **Consejo Pro:** [Descarga otros TikToks virales](/tiktok-downloader/) (sin marcas de agua) para usarlos como clips de reacción o ejemplos.
 
 ## 4. El texto en pantalla los mantiene mirando
 Mucha gente ve los videos sin sonido.
@@ -59,7 +59,7 @@ Los bucles perfectos son increíblemente satisfactorios.
 No pongas una canción por encima y ya.
 - **Sincronización:** Corta tus clips para que coincidan con el ritmo de la canción.
 - **Mezcla de volumen:** Mantén la música de fondo al 10-20% de volumen para que tu voz sea clara.
-- Usa nuestro [Descargador de audio de TikTok](/tiktok-sound-downloader) para guardar audios virales para tu software de edición.
+- Usa nuestro [Descargador de audio de TikTok](/tiktok-sound-downloader/) para guardar audios virales para tu software de edición.
 
 ## 7. La "Interrupción de patrón"
 Si una toma dura demasiado, el cerebro se aburre.
@@ -76,7 +76,7 @@ La edición es la mitad de la batalla; el momento de publicarlo es la otra.
 ## 9. Las herramientas del oficio
 No necesitas programas de Hollywood.
 - **CapCut:** El estándar de oro para la edición de TikTok.
-- **MediaTools:** Esencial para [descargar todos tus recursos limpios](/tiktok-downloader) sin marcas de agua.
+- **MediaTools:** Esencial para [descargar todos tus recursos limpios](/tiktok-downloader/) sin marcas de agua.
 - **InShot:** Genial para ediciones rápidas en dispositivos móviles.
 
 ## 10. Estudia tu gráfico de retención
@@ -90,6 +90,6 @@ TikTok Analytics te muestra exactamente dónde la gente abandonó tu video.
 La edición es una habilidad que mejora con la práctica. Comienza implementando solo uno de estos consejos en tu próximo video.
 
 **¿Necesitas recursos para tu edición?**
-- [Descargar videos de TikTok sin marca de agua](/tiktok-downloader)
-- [Descargar audios de TikTok](/tiktok-sound-downloader)
-- [Obtener miniaturas en HD](/thumbnail-grabber)
+- [Descargar videos de TikTok sin marca de agua](/tiktok-downloader/)
+- [Descargar audios de TikTok](/tiktok-sound-downloader/)
+- [Obtener miniaturas en HD](/thumbnail-grabber/)

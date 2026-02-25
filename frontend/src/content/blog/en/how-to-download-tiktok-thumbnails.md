@@ -23,7 +23,7 @@ import InContentCTA from '../../../components/InContentCTA.astro';
   iconType="thumbnail" 
 />
 
-Here is how to grab any TikTok thumbnail in full HD using [MediaTools](/thumbnail-grabber).
+Here is how to grab any TikTok thumbnail in full HD using [MediaTools](/thumbnail-grabber/).
 
 ## Why Download Thumbnails?
 
@@ -39,7 +39,7 @@ We built a dedicated **Thumbnail Grabber** tool specifically for this.
 Find the TikTok video (or YouTube video!) and copy its link.
 
 ### Step 2: Open Thumbnail Grabber
-Go to our [Thumbnail Grabber Tool](/thumbnail-grabber).
+Go to our [Thumbnail Grabber Tool](/thumbnail-grabber/).
 
 ### Step 3: Paste and View
 Paste the link and hit **Get Thumbnail**.
@@ -64,7 +64,7 @@ You *could* just screenshot your phone screen. But:
 ## Common Questions
 
 **Does this work for YouTube?**
-Yes! Our [Thumbnail Grabber](/thumbnail-grabber) works for both TikTok and YouTube videos. Get 4K YouTube thumbnails instantly.
+Yes! Our [Thumbnail Grabber](/thumbnail-grabber/) works for both TikTok and YouTube videos. Get 4K YouTube thumbnails instantly.
 
 **Can I use these thumbnails for my own videos?**
 Be careful. Using someone else's face or exact artwork can lead to copyright strikes. We recommend using them for inspiration or reference, not direct copying.
@@ -76,8 +76,8 @@ Yes, 100% free and unlimited.
 
 Don't settle for blurry screenshots. Get the original HD file.
 
-**[Open Thumbnail Grabber](/thumbnail-grabber)**
+**[Open Thumbnail Grabber](/thumbnail-grabber/)**
 
 **Related Tools:**
-- [TikTok Video Downloader](/tiktok-downloader)
-- [TikTok Sound Downloader](/tiktok-sound-downloader)
+- [TikTok Video Downloader](/tiktok-downloader/)
+- [TikTok Sound Downloader](/tiktok-sound-downloader/)

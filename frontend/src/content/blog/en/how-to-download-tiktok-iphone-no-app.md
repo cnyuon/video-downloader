@@ -44,7 +44,7 @@ Follow these simple steps to save any video in HD.
 Open the TikTok app and find the video you want. Tap the **Share arrow** (bottom right) and select **Copy Link**.
 
 ### Step 2: Open MediaTools in Safari
-Switch to Safari and go to [MediaTools TikTok Downloader](/tiktok-downloader).
+Switch to Safari and go to [MediaTools TikTok Downloader](/tiktok-downloader/).
 
 ### Step 3: Paste and Download
 1. Tap the "Paste Link" box and hit **Paste**.
@@ -85,7 +85,7 @@ If you didn't save it to Photos, it's still in your **Files** app. Open the File
 ## Bonus: How to Extract Audio on iPhone
 
 Want just the sound for a ringtone or edit?
-1. Follow the same steps above but go to our [TikTok Sound Downloader](/tiktok-sound-downloader).
+1. Follow the same steps above but go to our [TikTok Sound Downloader](/tiktok-sound-downloader/).
 2. Download the MP3 file.
 3. It will save to your **Files** app (iOS doesn't save audio to Photos).
 
@@ -93,9 +93,9 @@ Want just the sound for a ringtone or edit?
 
 Stop clogging your iPhone with sketchy downloader apps. The browser method is faster, safer, and completely free.
 
-**Try it now:** [Go to TikTok Downloader](/tiktok-downloader)
+**Try it now:** [Go to TikTok Downloader](/tiktok-downloader/)
 
 **Related Guides:**
-- [How to Download TikTok Sounds to MP3](/blog/how-to-download-tiktok-sounds-mp3)
-- [TikTok Restricted? How to Save Videos](/blog/tiktok-banned-how-to-access-download)
-- [Best Free Video Editors for TikTok](/blog/best-free-video-editors-tiktok)
+- [How to Download TikTok Sounds to MP3](/blog/how-to-download-tiktok-sounds-mp3/)
+- [TikTok Restricted? How to Save Videos](/blog/tiktok-banned-how-to-access-download/)
+- [Best Free Video Editors for TikTok](/blog/best-free-video-editors-tiktok/)

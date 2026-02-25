@@ -30,14 +30,14 @@ This is the simplest way — no apps, no extensions, just your browser.
 ### How to Save Twitter Videos on iPhone
 1. Open the Twitter/X app and find the video.
 2. Tap the **Share icon** → **Copy Link**.
-3. Open Safari and go to [MediaTools Twitter Downloader](/twitter-downloader).
+3. Open Safari and go to [MediaTools Twitter Downloader](/twitter-downloader/).
 4. Paste the link and tap **Get Video**.
 5. Tap **Download**.
 6. **Crucial Step:** Tap the **AA** or **Downloads icon** in the address bar → **Downloads** → Tap the video → **Share** → **Save Video**.
 
 ### How to Save Twitter Videos on Android
 1. Copy the tweet link.
-2. Open Chrome and visit [MediaTools Twitter Downloader](/twitter-downloader).
+2. Open Chrome and visit [MediaTools Twitter Downloader](/twitter-downloader/).
 3. Paste the link and tap **Get Video**.
 4. Tap **Download**. The video will automatically appear in your Gallery.
 
@@ -73,12 +73,12 @@ You can screen-record the video playing on your phone. But you'll get:
 
 Various apps on the App Store and Google Play claim to download Twitter videos. Most are filled with ads, require subscriptions, or get removed for violating platform policies.
 
-**Verdict:** Not worth the risk. A browser-based tool like [MediaTools](/twitter-downloader) is safer and faster.
+**Verdict:** Not worth the risk. A browser-based tool like [MediaTools](/twitter-downloader/) is safer and faster.
 
 ## Frequently Asked Questions
 
 **Can I download Twitter GIFs?**
-Yes! Our [Twitter downloader](/twitter-downloader) handles both videos and GIFs. GIFs on Twitter are actually MP4 files, so they download as video.
+Yes! Our [Twitter downloader](/twitter-downloader/) handles both videos and GIFs. GIFs on Twitter are actually MP4 files, so they download as video.
 
 **Does this work with tweets from private accounts?**
 No. You can only download videos from public tweets. Private/protected tweets require the author's permission.
@@ -91,11 +91,11 @@ Downloading for personal use is generally fine. Don't repost someone else's cont
 
 ## The Bottom Line
 
-[MediaTools](/twitter-downloader) is the fastest, safest way to save Twitter videos. No apps to install, no extensions to manage, no screen recording hassle. Just paste the link and download.
+[MediaTools](/twitter-downloader/) is the fastest, safest way to save Twitter videos. No apps to install, no extensions to manage, no screen recording hassle. Just paste the link and download.
 
 Try it now — it's completely free.
 
 **Related guides:**
-- [How to Download TikTok Videos Without Watermark](/blog/how-to-download-tiktok-without-watermark)
-- [TikTok Restricted? How to Save Your Videos](/blog/tiktok-banned-how-to-access-download)
-- [Best Free Video Editors for TikTok Creators](/blog/best-free-video-editors-tiktok)
+- [How to Download TikTok Videos Without Watermark](/blog/how-to-download-tiktok-without-watermark/)
+- [TikTok Restricted? How to Save Your Videos](/blog/tiktok-banned-how-to-access-download/)
+- [Best Free Video Editors for TikTok Creators](/blog/best-free-video-editors-tiktok/)

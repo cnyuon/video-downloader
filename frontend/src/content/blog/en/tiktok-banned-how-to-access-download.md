@@ -67,19 +67,19 @@ Regardless of where you live, having backup copies of your favorite content is a
 
 1. Open TikTok and find the video you want to keep.
 2. Copy the link (tap **Share** → **Copy Link**).
-3. Go to [MediaTools TikTok Downloader](/tiktok-downloader).
+3. Go to [MediaTools TikTok Downloader](/tiktok-downloader/).
 4. Paste the link and download — videos save **without a watermark** in HD.
 
 ### Extract Audio from TikToks
 
-Love a particular TikTok sound? Use our [TikTok Sound Downloader](/tiktok-sound-downloader) to save the audio as an MP3 file you can keep forever.
+Love a particular TikTok sound? Use our [TikTok Sound Downloader](/tiktok-sound-downloader/) to save the audio as an MP3 file you can keep forever.
 
 ### Back Up Your Own Posted Content
 
 If you're a creator, back up your own videos:
 1. Go to your TikTok profile.
 2. Copy the link for each video you've posted.
-3. Download clean copies through [MediaTools](/tiktok-downloader).
+3. Download clean copies through [MediaTools](/tiktok-downloader/).
 
 This way, even if the platform becomes unavailable in your region, you still have all your content.
 
@@ -108,19 +108,19 @@ In most countries, VPN use is completely legal. However, some countries (like Ch
 TikTok does not typically ban accounts for VPN use. Many people use VPNs for privacy reasons unrelated to TikTok.
 
 **Can I still download TikTok videos if the app is removed from app stores?**
-If you already have TikTok installed, it may still work with a VPN. You can also save videos through [MediaTools](/tiktok-downloader) using just a browser — no app needed.
+If you already have TikTok installed, it may still work with a VPN. You can also save videos through [MediaTools](/tiktok-downloader/) using just a browser — no app needed.
 
 ## Take Action Now
 
 Don't wait for restrictions to affect you. Spend 10 minutes today to:
 
-1. **[Download your favorite TikToks](/tiktok-downloader)** — watermark-free, HD quality.
-2. **[Save TikTok sounds](/tiktok-sound-downloader)** as MP3 files.
+1. **[Download your favorite TikToks](/tiktok-downloader/)** — watermark-free, HD quality.
+2. **[Save TikTok sounds](/tiktok-sound-downloader/)** as MP3 files.
 3. Research VPN options if you're in a restricted region.
 
 Your content is worth preserving. [MediaTools](/) makes it easy and free.
 
 **Related guides:**
-- [How to Download TikTok Videos Without Watermark](/blog/how-to-download-tiktok-without-watermark)
-- [Best Free Video Editors for TikTok Creators](/blog/best-free-video-editors-tiktok)
-- [5 Best Ways to Save Twitter Videos](/blog/5-best-ways-to-save-twitter-videos)
+- [How to Download TikTok Videos Without Watermark](/blog/how-to-download-tiktok-without-watermark/)
+- [Best Free Video Editors for TikTok Creators](/blog/best-free-video-editors-tiktok/)
+- [5 Best Ways to Save Twitter Videos](/blog/5-best-ways-to-save-twitter-videos/)

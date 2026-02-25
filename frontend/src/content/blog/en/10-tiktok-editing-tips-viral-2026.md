@@ -41,7 +41,7 @@ Silence is death on TikTok.
 Staring at a talking head for 60 seconds is boring.
 - Every 5-10 seconds, switch the visual.
 - Use stock footage, green screen effects, or "B-roll" (supplementary footage) to illustrate what you're saying.
-- **Pro Tip:** [Download other viral TikToks](/tiktok-downloader) (without watermarks) to use as reaction clips or examples.
+- **Pro Tip:** [Download other viral TikToks](/tiktok-downloader/) (without watermarks) to use as reaction clips or examples.
 
 ## 4. Text Overlays Keep Them Watching
 Many people watch with sound off.
@@ -59,7 +59,7 @@ Perfect loops are satisfying.
 Don't just slap a song on top.
 - **Beat Sync:** Cut your clips to match the beat of the song.
 - **Volume Mixing:** Keep background music at 10-20% volume so your voice is clear.
-- Use our [TikTok Sound Downloader](/tiktok-sound-downloader) to save trending audio for your editing software.
+- Use our [TikTok Sound Downloader](/tiktok-sound-downloader/) to save trending audio for your editing software.
 
 ## 7. The "Pattern Interrupt"
 If a shot lasts too long, the brain gets bored.
@@ -76,7 +76,7 @@ Editing is half the battle; timing is the other.
 ## 9. Tools of the Trade
 You don't need Hollywood software.
 - **CapCut:** The gold standard for TikTok editing.
-- **MediaTools:** Essential for [downloading clean assets](/tiktok-downloader) without watermarks.
+- **MediaTools:** Essential for [downloading clean assets](/tiktok-downloader/) without watermarks.
 - **InShot:** Great for quick mobile edits.
 
 ## 10. Study Your Retention Graph
@@ -90,6 +90,6 @@ TikTok Analytics shows you exactly where people dropped off.
 Editing is a skill that gets better with practice. Start by implementing just one of these tips in your next video.
 
 **Need assets for your edit?**
-- [Download TikTok Videos without Watermark](/tiktok-downloader)
-- [Download TikTok Sounds](/tiktok-sound-downloader)
-- [Get HD Thumbnails](/thumbnail-grabber)
+- [Download TikTok Videos without Watermark](/tiktok-downloader/)
+- [Download TikTok Sounds](/tiktok-sound-downloader/)
+- [Get HD Thumbnails](/thumbnail-grabber/)

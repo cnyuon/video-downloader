@@ -67,7 +67,7 @@ Para asegurarte de que tus contactos mutuos no vean que estás viendo sus videos
 ### 3. Utiliza un descargador anónimo de TikTok
 Si deseas ver un video o una historia en particular sin siquiera tocar la aplicación de TikTok, el método garantizado más seguro es descargar directamente el archivo multimedia.
 
-Usando una herramienta gratuita como el **[Descargador de TikTok de MediaTools](/tiktok-downloader)**, puedes extraer el video MP4 de alta calidad directamente desde el enlace del creador.
+Usando una herramienta gratuita como el **[Descargador de TikTok de MediaTools](/tiktok-downloader/)**, puedes extraer el video MP4 de alta calidad directamente desde el enlace del creador.
 
 Así es cómo lo haces:
 1. Copia el enlace al video o perfil de TikTok (puedes hacer esto sin siquiera abrir el video en particular).
@@ -80,4 +80,4 @@ El video se guardará en tu dispositivo. Ahora puedes verlo sin conexión a inte
 
 ## En conclusión
 
-La configuración de privacidad de TikTok cambia constantemente, pero la regla general es: si deseas ser completamente invisible, debes desactivar tu propio historial de visualización, navegar en un navegador de incógnito o usar una herramienta para [descargar el video de TikTok](/tiktok-downloader) directamente a tu dispositivo.
+La configuración de privacidad de TikTok cambia constantemente, pero la regla general es: si deseas ser completamente invisible, debes desactivar tu propio historial de visualización, navegar en un navegador de incógnito o usar una herramienta para [descargar el video de TikTok](/tiktok-downloader/) directamente a tu dispositivo.

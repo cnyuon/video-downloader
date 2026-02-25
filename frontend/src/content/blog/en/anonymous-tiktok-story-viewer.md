@@ -67,7 +67,7 @@ To ensure your mutuals don't see that you are watching their videos:
 ### 3. Use an Anonymous TikTok Downloader
 If you want to view a specific video or Story without touching the TikTok app at all, the safest guaranteed method is to download the media file directly.
 
-Using a free tool like the **[MediaTools TikTok Downloader](/tiktok-downloader)**, you can extract the high-quality MP4 video straight from the creator's link. 
+Using a free tool like the **[MediaTools TikTok Downloader](/tiktok-downloader/)**, you can extract the high-quality MP4 video straight from the creator's link. 
 
 Here’s how:
 1. Copy the link to the TikTok video or profile (you can do this without actually opening the specific video).
@@ -80,4 +80,4 @@ The video will be saved to your device. You can now watch it offline as many tim
 
 ## The Bottom Line
 
-TikTok's privacy settings are constantly shifting, but the general rule is: if you want to be completely invisible, you must either turn off your own view history settings, browse in an incognito web browser, or use a tool to [download the TikTok video](/tiktok-downloader) directly to your device.
+TikTok's privacy settings are constantly shifting, but the general rule is: if you want to be completely invisible, you must either turn off your own view history settings, browse in an incognito web browser, or use a tool to [download the TikTok video](/tiktok-downloader/) directly to your device.
