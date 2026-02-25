@@ -18,7 +18,16 @@ const jsonLd = {
             "applicationCategory": "MultimediaApplication",
             "operatingSystem": "Any",
             "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
-            "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.8", "ratingCount": "1340", "bestRating": "5", "worstRating": "1" }
+        },
+        {
+            "@type": "HowTo",
+            "name": ui.en['fb.howto.title'],
+            "description": ui.en['fb.howto.desc'],
+            "step": [
+                { "@type": "HowToStep", "position": 1, "name": ui.en['fb.howto.step1.title'], "text": ui.en['fb.howto.step1.desc'] },
+                { "@type": "HowToStep", "position": 2, "name": ui.en['fb.howto.step2.title'], "text": ui.en['fb.howto.step2.desc'] },
+                { "@type": "HowToStep", "position": 3, "name": ui.en['fb.howto.step3.title'], "text": ui.en['fb.howto.step3.desc'] }
+            ]
         },
         {
             "@type": "FAQPage",

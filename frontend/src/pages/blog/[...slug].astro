@@ -55,6 +55,7 @@ const jsonLd = {
     "headline": post.data.title,
     "description": post.data.description,
     "datePublished": post.data.pubDate.toISOString(),
+    "dateModified": (post.data.updatedDate || post.data.pubDate).toISOString(),
     "image": post.data.heroImage ? `https://getmediatools.com${(post.data.heroImage as any).src}` : undefined,
     "author": { "@type": "Organization", "name": "MediaTools" },
     "publisher": { "@type": "Organization", "name": "MediaTools", "url": "https://getmediatools.com" },

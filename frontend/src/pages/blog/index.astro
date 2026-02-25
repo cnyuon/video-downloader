@@ -41,11 +41,22 @@ const getHref = (path: string) => {
     return href.endsWith('/') ? href : href + '/';
 };
 const t = useTranslations(lang);
+
+const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": t('blog.title'),
+    "description": t('blog.desc'),
+    "url": `https://getmediatools.com${getHref('/blog')}`,
+    "isPartOf": { "@type": "WebSite", "name": "MediaTools", "url": "https://getmediatools.com" },
+    "publisher": { "@type": "Organization", "name": "MediaTools" }
+};
 ---
 
 <Layout 
     title={`${t('blog.title')} — Video Download Guides, Tips & Creator Tools`}
     description={t('blog.desc')}
+    jsonLd={jsonLd}
 >
     <!-- Target Keywords: video downloading tips, tiktok download guide, remove watermarks, free online tools blog -->
     <Navbar client:idle currentPage="blog" lang={lang as any} />
@@ -60,13 +71,7 @@ const t = useTranslations(lang);
             </p>
         </div>
         
-        <!-- Category Filter (Visual only for now) -->
-        <div class="flex flex-wrap justify-center gap-2 mb-12">
-            <button class="px-4 py-2 rounded-full bg-primary text-primary-foreground text-sm font-medium">{t('blog.filter.all')}</button>
-            <button class="px-4 py-2 rounded-full bg-muted hover:bg-muted/80 text-sm font-medium transition-colors">{t('blog.filter.tiktok')}</button>
-            <button class="px-4 py-2 rounded-full bg-muted hover:bg-muted/80 text-sm font-medium transition-colors">{t('blog.filter.creator')}</button>
-            <button class="px-4 py-2 rounded-full bg-muted hover:bg-muted/80 text-sm font-medium transition-colors">{t('blog.filter.editing')}</button>
-        </div>
+        <!-- TODO: Implement category filtering with client-side JS when blog grows -->
 
         <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             {localizedPosts.map((post) => (

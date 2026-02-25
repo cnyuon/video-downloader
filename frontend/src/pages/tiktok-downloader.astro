@@ -19,9 +19,17 @@ const jsonLd = {
             "operatingSystem": "Any",
             "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
             "browserRequirements": "Requires JavaScript",
-            "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.9", "ratingCount": "2180", "bestRating": "5", "worstRating": "1" }
         },
-        // Keeping FAQs dynamic to the translation
+        {
+            "@type": "HowTo",
+            "name": ui.en['tt.howto.title'],
+            "description": ui.en['tt.howto.desc'],
+            "step": [
+                { "@type": "HowToStep", "position": 1, "name": ui.en['tt.howto.step1.title'], "text": ui.en['tt.howto.step1.desc'] },
+                { "@type": "HowToStep", "position": 2, "name": ui.en['tt.howto.step2.title'], "text": ui.en['tt.howto.step2.desc'] },
+                { "@type": "HowToStep", "position": 3, "name": ui.en['tt.howto.step3.title'], "text": ui.en['tt.howto.step3.desc'] }
+            ]
+        },
         {
             "@type": "FAQPage",
             "mainEntity": [

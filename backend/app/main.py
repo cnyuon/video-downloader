@@ -1,6 +1,7 @@
 """
 FastAPI application entry point for the video downloader API.
 """
+import os
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
@@ -13,10 +14,12 @@ app = FastAPI(
     version="1.0.0",
 )
 
-# CORS configuration - allow all origins for local network testing
+# CORS configuration - restrict to production and local development
+ALLOWED_ORIGINS = os.environ.get("ALLOWED_ORIGINS", "https://getmediatools.com,http://localhost:4321,http://localhost:3000").split(",")
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # Allow all origins for local network testing
+    allow_origins=ALLOWED_ORIGINS,
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],

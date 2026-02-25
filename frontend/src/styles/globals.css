@@ -66,9 +66,10 @@
   background: linear-gradient(135deg, #ff0050, #00f2ea);
 }
 
-/* Smooth transitions */
-* {
-  transition-property: color, background-color, border-color;
+/* Smooth transitions for interactive elements only */
+a, button, input, select, textarea,
+[class*="hover:"], [role="button"] {
+  transition-property: color, background-color, border-color, box-shadow, opacity, transform;
   transition-timing-function: ease;
   transition-duration: 150ms;
 }

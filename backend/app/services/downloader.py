@@ -18,7 +18,7 @@ PLATFORM_PATTERNS = {
 }
 
 # Path to cookies file for YouTube authentication
-COOKIES_FILE = '/home/chioknyuon2020/video-downloader/backend/cookies.txt'
+COOKIES_FILE = os.environ.get('COOKIES_FILE', os.path.join(os.path.dirname(__file__), '..', '..', 'cookies.txt'))
 
 
 def detect_platform(url: str) -> Optional[str]:

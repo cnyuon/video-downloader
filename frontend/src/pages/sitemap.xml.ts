@@ -42,10 +42,10 @@ export async function GET() {
             isBlog: true
         }));
 
-    // Map static pages to objects
+    // Use a fixed date for static pages — update this value when tool pages genuinely change
     const staticPagesUrls = staticPages.map(url => ({
         url,
-        lastmod: new Date().toISOString(),
+        lastmod: '2026-02-24T00:00:00.000Z',
         isBlog: false
     }));
 

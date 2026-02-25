@@ -1,7 +1,7 @@
 {
-    "name": "Video Downloader",
-    "short_name": "VidDown",
-    "description": "Download videos from TikTok, YouTube, Twitter, and Facebook without watermarks",
+    "name": "MediaTools - Download Videos, Extract Audio & More",
+    "short_name": "MediaTools",
+    "description": "Free online tools to download videos from TikTok, Twitter, and Facebook. Extract audio to MP3 and grab thumbnails.",
     "start_url": "/",
     "display": "standalone",
     "background_color": "#030712",
