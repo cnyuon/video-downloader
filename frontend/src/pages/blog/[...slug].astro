@@ -28,8 +28,7 @@ export async function getStaticPaths() {
 }
 const { post, originalSlug } = Astro.props;
 
-const allPostsList = await getCollection('blog');
-const enPosts = allPostsList.filter((p: any) => p.slug.startsWith('en/'));
+
 
 const { Content } = await post.render();
 
@@ -66,6 +65,10 @@ const jsonLd = {
     "publisher": { "@type": "Organization", "name": "MediaTools", "url": "https://getmediatools.com" },
     "mainEntityOfPage": `https://getmediatools.com/${lang}/blog/${originalSlug}`
 };
+const allPostsList = await getCollection('blog');
+const enPosts = allPostsList.filter((p: any) => p.slug.startsWith('en/'));
+const localPosts = allPostsList.filter((p: any) => p.slug.startsWith('en/'));
+const displayPosts = localPosts.length > 0 ? localPosts : enPosts;
 ---
 
 <Layout 
@@ -120,9 +123,9 @@ const jsonLd = {
         <div class="mt-20 pt-12 border-t max-w-2xl mx-auto">
             <h2 class="text-2xl font-bold mb-6">{ui.en['nav.blog']}</h2>
             <div class="grid gap-4 sm:grid-cols-2">
-                {enPosts.filter((p: any) => p.slug !== originalSlug).slice(0, 4).map((p: any) => {
+                {displayPosts.filter((p: any) => !p.slug.endsWith(originalSlug)).slice(0, 4).map((p: any) => {
                     const postLang = 'en';
-                    const trueSlug = p.slug.replace('en/', '');
+                    const trueSlug = p.slug.split('/').pop();
                     return (
                         <a href={`/blog/${trueSlug}/`} class="group block p-4 rounded-xl border bg-card hover:border-primary/50 hover:shadow-md transition-all">
                             <h3 class="font-semibold group-hover:text-primary transition-colors line-clamp-2 mb-2">{p.data.title}</h3>

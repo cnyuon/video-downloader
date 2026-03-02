@@ -1,10 +1,11 @@
 ---
+import { getCollection } from 'astro:content';
 import Layout from '../../layouts/Layout.astro';
 import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer.astro';
 import AudioExtractor from '../../components/AudioExtractor';
 import { getLangFromUrl, useTranslations } from '../../i18n/utils';
-import type { ui } from '../../i18n/ui';
+import { ui } from '../../i18n/ui';
 
 export function getStaticPaths() {
   return [
@@ -50,6 +51,10 @@ const jsonLd = {
         }
     ]
 };
+const allPostsList = await getCollection('blog');
+const enPosts = allPostsList.filter((p: any) => p.slug.startsWith('en/'));
+const localPosts = allPostsList.filter((p: any) => p.slug.startsWith('hi/'));
+const displayPosts = localPosts.length > 0 ? localPosts : enPosts;
 ---
 
 <Layout 
@@ -183,6 +188,29 @@ const jsonLd = {
                 </a>
             </div>
         </div>
+    
+        <!-- Recent Posts Section -->
+        <div class="mt-20 pt-12 border-t max-w-2xl mx-auto">
+            <h2 class="text-2xl font-bold mb-6">{ui.hi['nav.blog'] || "Blog"}</h2>
+            <div class="grid gap-4 sm:grid-cols-2">
+                {displayPosts.slice(0, 4).map((p: any) => {
+                    const trueSlug = p.slug.split('/').pop();
+                    return (
+                        <a href={`/hi/blog/${trueSlug}/`} class="group block p-4 rounded-xl border bg-card hover:border-primary/50 hover:shadow-md transition-all">
+                            <h3 class="font-semibold group-hover:text-primary transition-colors line-clamp-2 mb-2">{p.data.title}</h3>
+                            <p class="text-sm text-muted-foreground line-clamp-2">{p.data.description}</p>
+                        </a>
+                    );
+                })}
+            </div>
+            <div class="mt-6 text-center">
+                <a href={`/hi/blog/`} class="inline-flex items-center text-sm font-medium text-primary hover:underline">
+                    {ui.hi['btn.back_to_blog'] || "View all posts"}
+                    <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                </a>
+            </div>
+        </div>
+
     </main>
 
     <Footer />
