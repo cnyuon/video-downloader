@@ -25,6 +25,10 @@ export async function getStaticPaths() {
 }
 
 const { post, originalSlug } = Astro.props;
+
+const allPostsList = await getCollection('blog');
+const enPosts = allPostsList.filter((p: any) => p.slug.startsWith('en/'));
+
 const { Content } = await post.render();
 
 // Category mapping helper
@@ -106,6 +110,24 @@ const jsonLd = {
 				<Content />
 			</div>
 		</article>
+
+        
+        <!-- Recent Posts Section -->
+        <div class="mt-20 pt-12 border-t max-w-2xl mx-auto">
+            <h2 class="text-2xl font-bold mb-6">{ui.de['nav.blog']}</h2>
+            <div class="grid gap-4 sm:grid-cols-2">
+                {enPosts.filter((p: any) => p.slug !== originalSlug).slice(0, 4).map((p: any) => {
+                    const postLang = 'de';
+                    const trueSlug = p.slug.replace('en/', '');
+                    return (
+                        <a href={`/de/blog/${trueSlug}/`} class="group block p-4 rounded-xl border bg-card hover:border-primary/50 hover:shadow-md transition-all">
+                            <h3 class="font-semibold group-hover:text-primary transition-colors line-clamp-2 mb-2">{p.data.title}</h3>
+                            <p class="text-sm text-muted-foreground line-clamp-2">{p.data.description}</p>
+                        </a>
+                    );
+                })}
+            </div>
+        </div>
 
         <!-- Related Tools Section -->
         <div class="mt-20 pt-12 border-t max-w-2xl mx-auto">

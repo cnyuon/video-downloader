@@ -25,7 +25,11 @@ export default function Navbar({ currentPage, lang }: NavbarProps) {
 
     // Always prefix hrefs with /lang so the router works consistently
     const getHref = (path: string) => {
-        return lang === 'en' ? path : `/${lang}${path === '/' ? '' : path}`;
+        let href = lang === 'en' ? path : `/${lang}${path === '/' ? '/' : path}`;
+        if (href.length > 1 && !href.endsWith('/')) {
+            href += '/';
+        }
+        return href;
     };
 
     const navItems: NavItem[] = [
@@ -68,7 +72,7 @@ export default function Navbar({ currentPage, lang }: NavbarProps) {
         <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
             <div className="container flex h-14 items-center justify-between mx-auto px-4 max-w-6xl">
                 {/* Logo - Click to go home */}
-                <a href="/" className="flex items-center space-x-2 hover:opacity-80 transition-opacity">
+                <a href={getHref('/')} className="flex items-center space-x-2 hover:opacity-80 transition-opacity">
                     <div className="h-6 w-6 rounded-md bg-primary flex items-center justify-center">
                         <svg className="w-4 h-4 text-primary-foreground" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
@@ -109,11 +113,17 @@ export default function Navbar({ currentPage, lang }: NavbarProps) {
                             onChange={(e) => {
                                 const newLang = e.target.value;
                                 const path = window.location.pathname;
+                                let newPath = '';
                                 if (path.startsWith(`/${lang}`)) {
-                                    window.location.href = path.replace(`/${lang}`, `/${newLang}`);
+                                    // Make sure we only replace the language prefix at the start
+                                    newPath = `/${newLang}${path.substring(lang.length + 1)}`;
                                 } else {
-                                    window.location.href = `/${newLang}${path === '/' ? '' : path}`;
+                                    newPath = `/${newLang}${path === '/' ? '/' : path}`;
                                 }
+                                if (newPath.length > 1 && !newPath.endsWith('/')) {
+                                    newPath += '/';
+                                }
+                                window.location.href = newPath;
                             }}
                             className="bg-transparent text-sm font-semibold text-foreground hover:text-primary cursor-pointer focus:outline-none transition-colors appearance-none pr-4 relative"
                             style={{ backgroundImage: 'url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'currentColor\' stroke-width=\'2\' stroke-linecap=\'round\' stroke-linejoin=\'round\'%3e%3cpolyline points=\'6 9 12 15 18 9\'%3e%3c/polyline%3e%3c/svg%3e")', backgroundRepeat: 'no-repeat', backgroundPosition: 'right center', backgroundSize: '1em' }}
@@ -150,11 +160,17 @@ export default function Navbar({ currentPage, lang }: NavbarProps) {
                             onChange={(e) => {
                                 const newLang = e.target.value;
                                 const path = window.location.pathname;
+                                let newPath = '';
                                 if (path.startsWith(`/${lang}`)) {
-                                    window.location.href = path.replace(`/${lang}`, `/${newLang}`);
+                                    // Make sure we only replace the language prefix at the start
+                                    newPath = `/${newLang}${path.substring(lang.length + 1)}`;
                                 } else {
-                                    window.location.href = `/${newLang}${path === '/' ? '' : path}`;
+                                    newPath = `/${newLang}${path === '/' ? '/' : path}`;
                                 }
+                                if (newPath.length > 1 && !newPath.endsWith('/')) {
+                                    newPath += '/';
+                                }
+                                window.location.href = newPath;
                             }}
                             className="bg-transparent text-sm font-semibold text-foreground focus:outline-none appearance-none pr-4 relative"
                             style={{ backgroundImage: 'url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'currentColor\' stroke-width=\'2\' stroke-linecap=\'round\' stroke-linejoin=\'round\'%3e%3cpolyline points=\'6 9 12 15 18 9\'%3e%3c/polyline%3e%3c/svg%3e")', backgroundRepeat: 'no-repeat', backgroundPosition: 'right center', backgroundSize: '1em' }}

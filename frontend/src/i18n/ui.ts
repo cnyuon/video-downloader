@@ -371,7 +371,7 @@ export const ui = {
 
         // Index / All Tools Page
         'index.meta.title': 'MediaTools: Descargador de Videos Gratis — TikTok, Twitter y Facebook (2026)',
-        'index.meta.desc': 'Descargue videos de TikTok (sin marca de agua), Twitter/X y Facebook en HD — gratis, al instante, sin registro. Extraiga también audio a MP3. Funciona en iPhone, Android y PC.',
+        'index.meta.desc': 'Descarga videos de TikTok, Twitter y Facebook en HD sin marca de agua. Conversor MP3 gratis. Sin registro, compatible con iPhone y Android.',
         'index.hero.title': 'Todas las herramientas para descargar videos, ',
         'index.hero.highlight': 'en un solo lugar',
         'index.hero.desc': 'Descargue videos, extraiga audio, obtenga miniaturas y más. ¡Todas las herramientas son 100% GRATIS y fáciles de usar!',
@@ -695,7 +695,7 @@ export const ui = {
 
         // Index / All Tools Page
         'index.meta.title': 'MediaTools: Ücretsiz Video İndirici — TikTok, Twitter ve Facebook (2026)',
-        'index.meta.desc': 'TikTok (filigransız), Twitter/X ve Facebook videolarını HD olarak indirin — ücretsiz, anında, kayıt gerektirmez. MP3 ses çıkarma da mevcut. iPhone, Android ve masaüstünde çalışır.',
+        'index.meta.desc': 'TikTok, Twitter ve FB videolarını ücretsiz ve filigransız olarak HD indirin. iPhone ve Android için kayıt gerektirmeyen video ve MP3 dönüştürücü.',
         'index.hero.title': 'Video indirmek için ihtiyacınız olan tüm araçlar, ',
         'index.hero.highlight': 'tek bir yerde',
         'index.hero.desc': 'Video indirin, ses çıkarın, küçük resim alın ve daha fazlası. Tüm araçlar %100 ÜCRETSİZ ve kullanımı kolay!',
