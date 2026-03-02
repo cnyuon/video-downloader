@@ -3,6 +3,7 @@ title: "Tüm TikTok Videolarınızı Toplu İndirme (Yedekleme Rehberi)"
 description: "Tüm TikTok videolarınızı tek seferde kaydetmek mi istiyorsunuz? Yasak öncesi verilerinizi yedeklemeyi veya toplu indirmeyi öğrenin."
 pubDate: 2026-02-12
 heroImage: "../../../assets/blog-images/bulk-tiktok-download.png"
+heroAlt: "Tüm TikTok Videolarınızı Toplu İndirme (Yedekleme Rehberi) - Filigransız Ücretsiz HD İndir"
 keywords: ["tiktok toplu indirme", "tiktok video yedekleme", "tüm tiktok videoları indir", "tiktok hesap yedekleme"]
 monetization:
   primary_category: "software"

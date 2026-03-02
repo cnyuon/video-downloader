@@ -3,6 +3,7 @@ title: "أفضل 5 طرق لحفظ فيديوهات تويتر على هاتفك
 description: "تعرّف على كيفية تنزيل فيديوهات تويتر/إكس إلى ألبوم الكاميرا على جهاز آيفون أو أندرويد مجانًا. لا حاجة لأي تطبيق - احفظ التغريدات التي تحتوي على الفيديو في ثوانٍ باستخدام متصفح الإنترنت."
 pubDate: 2026-02-11
 heroImage: "../../../assets/blog-images/save-twitter-videos.png"
+heroAlt: "أفضل 5 طرق لحفظ فيديوهات تويتر على هاتفك (2026) - تنزيل مجاني عالي الدقة بدون علامة مائية"
 keywords: ["how to save twitter video to camera roll iphone", "download tweet video without app", "save twitter video to phone android free", "twitter x video downloader no login", "how to download twitter gif as mp4"]
 monetization:
   primary_category: "none"

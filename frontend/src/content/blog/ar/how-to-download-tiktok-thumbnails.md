@@ -3,6 +3,7 @@ title: "كيفية تحميل صور مصغرة من تطبيق تيك توك ب
 description: "تعرّف على كيفية حفظ الصور المصغّرة/الأغلفة عالية الدقة من أي فيديو على تيك توك. مثالية للصور المصغّرة على يوتيوب، أو لاستلهام التصميم، أو للأرشفة."
 pubDate: 2026-02-12
 heroImage: "../../../assets/blog-images/tiktok-thumbnail-download.png"
+heroAlt: "كيفية تحميل صور مصغرة من تطبيق تيك توك بجودة عالية (مجاناً) - تنزيل مجاني عالي الدقة بدون علامة مائية"
 keywords: ["download tiktok thumbnail", "save tiktok cover image", "get tiktok video thumbnail hd", "tiktok thumbnail grabber", "extract image from tiktok"]
 monetization:
   primary_category: "creator-tools"

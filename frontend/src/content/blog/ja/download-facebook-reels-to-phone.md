@@ -3,6 +3,7 @@ title: "Facebook Reelsをスマホにダウンロードする方法（2026年版
 description: "Facebookのリール動画や動画をiPhoneまたはAndroidに無料で保存できます。アプリは不要。ブラウザだけでFacebookコンテンツを高画質でダウンロードできます。"
 pubDate: 2026-02-12
 heroImage: "../../../assets/blog-images/facebook-reels-download.png"
+heroAlt: "Facebook Reelsをスマホにダウンロードする方法（2026年版ガイド） - ウォーターマークなしの無料HDダウンロード"
 keywords: ["download facebook reels", "save facebook video to phone", "facebook reel downloader free", "how to download facebook reels iphone", "facebook video saver android", "save facebook reels to camera roll"]
 monetization:
   primary_category: "none"

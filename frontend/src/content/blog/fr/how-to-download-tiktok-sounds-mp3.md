@@ -3,6 +3,7 @@ title: "Comment télécharger les sons TikTok au format MP3 (Guide 2026)"
 description: "Extrayez gratuitement l'audio de n'importe quelle vidéo TikTok et enregistrez-le au format MP3. Compatible avec iPhone, Android et ordinateur — aucune application requise."
 pubDate: 2026-02-12
 heroImage: "../../../assets/blog-images/tiktok-sound-mp3.png"
+heroAlt: "Comment télécharger les sons TikTok au format MP3 (Guide 2026) - Téléchargement gratuit en HD sans filigrane"
 keywords: ["how to download tiktok sound", "extract audio from tiktok", "tiktok sound to mp3", "save tiktok audio iphone", "tiktok mp3 downloader free", "download tiktok music"]
 monetization:
   primary_category: "none"

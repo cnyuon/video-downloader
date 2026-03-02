@@ -3,6 +3,7 @@ title: "TikTok動画を一括ダウンロードする方法（バックアップ
 description: "TikTok 動画を一度に保存したいですか？禁止される前にデータのバックアップをリクエストする方法や、コンテンツを一括ダウンロードする方法を学びましょう。"
 pubDate: 2026-02-12
 heroImage: "../../../assets/blog-images/bulk-tiktok-download.png"
+heroAlt: "TikTok動画を一括ダウンロードする方法（バックアップガイド） - ウォーターマークなしの無料HDダウンロード"
 keywords: ["bulk download tiktok videos", "download all tiktok videos at once", "backup tiktok account", "mass tiktok downloader", "save all liked tiktoks"]
 monetization:
   primary_category: "software"

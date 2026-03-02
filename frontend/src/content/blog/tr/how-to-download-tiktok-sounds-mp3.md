@@ -3,6 +3,7 @@ title: "TikTok Seslerini MP3 Olarak İndirme (2026 Rehberi)"
 description: "Herhangi bir TikTok videosundan sesi çıkarın ve ücretsiz MP3 dosyası olarak kaydedin. iPhone, Android ve masaüstünde çalışır — uygulama gerekmez."
 pubDate: 2026-02-12
 heroImage: "../../../assets/blog-images/tiktok-sound-mp3.png"
+heroAlt: "TikTok Seslerini MP3 Olarak İndirme (2026 Rehberi) - Filigransız Ücretsiz HD İndir"
 keywords: ["tiktok ses indir mp3", "tiktok müzik indirme", "tiktok ses kaydet", "tiktok ses çıkarma iphone", "tiktok mp3 indirici ücretsiz"]
 monetization:
   primary_category: "none"

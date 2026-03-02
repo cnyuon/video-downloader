@@ -3,6 +3,7 @@ title: "Twitter Videolarını Telefonunuza Kaydetmenin 5 Yolu (2026)"
 description: "Twitter/X videolarını ücretsiz olarak iPhone veya Android telefonunuza nasıl indireceğinizi öğrenin. Uygulama gerekmez — tarayıcı ile saniyeler içinde kaydedin."
 pubDate: 2026-02-11
 heroImage: "../../../assets/blog-images/save-twitter-videos.png"
+heroAlt: "Twitter Videolarını Telefonunuza Kaydetmenin 5 Yolu (2026) - Filigransız Ücretsiz HD İndir"
 keywords: ["twitter video indir telefona", "tweet video kaydet uygulama olmadan", "twitter video indirme android ücretsiz", "twitter x video indirici giriş yok", "twitter gif mp4 olarak indir"]
 monetization:
   primary_category: "none"

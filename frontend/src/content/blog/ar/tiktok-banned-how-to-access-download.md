@@ -3,6 +3,7 @@ title: "هل تم حظر تطبيق تيك توك؟ كيفية حفظ مقاطع
 description: "تعرّف على كيفية تنزيل وحفظ فيديوهاتك المفضلة على تيك توك قبل فرض القيود في منطقتك. دليل خطوة بخطوة لعمل نسخة احتياطية من المحتوى والوصول إلى تيك توك من المناطق المحظورة."
 pubDate: 2026-02-11
 heroImage: "../../../assets/blog-images/tiktok-banned-vpn.png"
+heroAlt: "هل تم حظر تطبيق تيك توك؟ كيفية حفظ مقاطع الفيديو الخاصة بك (2026) - تنزيل مجاني عالي الدقة بدون علامة مائية"
 keywords: ["download tiktok videos before ban", "save tiktok content restricted countries", "how to access tiktok with vpn", "tiktok restrictions 2026", "back up tiktok videos"]
 monetization:
   primary_category: "vpn"

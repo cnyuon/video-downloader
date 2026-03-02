@@ -3,6 +3,7 @@ title: "iPhone'da TikTok Videoları Uygulamasız Nasıl İndirilir (2026)"
 description: "Şüpheli uygulamalar veya kısayollar yüklemeden TikTok videolarını iPhone Fotoğraflar'a kaydetmenin en kolay yolunu öğrenin. iOS 18+ ile çalışır."
 pubDate: 2026-02-12
 heroImage: "../../../assets/blog-images/tiktok-iphone-download.png"
+heroAlt: "iPhone'da TikTok Videoları Uygulamasız Nasıl İndirilir (2026) - Filigransız Ücretsiz HD İndir"
 keywords: ["tiktok indir iphone", "tiktok video kaydet iphone uygulama olmadan", "iphone tiktok indirme", "tiktok video indirici iphone", "iphone tiktok filigransız kaydet"]
 monetization:
   primary_category: "none"

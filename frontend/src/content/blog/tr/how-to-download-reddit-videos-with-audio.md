@@ -3,6 +3,7 @@ title: "Reddit Videolarını Sesli İndirme (2026)"
 description: "Reddit videolarını paylaşırken ses yok mu? Reddit videolarını tam sesli olarak telefonunuza veya bilgisayarınıza indirmenin en iyi yolunu öğrenin."
 pubDate: 2026-02-21
 heroImage: "../../../assets/blog-images/reddit_video_downloader_hero.png"
+heroAlt: "Reddit Videolarını Sesli İndirme (2026) - Filigransız Ücretsiz HD İndir"
 tags: ["Reddit", "Guides", "Fixes"]
 keywords: ["reddit video indir sesli", "reddit video kaydet", "reddit video indirme ses sorunu"]
 ---

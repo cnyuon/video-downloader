@@ -3,6 +3,7 @@ title: "So laden Sie alle Ihre TikTok-Videos auf einmal herunter (Backup-Anleitu
 description: "Möchtest du alle deine TikTok-Videos auf einmal sichern? Erfahre, wie du deine Datensicherung anforderst oder deine Inhalte vor einer Sperrung stapelweise herunterlädst."
 pubDate: 2026-02-12
 heroImage: "../../../assets/blog-images/bulk-tiktok-download.png"
+heroAlt: "So laden Sie alle Ihre TikTok-Videos auf einmal herunter (Backup-Anleitung) - Kostenloser HD-Download Ohne Wasserzeichen"
 keywords: ["bulk download tiktok videos", "download all tiktok videos at once", "backup tiktok account", "mass tiktok downloader", "save all liked tiktoks"]
 monetization:
   primary_category: "software"

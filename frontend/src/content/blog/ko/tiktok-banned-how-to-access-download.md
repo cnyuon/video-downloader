@@ -3,6 +3,7 @@ title: "틱톡 이용 제한? 동영상 복구 방법 (2026)"
 description: "지역 제한 조치가 시행되기 전에 좋아하는 TikTok 영상을 다운로드하고 저장하는 방법을 알아보세요. 콘텐츠 백업 및 제한 지역에서 TikTok에 접속하는 방법에 대한 단계별 가이드입니다."
 pubDate: 2026-02-11
 heroImage: "../../../assets/blog-images/tiktok-banned-vpn.png"
+heroAlt: "틱톡 이용 제한? 동영상 복구 방법 (2026) - 워터마크 없는 무료 HD 다운로드"
 keywords: ["download tiktok videos before ban", "save tiktok content restricted countries", "how to access tiktok with vpn", "tiktok restrictions 2026", "back up tiktok videos"]
 monetization:
   primary_category: "vpn"

@@ -3,6 +3,7 @@ title: "So lädst du TikTok-Thumbnails in HD herunter (kostenlos)"
 description: "Lerne, wie du hochauflösende Thumbnails/Cover von jedem TikTok-Video speicherst. Perfekt für YouTube-Thumbnails, als Designinspiration oder zum Archivieren."
 pubDate: 2026-02-12
 heroImage: "../../../assets/blog-images/tiktok-thumbnail-download.png"
+heroAlt: "So lädst du TikTok-Thumbnails in HD herunter (kostenlos) - Kostenloser HD-Download Ohne Wasserzeichen"
 keywords: ["download tiktok thumbnail", "save tiktok cover image", "get tiktok video thumbnail hd", "tiktok thumbnail grabber", "extract image from tiktok"]
 monetization:
   primary_category: "creator-tools"

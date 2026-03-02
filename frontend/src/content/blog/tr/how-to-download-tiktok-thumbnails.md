@@ -3,6 +3,7 @@ title: "TikTok Küçük Resimlerini HD İndirme (Ücretsiz)"
 description: "Herhangi bir TikTok videosundan yüksek çözünürlüklü küçük resimleri/kapakları nasıl kaydedeceğinizi öğrenin."
 pubDate: 2026-02-12
 heroImage: "../../../assets/blog-images/tiktok-thumbnail-download.png"
+heroAlt: "TikTok Küçük Resimlerini HD İndirme (Ücretsiz) - Filigransız Ücretsiz HD İndir"
 keywords: ["tiktok küçük resim indir", "tiktok kapak resmi kaydet", "tiktok thumbnail indir hd", "tiktok küçük resim indirici"]
 monetization:
   primary_category: "creator-tools"

@@ -47,12 +47,12 @@ const getHref = (path: string) => lang === 'en' ? path : `/${lang}${path === '/'
             <div>
                 <h3 class="font-semibold mb-3 text-sm">{t('footer.tools')}</h3>
                 <ul class="space-y-2 text-sm text-muted-foreground">
-                    <li><a href={getHref('/tiktok-downloader')} class="hover:text-foreground transition-colors">{t('nav.tiktok')}</a></li>
-                    <li><a href={getHref('/twitter-downloader')} class="hover:text-foreground transition-colors">{t('nav.twitter')}</a></li>
-                    <li><a href={getHref('/facebook-downloader')} class="hover:text-foreground transition-colors">{t('nav.facebook')}</a></li>
-                    <li><a href={getHref('/tiktok-sound-downloader')} class="hover:text-foreground transition-colors">{t('nav.sound')}</a></li>
-                    <li><a href={getHref('/video-to-mp3')} class="hover:text-foreground transition-colors">{t('nav.audio')}</a></li>
-                    <li><a href={getHref('/thumbnail-grabber')} class="hover:text-foreground transition-colors">{t('nav.thumbnail')}</a></li>
+                    <li><a href={getHref('/tiktok-downloader/')} class="hover:text-foreground transition-colors">{t('nav.tiktok')}</a></li>
+                    <li><a href={getHref('/twitter-downloader/')} class="hover:text-foreground transition-colors">{t('nav.twitter')}</a></li>
+                    <li><a href={getHref('/facebook-downloader/')} class="hover:text-foreground transition-colors">{t('nav.facebook')}</a></li>
+                    <li><a href={getHref('/tiktok-sound-downloader/')} class="hover:text-foreground transition-colors">{t('nav.sound')}</a></li>
+                    <li><a href={getHref('/video-to-mp3/')} class="hover:text-foreground transition-colors">{t('nav.audio')}</a></li>
+                    <li><a href={getHref('/thumbnail-grabber/')} class="hover:text-foreground transition-colors">{t('nav.thumbnail')}</a></li>
                 </ul>
             </div>
 
@@ -60,7 +60,7 @@ const getHref = (path: string) => lang === 'en' ? path : `/${lang}${path === '/'
             <div>
                 <h3 class="font-semibold mb-3 text-sm">{t('footer.resources')}</h3>
                 <ul class="space-y-2 text-sm text-muted-foreground">
-                    <li><a href={getHref('/blog')} class="hover:text-foreground transition-colors">{t('nav.blog')}</a></li>
+                    <li><a href={getHref('/blog/')} class="hover:text-foreground transition-colors">{t('nav.blog')}</a></li>
                     {recentPosts.map(post => {
                         const slug = post.slug.replace(/^[a-z]{2}\//, '');
                         return (

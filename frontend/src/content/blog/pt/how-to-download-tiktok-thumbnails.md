@@ -3,6 +3,7 @@ title: "Como baixar miniaturas do TikTok em HD (grátis)"
 description: "Aprenda como salvar miniaturas/capas em alta resolução de qualquer vídeo do TikTok. Perfeito para miniaturas do YouTube, inspiração de design ou para arquivar conteúdo."
 pubDate: 2026-02-12
 heroImage: "../../../assets/blog-images/tiktok-thumbnail-download.png"
+heroAlt: "Como baixar miniaturas do TikTok em HD (grátis) - Baixar Grátis em HD Sem Marca D'água"
 keywords: ["download tiktok thumbnail", "save tiktok cover image", "get tiktok video thumbnail hd", "tiktok thumbnail grabber", "extract image from tiktok"]
 monetization:
   primary_category: "creator-tools"

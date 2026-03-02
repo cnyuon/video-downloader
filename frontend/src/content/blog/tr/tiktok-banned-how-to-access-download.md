@@ -3,6 +3,7 @@ title: "TikTok Kısıtlandı mı? Videolarınızı Nasıl Kaydedersiniz (2026)"
 description: "Kısıtlamalar bölgenize ulaşmadan önce favori TikTok videolarınızı nasıl indirip kaydedeceğinizi öğrenin. İçerik yedekleme ve erişim için adım adım rehber."
 pubDate: 2026-02-11
 heroImage: "../../../assets/blog-images/tiktok-banned-vpn.png"
+heroAlt: "TikTok Kısıtlandı mı? Videolarınızı Nasıl Kaydedersiniz (2026) - Filigransız Ücretsiz HD İndir"
 keywords: ["tiktok yasaklandı video indir", "tiktok erişim engeli", "tiktok yedekleme rehberi", "tiktok kısıtlamaları 2026", "tiktok vpn ile erişim"]
 monetization:
   primary_category: "vpn"

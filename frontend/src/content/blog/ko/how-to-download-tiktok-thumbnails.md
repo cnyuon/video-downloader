@@ -3,6 +3,7 @@ title: "틱톡 썸네일 고화질 다운로드 방법 (무료)"
 description: "틱톡 영상에서 고해상도 썸네일/커버 이미지를 저장하는 방법을 알아보세요. 유튜브 썸네일 제작, 디자인 영감 얻기, 또는 아카이빙에 안성맞춤입니다."
 pubDate: 2026-02-12
 heroImage: "../../../assets/blog-images/tiktok-thumbnail-download.png"
+heroAlt: "틱톡 썸네일 고화질 다운로드 방법 (무료) - 워터마크 없는 무료 HD 다운로드"
 keywords: ["download tiktok thumbnail", "save tiktok cover image", "get tiktok video thumbnail hd", "tiktok thumbnail grabber", "extract image from tiktok"]
 monetization:
   primary_category: "creator-tools"

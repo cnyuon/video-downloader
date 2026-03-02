@@ -3,6 +3,7 @@ title: "كيفية تنزيل فيديوهات فيسبوك ريلز على ها
 description: "احفظ مقاطع الفيديو والملفات القصيرة من فيسبوك على جهاز آيفون أو أندرويد مجاناً. لا حاجة لتطبيق - حمّل محتوى فيسبوك بجودة عالية الوضوح باستخدام متصفح فقط."
 pubDate: 2026-02-12
 heroImage: "../../../assets/blog-images/facebook-reels-download.png"
+heroAlt: "كيفية تنزيل فيديوهات فيسبوك ريلز على هاتفك (دليل 2026) - تنزيل مجاني عالي الدقة بدون علامة مائية"
 keywords: ["download facebook reels", "save facebook video to phone", "facebook reel downloader free", "how to download facebook reels iphone", "facebook video saver android", "save facebook reels to camera roll"]
 monetization:
   primary_category: "none"

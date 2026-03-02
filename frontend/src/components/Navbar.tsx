@@ -30,13 +30,13 @@ export default function Navbar({ currentPage, lang }: NavbarProps) {
 
     const navItems: NavItem[] = [
         { id: 'home', nameKey: 'nav.home', href: '/' },
-        { id: 'video', nameKey: 'nav.tiktok', href: '/tiktok-downloader' },
-        { id: 'twitter', nameKey: 'nav.twitter', href: '/twitter-downloader' },
-        { id: 'facebook', nameKey: 'nav.facebook', href: '/facebook-downloader' },
-        { id: 'sound', nameKey: 'nav.sound', href: '/tiktok-sound-downloader' },
-        { id: 'audio', nameKey: 'nav.audio', href: '/video-to-mp3' },
-        { id: 'thumbnail', nameKey: 'nav.thumbnail', href: '/thumbnail-grabber' },
-        { id: 'blog', nameKey: 'nav.blog', href: '/blog' },
+        { id: 'video', nameKey: 'nav.tiktok', href: '/tiktok-downloader/' },
+        { id: 'twitter', nameKey: 'nav.twitter', href: '/twitter-downloader/' },
+        { id: 'facebook', nameKey: 'nav.facebook', href: '/facebook-downloader/' },
+        { id: 'sound', nameKey: 'nav.sound', href: '/tiktok-sound-downloader/' },
+        { id: 'audio', nameKey: 'nav.audio', href: '/video-to-mp3/' },
+        { id: 'thumbnail', nameKey: 'nav.thumbnail', href: '/thumbnail-grabber/' },
+        { id: 'blog', nameKey: 'nav.blog', href: '/blog/' },
     ];
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
     const [darkMode, setDarkMode] = useState(false);

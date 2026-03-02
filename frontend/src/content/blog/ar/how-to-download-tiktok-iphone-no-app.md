@@ -3,6 +3,7 @@ title: "كيفية تنزيل فيديوهات تيك توك على الآيفو
 description: "تعرّف على أسهل طريقة لحفظ فيديوهات تيك توك في ألبوم الكاميرا على جهاز آيفون الخاص بك دون تثبيت تطبيقات أو اختصارات مشبوهة. يعمل على نظام iOS 18 والإصدارات الأحدث."
 pubDate: 2026-02-12
 heroImage: "../../../assets/blog-images/tiktok-iphone-download.png"
+heroAlt: "كيفية تنزيل فيديوهات تيك توك على الآيفون بدون تطبيق (2026) - تنزيل مجاني عالي الدقة بدون علامة مائية"
 keywords: ["download tiktok iphone", "save tiktok to camera roll", "download tiktok no app ios", "tiktok video downloader iphone", "how to save tiktok without watermark on iphone"]
 monetization:
   primary_category: "none"

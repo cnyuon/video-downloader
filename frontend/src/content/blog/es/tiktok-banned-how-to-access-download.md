@@ -3,6 +3,7 @@ title: "¿TikTok está restringido? Cómo guardar tus videos (2026)"
 description: "Aprende a descargar y guardar tus videos favoritos de TikTok antes de que se apliquen restricciones en tu región. Guía paso a paso para hacer copias de seguridad de tu contenido y acceder a TikTok desde zonas restringidas."
 pubDate: 2026-02-11
 heroImage: "../../../assets/blog-images/tiktok-banned-vpn.png"
+heroAlt: "¿TikTok está restringido? Cómo guardar tus videos (2026) - Descarga gratis en HD sin marca de agua"
 keywords: ["download tiktok videos before ban", "save tiktok content restricted countries", "how to access tiktok with vpn", "tiktok restrictions 2026", "back up tiktok videos"]
 monetization:
   primary_category: "vpn"

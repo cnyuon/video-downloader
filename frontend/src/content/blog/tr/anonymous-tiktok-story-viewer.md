@@ -3,6 +3,7 @@ title: "TikTok Hikayelerini Anonim Olarak Görüntüleyebilir misiniz?"
 description: "TikTok profilini veya hikayesini görüntülediğinizi birisi görebilir mi merak ediyor musunuz? İşte TikTok görüntüleme geçmişi ve anonim izleme rehberi."
 pubDate: 2026-02-21
 heroImage: "../../../assets/blog-images/tiktok_anonymous_viewer_hero.png"
+heroAlt: "TikTok Hikayelerini Anonim Olarak Görüntüleyebilir misiniz? - Filigransız Ücretsiz HD İndir"
 tags: ["TikTok", "Guides", "Privacy"]
 keywords: ["tiktok hikaye anonim izleme", "tiktok profil görüntüleme gizli", "tiktok hikaye görüntüleyici"]
 ---

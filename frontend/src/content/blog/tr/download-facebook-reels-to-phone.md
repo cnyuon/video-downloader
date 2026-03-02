@@ -3,6 +3,7 @@ title: "Facebook Reels Telefonunuza Nasıl İndirilir (2026 Rehberi)"
 description: "Facebook Reels ve videolarını ücretsiz olarak iPhone veya Android telefonunuza kaydedin. Uygulama gerekmez — tarayıcı ile HD kalitede indirin."
 pubDate: 2026-02-12
 heroImage: "../../../assets/blog-images/facebook-reels-download.png"
+heroAlt: "Facebook Reels Telefonunuza Nasıl İndirilir (2026 Rehberi) - Filigransız Ücretsiz HD İndir"
 keywords: ["facebook reels indir", "facebook video indirme telefona", "facebook reels indirici ücretsiz", "iphone facebook reels indirme", "facebook video kaydetme android"]
 monetization:
   primary_category: "none"

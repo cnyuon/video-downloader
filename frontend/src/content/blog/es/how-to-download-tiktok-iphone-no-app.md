@@ -3,6 +3,7 @@ title: "Cómo descargar vídeos de TikTok en iPhone sin app (2026)"
 description: "Aprende la forma más fácil de guardar videos de TikTok en el carrete de tu iPhone sin instalar aplicaciones ni accesos directos sospechosos. Compatible con iOS 18 y posteriores."
 pubDate: 2026-02-12
 heroImage: "../../../assets/blog-images/tiktok-iphone-download.png"
+heroAlt: "Cómo descargar vídeos de TikTok en iPhone sin app (2026) - Descarga gratis en HD sin marca de agua"
 keywords: ["download tiktok iphone", "save tiktok to camera roll", "download tiktok no app ios", "tiktok video downloader iphone", "how to save tiktok without watermark on iphone"]
 monetization:
   primary_category: "none"
