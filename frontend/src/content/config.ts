@@ -8,6 +8,7 @@ const blogCollection = defineCollection({
         pubDate: z.date(),
         updatedDate: z.date().optional(),
         heroImage: image().optional(),
+        heroAlt: z.string().optional(),
         // SEO
         keywords: z.array(z.string()).optional(),
         // Monetization Tags
