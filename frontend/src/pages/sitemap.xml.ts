@@ -53,7 +53,7 @@ export async function GET() {
     // Use a fixed date for static pages — update this value when tool pages genuinely change
     const staticPagesUrls = staticPages.map(url => ({
         url,
-        lastmod: '2026-02-24T00:00:00.000Z',
+        lastmod: '2026-03-02T00:00:00.000Z',
         isBlog: false
     }));
 
