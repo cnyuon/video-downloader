@@ -4,6 +4,7 @@
  * Used on every page for consistent internal linking and crawlability
  */
 import { getLangFromUrl, useTranslations } from '../i18n/utils';
+import { getLocalizedHref } from '../i18n/href';
 import type { ui } from '../i18n/ui';
 import { getCollection } from 'astro:content';
 
@@ -23,8 +24,7 @@ const recentPosts = posts
     })
     .slice(0, 3);
 
-// Always prefix URLs with the language code except 'en'
-const getHref = (path: string) => lang === 'en' ? path : `/${lang}${path === '/' ? '' : path}`;
+const getHref = (path: string) => getLocalizedHref(path, lang);
 ---
 
 <footer class="border-t py-12 mt-8">

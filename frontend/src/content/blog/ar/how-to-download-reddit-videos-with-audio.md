@@ -2,7 +2,7 @@
 title: "كيفية تنزيل فيديوهات ريديت (مع الصوت) في عام 2026"
 description: "هل تواجه مشكلة انقطاع الصوت عند مشاركة فيديوهات ريديت؟ تعرّف على أفضل طريقة مجانية لتنزيل وحفظ فيديوهات ريديت مع الصوت الكامل على هاتفك أو جهاز الكمبيوتر."
 pubDate: 2026-02-21
-heroImage: "../../../assets/blog-images/reddit_video_downloader_hero.png"
+heroImage: "../../../assets/blog-images/reddit-video-downloader-with-audio.png"
 heroAlt: "كيفية تنزيل فيديوهات ريديت (مع الصوت) في عام 2026 - تنزيل مجاني عالي الدقة بدون علامة مائية"
 tags: ["Reddit", "Guides", "Fixes"]
 ---

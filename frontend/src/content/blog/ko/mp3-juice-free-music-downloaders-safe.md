@@ -2,7 +2,7 @@
 title: "MP3 Juice란 무엇인가요? 2026년에도 무료 음악 다운로더는 안전할까요?"
 description: "MP3 주스에 대한 완벽한 가이드, 무료 음악 다운로드의 역사, 그리고 악성코드 없이 동영상에서 오디오를 추출하는 가장 안전한 방법까지 모두 담았습니다."
 pubDate: 2026-02-21
-heroImage: "../../../assets/blog-images/mp3_juice_downloader_hero.png"
+heroImage: "../../../assets/blog-images/mp3-juice-free-music-downloader.png"
 heroAlt: "MP3 Juice란 무엇인가요? 2026년에도 무료 음악 다운로더는 안전할까요? - 워터마크 없는 무료 HD 다운로드"
 tags: ["Audio", "Guides", "Safety"]
 ---

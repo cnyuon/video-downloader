@@ -2,7 +2,7 @@
 title: "틱톡 스토리를 익명으로 볼 수 있나요? (작동 방식)"
 description: "상대방이 내가 그들의 틱톡 프로필이나 스토리를 봤는지 알 수 있는지 궁금하신가요? 틱톡의 시청 기록과 익명으로 시청하는 방법에 대한 완벽한 가이드를 여기에서 확인하세요."
 pubDate: 2026-02-21
-heroImage: "../../../assets/blog-images/tiktok_anonymous_viewer_hero.png"
+heroImage: "../../../assets/blog-images/tiktok-anonymous-story-viewer.png"
 heroAlt: "틱톡 스토리를 익명으로 볼 수 있나요? (작동 방식) - 워터마크 없는 무료 HD 다운로드"
 tags: ["TikTok", "Guides", "Privacy"]
 ---

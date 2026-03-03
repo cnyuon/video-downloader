@@ -1,6 +1,6 @@
 ---
 title: "Los mejores editores de vídeo gratuitos para TikTok (2026)"
-description: "Descubre los mejores editores de video gratuitos para crear contenido viral en TikTok sin marcas de agua. Compara CapCut, DaVinci Resolve, iMovie y más: encuentra el editor perfecto para principiantes y profesionales."
+description: "Compara los mejores editores de video gratuitos para TikTok en 2026. CapCut, DaVinci Resolve, iMovie y más — encuentra el mejor para crear contenido viral."
 pubDate: 2026-02-11
 heroImage: "../../../assets/blog-images/best-video-editors.png"
 heroAlt: "Los mejores editores de vídeo gratuitos para TikTok (2026) - Descarga gratis en HD sin marca de agua"

@@ -1,6 +1,6 @@
 ---
 title: "TikTok Kısıtlandı mı? Videolarınızı Nasıl Kaydedersiniz (2026)"
-description: "Kısıtlamalar bölgenize ulaşmadan önce favori TikTok videolarınızı nasıl indirip kaydedeceğinizi öğrenin. İçerik yedekleme ve erişim için adım adım rehber."
+description: "Bölgenizdeki kısıtlamalar öncesinde TikTok videolarınızı indirip yedeklemenin adım adım rehberi. İçeriklerinizi kaydedin ve her yerden erişim sağlayın."
 pubDate: 2026-02-11
 heroImage: "../../../assets/blog-images/tiktok-banned-vpn.png"
 heroAlt: "TikTok Kısıtlandı mı? Videolarınızı Nasıl Kaydedersiniz (2026) - Filigransız Ücretsiz HD İndir"
@@ -110,7 +110,7 @@ Kısıtlamaların sizi etkilemesini beklemeyin. Bugün 10 dakika ayırarak:
 2. **[TikTok seslerini kaydedin](/tr/tiktok-sound-downloader/)** MP3 dosyaları olarak.
 3. Kısıtlı bir bölgedeyseniz VPN seçeneklerini araştırın.
 
-İçeriğiniz korunmaya değer. [MediaTools](/) bunu kolay ve ücretsiz hale getirir.
+İçeriğiniz korunmaya değer. [MediaTools](/tr/) bunu kolay ve ücretsiz hale getirir.
 
 **İlgili rehberler:**
 - [TikTok Videolarını Filigransız İndirme](/tr/blog/how-to-download-tiktok-without-watermark/)

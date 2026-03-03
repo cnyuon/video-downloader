@@ -1,6 +1,6 @@
 ---
 title: "TikTok Restricted? How to Save Your Videos (2026)"
-description: "Learn how to download and save your favorite TikTok videos before restrictions hit your region. Step-by-step guide for backing up content and accessing TikTok from restricted areas."
+description: "Step-by-step guide to download and back up your TikTok videos before restrictions hit your region. Save content and keep access from anywhere."
 pubDate: 2026-02-11
 heroImage: "../../../assets/blog-images/tiktok-banned-vpn.png"
 heroAlt: "TikTok Restricted? How to Save Your Videos (2026) - Free HD Download Without Watermark"

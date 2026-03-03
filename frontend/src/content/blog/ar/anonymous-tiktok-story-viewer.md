@@ -2,7 +2,7 @@
 title: "هل يمكنك مشاهدة قصص تيك توك بشكل مجهول؟ (كيف يعمل ذلك)"
 description: "هل تتساءل عما إذا كان بإمكان أي شخص رؤية أنك شاهدت ملفه الشخصي أو قصته على تيك توك؟ إليك دليل شامل لسجل المشاهدات على تيك توك وكيفية المشاهدة بشكل مجهول."
 pubDate: 2026-02-21
-heroImage: "../../../assets/blog-images/tiktok_anonymous_viewer_hero.png"
+heroImage: "../../../assets/blog-images/tiktok-anonymous-story-viewer.png"
 heroAlt: "هل يمكنك مشاهدة قصص تيك توك بشكل مجهول؟ (كيف يعمل ذلك) - تنزيل مجاني عالي الدقة بدون علامة مائية"
 tags: ["TikTok", "Guides", "Privacy"]
 ---

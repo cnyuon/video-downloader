@@ -1,6 +1,6 @@
 ---
 title: "TikTokに最適な無料動画編集ソフト（2026年版）"
-description: "ウォーターマークなしでTikTokで話題の動画を作成できる、おすすめの無料動画編集ソフトをご紹介します。CapCut、DaVinci Resolve、iMovieなど、初心者からプロまで、自分にぴったりのソフトを見つけてください。"
+description: "2026年のTikTok向け無料動画編集アプリを比較。CapCut、DaVinci Resolve、iMovieなど — バイラルコンテンツ作成に最適なツールを見つけましょう。"
 pubDate: 2026-02-11
 heroImage: "../../../assets/blog-images/best-video-editors.png"
 heroAlt: "TikTokに最適な無料動画編集ソフト（2026年版） - ウォーターマークなしの無料HDダウンロード"

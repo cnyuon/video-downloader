@@ -1,6 +1,6 @@
 ---
 title: "TikTok está com restrições? Como salvar seus vídeos (2026)"
-description: "Aprenda como baixar e salvar seus vídeos favoritos do TikTok antes que as restrições entrem em vigor na sua região. Guia passo a passo para fazer backup de conteúdo e acessar o TikTok em áreas restritas."
+description: "Guia passo a passo para baixar e fazer backup dos seus vídeos do TikTok antes das restrições na sua região. Salve seu conteúdo e mantenha o acesso."
 pubDate: 2026-02-11
 heroImage: "../../../assets/blog-images/tiktok-banned-vpn.png"
 heroAlt: "TikTok está com restrições? Como salvar seus vídeos (2026) - Baixar Grátis em HD Sem Marca D'água"
@@ -110,7 +110,7 @@ Não espere que as restrições o afetem. Dedique 10 minutos hoje para:
 2. **[Salvar sons do TikTok](/pt/tiktok-sound-downloader/)** como arquivos MP3.
 3. Pesquise opções de VPN se você estiver em uma região com restrições.
 
-Seu conteúdo merece ser preservado. [MediaTools](/) torna isso fácil e gratuito.
+Seu conteúdo merece ser preservado. [MediaTools](/pt/) torna isso fácil e gratuito.
 
 **Guias relacionados:**
 - [Como baixar vídeos do TikTok sem marca d'água](/pt/blog/how-to-download-tiktok-without-watermark/)

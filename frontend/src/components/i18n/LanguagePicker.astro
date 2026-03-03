@@ -1,9 +1,16 @@
 ---
 import { getLangFromUrl } from '../../i18n/utils';
+import { getLocalizedHref } from '../../i18n/href';
 import { languages } from '../../i18n/ui';
 
 const lang = getLangFromUrl(Astro.url);
-const currentPath = Astro.url.pathname.replace(`/${lang}`, '');
+
+// Strip the locale prefix to get the locale-agnostic path
+const pathSegments = Astro.url.pathname.split('/').filter(Boolean);
+const isLocalePrefix = pathSegments.length > 0 && Object.keys(languages).includes(pathSegments[0]) && pathSegments[0] !== 'en';
+const cleanPath = isLocalePrefix 
+    ? '/' + pathSegments.slice(1).join('/') + '/'
+    : Astro.url.pathname.endsWith('/') ? Astro.url.pathname : Astro.url.pathname + '/';
 ---
 
 <div class="relative group">
@@ -16,7 +23,7 @@ const currentPath = Astro.url.pathname.replace(`/${lang}`, '');
     <div class="py-1">
       {Object.entries(languages).map(([code, label]) => (
         <a 
-          href={code === 'en' ? currentPath : `/${code}${currentPath}`}
+          href={getLocalizedHref(cleanPath, code as any)}
           class={`block px-4 py-2 text-sm hover:bg-accent hover:text-accent-foreground ${lang === code ? 'font-bold bg-accent/50' : ''}`}
         >
           {label}

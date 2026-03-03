@@ -2,7 +2,7 @@
 title: "É possível visualizar Stories do TikTok anonimamente? (Como funciona)"
 description: "Você está se perguntando se alguém consegue ver que você visualizou o perfil ou os Stories dessa pessoa no TikTok? Aqui está um guia completo sobre o histórico de visualizações do TikTok e como assistir anonimamente."
 pubDate: 2026-02-21
-heroImage: "../../../assets/blog-images/tiktok_anonymous_viewer_hero.png"
+heroImage: "../../../assets/blog-images/tiktok-anonymous-story-viewer.png"
 heroAlt: "É possível visualizar Stories do TikTok anonimamente? (Como funciona) - Baixar Grátis em HD Sem Marca D'água"
 tags: ["TikTok", "Guides", "Privacy"]
 ---

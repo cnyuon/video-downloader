@@ -2,7 +2,7 @@
 title: "TikTokストーリーを匿名で閲覧できますか？（仕組み）"
 description: "TikTokのプロフィールやストーリーを閲覧したことが誰かにバレてしまうのではないかと心配ですか？TikTokの閲覧履歴と匿名で視聴する方法を詳しく解説したガイドをご紹介します。"
 pubDate: 2026-02-21
-heroImage: "../../../assets/blog-images/tiktok_anonymous_viewer_hero.png"
+heroImage: "../../../assets/blog-images/tiktok-anonymous-story-viewer.png"
 heroAlt: "TikTokストーリーを匿名で閲覧できますか？（仕組み） - ウォーターマークなしの無料HDダウンロード"
 tags: ["TikTok", "Guides", "Privacy"]
 ---

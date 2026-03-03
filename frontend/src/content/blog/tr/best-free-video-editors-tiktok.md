@@ -1,6 +1,6 @@
 ---
 title: "TikTok İçin En İyi Ücretsiz Video Düzenleyiciler (2026)"
-description: "Filigransız viral TikTok içeriği oluşturmak için en iyi ücretsiz video düzenleyicileri keşfedin. CapCut, DaVinci Resolve, iMovie ve daha fazlasını karşılaştırın."
+description: "2026 için en iyi ücretsiz TikTok video düzenleme uygulamalarını karşılaştırın. CapCut, DaVinci Resolve, iMovie ve daha fazlası — viral içerik oluşturun."
 pubDate: 2026-02-11
 heroImage: "../../../assets/blog-images/best-video-editors.png"
 heroAlt: "TikTok İçin En İyi Ücretsiz Video Düzenleyiciler (2026) - Filigransız Ücretsiz HD İndir"

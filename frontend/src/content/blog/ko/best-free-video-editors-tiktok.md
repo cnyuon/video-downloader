@@ -1,6 +1,6 @@
 ---
 title: "틱톡을 위한 최고의 무료 동영상 편집기 (2026)"
-description: "워터마크 없이 인기 있는 틱톡 콘텐츠를 제작할 수 있는 최고의 무료 동영상 편집 프로그램을 알아보세요. CapCut, DaVinci Resolve, iMovie 등을 비교하고 초보자부터 전문가까지 모두에게 맞는 완벽한 편집 프로그램을 찾아보세요."
+description: "2026년 최고의 무료 틱톡 동영상 편집 앱을 비교해보세요. CapCut, DaVinci Resolve, iMovie 등 — 바이럴 콘텐츠 제작에 최적화된 도구를 찾아보세요."
 pubDate: 2026-02-11
 heroImage: "../../../assets/blog-images/best-video-editors.png"
 heroAlt: "틱톡을 위한 최고의 무료 동영상 편집기 (2026) - 워터마크 없는 무료 HD 다운로드"

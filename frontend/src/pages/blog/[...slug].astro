@@ -72,7 +72,7 @@ const displayPosts = localPosts.length > 0 ? localPosts : enPosts;
 ---
 
 <Layout 
-	title={`${post.data.title} | MediaTools`}
+	title={post.data.title}
 	description={post.data.description}
 	ogImage={post.data.heroImage ? (post.data.heroImage as any).src : undefined}
 	jsonLd={jsonLd}

@@ -2,7 +2,7 @@
 title: "Kann man TikTok-Stories anonym ansehen? (So funktioniert's)"
 description: "Fragst du dich, ob jemand sehen kann, dass du sein TikTok-Profil oder seine Story angesehen hast? Hier findest du eine vollständige Anleitung zum TikTok-Aufrufverlauf und wie du anonym zusehen kannst."
 pubDate: 2026-02-21
-heroImage: "../../../assets/blog-images/tiktok_anonymous_viewer_hero.png"
+heroImage: "../../../assets/blog-images/tiktok-anonymous-story-viewer.png"
 heroAlt: "Kann man TikTok-Stories anonym ansehen? (So funktioniert's) - Kostenloser HD-Download Ohne Wasserzeichen"
 tags: ["TikTok", "Guides", "Privacy"]
 ---

@@ -2,7 +2,7 @@
 title: "2026年にReddit動画（音声付き）をダウンロードする方法"
 description: "Reddit 動画を共有する際に音が出ない問題が発生していますか？音声付きの Reddit 動画をスマートフォンや PC に無料でダウンロードして保存する最適な方法を学びましょう。"
 pubDate: 2026-02-21
-heroImage: "../../../assets/blog-images/reddit_video_downloader_hero.png"
+heroImage: "../../../assets/blog-images/reddit-video-downloader-with-audio.png"
 heroAlt: "2026年にReddit動画（音声付き）をダウンロードする方法 - ウォーターマークなしの無料HDダウンロード"
 tags: ["Reddit", "Guides", "Fixes"]
 ---
