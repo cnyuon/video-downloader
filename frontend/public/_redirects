@@ -1,0 +1,12 @@
+# Cloudflare Pages _redirects
+# Server-side 301 redirects for /en/ prefix → root (English is default locale)
+# These fire BEFORE static assets so bots get a proper 301 instead of meta-refresh
+/en/ / 301
+/en/tiktok-downloader/ /tiktok-downloader/ 301
+/en/facebook-downloader/ /facebook-downloader/ 301
+/en/twitter-downloader/ /twitter-downloader/ 301
+/en/video-to-mp3/ /video-to-mp3/ 301
+/en/tiktok-sound-downloader/ /tiktok-sound-downloader/ 301
+/en/thumbnail-grabber/ /thumbnail-grabber/ 301
+/en/blog/ /blog/ 301
+/en/blog/* /blog/:splat 301
