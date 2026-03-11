@@ -3,7 +3,7 @@ title: "틱톡 사운드를 MP3로 다운로드하는 방법 (2026년 가이드)
 description: "틱톡 영상에서 오디오를 추출하여 MP3 파일로 무료로 저장하세요. 아이폰, 안드로이드, 데스크톱에서 모두 사용 가능하며, 별도의 앱 설치가 필요 없습니다."
 pubDate: 2026-02-12
 heroImage: "../../../assets/blog-images/tiktok-sound-mp3.png"
-heroAlt: "틱톡 사운드를 MP3로 다운로드하는 방법 (2026년 가이드) - 워터마크 없는 무료 HD 다운로드"
+heroAlt: "How to Download TikTok Sounds to MP3 (2026 Guide) - Free HD Download Without Watermark"
 keywords: ["how to download tiktok sound", "extract audio from tiktok", "tiktok sound to mp3", "save tiktok audio iphone", "tiktok mp3 downloader free", "download tiktok music"]
 monetization:
   primary_category: "none"

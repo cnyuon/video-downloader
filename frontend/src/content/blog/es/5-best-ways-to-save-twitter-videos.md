@@ -3,7 +3,7 @@ title: "Las 5 mejores maneras de guardar vídeos de Twitter en tu teléfono (202
 description: "Aprende a descargar videos de Twitter/X al carrete de tu iPhone o Android gratis. No necesitas ninguna app: guarda tuits con video en segundos usando un navegador."
 pubDate: 2026-02-11
 heroImage: "../../../assets/blog-images/save-twitter-videos.png"
-heroAlt: "Las 5 mejores maneras de guardar vídeos de Twitter en tu teléfono (2026) - Descarga gratis en HD sin marca de agua"
+heroAlt: "5 Best Ways to Save Twitter Videos to Your Phone (2026) - Free HD Download Without Watermark"
 keywords: ["how to save twitter video to camera roll iphone", "download tweet video without app", "save twitter video to phone android free", "twitter x video downloader no login", "how to download twitter gif as mp4"]
 monetization:
   primary_category: "none"

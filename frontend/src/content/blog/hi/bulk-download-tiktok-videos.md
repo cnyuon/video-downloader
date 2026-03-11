@@ -3,7 +3,7 @@ title: "अपने सभी TikTok वीडियो को बल्क म
 description: "क्या आप अपने सभी TikTok वीडियो एक साथ सेव करना चाहते हैं? जानें कि बैन लगने से पहले अपने डेटा का बैकअप कैसे लें या अपने कंटेंट को बैच में कैसे डाउनलोड करें।"
 pubDate: 2026-02-12
 heroImage: "../../../assets/blog-images/bulk-tiktok-download.png"
-heroAlt: "अपने सभी TikTok वीडियो को बल्क में डाउनलोड कैसे करें (बैकअप गाइड) - वाटरमार्क के बिना मुफ्त एचडी डाउनलोड"
+heroAlt: "How to Bulk Download All Your TikTok Videos (Backup Guide) - Free HD Download Without Watermark"
 keywords: ["bulk download tiktok videos", "download all tiktok videos at once", "backup tiktok account", "mass tiktok downloader", "save all liked tiktoks"]
 monetization:
   primary_category: "software"

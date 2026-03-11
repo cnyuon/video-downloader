@@ -3,7 +3,7 @@ title: "Comment télécharger en masse toutes vos vidéos TikTok (Guide de sauve
 description: "Vous souhaitez sauvegarder toutes vos vidéos TikTok en une seule fois ? Découvrez comment demander une sauvegarde de vos données ou télécharger votre contenu par lots avant une suspension."
 pubDate: 2026-02-12
 heroImage: "../../../assets/blog-images/bulk-tiktok-download.png"
-heroAlt: "Comment télécharger en masse toutes vos vidéos TikTok (Guide de sauvegarde) - Téléchargement gratuit en HD sans filigrane"
+heroAlt: "How to Bulk Download All Your TikTok Videos (Backup Guide) - Free HD Download Without Watermark"
 keywords: ["bulk download tiktok videos", "download all tiktok videos at once", "backup tiktok account", "mass tiktok downloader", "save all liked tiktoks"]
 monetization:
   primary_category: "software"

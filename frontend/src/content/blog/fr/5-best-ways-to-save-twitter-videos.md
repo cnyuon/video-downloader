@@ -3,7 +3,7 @@ title: "5 façons optimales d'enregistrer des vidéos Twitter sur votre téléph
 description: "Découvrez comment télécharger gratuitement des vidéos Twitter/X sur l'appareil photo de votre iPhone ou Android. Aucune application n'est nécessaire : enregistrez des tweets avec vidéo en quelques secondes grâce à votre navigateur."
 pubDate: 2026-02-11
 heroImage: "../../../assets/blog-images/save-twitter-videos.png"
-heroAlt: "5 façons optimales d'enregistrer des vidéos Twitter sur votre téléphone (2026) - Téléchargement gratuit en HD sans filigrane"
+heroAlt: "5 Best Ways to Save Twitter Videos to Your Phone (2026) - Free HD Download Without Watermark"
 keywords: ["how to save twitter video to camera roll iphone", "download tweet video without app", "save twitter video to phone android free", "twitter x video downloader no login", "how to download twitter gif as mp4"]
 monetization:
   primary_category: "none"

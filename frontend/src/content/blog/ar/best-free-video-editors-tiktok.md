@@ -1,9 +1,9 @@
 ---
 title: "أفضل برامج تحرير الفيديو المجانية لتطبيق تيك توك (2026)"
-description: "قارن أفضل برامج تحرير الفيديو المجانية لتيك توك في 2026. CapCut وDaVinci Resolve وiMovie والمزيد — اعثر على الأفضل لإنشاء محتوى فيروسي."
+description: "قارن بين أفضل برامج تحرير الفيديو المجانية لتطبيق TikTok في عام 2026. CapCut و DaVinci Resolve و iMovie وغيرها - اكتشف أيها الأسرع لإنشاء محتوى ينتشر بسرعة."
 pubDate: 2026-02-11
 heroImage: "../../../assets/blog-images/best-video-editors.png"
-heroAlt: "أفضل برامج تحرير الفيديو المجانية لتطبيق تيك توك (2026) - تنزيل مجاني عالي الدقة بدون علامة مائية"
+heroAlt: "Best Free Video Editors for TikTok (2026) - Free HD Download Without Watermark"
 keywords: ["best free video editor for tiktok beginners no watermark", "free tiktok video editor without watermark 2026", "capcut alternatives free no watermark", "how to edit tiktok videos for free on iphone", "best video editing app for tiktok android free"]
 monetization:
   primary_category: "software"

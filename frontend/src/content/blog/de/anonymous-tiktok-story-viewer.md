@@ -3,7 +3,7 @@ title: "Kann man TikTok-Stories anonym ansehen? (So funktioniert's)"
 description: "Fragst du dich, ob jemand sehen kann, dass du sein TikTok-Profil oder seine Story angesehen hast? Hier findest du eine vollständige Anleitung zum TikTok-Aufrufverlauf und wie du anonym zusehen kannst."
 pubDate: 2026-02-21
 heroImage: "../../../assets/blog-images/tiktok-anonymous-story-viewer.png"
-heroAlt: "Kann man TikTok-Stories anonym ansehen? (So funktioniert's) - Kostenloser HD-Download Ohne Wasserzeichen"
+heroAlt: "Can You View TikTok Stories Anonymously? (How It Works) - Free HD Download Without Watermark"
 tags: ["TikTok", "Guides", "Privacy"]
 ---
 
@@ -21,7 +21,7 @@ TikTok verfügt über eine Funktion namens „Profilansichtsverlauf“. Wenn die
 
 Es gibt jedoch einen Haken: **Es funktioniert nur, wenn *beide* Benutzer die Funktion aktiviert haben.**
 
-Wenn Sie die Profilansichtshistorie in Ihren Datenschutzeinstellungen deaktiviert haben, können Sie beliebig viele Profile ansehen, ohne dass die jeweiligen Ersteller benachrichtigt werden. Im Gegenzug können Sie dann aber auch nicht sehen, wer Ihr Profil besucht.
+Wenn Sie den Profilverlauf in Ihren Datenschutzeinstellungen deaktiviert haben, können Sie beliebig viele Profile ansehen, ohne dass die jeweiligen Ersteller benachrichtigt werden. Im Gegenzug können Sie dann aber auch nicht sehen, wer Ihr Profil besucht.
 
 ### So deaktivieren Sie den Profilansichtsverlauf:
 1. Öffne die TikTok-App und gehe zu deinem Profil.

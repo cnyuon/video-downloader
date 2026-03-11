@@ -3,7 +3,7 @@ title: "Twitter動画をスマホに保存する5つのベストな方法（2026
 description: "Twitter/X動画をiPhoneまたはAndroidのカメラロールに無料でダウンロードする方法をご紹介します。アプリは不要。ブラウザを使って動画付きのツイートを数秒で保存できます。"
 pubDate: 2026-02-11
 heroImage: "../../../assets/blog-images/save-twitter-videos.png"
-heroAlt: "Twitter動画をスマホに保存する5つのベストな方法（2026年） - ウォーターマークなしの無料HDダウンロード"
+heroAlt: "5 Best Ways to Save Twitter Videos to Your Phone (2026) - Free HD Download Without Watermark"
 keywords: ["how to save twitter video to camera roll iphone", "download tweet video without app", "save twitter video to phone android free", "twitter x video downloader no login", "how to download twitter gif as mp4"]
 monetization:
   primary_category: "none"
@@ -49,7 +49,7 @@ PCとMacでも動作します。動画はMP4形式でデバイスに直接保存
 - モバイルでは動作しません。
 - Chrome ではポリシー違反のため、頻繁にウェブストアから削除されます。
 
-**判定:** 危険であり、デスクトップ専用です。
+**評決:** 危険であり、デスクトップ専用です。
 
 ## 方法4: 画面録画
 

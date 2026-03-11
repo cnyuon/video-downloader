@@ -3,7 +3,7 @@ title: "アプリを使わずにiPhoneでTikTok動画をダウンロードする
 description: "怪しいアプリやショートカットをインストールせずに、TikTok動画をiPhoneのカメラロールに保存する最も簡単な方法をご紹介します。iOS 18以降で動作します。"
 pubDate: 2026-02-12
 heroImage: "../../../assets/blog-images/tiktok-iphone-download.png"
-heroAlt: "アプリを使わずにiPhoneでTikTok動画をダウンロードする方法（2026年） - ウォーターマークなしの無料HDダウンロード"
+heroAlt: "How to Download TikTok Videos on iPhone Without App (2026) - Free HD Download Without Watermark"
 keywords: ["download tiktok iphone", "save tiktok to camera roll", "download tiktok no app ios", "tiktok video downloader iphone", "how to save tiktok without watermark on iphone"]
 monetization:
   primary_category: "none"

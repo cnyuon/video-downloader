@@ -3,7 +3,7 @@ title: "Como baixar todos os seus vídeos do TikTok de uma só vez (Guia de back
 description: "Quer salvar todos os seus vídeos do TikTok de uma só vez? Aprenda como solicitar o backup dos seus dados ou baixar seu conteúdo em lote antes de ser banido."
 pubDate: 2026-02-12
 heroImage: "../../../assets/blog-images/bulk-tiktok-download.png"
-heroAlt: "Como baixar todos os seus vídeos do TikTok de uma só vez (Guia de backup) - Baixar Grátis em HD Sem Marca D'água"
+heroAlt: "How to Bulk Download All Your TikTok Videos (Backup Guide) - Free HD Download Without Watermark"
 keywords: ["bulk download tiktok videos", "download all tiktok videos at once", "backup tiktok account", "mass tiktok downloader", "save all liked tiktoks"]
 monetization:
   primary_category: "software"

@@ -1,9 +1,9 @@
 ---
 title: "TikTokに最適な無料動画編集ソフト（2026年版）"
-description: "2026年のTikTok向け無料動画編集アプリを比較。CapCut、DaVinci Resolve、iMovieなど — バイラルコンテンツ作成に最適なツールを見つけましょう。"
+description: "2026 年の TikTok に最適な無料ビデオ エディターを比較します。CapCut、DaVinci Resolve、iMovie など、バイラル コンテンツを作成するのに最も速いものを見つけます。"
 pubDate: 2026-02-11
 heroImage: "../../../assets/blog-images/best-video-editors.png"
-heroAlt: "TikTokに最適な無料動画編集ソフト（2026年版） - ウォーターマークなしの無料HDダウンロード"
+heroAlt: "Best Free Video Editors for TikTok (2026) - Free HD Download Without Watermark"
 keywords: ["best free video editor for tiktok beginners no watermark", "free tiktok video editor without watermark 2026", "capcut alternatives free no watermark", "how to edit tiktok videos for free on iphone", "best video editing app for tiktok android free"]
 monetization:
   primary_category: "software"

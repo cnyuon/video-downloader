@@ -1,0 +1,4 @@
+# Firecrawl cache
+.firecrawl/
+pipeline/
+update_row_3.py
