@@ -26,10 +26,10 @@ A maneira mais segura, rápida e confiável de assistir a um Story do TikTok sec
 
 Um **visualizador anônimo de Stories do TikTok** garante que sua visualização seja 100% invisível para o criador.
 
-Veja como fazer isso usando uma ferramenta gratuita como o **[MediaTools TikTok Viewer & Downloader](/tiktok-downloader/)**:
+Veja como fazer isso usando uma ferramenta gratuita como o **[MediaTools TikTok Viewer & Downloader](/pt/tiktok-downloader/)**:
 
 1.  **Copie a URL do Perfil do TikTok:** Vá para o perfil do usuário cujo Story você deseja visualizar. Toque nos três pontos no canto superior direito e selecione "Copiar link".
-2.  **Cole a URL no Visualizador:** Abra o [MediaTools TikTok Viewer](/tiktok-downloader/) e cole o link do perfil na caixa de entrada.
+2.  **Cole a URL no Visualizador:** Abra o [MediaTools TikTok Viewer](/pt/tiktok-downloader/) e cole o link do perfil na caixa de entrada.
 3.  **Visualize e Baixe Anonimamente:** Clique no botão "Download". A ferramenta carregará todos os vídeos e Stories públicos disponíveis desse usuário. Agora você pode assistir ao Story diretamente na página ou baixá-lo para o seu dispositivo para assistir offline — tudo sem que o usuário saiba.
 
 Este método é o mais eficaz porque sua conta pessoal do TikTok nunca entra em contato com o conteúdo do criador.
@@ -67,7 +67,7 @@ Sim. Quando você assiste ao Story de alguém no TikTok, seu nome de usuário é
 Não. Ferramentas de visualização anônima de Stories só podem acessar conteúdo de perfis públicos. Se uma conta for definida como privada, você deve ser um seguidor aprovado para ver o conteúdo dela, e sua visualização será visível para ela.
 
 **É gratuito usar um visualizador anônimo de Stories do TikTok?**
-Sim, ferramentas respeitáveis como o [MediaTools TikTok Viewer](/tiktok-downloader/) são totalmente gratuitas e não exigem nenhuma instalação de software.
+Sim, ferramentas respeitáveis como o [MediaTools TikTok Viewer](/pt/tiktok-downloader/) são totalmente gratuitas e não exigem nenhuma instalação de software.
 
 ## Conclusão
 

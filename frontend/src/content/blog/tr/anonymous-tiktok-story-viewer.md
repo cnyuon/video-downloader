@@ -26,10 +26,10 @@ Bir TikTok hikayesini gizlice izlemenin en güvenli, en hızlı ve en güvenilir
 
 Bir **anonim TikTok hikaye görüntüleyici**, görüntülemenizin içerik oluşturucuya %100 görünmez olmasını garanti eder.
 
-İşte **[MediaTools TikTok Görüntüleyici ve İndirici](/tiktok-downloader/)** gibi ücretsiz bir araç kullanarak bunu nasıl yapacağınız:
+İşte **[MediaTools TikTok Görüntüleyici ve İndirici](/tr/tiktok-downloader/)** gibi ücretsiz bir araç kullanarak bunu nasıl yapacağınız:
 
 1.  **TikTok Profil URL'sini Kopyalayın:** Hikayesini görüntülemek istediğiniz kullanıcının profiline gidin. Sağ üst köşedeki üç noktaya dokunun ve "Bağlantıyı kopyala"yı seçin.
-2.  **URL'yi Görüntüleyiciye Yapıştırın:** [MediaTools TikTok Görüntüleyici'yi](/tiktok-downloader/) açın ve profil bağlantısını giriş kutusuna yapıştırın.
+2.  **URL'yi Görüntüleyiciye Yapıştırın:** [MediaTools TikTok Görüntüleyici'yi](/tr/tiktok-downloader/) açın ve profil bağlantısını giriş kutusuna yapıştırın.
 3.  **Anonim Olarak Görüntüleyin ve İndirin:** "İndir" düğmesine tıklayın. Araç, o kullanıcıdan mevcut tüm herkese açık videoları ve hikayeleri yükleyecektir. Artık hikayeyi doğrudan sayfada izleyebilir veya çevrimdışı izlemek için cihazınıza indirebilirsiniz—tüm bunlar kullanıcının haberi olmadan gerçekleşir.
 
 Bu yöntem en etkilidir çünkü kişisel TikTok hesabınız içerik oluşturucunun içeriğiyle asla temas kurmaz.
@@ -67,7 +67,7 @@ Evet. Birinin TikTok Hikayesini izlediğinizde, kullanıcı adınız onların iz
 Hayır. Anonim hikaye görüntüleyici araçları yalnızca herkese açık profillerdeki içeriğe erişebilir. Bir hesap gizli olarak ayarlanmışsa, içeriğini görmek için onaylanmış bir takipçi olmanız gerekir ve görüntülemeniz onlara görünür olacaktır.
 
 **Anonim bir TikTok hikaye görüntüleyici kullanmak ücretsiz mi?**
-Evet, [MediaTools TikTok Görüntüleyici](/tiktok-downloader/) gibi güvenilir araçların kullanımı tamamen ücretsizdir ve herhangi bir yazılım kurulumu gerektirmez.
+Evet, [MediaTools TikTok Görüntüleyici](/tr/tiktok-downloader/) gibi güvenilir araçların kullanımı tamamen ücretsizdir ve herhangi bir yazılım kurulumu gerektirmez.
 
 ## Sonuç
 

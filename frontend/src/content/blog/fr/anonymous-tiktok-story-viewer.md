@@ -26,10 +26,10 @@ Le moyen le plus sûr, le plus rapide et le plus fiable de regarder une Story Ti
 
 Une **visionneuse de Stories TikTok anonyme** garantit que votre vue est 100 % invisible pour le créateur.
 
-Voici comment procéder en utilisant un outil gratuit comme le **[MediaTools TikTok Viewer & Downloader](/tiktok-downloader/)** :
+Voici comment procéder en utilisant un outil gratuit comme le **[MediaTools TikTok Viewer & Downloader](/fr/tiktok-downloader/)** :
 
 1.  **Copiez l'URL du profil TikTok :** Allez sur le profil de l'utilisateur dont vous souhaitez voir la Story. Appuyez sur les trois points dans le coin supérieur droit et sélectionnez « Copier le lien ».
-2.  **Collez l'URL dans la visionneuse :** Ouvrez le [MediaTools TikTok Viewer](/tiktok-downloader/) et collez le lien du profil dans le champ de saisie.
+2.  **Collez l'URL dans la visionneuse :** Ouvrez le [MediaTools TikTok Viewer](/fr/tiktok-downloader/) et collez le lien du profil dans le champ de saisie.
 3.  **Regardez et téléchargez anonymement :** Cliquez sur le bouton « Télécharger ». L'outil chargera toutes les vidéos et Stories publiques disponibles de cet utilisateur. Vous pouvez maintenant regarder la Story directement sur la page ou la télécharger sur votre appareil pour la regarder hors ligne — le tout sans que l'utilisateur ne le sache jamais.
 
 Cette méthode est la plus efficace car votre compte TikTok personnel n'entre jamais en contact avec le contenu du créateur.
@@ -67,7 +67,7 @@ Oui. Lorsque vous regardez la Story TikTok de quelqu'un, votre nom d'utilisateur
 Non. Les outils de visionnage de Stories anonymes ne peuvent accéder qu'au contenu des profils publics. Si un compte est défini comme privé, vous devez être un abonné approuvé pour voir son contenu, et votre vue leur sera visible.
 
 **Est-il gratuit d'utiliser une visionneuse de Stories TikTok anonyme ?**
-Oui, les outils réputés comme le [MediaTools TikTok Viewer](/tiktok-downloader/) sont entièrement gratuits et ne nécessitent aucune installation de logiciel.
+Oui, les outils réputés comme le [MediaTools TikTok Viewer](/fr/tiktok-downloader/) sont entièrement gratuits et ne nécessitent aucune installation de logiciel.
 
 ## En résumé
 
