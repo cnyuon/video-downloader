@@ -37,7 +37,7 @@ monetization:
 <a name="how-to-download"></a>
 ## 틱톡 썸네일을 3단계로 다운로드하는 방법
 
-저희는 이 과정을 즉각적이고 쉽게 만들기 위해 [썸네일 추출기](/thumbnail-grabber/) 도구를 만들었습니다.
+저희는 이 과정을 즉각적이고 쉽게 만들기 위해 [썸네일 추출기](/ko/thumbnail-grabber/) 도구를 만들었습니다.
 
 ### 1단계: 틱톡 영상 링크 복사
 틱톡 앱 또는 웹사이트를 열고 원하는 영상을 찾은 다음 **공유** 버튼을 탭하세요. 그런 다음 **링크 복사**를 선택하세요.
@@ -45,7 +45,7 @@ monetization:
 ![Step 1: Copy the TikTok Video Link](../../../assets/blog-images/copy-tiktok-link.png)
 
 ### 2단계: 다운로더에 링크 붙여넣기
-[MediaTools 썸네일 추출기](/thumbnail-grabber/)로 이동하세요. 복사한 URL을 입력 상자에 붙여넣으세요.
+[MediaTools 썸네일 추출기](/ko/thumbnail-grabber/)로 이동하세요. 복사한 URL을 입력 상자에 붙여넣으세요.
 
 ![Step 2: Paste the link into the downloader](../../../assets/blog-images/paste-link-thumbnail.png)
 
@@ -96,11 +96,11 @@ monetization:
 
 흐릿하고 지저분한 스크린샷에 만족하지 마세요. 어떤 틱톡 영상이든 원본 고품질 썸네일을 사용하여 콘텐츠 전략을 향상시키세요.
 
-**[지금 무료 틱톡 썸네일 다운로더를 사용해보세요](/thumbnail-grabber/)**
+**[지금 무료 틱톡 썸네일 다운로더를 사용해보세요](/ko/thumbnail-grabber/)**
 
 ---
 
 **관련 MediaTools:**
-- [틱톡 영상 다운로더](/tiktok-downloader/)
-- [틱톡 사운드 다운로더](/tiktok-sound-downloader/)
-- [유튜브 썸네일 추출기](/thumbnail-grabber/)
+- [틱톡 영상 다운로더](/ko/tiktok-downloader/)
+- [틱톡 사운드 다운로더](/ko/tiktok-sound-downloader/)
+- [유튜브 썸네일 추출기](/ko/thumbnail-grabber/)
