@@ -26,10 +26,10 @@ La forma más segura, rápida y fiable de ver una historia de TikTok en secreto 
 
 Un **visor anónimo de historias de TikTok** garantiza que tu visualización sea 100% invisible para el creador.
 
-Así es como se hace usando una herramienta gratuita como el **[Visor y Descargador de TikTok de MediaTools](/tiktok-downloader/)**:
+Así es como se hace usando una herramienta gratuita como el **[Visor y Descargador de TikTok de MediaTools](/es/tiktok-downloader/)**:
 
 1.  **Copia la URL del Perfil de TikTok:** Ve al perfil del usuario cuya historia quieres ver. Toca los tres puntos en la esquina superior derecha y selecciona "Copiar enlace".
-2.  **Pega la URL en el Visor:** Abre el [Visor de TikTok de MediaTools](/tiktok-downloader/) y pega el enlace del perfil en el cuadro de entrada.
+2.  **Pega la URL en el Visor:** Abre el [Visor de TikTok de MediaTools](/es/tiktok-downloader/) y pega el enlace del perfil en el cuadro de entrada.
 3.  **Visualiza y Descarga Anónimamente:** Haz clic en el botón "Descargar". La herramienta cargará todos los videos e historias públicas disponibles de ese usuario. Ahora puedes ver la historia directamente en la página o descargarla a tu dispositivo para verla sin conexión, todo sin que el usuario lo sepa.
 
 Este método es el más efectivo porque tu cuenta personal de TikTok nunca entra en contacto con el contenido del creador.
@@ -67,7 +67,7 @@ Sí. Cuando ves la Historia de TikTok de alguien, tu nombre de usuario se añade
 No. Las herramientas de visor anónimo de historias solo pueden acceder a contenido de perfiles públicos. Si una cuenta está configurada como privada, debes ser un seguidor aprobado para ver su contenido, y tu visualización será visible para ellos.
 
 **¿Es gratis usar un visor anónimo de historias de TikTok?**
-Sí, herramientas reputadas como el [Visor de TikTok de MediaTools](/tiktok-downloader/) son completamente gratuitas y no requieren ninguna instalación de software.
+Sí, herramientas reputadas como el [Visor de TikTok de MediaTools](/es/tiktok-downloader/) son completamente gratuitas y no requieren ninguna instalación de software.
 
 ## En Resumen
 
