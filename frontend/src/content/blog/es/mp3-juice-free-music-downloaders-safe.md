@@ -64,11 +64,11 @@ Si quieres guardar una canción, un sonido viral o un clip de audio específico,
 
 Este enfoque es más seguro porque no dependes de un motor de búsqueda dudoso que extrae archivos de fuentes desconocidas y potencialmente maliciosas. Simplemente estás aislando la pista de audio de un archivo de video disponible públicamente.
 
-Aquí te explicamos cómo hacerlo de forma segura con una herramienta limpia y sin anuncios como el **[Convertidor de Video a MP3 de MediaTools](/video-to-mp3/)**:
+Aquí te explicamos cómo hacerlo de forma segura con una herramienta limpia y sin anuncios como el **[Convertidor de Video a MP3 de MediaTools](/es/video-to-mp3/)**:
 
 1.  **Encuentra el video fuente:** Localiza el video en una plataforma como TikTok, Twitter o Facebook que contenga el audio que deseas.
 2.  **Copia el enlace del video:** Usa el botón "Compartir" en la aplicación o sitio web y selecciona "Copiar enlace".
-3.  **Pega y convierte:** Navega hasta el [Convertidor de Video a MP3 de MediaTools](/video-to-mp3/), pega la URL en el campo y haz clic en **Obtener información**.
+3.  **Pega y convierte:** Navega hasta el [Convertidor de Video a MP3 de MediaTools](/es/video-to-mp3/), pega la URL en el campo y haz clic en **Obtener información**.
 4.  **Descarga de forma segura:** La herramienta aislará la pista de audio en el servidor. Haz clic en el botón de descarga para guardar el archivo MP3 limpio directamente en tu dispositivo, sin ventanas emergentes, sin redirecciones y sin riesgo de malware.
 
 ### Preguntas Frecuentes (FAQ)
@@ -84,4 +84,4 @@ Ya no existe un sitio web "oficial" de MP3 Juice. El original fue cerrado, y tod
 
 ***
 
-No arriesgues la seguridad de tu dispositivo por una canción gratis. Para una forma segura, limpia y fiable de guardar audio, comienza extrayéndolo del video fuente utilizando el **[Convertidor de Video a MP3](/video-to-mp3/)** gratuito.
+No arriesgues la seguridad de tu dispositivo por una canción gratis. Para una forma segura, limpia y fiable de guardar audio, comienza extrayéndolo del video fuente utilizando el **[Convertidor de Video a MP3](/es/video-to-mp3/)** gratuito.
