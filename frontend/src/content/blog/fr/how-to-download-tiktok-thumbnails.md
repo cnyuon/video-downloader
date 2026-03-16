@@ -37,7 +37,7 @@ Une miniature est la première impression de votre vidéo. Une version nette et 
 <a name="how-to-download"></a>
 ## Comment télécharger n'importe quelle miniature TikTok en 3 étapes simples
 
-Nous avons conçu notre outil [Récupérateur de miniatures](/thumbnail-grabber/) pour rendre ce processus instantané et facile.
+Nous avons conçu notre outil [Récupérateur de miniatures](/fr/thumbnail-grabber/) pour rendre ce processus instantané et facile.
 
 ### Étape 1 : Copiez le lien de la vidéo TikTok
 Ouvrez l'application ou le site web TikTok, trouvez la vidéo que vous souhaitez, et appuyez sur le bouton **Partager**. Ensuite, sélectionnez **Copier le lien**.
@@ -45,7 +45,7 @@ Ouvrez l'application ou le site web TikTok, trouvez la vidéo que vous souhaitez
 ![Étape 1 : Copiez le lien de la vidéo TikTok](../../../assets/blog-images/copy-tiktok-link.png)
 
 ### Étape 2 : Collez le lien dans le téléchargeur
-Accédez au [Récupérateur de miniatures MediaTools](/thumbnail-grabber/). Collez l'URL que vous avez copiée dans le champ de saisie.
+Accédez au [Récupérateur de miniatures MediaTools](/fr/thumbnail-grabber/). Collez l'URL que vous avez copiée dans le champ de saisie.
 
 ![Étape 2 : Collez le lien dans le téléchargeur](../../../assets/blog-images/paste-link-thumbnail.png)
 
@@ -96,11 +96,11 @@ Oui, le Récupérateur de miniatures MediaTools est 100 % gratuit et illimité. 
 
 Arrêtez de vous contenter de captures d'écran floues et encombrées. Élevez votre stratégie de contenu en utilisant la miniature originale et de haute qualité pour n'importe quelle vidéo TikTok.
 
-**[Essayez notre téléchargeur de miniatures TikTok gratuit dès maintenant](/thumbnail-grabber/)**
+**[Essayez notre téléchargeur de miniatures TikTok gratuit dès maintenant](/fr/thumbnail-grabber/)**
 
 ---
 
 **Outils MediaTools associés :**
-- [Téléchargeur de vidéos TikTok](/tiktok-downloader/)
-- [Téléchargeur de sons TikTok](/tiktok-sound-downloader/)
-- [Récupérateur de miniatures YouTube](/thumbnail-grabber/)
+- [Téléchargeur de vidéos TikTok](/fr/tiktok-downloader/)
+- [Téléchargeur de sons TikTok](/fr/tiktok-sound-downloader/)
+- [Récupérateur de miniatures YouTube](/fr/thumbnail-grabber/)

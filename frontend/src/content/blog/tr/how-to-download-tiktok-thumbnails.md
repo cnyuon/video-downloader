@@ -37,7 +37,7 @@ Bir küçük resim, videonuzun ilk izlenimidir. Temiz, HD bir sürüm, içerik s
 <a name="how-to-download"></a>
 ## Herhangi Bir TikTok Küçük Resmini 3 Basit Adımda Nasıl İndirirsiniz?
 
-Bu süreci anında ve kolay hale getirmek için [Küçük Resim Yakalayıcı](/thumbnail-grabber/) aracımızı geliştirdik.
+Bu süreci anında ve kolay hale getirmek için [Küçük Resim Yakalayıcı](/tr/thumbnail-grabber/) aracımızı geliştirdik.
 
 ### Adım 1: TikTok Video Bağlantısını Kopyalayın
 TikTok uygulamasını veya web sitesini açın, istediğiniz videoyu bulun ve **Paylaş** düğmesine dokunun. Ardından, **Bağlantıyı Kopyala**'yı seçin.
@@ -45,7 +45,7 @@ TikTok uygulamasını veya web sitesini açın, istediğiniz videoyu bulun ve **
 ![Step 1: Copy the TikTok Video Link](../../../assets/blog-images/copy-tiktok-link.png)
 
 ### Adım 2: Bağlantıyı İndiriciye Yapıştırın
-[MediaTools Küçük Resim Yakalayıcı](/thumbnail-grabber/) sayfasına gidin. Kopyaladığınız URL'yi giriş kutusuna yapıştırın.
+[MediaTools Küçük Resim Yakalayıcı](/tr/thumbnail-grabber/) sayfasına gidin. Kopyaladığınız URL'yi giriş kutusuna yapıştırın.
 
 ![Step 2: Paste the link into the downloader](../../../assets/blog-images/paste-link-thumbnail.png)
 
@@ -96,11 +96,11 @@ Evet, MediaTools Küçük Resim Yakalayıcı %100 ücretsiz ve sınırsızdır. 
 
 Bulanık, dağınık ekran görüntüleriyle yetinmeyi bırakın. Herhangi bir TikTok videosu için orijinal, yüksek kaliteli küçük resmi kullanarak içerik stratejinizi yükseltin.
 
-**[Ücretsiz TikTok Küçük Resim İndiricimizi Şimdi Deneyin](/thumbnail-grabber/)**
+**[Ücretsiz TikTok Küçük Resim İndiricimizi Şimdi Deneyin](/tr/thumbnail-grabber/)**
 
 ---
 
 **İlgili MediaTools Araçları:**
-- [TikTok Video İndirici](/tiktok-downloader/)
-- [TikTok Ses İndirici](/tiktok-sound-downloader/)
-- [YouTube Küçük Resim Yakalayıcı](/thumbnail-grabber/)
+- [TikTok Video İndirici](/tr/tiktok-downloader/)
+- [TikTok Ses İndirici](/tr/tiktok-sound-downloader/)
+- [YouTube Küçük Resim Yakalayıcı](/tr/thumbnail-grabber/)

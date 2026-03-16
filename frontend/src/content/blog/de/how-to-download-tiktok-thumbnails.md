@@ -37,7 +37,7 @@ Ein Thumbnail ist der erste Eindruck Ihres Videos. Eine saubere HD-Version ist e
 <a name="how-to-download"></a>
 ## So laden Sie jedes TikTok-Thumbnail in 3 einfachen Schritten herunter
 
-Wir haben unser [Thumbnail Grabber](/thumbnail-grabber/)-Tool entwickelt, um diesen Prozess sofort und einfach zu gestalten.
+Wir haben unser [Thumbnail Grabber](/de/thumbnail-grabber/)-Tool entwickelt, um diesen Prozess sofort und einfach zu gestalten.
 
 ### Schritt 1: Kopieren Sie den TikTok-Videolink
 Öffnen Sie die TikTok-App oder -Website, suchen Sie das gewünschte Video und tippen Sie auf die Schaltfläche **Teilen**. Wählen Sie dann **Link kopieren**.
@@ -45,7 +45,7 @@ Wir haben unser [Thumbnail Grabber](/thumbnail-grabber/)-Tool entwickelt, um die
 ![Step 1: Copy the TikTok Video Link](../../../assets/blog-images/copy-tiktok-link.png)
 
 ### Schritt 2: Fügen Sie den Link in den Downloader ein
-Navigieren Sie zum [MediaTools Thumbnail Grabber](/thumbnail-grabber/). Fügen Sie die kopierte URL in das Eingabefeld ein.
+Navigieren Sie zum [MediaTools Thumbnail Grabber](/de/thumbnail-grabber/). Fügen Sie die kopierte URL in das Eingabefeld ein.
 
 ![Step 2: Paste the link into the downloader](../../../assets/blog-images/paste-link-thumbnail.png)
 
@@ -96,11 +96,11 @@ Ja, der MediaTools Thumbnail Grabber ist 100% kostenlos und unbegrenzt. Es gibt 
 
 Geben Sie sich nicht mit unscharfen, überladenen Screenshots zufrieden. Verbessern Sie Ihre Content-Strategie, indem Sie das originale, hochwertige Thumbnail für jedes TikTok-Video verwenden.
 
-**[Probieren Sie jetzt unseren kostenlosen TikTok Thumbnail Downloader aus](/thumbnail-grabber/)**
+**[Probieren Sie jetzt unseren kostenlosen TikTok Thumbnail Downloader aus](/de/thumbnail-grabber/)**
 
 ---
 
 **Verwandte MediaTools:**
-- [TikTok Video Downloader](/tiktok-downloader/)
-- [TikTok Sound Downloader](/tiktok-sound-downloader/)
-- [YouTube Thumbnail Grabber](/thumbnail-grabber/)
+- [TikTok Video Downloader](/de/tiktok-downloader/)
+- [TikTok Sound Downloader](/de/tiktok-sound-downloader/)
+- [YouTube Thumbnail Grabber](/de/thumbnail-grabber/)
