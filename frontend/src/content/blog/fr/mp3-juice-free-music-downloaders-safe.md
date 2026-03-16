@@ -1,4 +1,3 @@
-```fr
 ---
 title: "MP3 Juice est-il sûr en 2026 ? Les risques de virus et de logiciels malveillants"
 description: "Vous cherchez un site MP3 Juice sûr ? Nous révélons la vérité sur les logiciels malveillants, les virus et les risques juridiques sur les sites clones et vous montrons un moyen plus sûr de télécharger de l'audio."
@@ -86,4 +85,3 @@ Il n'y a plus de site web "officiel" de MP3 Juice. L'original a été fermé, et
 ***
 
 Ne risquez pas la sécurité de votre appareil pour une chanson gratuite. Pour un moyen sûr, propre et fiable de sauvegarder de l'audio, commencez par l'extraire de la vidéo source à l'aide du **[Convertisseur Vidéo en MP3](/video-to-mp3/)** gratuit.
-```
