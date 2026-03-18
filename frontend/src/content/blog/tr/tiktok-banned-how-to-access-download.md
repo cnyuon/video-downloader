@@ -59,7 +59,7 @@ Nerede yaşıyor olursanız olun, en sevdiğiniz içeriklerin yedek kopyalarına
 
 1. TikTok uygulamasını açın ve saklamak istediğiniz videoyu bulun.
 2. Bağlantıyı kopyalayın (**Paylaş** → **Bağlantıyı Kopyala** seçeneğine dokunun).
-3. [MediaTools TikTok Downloader](/tr/tiktok-downloader/)] adresine gidin.
+3. [MediaTools TikTok Downloader](/tr/tiktok-downloader/) adresine gidin.
 4. Bağlantıyı yapıştırın ve indirin — videolar **filigransız**HD olarak kaydedilir.
 
 ### TikTok'lardan Ses Dosyası Çıkarma
@@ -71,7 +71,7 @@ Belirli bir TikTok sesini mi seviyorsunuz? Ses dosyasını sonsuza kadar saklaya
 Eğer bir içerik üreticisiyseniz, kendi videolarınızın yedeklerini alın:
 1. TikTok profilinize gidin.
 2. Yüklediğiniz her videonun bağlantısını kopyalayın.
-3. [MediaTools](/tr/tiktok-downloader/)] aracılığıyla temiz kopyaları indirin.
+3. [MediaTools](/tr/tiktok-downloader/) aracılığıyla temiz kopyaları indirin.
 
 Bu sayede, platform bölgenizde kullanılamaz hale gelse bile, tüm içeriğinize erişmeye devam edersiniz.
 
@@ -113,6 +113,6 @@ Kısıtlamaların sizi etkilemesini beklemeyin. Bugün 10 dakikanızı ayırarak
 İçeriğiniz korunmaya değer. [MediaTools](/) bunu kolay ve ücretsiz hale getiriyor.
 
 **İlgili kılavuzlar:**
-- [TikTok Videolarını Filigran Olmadan Nasıl İndirebilirsiniz](/tr/blog/how-to-download-tiktok-without-watermark/)]
-- [TikTok İçerik Oluşturucuları İçin En İyi Ücretsiz Video Düzenleme Araçları](/tr/blog/best-free-video-editors-tiktok/)]
-- [Twitter Videolarını Kaydetmenin En İyi 5 Yolu](/tr/blog/5-best-ways-to-save-twitter-videos/)]
+- [TikTok Videolarını Filigran Olmadan Nasıl İndirebilirsiniz](/tr/blog/how-to-download-tiktok-without-watermark/)
+- [TikTok İçerik Oluşturucuları İçin En İyi Ücretsiz Video Düzenleme Araçları](/tr/blog/best-free-video-editors-tiktok/)
+- [Twitter Videolarını Kaydetmenin En İyi 5 Yolu](/tr/blog/5-best-ways-to-save-twitter-videos/)

@@ -35,14 +35,14 @@ Apple, dosya indirmeyi biraz karmaşık hale getiriyor. İşte iOS kullanıcıla
 Android çok daha basit:
 
 1. TikTok uygulamasından video bağlantısını kopyalayın.
-2. Chrome'u açın ve [MediaTools TikTok Downloader](/tr/tiktok-downloader/)] adresine gidin.
+2. Chrome'u açın ve [MediaTools TikTok Downloader](/tr/tiktok-downloader/) adresine gidin.
 3. Bağlantıyı yapıştırın ve **Videoyu Al** seçeneğine dokunun.
 4. **Videoyu İndir** seçeneğine dokunun. Doğrudan Galerinize kaydedilecektir.
 
 ## TikTok Videoları Bilgisayarda/Mac'te Nasıl Kaydedilir
 
 1. TikTok videosuna sağ tıklayın → Bağlantı Adresini Kopyala.
-2. Bunu masaüstü tarayıcınızdaki [MediaTools](/tr/tiktok-downloader/)] klasörüne yapıştırın.
+2. Bunu masaüstü tarayıcınızdaki [MediaTools](/tr/tiktok-downloader/) klasörüne yapıştırın.
 3. İndir'e tıklayın. MP4 dosyası İndirilenler klasörünüze kaydedilecektir.
 
 ## Sıkça Sorulan Sorular
@@ -61,8 +61,8 @@ Hayır, aracımız gizliliğe saygı duyar ve yalnızca herkese açık hesaplard
 Doğru araca sahip olduğunuzda, TikTok videolarını filigran olmadan indirmek çok kolay. Gizli ücretler veya can sıkıcı açılır pencereler olmadan hızlı, ücretsiz ve güvenli indirmeler için [MediaTools](/)]'ı tercih edin.
 
 **İlgili, faydalı bulabileceğiniz kılavuzlar:**
-- [TikTok Kısıtlı mı? Videolarınızı Her Yerden Nasıl Kaydedebilirsiniz](/tr/blog/tiktok-banned-how-to-access-download/)]
-- [TikTok İçerik Oluşturucuları İçin En İyi Ücretsiz Video Düzenleme Araçları](/tr/blog/best-free-video-editors-tiktok/)]
-- [Twitter Videolarını Kaydetmenin En İyi 5 Yolu](/tr/blog/5-best-ways-to-save-twitter-videos/)]
+- [TikTok Kısıtlı mı? Videolarınızı Her Yerden Nasıl Kaydedebilirsiniz](/tr/blog/tiktok-banned-how-to-access-download/)
+- [TikTok İçerik Oluşturucuları İçin En İyi Ücretsiz Video Düzenleme Araçları](/tr/blog/best-free-video-editors-tiktok/)
+- [Twitter Videolarını Kaydetmenin En İyi 5 Yolu](/tr/blog/5-best-ways-to-save-twitter-videos/)
 
 İyi indirmeler!

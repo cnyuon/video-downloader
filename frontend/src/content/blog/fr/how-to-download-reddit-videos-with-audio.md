@@ -31,7 +31,7 @@ Cependant, lorsque vous appuyez sur « Enregistrer la vidéo » sur votre tél
 
 L'application native étant peu fiable, la meilleure façon de garantir l'obtention du fichier multimédia complet est d'utiliser un téléchargeur externe capable d'assembler les flux audio et vidéo avant de vous remettre le fichier.
 
-Alors que MediaTools se spécialise dans des plateformes comme [Twitter](/fr/twitter-downloader/), [TikTok](/fr/tiktok-downloader/) et [Facebook](/fr/facebook-downloader/)], le processus de téléchargement des vidéos Reddit fonctionne de manière similaire dans les outils Web gratuits les plus populaires.
+Alors que MediaTools se spécialise dans des plateformes comme [Twitter](/fr/twitter-downloader/), [TikTok](/fr/tiktok-downloader/) et [Facebook](/fr/facebook-downloader/), le processus de téléchargement des vidéos Reddit fonctionne de manière similaire dans les outils Web gratuits les plus populaires.
 
 Voici exactement comment procéder :
 
@@ -70,4 +70,4 @@ Vérifiez toujours la présence d'une petite icône de haut-parleur avec un « 
 
 ***
 
-Vous souhaitez enregistrer des vidéos provenant d'autres plateformes ? Essayez dès aujourd'hui notre [TikTok Downloader (No Watermark)](/fr/tiktok-downloader/)] ou notre [Facebook Video Saver](/fr/facebook-downloader/)].
+Vous souhaitez enregistrer des vidéos provenant d'autres plateformes ? Essayez dès aujourd'hui notre [TikTok Downloader (No Watermark)](/fr/tiktok-downloader/) ou notre [Facebook Video Saver](/fr/facebook-downloader/).

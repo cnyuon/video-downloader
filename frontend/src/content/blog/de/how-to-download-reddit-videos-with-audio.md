@@ -31,7 +31,7 @@ Tippt man jedoch auf dem Smartphone auf „Video speichern“, verarbeitet die A
 
 Da die native App unzuverlässig ist, ist die beste Methode, um sicherzustellen, dass Sie die vollständige Mediendatei erhalten, die Verwendung eines externen Downloaders, der die Audio- und Videostreams zusammenfügen kann, bevor er Ihnen die Datei aushändigt.
 
-Während MediaTools sich auf Plattformen wie [Twitter](/de/twitter-downloader/), [TikTok](/de/tiktok-downloader/) und [Facebook](/de/facebook-downloader/)] spezialisiert hat, funktioniert der Prozess zum Herunterladen von Reddit-Videos bei den meisten gängigen kostenlosen Webtools ähnlich.
+Während MediaTools sich auf Plattformen wie [Twitter](/de/twitter-downloader/), [TikTok](/de/tiktok-downloader/) und [Facebook](/de/facebook-downloader/) spezialisiert hat, funktioniert der Prozess zum Herunterladen von Reddit-Videos bei den meisten gängigen kostenlosen Webtools ähnlich.
 
 So geht's genau:
 
@@ -70,4 +70,4 @@ Wenn Sie versuchen, einen Reddit-Beitrag zu speichern und dabei keinen Ton höre
 
 ***
 
-Möchten Sie Videos von anderen Plattformen speichern? Probieren Sie noch heute unseren kostenlosen [TikTok Downloader (ohne Wasserzeichen)](/de/tiktok-downloader/) oder unseren [Facebook Video Saver](/de/facebook-downloader/)] aus.
+Möchten Sie Videos von anderen Plattformen speichern? Probieren Sie noch heute unseren kostenlosen [TikTok Downloader (ohne Wasserzeichen)](/de/tiktok-downloader/) oder unseren [Facebook Video Saver](/de/facebook-downloader/) aus.

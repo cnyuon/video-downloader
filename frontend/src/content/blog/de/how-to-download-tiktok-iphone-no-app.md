@@ -36,7 +36,7 @@ Befolgen Sie diese einfachen Schritte, um jedes beliebige Video in HD zu speiche
 Öffne die TikTok-App und suche das gewünschte Video. Tippe auf den Teilen-Pfeil (unten rechts) und wähle „Link kopieren“.
 
 ### Schritt 2: MediaTools in Safari öffnen
-Wechseln Sie zu Safari und gehen Sie zu [MediaTools TikTok Downloader](/de/tiktok-downloader/)].
+Wechseln Sie zu Safari und gehen Sie zu [MediaTools TikTok Downloader](/de/tiktok-downloader/).
 
 ### Schritt 3: Einfügen und Herunterladen
 1. Tippen Sie auf das Feld „Link einfügen“ und drücken Sie **Paste**.
@@ -77,7 +77,7 @@ Wenn du die Datei nicht in Fotos gespeichert hast, befindet sie sich noch in dei
 ## Bonus: So extrahieren Sie Audio auf dem iPhone
 
 Möchten Sie nur den Ton für einen Klingelton oder zum Bearbeiten?
-1. Folgen Sie den oben genannten Schritten, aber gehen Sie zu unserem [TikTok Sound Downloader](/de/tiktok-sound-downloader/)].
+1. Folgen Sie den oben genannten Schritten, aber gehen Sie zu unserem [TikTok Sound Downloader](/de/tiktok-sound-downloader/).
 2. Laden Sie die MP3-Datei herunter.
 3. Es wird in Ihrer **Files**-App gespeichert (iOS speichert Audio nicht in Fotos).
 

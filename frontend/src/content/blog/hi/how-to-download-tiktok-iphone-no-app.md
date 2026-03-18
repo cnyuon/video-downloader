@@ -88,6 +88,6 @@ Safari पर स्विच करें और [MediaTools TikTok Downloader]
 अभी आजमाएं: TikTok डाउनलोडर पर जाएं
 
 **संबंधित मार्गदर्शिकाएँ:**
-- [टिकटॉक साउंड को एमपी3 में कैसे डाउनलोड करें](/hi/blog/how-to-download-tiktok-sounds-mp3/)]
+- [टिकटॉक साउंड को एमपी3 में कैसे डाउनलोड करें](/hi/blog/how-to-download-tiktok-sounds-mp3/)
 - [टिकटॉक प्रतिबंधित है? वीडियो कैसे सेव करें](/hi/blog/tiktok-banned-how-to-access-download/)
-- [टिकटॉक के लिए सर्वश्रेष्ठ निःशुल्क वीडियो संपादक](/hi/blog/best-free-video-editors-tiktok/)]
+- [टिकटॉक के लिए सर्वश्रेष्ठ निःशुल्क वीडियो संपादक](/hi/blog/best-free-video-editors-tiktok/)

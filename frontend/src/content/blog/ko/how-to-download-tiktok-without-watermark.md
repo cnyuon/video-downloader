@@ -35,14 +35,14 @@ monetization:
 안드로이드는 훨씬 간단합니다.
 
 1. 틱톡 앱에서 동영상 링크를 복사하세요.
-2. Chrome을 열고 [MediaTools TikTok Downloader](/ko/tiktok-downloader/)]로 이동합니다.
+2. Chrome을 열고 [MediaTools TikTok Downloader](/ko/tiktok-downloader/)로 이동합니다.
 3. 링크를 붙여넣고 **비디오 보기**을 탭하세요.
 4. **비디오 다운로드**을 탭하세요. 갤러리에 바로 저장됩니다.
 
 ## PC/Mac에서 TikTok 영상을 저장하는 방법
 
 1. 틱톡 영상을 마우스 오른쪽 버튼으로 클릭하고 → 링크 주소 복사를 선택합니다.
-2. 데스크톱 브라우저의 [MediaTools](/ko/tiktok-downloader/)]에 붙여넣으세요.
+2. 데스크톱 브라우저의 [MediaTools](/ko/tiktok-downloader/)에 붙여넣으세요.
 3. 다운로드를 클릭하세요. MP4 파일이 다운로드 폴더에 저장됩니다.
 
 ## 자주 묻는 질문
@@ -61,8 +61,8 @@ monetization:
 올바른 도구만 있으면 워터마크 없이 틱톡 영상을 다운로드하는 것은 간단합니다. 숨겨진 요금이나 성가신 팝업 광고 없이 빠르고 안전하게 다운로드하려면 [MediaTools](/)]를 이용해 보세요.
 
 **관련 가이드 (도움이 될 만한 내용):**
-- [틱톡 이용 제한? 어디서든 동영상 저장하는 방법](/ko/blog/tiktok-banned-how-to-access-download/)]
-- [틱톡 크리에이터를 위한 최고의 무료 동영상 편집기](/ko/blog/best-free-video-editors-tiktok/)]
-- [트위터 동영상을 저장하는 5가지 최고의 방법](/ko/blog/5-best-ways-to-save-twitter-videos/)]
+- [틱톡 이용 제한? 어디서든 동영상 저장하는 방법](/ko/blog/tiktok-banned-how-to-access-download/)
+- [틱톡 크리에이터를 위한 최고의 무료 동영상 편집기](/ko/blog/best-free-video-editors-tiktok/)
+- [트위터 동영상을 저장하는 5가지 최고의 방법](/ko/blog/5-best-ways-to-save-twitter-videos/)
 
 즐거운 다운로드 되세요!

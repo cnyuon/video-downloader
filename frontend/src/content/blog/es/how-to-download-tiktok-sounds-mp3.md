@@ -112,13 +112,13 @@ Descargar para **uso personal** generalmente está bien. Sin embargo:
 Sí, siempre que el video sea público. Nuestra herramienta extrae la pista de audio del video, por lo que cualquier sonido que se reproduzca en un TikTok público se puede descargar.
 
 **¿Esto funciona en iPhone?**
-Por supuesto. Nuestro [Descargador de Sonidos de TikTok](/es/tiktok-sound-downloader/)] funciona en Safari y Chrome en iOS. No necesitas ninguna app: el archivo MP3 se guarda directamente en tu app Archivos.
+Por supuesto. Nuestro [Descargador de Sonidos de TikTok](/es/tiktok-sound-downloader/) funciona en Safari y Chrome en iOS. No necesitas ninguna app: el archivo MP3 se guarda directamente en tu app Archivos.
 
 **¿Puedo usar sonidos descargados de TikTok en mis propios videos?**
 Para uso personal y no comercial, generalmente sí. Si creas contenido monetizado, ten cuidado con la música con derechos de autor; plataformas como YouTube pueden marcarla mediante Content ID.
 
 **¿Cuál es la diferencia entre TikTok Sound Downloader y Video to MP3?**
-El [TikTok Sound Downloader](/es/tiktok-sound-downloader/)] extrae el audio directamente de un enlace de TikTok en un solo paso. La herramienta [Video to MP3](/es/video-to-mp3/)] funciona con cualquier archivo de video o URL de múltiples plataformas; es más versátil, pero requiere una fuente de video.
+El [TikTok Sound Downloader](/es/tiktok-sound-downloader/) extrae el audio directamente de un enlace de TikTok en un solo paso. La herramienta [Video to MP3](/es/video-to-mp3/) funciona con cualquier archivo de video o URL de múltiples plataformas; es más versátil, pero requiere una fuente de video.
 
 **¿Puedo descargar la canción original completa, no solo el clip de TikTok?**
 No, nuestra herramienta descarga el audio exactamente como aparece en el video de TikTok. Los clips de TikTok suelen durar entre 15 y 60 segundos. Para escuchar la canción completa, consulta plataformas de streaming como Spotify o Apple Music.

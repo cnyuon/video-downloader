@@ -64,14 +64,14 @@ Egal wo Sie wohnen, es ist immer ratsam, Sicherungskopien Ihrer Lieblingsinhalte
 
 ### Audio aus TikToks extrahieren
 
-Gefällt dir ein bestimmter TikTok-Sound? Nutze unseren [TikTok Sound Downloader](/de/tiktok-sound-downloader/)], um die Audiodatei als MP3 zu speichern und für immer zu behalten.
+Gefällt dir ein bestimmter TikTok-Sound? Nutze unseren [TikTok Sound Downloader](/de/tiktok-sound-downloader/), um die Audiodatei als MP3 zu speichern und für immer zu behalten.
 
 ### Sichern Sie Ihre eigenen veröffentlichten Inhalte
 
 Wenn Sie ein Content-Creator sind, sichern Sie Ihre eigenen Videos:
 1. Gehe zu deinem TikTok-Profil.
 2. Kopiere den Link zu jedem Video, das du gepostet hast.
-3. Laden Sie saubere Kopien über [MediaTools](/de/tiktok-downloader/)] herunter.
+3. Laden Sie saubere Kopien über [MediaTools](/de/tiktok-downloader/) herunter.
 
 Auf diese Weise bleiben Ihre Inhalte auch dann erhalten, wenn die Plattform in Ihrer Region nicht mehr verfügbar ist.
 
@@ -100,7 +100,7 @@ Wird TikTok mein Konto sperren, wenn ich ein VPN benutze?
 TikTok sperrt Konten in der Regel nicht wegen VPN-Nutzung. Viele Menschen nutzen VPNs aus Datenschutzgründen, die nichts mit TikTok zu tun haben.
 
 Kann ich TikTok-Videos noch herunterladen, wenn die App aus den App-Stores entfernt wird?
-Wenn TikTok bereits installiert ist, funktioniert es möglicherweise auch mit einem VPN. Sie können Videos auch über [MediaTools](/de/tiktok-downloader/)] direkt im Browser speichern – eine App ist nicht erforderlich.
+Wenn TikTok bereits installiert ist, funktioniert es möglicherweise auch mit einem VPN. Sie können Videos auch über [MediaTools](/de/tiktok-downloader/) direkt im Browser speichern – eine App ist nicht erforderlich.
 
 ## Jetzt handeln
 

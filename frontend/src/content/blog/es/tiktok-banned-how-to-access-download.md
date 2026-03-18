@@ -64,7 +64,7 @@ Independientemente de dónde vivas, tener copias de seguridad de tu contenido fa
 
 ### Extraer audio de TikToks
 
-¿Te encanta algún sonido de TikTok en particular? Usa nuestro [Descargador de Sonidos de TikTok](/es/tiktok-sound-downloader/)] para guardar el audio como un archivo MP3 que podrás conservar para siempre.
+¿Te encanta algún sonido de TikTok en particular? Usa nuestro [Descargador de Sonidos de TikTok](/es/tiktok-sound-downloader/) para guardar el audio como un archivo MP3 que podrás conservar para siempre.
 
 ### Realice una copia de seguridad de su propio contenido publicado
 

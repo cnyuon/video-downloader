@@ -51,7 +51,7 @@ Et voilà ! Le fichier audio est enregistré directement sur votre appareil. Auc
 Si vous souhaitez également la vidéo avec l'audio :
 
 1. Téléchargez la vidéo en utilisant notre [TikTok Video Downloader](/fr/tiktok-downloader/) (sans filigrane).
-2. Utilisez notre outil [Video to MP3](/fr/video-to-mp3/)] pour extraire l'audio de la vidéo téléchargée.
+2. Utilisez notre outil [Video to MP3](/fr/video-to-mp3/) pour extraire l'audio de la vidéo téléchargée.
 
 Cette méthode en deux étapes vous permet d'obtenir à la fois le fichier vidéo propre ET le fichier audio.
 
@@ -112,13 +112,13 @@ Les titres populaires appartiennent généralement aux maisons de disques. Leur 
 Oui, à condition que la vidéo soit publique. Notre outil extrait la piste audio directement de la vidéo ; ainsi, n’importe quel son diffusé dans une vidéo TikTok publique peut être téléchargé.
 
 **Est-ce que cela fonctionne sur iPhone ?**
-Absolument. Notre [TikTok Sound Downloader](/fr/tiktok-sound-downloader/)] fonctionne avec Safari et Chrome sur iOS. Aucune application n'est nécessaire : le fichier MP3 est enregistré directement dans votre application Fichiers.
+Absolument. Notre [TikTok Sound Downloader](/fr/tiktok-sound-downloader/) fonctionne avec Safari et Chrome sur iOS. Aucune application n'est nécessaire : le fichier MP3 est enregistré directement dans votre application Fichiers.
 
 **Puis-je utiliser des sons TikTok téléchargés dans mes propres vidéos ?**
 Pour un usage personnel et non commercial, généralement oui. Si vous créez du contenu monétisé, soyez vigilant avec la musique protégée par le droit d'auteur : des plateformes comme YouTube peuvent la signaler via Content ID.
 
 **Quelle est la différence entre TikTok Sound Downloader et Video to MP3 ?**
-L'outil [TikTok Sound Downloader](/fr/tiktok-sound-downloader/)] extrait l'audio directement d'un lien TikTok en une seule étape. L'outil [Video to MP3](/fr/video-to-mp3/)] fonctionne avec n'importe quel fichier vidéo ou URL provenant de plusieurs plateformes ; il est plus polyvalent, mais nécessite une source vidéo.
+L'outil [TikTok Sound Downloader](/fr/tiktok-sound-downloader/) extrait l'audio directement d'un lien TikTok en une seule étape. L'outil [Video to MP3](/fr/video-to-mp3/) fonctionne avec n'importe quel fichier vidéo ou URL provenant de plusieurs plateformes ; il est plus polyvalent, mais nécessite une source vidéo.
 
 **Puis-je télécharger la chanson originale complète, et pas seulement l'extrait TikTok ?**
 Non, notre outil télécharge l'audio tel qu'il apparaît dans la vidéo TikTok. Les clips TikTok durent généralement entre 15 et 60 secondes. Pour écouter la chanson complète, consultez les plateformes de streaming comme Spotify ou Apple Music.

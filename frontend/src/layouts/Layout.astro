@@ -8,6 +8,7 @@ interface Props {
     title?: string;
     description?: string;
     ogImage?: string;
+    robots?: string;
     jsonLd?: Record<string, any>;
 }
 
@@ -17,6 +18,7 @@ const {
     title = "MediaTools - Download Videos, Extract Audio & More",
     description = "Free online tools to download videos, extract audio, and more from TikTok, YouTube, Twitter, and Facebook.",
     ogImage = "/icon-512.png",
+    robots = "index, follow",
     jsonLd,
 } = Astro.props;
 
@@ -83,7 +85,7 @@ const websiteSchema = isHomepage ? {
         <HreflangTags />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="description" content={description} />
-        <meta name="robots" content="index, follow" />
+        <meta name="robots" content={robots} />
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
         <link rel="manifest" href="/manifest.json" />
         <meta name="theme-color" content="#ffffff" />

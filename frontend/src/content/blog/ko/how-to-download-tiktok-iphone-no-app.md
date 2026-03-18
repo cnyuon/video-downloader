@@ -77,7 +77,7 @@ Safari로 전환하고 [MediaTools TikTok Downloader](/ko/tiktok-downloader/)로
 ## 보너스: 아이폰에서 오디오 추출하는 방법
 
 벨소리로 사용하거나 편집할 소리만 원하시나요?
-1. 위와 동일한 단계를 따르되, [TikTok Sound Downloader](/ko/tiktok-sound-downloader/)]로 이동하세요.
+1. 위와 동일한 단계를 따르되, [TikTok Sound Downloader](/ko/tiktok-sound-downloader/)로 이동하세요.
 2. MP3 파일을 다운로드하세요.
 3. 해당 파일은 **Files** 앱에 저장됩니다(iOS는 오디오 파일을 사진 앱에 저장하지 않습니다).
 
@@ -89,5 +89,5 @@ Safari로 전환하고 [MediaTools TikTok Downloader](/ko/tiktok-downloader/)로
 
 **관련 가이드:**
 - [틱톡 사운드를 MP3로 다운로드하는 방법](/ko/blog/how-to-download-tiktok-sounds-mp3/)
-- [틱톡 이용 제한? 동영상 저장 방법](/ko/blog/tiktok-banned-how-to-access-download/)]
-- [틱톡을 위한 최고의 무료 동영상 편집기](/ko/blog/best-free-video-editors-tiktok/)]
+- [틱톡 이용 제한? 동영상 저장 방법](/ko/blog/tiktok-banned-how-to-access-download/)
+- [틱톡을 위한 최고의 무료 동영상 편집기](/ko/blog/best-free-video-editors-tiktok/)

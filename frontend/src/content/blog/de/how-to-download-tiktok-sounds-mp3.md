@@ -112,7 +112,7 @@ Kann ich beliebige TikTok-Sounds herunterladen?
 Ja, sofern das Video öffentlich ist. Unser Tool extrahiert die Audiospur aus dem Video selbst, sodass jeder Ton, der in einem öffentlichen TikTok-Video abgespielt wird, heruntergeladen werden kann.
 
 Funktioniert das auf dem iPhone?
-Absolut. Unser [TikTok Sound Downloader](/de/tiktok-sound-downloader/)] funktioniert in Safari und Chrome unter iOS. Keine App erforderlich – die MP3-Datei wird direkt in Ihrer Dateien-App gespeichert.
+Absolut. Unser [TikTok Sound Downloader](/de/tiktok-sound-downloader/) funktioniert in Safari und Chrome unter iOS. Keine App erforderlich – die MP3-Datei wird direkt in Ihrer Dateien-App gespeichert.
 
 **Kann ich heruntergeladene TikTok-Sounds in meinen eigenen Videos verwenden?**
 Für den privaten, nicht-kommerziellen Gebrauch ist das in der Regel erlaubt. Wenn Sie Inhalte erstellen, die mit Gelder verdient werden, sollten Sie bei urheberrechtlich geschützter Musik vorsichtig sein – Plattformen wie YouTube können diese über Content ID kennzeichnen.

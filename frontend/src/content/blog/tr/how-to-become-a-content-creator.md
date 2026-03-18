@@ -100,8 +100,8 @@ A: Her gün içerik üretmek tükenmişliğe giden hızlı bir yoldur, bu nedenl
 
 ## İlgili Yazılar
 
-- [TikTok Videolarını iPhone'a Uygulama Kullanmadan Nasıl İndirebilirsiniz (2026)](/tr/blog/how-to-download-tiktok-iphone-no-app/)]
-- [TikTok Videolarını Filigran Olmadan Nasıl İndirebilirsiniz (2026 Kılavuzu)](/tr/blog/how-to-download-tiktok-without-watermark/)]
-- [TikTok Videolarınızın Tamamını Toplu Olarak Nasıl İndirebilirsiniz (Yedekleme Kılavuzu)](/tr/blog/bulk-download-tiktok-videos/)]
-- [2026'da Reddit Videolarını (Sesli Olarak) Nasıl İndirebilirsiniz](/tr/blog/how-to-download-reddit-videos-with-audio/)]
-- [Facebook Reels'i Telefonunuza Nasıl İndirebilirsiniz (2026 Kılavuzu)](/tr/blog/download-facebook-reels-to-phone/)]
+- [TikTok Videolarını iPhone'a Uygulama Kullanmadan Nasıl İndirebilirsiniz (2026)](/tr/blog/how-to-download-tiktok-iphone-no-app/)
+- [TikTok Videolarını Filigran Olmadan Nasıl İndirebilirsiniz (2026 Kılavuzu)](/tr/blog/how-to-download-tiktok-without-watermark/)
+- [TikTok Videolarınızın Tamamını Toplu Olarak Nasıl İndirebilirsiniz (Yedekleme Kılavuzu)](/tr/blog/bulk-download-tiktok-videos/)
+- [2026'da Reddit Videolarını (Sesli Olarak) Nasıl İndirebilirsiniz](/tr/blog/how-to-download-reddit-videos-with-audio/)
+- [Facebook Reels'i Telefonunuza Nasıl İndirebilirsiniz (2026 Kılavuzu)](/tr/blog/download-facebook-reels-to-phone/)

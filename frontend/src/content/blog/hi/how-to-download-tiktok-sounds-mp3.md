@@ -128,6 +128,6 @@ TikTok साउंड डाउनलोडर और वीडियो टू
 अपने पसंदीदा TikTok साउंड्स को खोना बंद करें। इन्हें कुछ ही सेकंड में MP3 फ़ाइलों के रूप में सेव करें — बिल्कुल मुफ्त, किसी साइन अप की आवश्यकता नहीं।
 
 **संबंधित मार्गदर्शिकाएँ:**
-- [बिना वॉटरमार्क के TikTok वीडियो कैसे डाउनलोड करें](/hi/blog/how-to-download-tiktok-without-watermark/)]
+- [बिना वॉटरमार्क के TikTok वीडियो कैसे डाउनलोड करें](/hi/blog/how-to-download-tiktok-without-watermark/)
 - [टिकटॉक प्रतिबंधित है? अपने वीडियो कैसे सुरक्षित करें](/hi/blog/tiktok-banned-how-to-access-download/)
-- [टिकटॉक क्रिएटर्स के लिए सर्वश्रेष्ठ मुफ़्त वीडियो एडिटर](/hi/blog/best-free-video-editors-tiktok/)]
+- [टिकटॉक क्रिएटर्स के लिए सर्वश्रेष्ठ मुफ़्त वीडियो एडिटर](/hi/blog/best-free-video-editors-tiktok/)

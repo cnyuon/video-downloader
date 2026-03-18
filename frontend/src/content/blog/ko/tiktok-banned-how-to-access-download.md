@@ -59,19 +59,19 @@ monetization:
 
 1. 틱톡을 열고 저장하고 싶은 영상을 찾으세요.
 2. 링크를 복사합니다(**공유** → **링크 복사**를 탭하세요).
-3. [MediaTools TikTok Downloader](/ko/tiktok-downloader/)]로 이동합니다.
+3. [MediaTools TikTok Downloader](/ko/tiktok-downloader/)로 이동합니다.
 4. 링크를 붙여넣고 다운로드하세요. 워터마크 없이 HD 화질로 동영상이 저장됩니다.
 
 ### 틱톡에서 오디오 추출하기
 
-마음에 드는 틱톡 사운드가 있으신가요? 저희 [틱톡 사운드 다운로더](/ko/tiktok-sound-downloader/)]를 사용하여 해당 오디오를 MP3 파일로 저장하고 영구적으로 보관하세요.
+마음에 드는 틱톡 사운드가 있으신가요? 저희 [틱톡 사운드 다운로더](/ko/tiktok-sound-downloader/)를 사용하여 해당 오디오를 MP3 파일로 저장하고 영구적으로 보관하세요.
 
 ### 직접 게시한 콘텐츠를 백업하세요
 
 콘텐츠 제작자라면 자신의 영상을 백업하세요.
 1. 틱톡 프로필로 이동하세요.
 2. 게시한 각 동영상의 링크를 복사하세요.
-3. [MediaTools](/ko/tiktok-downloader/)]를 통해 깨끗한 사본을 다운로드하세요.
+3. [MediaTools](/ko/tiktok-downloader/)를 통해 깨끗한 사본을 다운로드하세요.
 
 이렇게 하면 해당 플랫폼이 해당 지역에서 이용 불가능해지더라도 모든 콘텐츠를 계속 이용할 수 있습니다.
 
@@ -113,6 +113,6 @@ VPN을 사용하면 틱톡에서 제 계정을 차단할까요?
 당신의 콘텐츠는 보존할 가치가 있습니다. [MediaTools](/)를 사용하면 쉽고 무료로 보존할 수 있습니다.
 
 **관련 가이드:**
-- [워터마크 없이 틱톡 영상 다운로드하는 방법](/ko/blog/how-to-download-tiktok-without-watermark/)]
-- [틱톡 크리에이터를 위한 최고의 무료 동영상 편집기](/ko/blog/best-free-video-editors-tiktok/)]
-- [트위터 동영상을 저장하는 5가지 최고의 방법](/ko/blog/5-best-ways-to-save-twitter-videos/)]
+- [워터마크 없이 틱톡 영상 다운로드하는 방법](/ko/blog/how-to-download-tiktok-without-watermark/)
+- [틱톡 크리에이터를 위한 최고의 무료 동영상 편집기](/ko/blog/best-free-video-editors-tiktok/)
+- [트위터 동영상을 저장하는 5가지 최고의 방법](/ko/blog/5-best-ways-to-save-twitter-videos/)

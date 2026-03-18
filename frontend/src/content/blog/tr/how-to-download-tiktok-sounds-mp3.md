@@ -128,6 +128,6 @@ Hayır, aracımız sesi TikTok videosunda göründüğü gibi indiriyor. TikTok 
 En sevdiğiniz TikTok seslerini kaybetmeyi bırakın. [Bunları saniyeler içinde MP3 dosyaları olarak kaydedin — tamamen ücretsiz, kayıt olmaya gerek yok.]
 
 **İlgili kılavuzlar:**
-- [TikTok Videolarını Filigran Olmadan Nasıl İndirebilirsiniz](/tr/blog/how-to-download-tiktok-without-watermark/)]
-- [TikTok Kısıtlaması mı? Videolarınızı Nasıl Kaydedebilirsiniz](/tr/blog/tiktok-banned-how-to-access-download/)]
-- [TikTok İçerik Oluşturucuları İçin En İyi Ücretsiz Video Düzenleme Araçları](/tr/blog/best-free-video-editors-tiktok/)]
+- [TikTok Videolarını Filigran Olmadan Nasıl İndirebilirsiniz](/tr/blog/how-to-download-tiktok-without-watermark/)
+- [TikTok Kısıtlaması mı? Videolarınızı Nasıl Kaydedebilirsiniz](/tr/blog/tiktok-banned-how-to-access-download/)
+- [TikTok İçerik Oluşturucuları İçin En İyi Ücretsiz Video Düzenleme Araçları](/tr/blog/best-free-video-editors-tiktok/)

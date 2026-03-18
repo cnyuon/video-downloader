@@ -143,8 +143,8 @@ A: Hayır, TikTok birisi video izlediğinde içerik oluşturuculara bildirim gö
 
 ## İlgili Yazılar
 
-- [TikTok Videolarını iPhone'a Uygulama Kullanmadan Nasıl İndirebilirsiniz (2026)](/tr/blog/how-to-download-tiktok-iphone-no-app/)]
-- [TikTok Videolarını Filigran Olmadan Nasıl İndirebilirsiniz (2026 Kılavuzu)](/tr/blog/how-to-download-tiktok-without-watermark/)]
-- [TikTok Videolarınızın Tamamını Toplu Olarak Nasıl İndirebilirsiniz (Yedekleme Kılavuzu)](/tr/blog/bulk-download-tiktok-videos/)]
-- [TikTok için En İyi Ücretsiz Video Düzenleme Uygulamaları (2026)](/tr/blog/best-free-video-editors-tiktok/)]
-- [2026'da Viral Olmak İçin 10 TikTok Video Düzenleme İpucu](/tr/blog/10-tiktok-editing-tips-viral-2026/)]
+- [TikTok Videolarını iPhone'a Uygulama Kullanmadan Nasıl İndirebilirsiniz (2026)](/tr/blog/how-to-download-tiktok-iphone-no-app/)
+- [TikTok Videolarını Filigran Olmadan Nasıl İndirebilirsiniz (2026 Kılavuzu)](/tr/blog/how-to-download-tiktok-without-watermark/)
+- [TikTok Videolarınızın Tamamını Toplu Olarak Nasıl İndirebilirsiniz (Yedekleme Kılavuzu)](/tr/blog/bulk-download-tiktok-videos/)
+- [TikTok için En İyi Ücretsiz Video Düzenleme Uygulamaları (2026)](/tr/blog/best-free-video-editors-tiktok/)
+- [2026'da Viral Olmak İçin 10 TikTok Video Düzenleme İpucu](/tr/blog/10-tiktok-editing-tips-viral-2026/)
