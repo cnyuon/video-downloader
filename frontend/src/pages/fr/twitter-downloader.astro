@@ -6,6 +6,7 @@ import Footer from '../../components/Footer.astro';
 import VideoDownloader from '../../components/VideoDownloader';
 import { getLangFromUrl, useTranslations } from '../../i18n/utils';
 import { ui } from '../../i18n/ui';
+import { getDiversePosts } from '../../lib/blog-utils';
 
 export function getStaticPaths() {
   return [
@@ -55,6 +56,7 @@ const allPostsList = await getCollection('blog');
 const enPosts = allPostsList.filter((p: any) => p.slug.startsWith('en/'));
 const localPosts = allPostsList.filter((p: any) => p.slug.startsWith('fr/'));
 const displayPosts = localPosts.length > 0 ? localPosts : enPosts;
+const diversePosts = getDiversePosts(displayPosts, 'twitter-downloader', 4);
 ---
 
 <Layout 
@@ -182,7 +184,7 @@ const displayPosts = localPosts.length > 0 ? localPosts : enPosts;
         <div class="mt-20 pt-12 border-t max-w-2xl mx-auto">
             <h2 class="text-2xl font-bold mb-6">{ui.fr['nav.blog'] || "Blog"}</h2>
             <div class="grid gap-4 sm:grid-cols-2">
-                {displayPosts.slice(0, 4).map((p: any) => {
+                {diversePosts.map((p: any) => {
                     const trueSlug = p.slug.split('/').pop();
                     return (
                         <a href={`/fr/blog/${trueSlug}/`} class="group block p-4 rounded-xl border bg-card hover:border-primary/50 hover:shadow-md transition-all">

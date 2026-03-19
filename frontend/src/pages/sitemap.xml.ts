@@ -14,6 +14,7 @@ const staticPages = [
     '/video-to-mp3/',
     '/thumbnail-grabber/',
     '/tiktok-sound-downloader/',
+    '/instagram-downloader/',
     // Generate all localized static pages
     ...LANGS.flatMap(lang => [
         `/${lang}/`,
@@ -23,6 +24,7 @@ const staticPages = [
         `/${lang}/video-to-mp3/`,
         `/${lang}/thumbnail-grabber/`,
         `/${lang}/tiktok-sound-downloader/`,
+        `/${lang}/instagram-downloader/`,
         `/${lang}/blog/`,
     ]),
 ];

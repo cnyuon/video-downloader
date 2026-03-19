@@ -1,18 +1,24 @@
 #!/usr/bin/env python3
 """
-Translate all EN blog posts to a target language using Google Cloud Translation API.
+Translate EN blog posts to a target language using Google Cloud Translation API.
 Preserves markdown structure, Astro components, and internal links.
 
-Usage: python3 scripts/translate_blogs.py <lang_code> <api_key>
+Usage:
+  python3 scripts/translate_blogs.py <lang_code> <api_key>                  # new/changed posts only
+  python3 scripts/translate_blogs.py <lang_code> <api_key> --only <slug>    # translate one specific post
+  python3 scripts/translate_blogs.py <lang_code> <api_key> --force          # re-translate everything
+
 Example: python3 scripts/translate_blogs.py pt AIzaSy...
+         python3 scripts/translate_blogs.py pt AIzaSy... --only how-to-download-tiktok-videos
 
 The script:
-1. Reads each EN blog post
-2. Extracts translatable text blocks (skipping imports, components, links, code)
-3. Batch-translates via Google Cloud Translation API v2
-4. Reconstructs the markdown with translated text
-5. Fixes internal links to use /{lang}/ prefix
-6. Writes to src/content/blog/{lang}/
+1. Reads each EN blog post (or just the specified slug)
+2. Skips posts where the target translation already exists and is newer than the EN source
+3. Extracts translatable text blocks (skipping imports, components, links, code)
+4. Batch-translates via Google Cloud Translation API v2
+5. Reconstructs the markdown with translated text
+6. Fixes internal links to use /{lang}/ prefix
+7. Writes to src/content/blog/{lang}/
 """
 import sys, os, re, json, time
 from urllib.request import Request, urlopen
@@ -20,11 +26,28 @@ from urllib.parse import urlencode
 from urllib.error import HTTPError
 
 if len(sys.argv) < 3:
-    print("Usage: python3 scripts/translate_blogs.py <lang_code> <api_key>")
+    print("Usage: python3 scripts/translate_blogs.py <lang_code> <api_key> [--only <slug>] [--force]")
     sys.exit(1)
 
 LANG = sys.argv[1]
 API_KEY = sys.argv[2]
+
+# Parse optional flags
+ONLY_SLUG = None
+FORCE = False
+i = 3
+while i < len(sys.argv):
+    if sys.argv[i] == '--only' and i + 1 < len(sys.argv):
+        ONLY_SLUG = sys.argv[i + 1]
+        if not ONLY_SLUG.endswith('.md'):
+            ONLY_SLUG += '.md'
+        i += 2
+    elif sys.argv[i] == '--force':
+        FORCE = True
+        i += 1
+    else:
+        i += 1
+
 BASE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 EN_BLOG = os.path.join(BASE, 'src', 'content', 'blog', 'en')
 TARGET_BLOG = os.path.join(BASE, 'src', 'content', 'blog', LANG)
@@ -280,14 +303,40 @@ print(f"\n{'='*60}")
 print(f"  Translating blog posts to: {LANG}")
 print(f"  Source: {EN_BLOG}")
 print(f"  Target: {TARGET_BLOG}")
+if ONLY_SLUG:
+    print(f"  Mode: Single post — {ONLY_SLUG}")
+elif FORCE:
+    print(f"  Mode: Force re-translate ALL")
+else:
+    print(f"  Mode: New/changed posts only")
 print(f"{'='*60}\n")
 
-en_files = sorted([f for f in os.listdir(EN_BLOG) if f.endswith('.md')])
+# Build file list
+if ONLY_SLUG:
+    if os.path.exists(os.path.join(EN_BLOG, ONLY_SLUG)):
+        en_files = [ONLY_SLUG]
+    else:
+        print(f"  ❌ File not found: {os.path.join(EN_BLOG, ONLY_SLUG)}")
+        sys.exit(1)
+else:
+    en_files = sorted([f for f in os.listdir(EN_BLOG) if f.endswith('.md')])
+
 total_chars = 0
+translated_count = 0
+skipped_count = 0
 
 for filename in en_files:
     en_path = os.path.join(EN_BLOG, filename)
     target_path = os.path.join(TARGET_BLOG, filename)
+
+    # Skip logic: if target already exists and is newer than source, skip it
+    if not FORCE and os.path.exists(target_path):
+        en_mtime = os.path.getmtime(en_path)
+        target_mtime = os.path.getmtime(target_path)
+        if target_mtime >= en_mtime:
+            print(f"  ⏭️  Skipping (up-to-date): {filename}")
+            skipped_count += 1
+            continue
 
     print(f"  Translating: {filename}...", end=' ', flush=True)
 
@@ -300,10 +349,12 @@ for filename in en_files:
     with open(target_path, 'w', encoding='utf-8') as f:
         f.write(translated)
 
+    translated_count += 1
     print(f"✅ ({len(original)} chars)")
 
 print(f"\n{'='*60}")
-print(f"  Done! {len(en_files)} posts translated to {LANG}")
+print(f"  Done! {translated_count} posts translated, {skipped_count} skipped (already up-to-date)")
 print(f"  Total characters processed: {total_chars:,}")
 print(f"  Output: {TARGET_BLOG}")
 print(f"{'='*60}\n")
+

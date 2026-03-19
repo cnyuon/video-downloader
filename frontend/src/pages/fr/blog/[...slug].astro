@@ -5,6 +5,7 @@ import Navbar from '../../../components/Navbar';
 import Footer from '../../../components/Footer.astro';
 import { ui } from '../../../i18n/ui';
 import { Image } from 'astro:assets';
+import { getDiversePosts } from '../../../lib/blog-utils';
 
 export async function getStaticPaths() {
   const allPosts = await getCollection('blog');
@@ -60,12 +61,13 @@ const jsonLd = {
     "image": post.data.heroImage ? `https://getmediatools.com${(post.data.heroImage as any).src}` : undefined,
     "author": { "@type": "Organization", "name": "MediaTools" },
     "publisher": { "@type": "Organization", "name": "MediaTools", "url": "https://getmediatools.com" },
-    "mainEntityOfPage": `https://getmediatools.com/${lang}/blog/${originalSlug}`
+    "mainEntityOfPage": `https://getmediatools.com/${lang}/blog/${originalSlug}/`
 };
 const allPostsList = await getCollection('blog');
 const enPosts = allPostsList.filter((p: any) => p.slug.startsWith('en/'));
 const localPosts = allPostsList.filter((p: any) => p.slug.startsWith('fr/'));
 const displayPosts = localPosts.length > 0 ? localPosts : enPosts;
+const diversePosts = getDiversePosts(displayPosts, originalSlug, 4);
 ---
 
 <Layout 
@@ -73,6 +75,9 @@ const displayPosts = localPosts.length > 0 ? localPosts : enPosts;
 	description={post.data.description}
 	ogImage={post.data.heroImage ? (post.data.heroImage as any).src : undefined}
 	jsonLd={jsonLd}
+	keywords={post.data.keywords}
+	pubDate={post.data.pubDate}
+	updatedDate={post.data.updatedDate}
 >
 	<Navbar client:idle currentPage="blog" lang={lang as any} />
 	
@@ -120,8 +125,7 @@ const displayPosts = localPosts.length > 0 ? localPosts : enPosts;
         <div class="mt-20 pt-12 border-t max-w-2xl mx-auto">
             <h2 class="text-2xl font-bold mb-6">{ui.fr['nav.blog']}</h2>
             <div class="grid gap-4 sm:grid-cols-2">
-                {displayPosts.filter((p: any) => !p.slug.endsWith(originalSlug)).slice(0, 4).map((p: any) => {
-                    const postLang = 'fr';
+                {diversePosts.map((p: any) => {
                     const trueSlug = p.slug.split('/').pop();
                     return (
                         <a href={`/fr/blog/${trueSlug}/`} class="group block p-4 rounded-xl border bg-card hover:border-primary/50 hover:shadow-md transition-all">
