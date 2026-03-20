@@ -82,6 +82,15 @@ While the MP3 file itself is generally safe, the **download process** is the mai
 **3. What is the official MP3 Juice website?**
 There is no longer an "official" MP3 Juice website. The original was shut down, and all the sites currently using the name are unofficial clones.
 
-***
+---
+
+### Stay Safer Online: Two Tools Worth Having
+
+Since you're navigating sites with aggressive ads and malware risks, two tools can give you a significant security boost:
+
+- **[NordVPN](https://go.nordvpn.net/aff_c?offer_id=15&aff_id=141075&url_id=902)** — Encrypts your internet connection and blocks malicious ads and trackers at the network level, so dangerous redirects can't reach your browser in the first place.
+- **[NordPass](https://go.nordpass.io/aff_c?offer_id=488&aff_id=141075&url_id=9356)** — A secure password manager that generates and stores strong, unique passwords for every site. If a phishing clone ever tricks you into filling in a form, a password manager ensures your real credentials aren't reused elsewhere.
+
+---
 
 Don't risk your device's security for a free song. For a safe, clean, and reliable way to save audio, start by extracting it from the source video using the free **[Video to MP3 Converter](/video-to-mp3/)**.

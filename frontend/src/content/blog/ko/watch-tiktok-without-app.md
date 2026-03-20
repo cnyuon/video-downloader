@@ -82,6 +82,10 @@ monetization:
 
 ---
 
+---
+
+> **🔒 개인정보 팁:** 앱 없이 TikTok을 보는 것은 좋은 첫 번째 단계이지만, IP 주소는 여전히 ISP에 의해 추적될 수 있습니다. 진정한 익명성을 위해 — 특히 공공 Wi-Fi에서 — **[NordVPN](https://go.nordvpn.net/aff_c?offer_id=15&aff_id=141075&url_id=902)** 과 함께 사용하세요. 트래픽을 암호화하여 누구도 무엇을 보고 있는지 알 수 없게 합니다.
+
 ### 관련 가이드
 - [앱 없이 아이폰에서 틱톡 영상 다운로드하는 방법](/ko/blog/how-to-download-tiktok-iphone-no-app/)
 - [워터마크 없이 틱톡 영상 다운로드하는 방법](/ko/blog/how-to-download-tiktok-without-watermark/)

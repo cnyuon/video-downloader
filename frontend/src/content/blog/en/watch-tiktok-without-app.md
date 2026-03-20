@@ -82,6 +82,10 @@ You can use the search function on the TikTok desktop website or on some third-p
 
 ---
 
+---
+
+> **🔒 Privacy Tip:** Watching TikTok without the app is a great first step, but your IP address can still be tracked by your ISP. For true anonymity—especially on public Wi-Fi—pair this with **[NordVPN](https://go.nordvpn.net/aff_c?offer_id=15&aff_id=141075&url_id=902)**. It encrypts your traffic so no one can see what you're watching.
+
 ### Related Guides
 - [How to Download TikTok Videos on iPhone (No App Needed)](/blog/how-to-download-tiktok-iphone-no-app/)
 - [How to Download TikToks Without the Watermark](/blog/how-to-download-tiktok-without-watermark/)

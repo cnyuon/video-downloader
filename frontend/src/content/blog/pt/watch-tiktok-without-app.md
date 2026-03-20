@@ -86,3 +86,9 @@ Você pode usar a função de busca no site desktop do TikTok ou em alguns visua
 - [Como Baixar Vídeos do TikTok no iPhone (Sem Aplicativo)](/pt/blog/how-to-download-tiktok-iphone-no-app/)
 - [Como Baixar TikToks Sem Marca D'água](/pt/blog/how-to-download-tiktok-without-watermark/)
 - [Como Baixar Todos os Seus Vídeos do TikTok em Massa](/pt/blog/bulk-download-tiktok-videos/)
+
+---
+
+> **🔒 Dica de privacidade:** Assistir ao TikTok sem o aplicativo é um ótimo primeiro passo, mas seu endereço IP ainda pode ser rastreado pelo seu provedor. Para anonimato real — especialmente em Wi-Fi público — combine isso com **[NordVPN](https://go.nordvpn.net/aff_c?offer_id=15&aff_id=141075&url_id=902)**. Ele criptografa seu tráfego para que ninguém possa ver o que você está assistindo.
+
+### Guias relacionados

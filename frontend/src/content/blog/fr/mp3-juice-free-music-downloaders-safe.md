@@ -85,3 +85,13 @@ Il n'y a plus de site web "officiel" de MP3 Juice. L'original a été fermé, et
 ***
 
 Ne risquez pas la sécurité de votre appareil pour une chanson gratuite. Pour un moyen sûr, propre et fiable de sauvegarder de l'audio, commencez par l'extraire de la vidéo source à l'aide du **[Convertisseur Vidéo en MP3](/fr/video-to-mp3/)** gratuit.
+
+---
+
+### Restez plus en sécurité en ligne : deux outils indispensables
+
+Puisque vous naviguez sur des sites avec des publicités agressives et des risques de malwares, deux outils peuvent considérablement améliorer votre sécurité :
+
+- **[NordVPN](https://go.nordvpn.net/aff_c?offer_id=15&aff_id=141075&url_id=902)** — Chiffre votre connexion Internet et bloque les publicités malveillantes et les trackers au niveau du réseau, afin que les redirections dangereuses ne puissent pas atteindre votre navigateur.
+- **[NordPass](https://go.nordpass.io/aff_c?offer_id=488&aff_id=141075&url_id=9356)** — Un gestionnaire de mots de passe sécurisé qui génère et stocke des mots de passe forts et uniques pour chaque site. Si un site clone vous trompe, un gestionnaire de mots de passe garantit que vos identifiants réels ne sont pas réutilisés ailleurs.
+

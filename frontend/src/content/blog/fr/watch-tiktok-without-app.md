@@ -82,6 +82,10 @@ Vous pouvez utiliser la fonction de recherche sur le site web de bureau de TikTo
 
 ---
 
+---
+
+> **🔒 Conseil confidentialité :** Regarder TikTok sans l'application est un excellent premier pas, mais votre adresse IP peut toujours être suivie par votre FAI. Pour un véritable anonymat — surtout sur le Wi-Fi public — associez cela à **[NordVPN](https://go.nordvpn.net/aff_c?offer_id=15&aff_id=141075&url_id=902)**. Il chiffre votre trafic pour que personne ne puisse voir ce que vous regardez.
+
 ### Guides connexes
 - [Comment télécharger des vidéos TikTok sur iPhone (sans application)](/fr/blog/how-to-download-tiktok-iphone-no-app/)
 - [Comment télécharger des TikToks sans filigrane](/fr/blog/how-to-download-tiktok-without-watermark/)

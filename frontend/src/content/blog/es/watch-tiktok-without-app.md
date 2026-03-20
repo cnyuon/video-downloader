@@ -86,3 +86,9 @@ Puedes usar la función de búsqueda en el sitio web de escritorio de TikTok o e
 - [Cómo descargar videos de TikTok en iPhone (sin necesidad de aplicación)](/es/blog/how-to-download-tiktok-iphone-no-app/)
 - [Cómo descargar TikToks sin marca de agua](/es/blog/how-to-download-tiktok-without-watermark/)
 - [Cómo descargar masivamente todos tus videos de TikTok](/es/blog/bulk-download-tiktok-videos/)
+
+---
+
+> **🔒 Consejo de privacidad:** Ver TikTok sin la aplicación es un gran primer paso, pero tu dirección IP aún puede ser rastreada por tu proveedor de Internet. Para un anonimato real — especialmente en Wi-Fi público — combínalo con **[NordVPN](https://go.nordvpn.net/aff_c?offer_id=15&aff_id=141075&url_id=902)**. Cifra tu tráfico para que nadie pueda ver lo que estás viendo.
+
+### Guías relacionadas
