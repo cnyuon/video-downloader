@@ -3,6 +3,7 @@ import { getCollection } from 'astro:content';
 import Layout from '../../../layouts/Layout.astro';
 import Navbar from '../../../components/Navbar';
 import Footer from '../../../components/Footer.astro';
+import { useTranslations } from '../../../i18n/utils';
 import { ui } from '../../../i18n/ui';
 import { Image } from 'astro:assets';
 import { getDiversePosts } from '../../../lib/blog-utils';
@@ -29,7 +30,7 @@ const { post, originalSlug } = Astro.props;
 
 
 
-const { Content } = await post.render();
+const { Content, headings } = await post.render();
 
 // Category mapping helper
 const CATEGORY_LABELS: Record<string, string> = {
@@ -46,6 +47,7 @@ const category = post.data.monetization?.primary_category
     : 'Guide';
 
 const lang = 'ar';
+const t = useTranslations(lang);
 const getHref = (path: string) => {
     let href = `/${lang}${path === '/' ? '' : path}`;
     return href.endsWith('/') ? href : href + '/';
@@ -81,56 +83,137 @@ const diversePosts = getDiversePosts(displayPosts, originalSlug, 4);
 >
 	<Navbar client:idle currentPage="blog" lang={lang as any} />
 	
-	<main class="container mx-auto px-4 pt-10 pb-16 max-w-4xl">
-        <!-- Back Link -->
-        <a href={getHref('/blog/')} class="inline-flex items-center text-sm text-muted-foreground hover:text-primary mb-8 transition-colors">
-            <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
-            {ui.ar['btn.back_to_blog']}
-        </a>
+	<main class="container mx-auto px-4 pt-10 pb-20 max-w-7xl">
+        <!-- Breadcrumb -->
+        <nav class="flex items-center text-sm font-bold text-slate-500 mb-8 overflow-hidden whitespace-nowrap" aria-label="Breadcrumb">
+            <a href={getHref('/')} class="hover:text-slate-900 dark:hover:text-white transition-colors shrink-0">Home</a>
+            <svg class="w-4 h-4 mx-2 text-slate-400 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7" /></svg>
+            <a href={getHref('/blog/')} class="hover:text-slate-900 dark:hover:text-white transition-colors shrink-0">{t('nav.blog')}</a>
+            <svg class="w-4 h-4 mx-2 text-slate-400 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7" /></svg>
+            <span class="text-slate-900 dark:text-white truncate">{post.data.title}</span>
+        </nav>
 
 		<article class="mx-auto">
+			
+            <div class="flex flex-col lg:flex-row gap-16 lg:gap-24 max-w-7xl mx-auto relative items-start">
+                
+                <!-- Main Content -->
+                <div class="w-full lg:w-[68%] shrink-0">
+                    <!-- Header inside main content column -->
+                    <header class="mb-8 text-left">
+                        <h1 class="text-2xl md:text-3xl lg:text-4xl font-extrabold tracking-tight mb-4 text-slate-900 dark:text-white leading-[1.2]">
+                            {post.data.title}
+                        </h1>
+                        <p class="text-sm md:text-base text-slate-600 dark:text-slate-400 leading-relaxed max-w-3xl font-medium">
+                            {post.data.description}
+                        </p>
+                    </header>
+                    
+                    {post.data.heroImage && (
+                        <div class="rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 mb-16 aspect-[16/9] w-full bg-slate-100 dark:bg-slate-800">
+                            <Image 
+                                src={post.data.heroImage as any} 
+                                alt={post.data.heroAlt || post.data.title} 
+                                class="w-full h-full object-cover"
+                                loading="eager"
+                                width={1000}
+                                height={562}
+                                format="webp"
+                            />
+                        </div>
+                    )}
 
-			<div class="mb-8 text-center max-w-2xl mx-auto">
-                <span class="inline-block px-3 py-1 bg-primary/10 text-primary rounded-full text-sm font-medium mb-4">
-                    {category}
-                </span>
-				<h1 class="text-4xl md:text-5xl font-bold tracking-tight mb-6 leading-tight">{post.data.title}</h1>
-			</div>
-			
-			{post.data.heroImage && (
-				<div class="rounded-2xl overflow-hidden shadow-xl mb-12 aspect-square max-w-lg mx-auto bg-muted">
-                    <Image 
-                        src={post.data.heroImage as any} 
-                        alt={post.data.heroAlt || post.data.title} 
-                        class="w-full h-full object-cover transform hover:scale-105 transition-transform duration-700"
-                        loading="eager"
-                        width={1200}
-                        height={1200}
-                        format="webp"
-                    />
+                    {/* Removed Manual Table of Contents Box - Handled by Markdown + Sidebar now */}
+
+                    <div class="prose max-w-none text-slate-800 dark:text-slate-300
+                        prose-headings:font-extrabold prose-headings:tracking-tight prose-headings:text-slate-900 dark:prose-headings:text-white
+                        prose-a:font-bold prose-a:text-[#405EDB] prose-a:no-underline hover:prose-a:underline hover:prose-a:decoration-[#405EDB]/30 hover:prose-a:decoration-4 hover:prose-a:underline-offset-4 prose-a:transition-all
+                        prose-p:leading-loose
+                        prose-img:rounded-2xl prose-img:shadow-sm prose-img:border prose-img:border-slate-200 dark:prose-img:border-slate-800 prose-img:my-10
+                        prose-strong:text-slate-900 dark:prose-strong:text-white prose-strong:font-extrabold
+                        prose-ul:leading-loose prose-ol:leading-loose prose-li:my-2
+                        prose-table:block prose-table:w-full prose-table:overflow-x-auto sm:prose-table:table sm:prose-table:overflow-x-visible prose-table:rounded-xl prose-table:border prose-table:border-slate-200 dark:prose-table:border-slate-800 prose-table:shadow-sm prose-table:whitespace-nowrap sm:prose-table:whitespace-normal
+                        prose-th:bg-slate-50 dark:prose-th:bg-slate-800/50 prose-th:p-4 prose-th:text-left prose-th:font-extrabold prose-th:text-slate-900 dark:prose-th:text-white
+                        prose-td:p-4 prose-td:border-t prose-td:border-slate-100 dark:prose-td:border-slate-800 prose-tr:nth-child(even):bg-slate-50/50 dark:prose-tr:nth-child(even):bg-slate-800/30">
+        				<Content />
+                    </div>
                 </div>
-			)}
-			
-            <div class="prose prose-lg dark:prose-invert mx-auto max-w-2xl 
-                prose-headings:font-bold prose-headings:tracking-tight 
-                prose-a:font-medium prose-a:underline prose-a:underline-offset-2 prose-a:decoration-1 hover:prose-a:decoration-2 
-                prose-img:rounded-xl prose-img:shadow-lg"
-                style="--tw-prose-links: hsl(var(--link)); --tw-prose-invert-links: hsl(var(--link));">
-				<Content />
-			</div>
+
+                <!-- Sidebar Desktop -->
+                <aside class="w-full lg:w-[32%] sticky top-24 hidden lg:block">
+
+                    <!-- Post Content (TOC) -->
+                    {headings.length > 0 && (
+                        <div class="mb-10">
+                            <h3 class="font-bold text-[13px] text-slate-500 dark:text-slate-400 uppercase tracking-widest mb-4 flex items-center gap-2">
+                                <div class="w-1 h-4 bg-[#405EDB] rounded-full"></div>
+                                Post content
+                            </h3>
+                            <ul class="space-y-3 m-0 p-0 list-none border-l-2 border-slate-100 dark:border-slate-800 pl-4 py-1">
+                                {headings.filter(h => h.depth <= 3).map((heading) => (
+                                    <li class={`leading-snug ${heading.depth === 3 ? 'ml-4' : 'ml-0'}`}>
+                                        <a href={`#${heading.slug}`} class="text-[14px] text-slate-600 dark:text-slate-400 hover:text-[#405EDB] dark:hover:text-[#405EDB] hover:font-bold transition-all line-clamp-2">
+                                            {heading.text}
+                                        </a>
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+                    )}
+
+                    <!-- Related Topics & Offers -->
+                    <div>
+                        <h3 class="font-bold text-[13px] text-slate-500 dark:text-slate-400 uppercase tracking-widest mb-4">
+                            Related Blog Posts
+                        </h3>
+                        <div class="space-y-4">
+                            {diversePosts.slice(0, 3).map((p: any) => {
+                                const trueSlug = p.slug.split('/').pop();
+                                return (
+                                    <a href={getHref(`/blog/${trueSlug}/`)} class="group block p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-[#405EDB] dark:hover:border-[#405EDB] transition-colors relative overflow-hidden">
+                                        <!-- Decorative ticket cutout effect -->
+                                        <div class="absolute left-[-8px] top-1/2 -translate-y-1/2 w-4 h-4 bg-white dark:bg-slate-950 rounded-full border-r border-slate-200 dark:border-slate-800 z-10 group-hover:border-[#405EDB] transition-colors"></div>
+                                        <div class="absolute right-[-8px] top-1/2 -translate-y-1/2 w-4 h-4 bg-white dark:bg-slate-950 rounded-full border-l border-slate-200 dark:border-slate-800 z-10 group-hover:border-[#405EDB] transition-colors"></div>
+                                        
+                                        <h4 class="font-bold text-slate-900 dark:text-white group-hover:text-[#405EDB] transition-colors line-clamp-2 text-[15px] mb-2 leading-snug px-2">{p.data.title}</h4>
+                                        <p class="text-[13px] text-slate-500 dark:text-slate-400 px-2 line-clamp-2 mb-4">Read to learn more about this topic.</p>
+                                        
+                                        <div class="mx-2 border-t border-dashed border-slate-200 dark:border-slate-800 pt-3 flex justify-center items-center group-hover:border-[#405EDB]/50 transition-colors bg-slate-50 dark:bg-slate-900/50 rounded-xl mt-4 px-4 py-2 hover:bg-[#405EDB]/10 hover:text-[#405EDB]">
+                                            <span class="text-[13px] font-bold text-slate-700 dark:text-slate-300 group-hover:text-[#405EDB] transition-colors">Read Article</span>
+                                        </div>
+                                    </a>
+                                );
+                            })}
+                        </div>
+                    </div>
+                </aside>
+            </div>
 		</article>
 
-        
-        <!-- Recent Posts Section -->
-        <div class="mt-20 pt-12 border-t max-w-2xl mx-auto">
-            <h2 class="text-2xl font-bold mb-6">{ui.ar['nav.blog']}</h2>
+        <!-- Sidebar Mobile / Fallback below content -->
+        <div class="mt-16 lg:hidden w-full bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 p-6 sm:p-8 rounded-2xl shadow-sm">
+            <h3 class="font-extrabold text-xl text-slate-900 dark:text-white mb-6">
+                Related Blog Posts
+            </h3>
             <div class="grid gap-4 sm:grid-cols-2">
-                {diversePosts.map((p: any) => {
+                {diversePosts.slice(0, 4).map((p: any) => {
                     const trueSlug = p.slug.split('/').pop();
                     return (
-                        <a href={`/ar/blog/${trueSlug}/`} class="group block p-4 rounded-xl border bg-card hover:border-primary/50 hover:shadow-md transition-all">
-                            <h3 class="font-semibold group-hover:text-primary transition-colors line-clamp-2 mb-2">{p.data.title}</h3>
-                            <p class="text-sm text-muted-foreground line-clamp-2">{p.data.description}</p>
+                        <a href={getHref(`/blog/${trueSlug}/`)} class="group flex items-center gap-4 p-4 rounded-xl bg-[#F8FAFC] dark:bg-slate-800/50 hover:bg-slate-50 dark:hover:bg-slate-800 border-transparent transition-all">
+                            <div class="w-16 h-16 shrink-0 rounded-lg overflow-hidden bg-slate-200 dark:bg-slate-700 relative">
+                                {p.data.heroImage && (
+                                    <Image 
+                                        src={p.data.heroImage as any} 
+                                        alt={p.data.title} 
+                                        class="w-full h-full object-cover group-hover:scale-105 transition-transform"
+                                        width={100} height={100} format="webp"
+                                    />
+                                )}
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-900 dark:text-white group-hover:text-[#405EDB] transition-colors line-clamp-2 text-sm leading-snug">{p.data.title}</h4>
+                                <span class="text-xs text-slate-500 dark:text-slate-400 font-medium mt-1 inline-block">Read Article &rarr;</span>
+                            </div>
                         </a>
                     );
                 })}
@@ -138,43 +221,43 @@ const diversePosts = getDiversePosts(displayPosts, originalSlug, 4);
         </div>
 
         <!-- Related Tools Section -->
-        <div class="mt-20 pt-12 border-t max-w-2xl mx-auto">
-            <h2 class="text-2xl font-bold mb-6">{ui.ar['tools.free_tools']}</h2>
-            <div class="grid gap-4 sm:grid-cols-2">
-                <a href={getHref('/tiktok-downloader/')} class="group flex items-center gap-4 p-4 rounded-xl border bg-card hover:border-primary/50 hover:shadow-md transition-all">
-                    <div class="w-10 h-10 rounded-lg bg-black flex items-center justify-center text-white shrink-0 group-hover:scale-110 transition-transform">
-                        <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M19.321 5.562a5.124 5.124 0 0 1-.443-.258 6.228 6.228 0 0 1-1.137-.966c-.849-.849-1.18-1.69-1.333-2.338h.003c-.11-.467-.073-.77-.066-.77h-3.547v13.473c0 .181 0 .359-.008.534a3.874 3.874 0 0 1-.022.287l-.001.021v.011a2.9 2.9 0 0 1-.881 1.838 2.87 2.87 0 0 1-2.028.824 2.9 2.9 0 0 1-2.9-2.9 2.9 2.9 0 0 1 2.9-2.9c.304 0 .596.049.868.138v-3.6a6.391 6.391 0 0 0-.868-.059 6.45 6.45 0 0 0-4.568 1.868A6.387 6.387 0 0 0 3.4 15.9a6.4 6.4 0 0 0 .389 2.187 6.452 6.452 0 0 0 1.5 2.1 6.437 6.437 0 0 0 4.568 1.88 6.45 6.45 0 0 0 4.568-1.88 6.394 6.394 0 0 0 1.89-4.568V9.55a9.372 9.372 0 0 0 5.49 1.77V7.77s-2.485.097-4.484-2.208z"/></svg>
+        <div class="mt-16 pt-16 border-t border-slate-100 dark:border-slate-800 w-full lg:w-[68%]">
+            <h2 class="text-2xl sm:text-3xl font-extrabold mb-6 sm:mb-8 text-slate-900 dark:text-white">Explore Free Video Tools</h2>
+            <div class="grid gap-4 sm:gap-6 sm:grid-cols-2">
+                <a href={getHref('/tiktok-downloader/')} class="group flex items-center gap-4 sm:gap-5 p-4 sm:p-6 rounded-2xl bg-[#F8FAFC] dark:bg-slate-800/50 hover:bg-white dark:hover:bg-slate-700 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border border-transparent">
+                    <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-black flex items-center justify-center text-white shrink-0 group-hover:scale-110 transition-transform">
+                        <svg class="w-5 h-5 sm:w-6 sm:h-6" viewBox="0 0 24 24" fill="currentColor"><path d="M19.321 5.562a5.124 5.124 0 0 1-.443-.258 6.228 6.228 0 0 1-1.137-.966c-.849-.849-1.18-1.69-1.333-2.338h.003c-.11-.467-.073-.77-.066-.77h-3.547v13.473c0 .181 0 .359-.008.534a3.874 3.874 0 0 1-.022.287l-.001.021v.011a2.9 2.9 0 0 1-.881 1.838 2.87 2.87 0 0 1-2.028.824 2.9 2.9 0 0 1-2.9-2.9 2.9 2.9 0 0 1 2.9-2.9c.304 0 .596.049.868.138v-3.6a6.391 6.391 0 0 0-.868-.059 6.45 6.45 0 0 0-4.568 1.868A6.387 6.387 0 0 0 3.4 15.9a6.4 6.4 0 0 0 .389 2.187 6.452 6.452 0 0 0 1.5 2.1 6.437 6.437 0 0 0 4.568 1.88 6.45 6.45 0 0 0 4.568-1.88 6.394 6.394 0 0 0 1.89-4.568V9.55a9.372 9.372 0 0 0 5.49 1.77V7.77s-2.485.097-4.484-2.208z"/></svg>
                     </div>
                     <div>
-                        <h3 class="font-semibold group-hover:text-primary transition-colors">{ui.ar['nav.tiktok']}</h3>
-                        <p class="text-sm text-muted-foreground">{ui.ar['index.tools.tt.desc']}</p>
+                        <h3 class="font-bold text-base sm:text-lg text-slate-900 dark:text-white group-hover:text-[#405EDB] transition-colors line-clamp-1">{t('nav.tiktok')}</h3>
+                        <p class="text-[13px] sm:text-sm text-slate-600 dark:text-slate-400 line-clamp-2">{t('index.tools.tt.desc')}</p>
                     </div>
                 </a>
-                <a href={getHref('/twitter-downloader/')} class="group flex items-center gap-4 p-4 rounded-xl border bg-card hover:border-primary/50 hover:shadow-md transition-all">
-                    <div class="w-10 h-10 rounded-lg bg-black flex items-center justify-center text-white shrink-0 group-hover:scale-110 transition-transform">
-                        <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                <a href={getHref('/twitter-downloader/')} class="group flex items-center gap-4 sm:gap-5 p-4 sm:p-6 rounded-2xl bg-[#F8FAFC] dark:bg-slate-800/50 hover:bg-white dark:hover:bg-slate-700 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border border-transparent">
+                    <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-black flex items-center justify-center text-white shrink-0 group-hover:scale-110 transition-transform">
+                        <svg class="w-5 h-5 sm:w-6 sm:h-6" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
                     </div>
                     <div>
-                        <h3 class="font-semibold group-hover:text-primary transition-colors">{ui.ar['nav.twitter']}</h3>
-                        <p class="text-sm text-muted-foreground">{ui.ar['index.tools.tw.desc']}</p>
+                        <h3 class="font-bold text-base sm:text-lg text-slate-900 dark:text-white group-hover:text-[#405EDB] transition-colors line-clamp-1">{t('nav.twitter')}</h3>
+                        <p class="text-[13px] sm:text-sm text-slate-600 dark:text-slate-400 line-clamp-2">{t('index.tools.tw.desc')}</p>
                     </div>
                 </a>
-                <a href={getHref('/video-to-mp3/')} class="group flex items-center gap-4 p-4 rounded-xl border bg-card hover:border-primary/50 hover:shadow-md transition-all">
-                    <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-green-500 to-emerald-600 flex items-center justify-center text-white shrink-0 group-hover:scale-110 transition-transform">
-                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3"/></svg>
+                <a href={getHref('/video-to-mp3/')} class="group flex items-center gap-4 sm:gap-5 p-4 sm:p-6 rounded-2xl bg-[#F8FAFC] dark:bg-slate-800/50 hover:bg-white dark:hover:bg-slate-700 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border border-transparent">
+                    <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-gradient-to-br from-green-500 to-emerald-600 flex items-center justify-center text-white shrink-0 group-hover:scale-110 transition-transform">
+                        <svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3"/></svg>
                     </div>
                     <div>
-                        <h3 class="font-semibold group-hover:text-primary transition-colors">{ui.ar['nav.audio']}</h3>
-                        <p class="text-sm text-muted-foreground">{ui.ar['index.tools.mp3.desc']}</p>
+                        <h3 class="font-bold text-base sm:text-lg text-slate-900 dark:text-white group-hover:text-[#405EDB] transition-colors line-clamp-1">{t('nav.audio')}</h3>
+                        <p class="text-[13px] sm:text-sm text-slate-600 dark:text-slate-400 line-clamp-2">{t('index.tools.mp3.desc')}</p>
                     </div>
                 </a>
-                <a href={getHref('/tiktok-sound-downloader/')} class="group flex items-center gap-4 p-4 rounded-xl border bg-card hover:border-primary/50 hover:shadow-md transition-all">
-                    <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-pink-500 to-rose-600 flex items-center justify-center text-white shrink-0 group-hover:scale-110 transition-transform">
-                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072M12 12h.01M18.364 5.636a9 9 0 010 12.728M5.636 18.364a9 9 0 010-12.728"/></svg>
+                <a href={getHref('/tiktok-sound-downloader/')} class="group flex items-center gap-4 sm:gap-5 p-4 sm:p-6 rounded-2xl bg-[#F8FAFC] dark:bg-slate-800/50 hover:bg-white dark:hover:bg-slate-700 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border border-transparent">
+                    <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-gradient-to-br from-pink-500 to-rose-600 flex items-center justify-center text-white shrink-0 group-hover:scale-110 transition-transform">
+                        <svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072M12 12h.01M18.364 5.636a9 9 0 010 12.728M5.636 18.364a9 9 0 010-12.728"/></svg>
                     </div>
                     <div>
-                        <h3 class="font-semibold group-hover:text-primary transition-colors">{ui.ar['nav.sound']}</h3>
-                        <p class="text-sm text-muted-foreground">{ui.ar['ts.hero.desc']?.replace(/<[^>]*>?/gm, '').split('.')[0]}</p>
+                        <h3 class="font-bold text-base sm:text-lg text-slate-900 dark:text-white group-hover:text-[#405EDB] transition-colors line-clamp-1">{t('nav.sound')}</h3>
+                        <p class="text-[13px] sm:text-sm text-slate-600 dark:text-slate-400 line-clamp-2">{t('ts.hero.desc').replace(/<[^>]*>?/gm, '').split('.')[0]}</p>
                     </div>
                 </a>
             </div>

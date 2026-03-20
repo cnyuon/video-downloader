@@ -10,8 +10,8 @@
     --card-foreground: 0 0% 3.9%;
     --popover: 0 0% 100%;
     --popover-foreground: 0 0% 3.9%;
-    --primary: 0 0% 9%;
-    --primary-foreground: 0 0% 98%;
+    --primary: 228 69% 55%;
+    --primary-foreground: 0 0% 100%;
     --secondary: 0 0% 96.1%;
     --secondary-foreground: 0 0% 9%;
     --muted: 0 0% 96.1%;
@@ -34,8 +34,8 @@
     --card-foreground: 0 0% 98%;
     --popover: 0 0% 3.9%;
     --popover-foreground: 0 0% 98%;
-    --primary: 0 0% 98%;
-    --primary-foreground: 0 0% 9%;
+    --primary: 228 69% 55%;
+    --primary-foreground: 0 0% 100%;
     --secondary: 0 0% 14.9%;
     --secondary-foreground: 0 0% 98%;
     --muted: 0 0% 14.9%;
@@ -77,4 +77,101 @@ a, button, input, select, textarea,
 /* Focus styles */
 :focus-visible {
   @apply outline-none ring-2 ring-ring ring-offset-2 ring-offset-background;
+}
+
+/* In-article Table of Contents card styling */
+.prose :where(h2[id^="table-of-contents"], h3[id^="table-of-contents"]) {
+  margin-top: 2rem;
+  margin-bottom: 0;
+  padding: 1.1rem 1.35rem 0.55rem;
+  border: 1px solid rgb(226 232 240 / 0.95);
+  border-bottom: 0;
+  border-radius: 1rem 1rem 0 0;
+  background: linear-gradient(180deg, rgb(248 250 252 / 0.96) 0%, rgb(241 245 249 / 0.88) 100%);
+}
+
+.prose :where(h2[id^="table-of-contents"], h3[id^="table-of-contents"]) + ul {
+  margin-top: 0;
+  margin-bottom: 2rem;
+  padding: 0.2rem 1.35rem 1.2rem;
+  list-style: none;
+  border: 1px solid rgb(226 232 240 / 0.95);
+  border-top: 0;
+  border-radius: 0 0 1rem 1rem;
+  background: linear-gradient(180deg, rgb(248 250 252 / 0.96) 0%, rgb(241 245 249 / 0.88) 100%);
+}
+
+.prose :where(h2[id^="table-of-contents"], h3[id^="table-of-contents"]) + ul > li {
+  position: relative;
+  margin: 0.42rem 0;
+  padding-left: 1rem;
+}
+
+.prose :where(h2[id^="table-of-contents"], h3[id^="table-of-contents"]) + ul > li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.58em;
+  width: 0.34rem;
+  height: 0.34rem;
+  border-radius: 9999px;
+  background: rgb(148 163 184 / 0.9);
+}
+
+.prose :where(h2[id^="table-of-contents"], h3[id^="table-of-contents"]) + ul a {
+  color: #405EDB;
+  font-weight: 700;
+  text-decoration: none;
+  text-underline-offset: 4px;
+}
+
+.prose :where(h2[id^="table-of-contents"], h3[id^="table-of-contents"]) + ul a:hover {
+  color: #2f4ac2;
+  text-decoration: underline;
+}
+
+.prose :where(h2[id^="table-of-contents"], h3[id^="table-of-contents"]) + ul ul {
+  margin-top: 0.35rem;
+  margin-left: 1rem;
+  padding-left: 0;
+  list-style: none;
+}
+
+.prose :where(h2[id^="table-of-contents"], h3[id^="table-of-contents"]) + ul ul > li {
+  position: relative;
+  margin: 0.34rem 0;
+  padding-left: 0.9rem;
+}
+
+.prose :where(h2[id^="table-of-contents"], h3[id^="table-of-contents"]) + ul ul > li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.58em;
+  width: 0.28rem;
+  height: 0.28rem;
+  border-radius: 9999px;
+  background: rgb(156 163 175 / 0.9);
+}
+
+.dark .prose :where(h2[id^="table-of-contents"], h3[id^="table-of-contents"]) {
+  border-color: rgb(71 85 105 / 0.8);
+  background: linear-gradient(180deg, rgb(30 41 59 / 0.72) 0%, rgb(30 41 59 / 0.52) 100%);
+}
+
+.dark .prose :where(h2[id^="table-of-contents"], h3[id^="table-of-contents"]) + ul {
+  border-color: rgb(71 85 105 / 0.8);
+  background: linear-gradient(180deg, rgb(30 41 59 / 0.72) 0%, rgb(30 41 59 / 0.52) 100%);
+}
+
+.dark .prose :where(h2[id^="table-of-contents"], h3[id^="table-of-contents"]) + ul > li::before {
+  background: rgb(148 163 184 / 0.85);
+}
+
+.dark .prose :where(h2[id^="table-of-contents"], h3[id^="table-of-contents"]) + ul a {
+  color: #8ea2ff;
+}
+
+.dark .prose :where(h2[id^="table-of-contents"], h3[id^="table-of-contents"]) + ul a:hover {
+  color: #b2c0ff;
 }

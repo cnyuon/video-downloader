@@ -59,17 +59,17 @@ const diversePosts = getDiversePosts(displayPosts, 'tiktok-sound-downloader', 4)
     <Navbar client:idle currentPage="sound" lang={lang as keyof typeof ui} />
     
     <main class="container mx-auto px-4 pt-10 pb-4 max-w-2xl">
-        <div class="text-center mb-8">
-            <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-black text-white text-sm font-medium mb-4">
+        <div class="text-center mb-10">
+            <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-sm font-bold uppercase tracking-wider mb-5 shadow-sm bg-slate-900 dark:bg-white text-white dark:text-slate-900">
                 <svg class="w-4 h-4 text-pink-500" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/>
                 </svg>
                 {ui.en['ts.hero.badge']}
             </div>
-            <h1 class="text-4xl font-bold tracking-tight mb-3">
+            <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight mb-4 text-slate-900 dark:text-white leading-[1.1]">
                 {ui.en['ts.hero.title']}
             </h1>
-            <p class="text-lg text-muted-foreground max-w-xl mx-auto" set:html={ui.en['ts.hero.desc']} />
+            <p class="text-lg text-slate-600 dark:text-slate-400 max-w-xl mx-auto leading-relaxed" set:html={ui.en['ts.hero.desc']} />
         </div>
 
         <AudioExtractor 
@@ -85,121 +85,127 @@ const diversePosts = getDiversePosts(displayPosts, 'tiktok-sound-downloader', 4)
         />
         
         <!-- Features Section -->
-        <div class="mt-12 grid gap-4 md:grid-cols-3">
-            <div class="text-center p-4 rounded-lg bg-muted/30">
-                <div class="text-2xl mb-2">🎵</div>
-                <h3 class="font-semibold mb-1">{ui.en['ts.features.original.title']}</h3>
-                <p class="text-sm text-muted-foreground">{ui.en['ts.features.original.desc']}</p>
+        <div class="mt-16 grid gap-6 md:grid-cols-3">
+            <div class="text-center p-8 rounded-2xl bg-[#F8FAFC] dark:bg-slate-800/50 shadow-sm border border-transparent">
+                <div class="w-12 h-12 rounded-xl bg-[#405EDB]/10 flex items-center justify-center mx-auto mb-4">
+                    <div class="text-2xl">🎵</div>
+                </div>
+                <h3 class="font-bold text-lg mb-2 text-slate-900 dark:text-white">{ui.en['ts.features.original.title']}</h3>
+                <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">{ui.en['ts.features.original.desc']}</p>
             </div>
-            <div class="text-center p-4 rounded-lg bg-muted/30">
-                <div class="text-2xl mb-2">⚡</div>
-                <h3 class="font-semibold mb-1">{ui.en['ts.features.fast.title']}</h3>
-                <p class="text-sm text-muted-foreground">{ui.en['ts.features.fast.desc']}</p>
+            <div class="text-center p-8 rounded-2xl bg-[#F8FAFC] dark:bg-slate-800/50 shadow-sm border border-transparent">
+                <div class="w-12 h-12 rounded-xl bg-[#405EDB]/10 flex items-center justify-center mx-auto mb-4">
+                    <div class="text-2xl">⚡</div>
+                </div>
+                <h3 class="font-bold text-lg mb-2 text-slate-900 dark:text-white">{ui.en['ts.features.fast.title']}</h3>
+                <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">{ui.en['ts.features.fast.desc']}</p>
             </div>
-            <div class="text-center p-4 rounded-lg bg-muted/30">
-                <div class="text-2xl mb-2">🆓</div>
-                <h3 class="font-semibold mb-1">{ui.en['ts.features.free.title']}</h3>
-                <p class="text-sm text-muted-foreground">{ui.en['ts.features.free.desc']}</p>
+            <div class="text-center p-8 rounded-2xl bg-[#F8FAFC] dark:bg-slate-800/50 shadow-sm border border-transparent">
+                <div class="w-12 h-12 rounded-xl bg-[#405EDB]/10 flex items-center justify-center mx-auto mb-4">
+                    <div class="text-2xl">🆓</div>
+                </div>
+                <h3 class="font-bold text-lg mb-2 text-slate-900 dark:text-white">{ui.en['ts.features.free.title']}</h3>
+                <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">{ui.en['ts.features.free.desc']}</p>
             </div>
         </div>
         
         <!-- How To Section -->
-        <div class="mt-12 py-8 border-t">
-            <h2 class="text-2xl font-bold text-center mb-2">{ui.en['ts.howto.title']}</h2>
-            <p class="text-center text-muted-foreground mb-6 max-w-lg mx-auto">{ui.en['ts.howto.desc']}</p>
-            <div class="space-y-4">
-                <div class="flex gap-4 items-start">
-                    <div class="flex-shrink-0 w-8 h-8 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold">1</div>
+        <div class="mt-20 py-10 border-t border-slate-100 dark:border-slate-800">
+            <h2 class="text-3xl font-extrabold text-center mb-4 text-slate-900 dark:text-white">{ui.en['ts.howto.title']}</h2>
+            <p class="text-center text-slate-600 dark:text-slate-400 mb-10 max-w-lg mx-auto leading-relaxed">{ui.en['ts.howto.desc']}</p>
+            <div class="space-y-4 max-w-xl mx-auto">
+                <div class="flex gap-5 items-start p-6 rounded-2xl bg-[#F8FAFC] dark:bg-slate-800/30">
+                    <div class="flex-shrink-0 w-10 h-10 rounded-full bg-[#405EDB]/10 text-[#405EDB] flex items-center justify-center font-bold">1</div>
                     <div>
-                        <h3 class="font-semibold">{ui.en['ts.howto.step1.title']}</h3>
-                        <p class="text-muted-foreground text-sm">{ui.en['ts.howto.step1.desc']}</p>
+                        <h3 class="font-bold text-lg mb-1 text-slate-900 dark:text-white">{ui.en['ts.howto.step1.title']}</h3>
+                        <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">{ui.en['ts.howto.step1.desc']}</p>
                     </div>
                 </div>
-                <div class="flex gap-4 items-start">
-                    <div class="flex-shrink-0 w-8 h-8 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold">2</div>
+                <div class="flex gap-5 items-start p-6 rounded-2xl bg-[#F8FAFC] dark:bg-slate-800/30">
+                    <div class="flex-shrink-0 w-10 h-10 rounded-full bg-[#405EDB]/10 text-[#405EDB] flex items-center justify-center font-bold">2</div>
                     <div>
-                        <h3 class="font-semibold">{ui.en['ts.howto.step2.title']}</h3>
-                        <p class="text-muted-foreground text-sm">{ui.en['ts.howto.step2.desc']}</p>
+                        <h3 class="font-bold text-lg mb-1 text-slate-900 dark:text-white">{ui.en['ts.howto.step2.title']}</h3>
+                        <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">{ui.en['ts.howto.step2.desc']}</p>
                     </div>
                 </div>
-                <div class="flex gap-4 items-start">
-                    <div class="flex-shrink-0 w-8 h-8 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold">3</div>
+                <div class="flex gap-5 items-start p-6 rounded-2xl bg-[#F8FAFC] dark:bg-slate-800/30">
+                    <div class="flex-shrink-0 w-10 h-10 rounded-full bg-[#405EDB]/10 text-[#405EDB] flex items-center justify-center font-bold">3</div>
                     <div>
-                        <h3 class="font-semibold">{ui.en['ts.howto.step3.title']}</h3>
-                        <p class="text-muted-foreground text-sm">{ui.en['ts.howto.step3.desc']}</p>
+                        <h3 class="font-bold text-lg mb-1 text-slate-900 dark:text-white">{ui.en['ts.howto.step3.title']}</h3>
+                        <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">{ui.en['ts.howto.step3.desc']}</p>
                     </div>
                 </div>
             </div>
         </div>
         
         <!-- FAQ Section -->
-        <div class="mt-12 py-8 border-t">
-            <h2 class="text-2xl font-bold text-center mb-6">{ui.en['ts.faq.title']}</h2>
-            <div class="space-y-4">
-                <div class="p-4 rounded-lg bg-muted/30">
-                    <h3 class="font-semibold mb-2">{ui.en['ts.faq.q1']}</h3>
-                    <p class="text-sm text-muted-foreground">{ui.en['ts.faq.a1']}</p>
+        <div class="mt-20 py-10 border-t border-slate-100 dark:border-slate-800">
+            <h2 class="text-3xl font-extrabold text-center mb-8 text-slate-900 dark:text-white">{ui.en['ts.faq.title']}</h2>
+            <div class="space-y-4 max-w-xl mx-auto">
+                <div class="p-6 rounded-2xl bg-[#F8FAFC] dark:bg-slate-800/50 shadow-sm border border-transparent">
+                    <h3 class="font-bold text-lg mb-2 text-slate-900 dark:text-white">{ui.en['ts.faq.q1']}</h3>
+                    <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">{ui.en['ts.faq.a1']}</p>
                 </div>
-                <div class="p-4 rounded-lg bg-muted/30">
-                    <h3 class="font-semibold mb-2">{ui.en['ts.faq.q2']}</h3>
-                    <p class="text-sm text-muted-foreground">{ui.en['ts.faq.a2']}</p>
+                <div class="p-6 rounded-2xl bg-[#F8FAFC] dark:bg-slate-800/50 shadow-sm border border-transparent">
+                    <h3 class="font-bold text-lg mb-2 text-slate-900 dark:text-white">{ui.en['ts.faq.q2']}</h3>
+                    <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">{ui.en['ts.faq.a2']}</p>
                 </div>
-                <div class="p-4 rounded-lg bg-muted/30">
-                    <h3 class="font-semibold mb-2">{ui.en['ts.faq.q3']}</h3>
-                    <p class="text-sm text-muted-foreground">{ui.en['ts.faq.a3']}</p>
+                <div class="p-6 rounded-2xl bg-[#F8FAFC] dark:bg-slate-800/50 shadow-sm border border-transparent">
+                    <h3 class="font-bold text-lg mb-2 text-slate-900 dark:text-white">{ui.en['ts.faq.q3']}</h3>
+                    <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">{ui.en['ts.faq.a3']}</p>
                 </div>
-                <div class="p-4 rounded-lg bg-muted/30">
-                    <h3 class="font-semibold mb-2">{ui.en['ts.faq.q4']}</h3>
-                    <p class="text-sm text-muted-foreground">{ui.en['ts.faq.a4']}</p>
+                <div class="p-6 rounded-2xl bg-[#F8FAFC] dark:bg-slate-800/50 shadow-sm border border-transparent">
+                    <h3 class="font-bold text-lg mb-2 text-slate-900 dark:text-white">{ui.en['ts.faq.q4']}</h3>
+                    <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">{ui.en['ts.faq.a4']}</p>
                 </div>
-                <div class="p-4 rounded-lg bg-muted/30">
-                    <h3 class="font-semibold mb-2">{ui.en['ts.faq.q5']}</h3>
-                    <p class="text-sm text-muted-foreground">{ui.en['ts.faq.a5']}</p>
+                <div class="p-6 rounded-2xl bg-[#F8FAFC] dark:bg-slate-800/50 shadow-sm border border-transparent">
+                    <h3 class="font-bold text-lg mb-2 text-slate-900 dark:text-white">{ui.en['ts.faq.q5']}</h3>
+                    <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">{ui.en['ts.faq.a5']}</p>
                 </div>
             </div>
         </div>
 
         <!-- Related Guides Section -->
-        <div class="mt-12 py-8 border-t">
-            <h2 class="text-2xl font-bold text-center mb-6">{ui.en['ts.guides.title']}</h2>
-            <div class="grid gap-4 md:grid-cols-2">
-                <a href={lang === 'en' ? '/blog/how-to-download-tiktok-without-watermark/' : `/${lang}/blog/how-to-download-tiktok-without-watermark/`} class="group p-4 rounded-xl border bg-card hover:border-primary/50 hover:shadow-md transition-all">
-                    <h3 class="font-semibold mb-1 group-hover:text-primary transition-colors">{ui.en['ts.guides.1.title']}</h3>
-                    <p class="text-sm text-muted-foreground">{ui.en['ts.guides.1.desc']}</p>
+        <div class="mt-20 py-10 border-t border-slate-100 dark:border-slate-800">
+            <h2 class="text-3xl font-extrabold text-center mb-8 text-slate-900 dark:text-white">{ui.en['ts.guides.title']}</h2>
+            <div class="grid gap-6 md:grid-cols-2 max-w-3xl mx-auto">
+                <a href={lang === 'en' ? '/blog/how-to-download-tiktok-without-watermark/' : `/${lang}/blog/how-to-download-tiktok-without-watermark/`} class="group p-6 rounded-2xl bg-[#F4F7FB] dark:bg-slate-800 border border-transparent hover:bg-white dark:hover:bg-slate-700 hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+                    <h3 class="font-bold text-lg mb-2 text-slate-900 dark:text-white group-hover:text-[#405EDB] transition-colors">{ui.en['ts.guides.1.title']}</h3>
+                    <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">{ui.en['ts.guides.1.desc']}</p>
                 </a>
-                <a href={lang === 'en' ? '/blog/best-free-video-editors-tiktok/' : `/${lang}/blog/best-free-video-editors-tiktok/`} class="group p-4 rounded-xl border bg-card hover:border-primary/50 hover:shadow-md transition-all">
-                    <h3 class="font-semibold mb-1 group-hover:text-primary transition-colors">{ui.en['ts.guides.2.title']}</h3>
-                    <p class="text-sm text-muted-foreground">{ui.en['ts.guides.2.desc']}</p>
+                <a href={lang === 'en' ? '/blog/best-free-video-editors-tiktok/' : `/${lang}/blog/best-free-video-editors-tiktok/`} class="group p-6 rounded-2xl bg-[#F4F7FB] dark:bg-slate-800 border border-transparent hover:bg-white dark:hover:bg-slate-700 hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+                    <h3 class="font-bold text-lg mb-2 text-slate-900 dark:text-white group-hover:text-[#405EDB] transition-colors">{ui.en['ts.guides.2.title']}</h3>
+                    <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">{ui.en['ts.guides.2.desc']}</p>
                 </a>
-                <a href={lang === 'en' ? '/tiktok-downloader/' : `/${lang}/tiktok-downloader/`} class="group p-4 rounded-xl border bg-card hover:border-primary/50 hover:shadow-md transition-all">
-                    <h3 class="font-semibold mb-1 group-hover:text-primary transition-colors">{ui.en['ts.guides.3.title']}</h3>
-                    <p class="text-sm text-muted-foreground">{ui.en['ts.guides.3.desc']}</p>
+                <a href={lang === 'en' ? '/tiktok-downloader/' : `/${lang}/tiktok-downloader/`} class="group p-6 rounded-2xl bg-[#F4F7FB] dark:bg-slate-800 border border-transparent hover:bg-white dark:hover:bg-slate-700 hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+                    <h3 class="font-bold text-lg mb-2 text-slate-900 dark:text-white group-hover:text-[#405EDB] transition-colors">{ui.en['ts.guides.3.title']}</h3>
+                    <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">{ui.en['ts.guides.3.desc']}</p>
                 </a>
-                <a href={lang === 'en' ? '/video-to-mp3/' : `/${lang}/video-to-mp3/`} class="group p-4 rounded-xl border bg-card hover:border-primary/50 hover:shadow-md transition-all">
-                    <h3 class="font-semibold mb-1 group-hover:text-primary transition-colors">{ui.en['ts.guides.4.title']}</h3>
-                    <p class="text-sm text-muted-foreground">{ui.en['ts.guides.4.desc']}</p>
+                <a href={lang === 'en' ? '/video-to-mp3/' : `/${lang}/video-to-mp3/`} class="group p-6 rounded-2xl bg-[#F4F7FB] dark:bg-slate-800 border border-transparent hover:bg-white dark:hover:bg-slate-700 hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+                    <h3 class="font-bold text-lg mb-2 text-slate-900 dark:text-white group-hover:text-[#405EDB] transition-colors">{ui.en['ts.guides.4.title']}</h3>
+                    <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">{ui.en['ts.guides.4.desc']}</p>
                 </a>
             </div>
         </div>
     
         <!-- Recent Posts Section -->
-        <div class="mt-20 pt-12 border-t max-w-2xl mx-auto">
-            <h2 class="text-2xl font-bold mb-6">{ui.en['nav.blog'] || "Blog"}</h2>
-            <div class="grid gap-4 sm:grid-cols-2">
+        <div class="mt-20 pt-12 border-t border-slate-100 dark:border-slate-800 max-w-3xl mx-auto">
+            <h2 class="text-2xl font-extrabold mb-8 text-slate-900 dark:text-white">{ui.en['nav.blog'] || "Blog"}</h2>
+            <div class="grid gap-6 sm:grid-cols-2">
                 {diversePosts.map((p: any) => {
                     const trueSlug = p.slug.split('/').pop();
                     return (
-                        <a href={`/blog/${trueSlug}/`} class="group block p-4 rounded-xl border bg-card hover:border-primary/50 hover:shadow-md transition-all">
-                            <h3 class="font-semibold group-hover:text-primary transition-colors line-clamp-2 mb-2">{p.data.title}</h3>
-                            <p class="text-sm text-muted-foreground line-clamp-2">{p.data.description}</p>
+                        <a href={`/blog/${trueSlug}/`} class="group block p-6 rounded-2xl bg-[#F4F7FB] dark:bg-slate-800 border border-transparent hover:bg-white dark:hover:bg-slate-700 hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+                            <h3 class="font-bold text-lg text-slate-900 dark:text-white group-hover:text-[#405EDB] transition-colors line-clamp-2 mb-3">{p.data.title}</h3>
+                            <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed line-clamp-2">{p.data.description}</p>
                         </a>
                     );
                 })}
             </div>
-            <div class="mt-6 text-center">
-                <a href={`/blog/`} class="inline-flex items-center text-sm font-medium text-primary hover:underline">
+            <div class="mt-10 text-center">
+                <a href={`/blog/`} class="inline-flex items-center px-6 py-3 rounded-full bg-[#405EDB]/10 text-[#405EDB] font-bold text-sm hover:bg-[#405EDB] hover:text-white transition-colors duration-300">
                     {ui.en['btn.back_to_blog'] || "View all posts"}
-                    <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                    <svg class="w-4 h-4 ml-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
                 </a>
             </div>
         </div>
