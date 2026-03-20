@@ -1,11 +1,9 @@
 import { getCollection } from 'astro:content';
 
 const BASE_URL = 'https://getmediatools.com';
-
-// All supported languages (add new ones here)
-const LANGS = ['es', 'tr', 'pt', 'fr', 'de', 'ja', 'ko', 'ar', 'hi'];
-
-const staticPages = [
+const LOCALES = ['en', 'es', 'tr', 'pt', 'fr', 'de', 'ja', 'ko', 'ar', 'hi'];
+const NON_DEFAULT_LOCALES = LOCALES.filter((locale) => locale !== 'en');
+const STATIC_BASE_PATHS = [
     '/',
     '/blog/',
     '/tiktok-downloader/',
@@ -15,40 +13,77 @@ const staticPages = [
     '/thumbnail-grabber/',
     '/tiktok-sound-downloader/',
     '/instagram-downloader/',
-    // Generate all localized static pages
-    ...LANGS.flatMap(lang => [
-        `/${lang}/`,
-        `/${lang}/tiktok-downloader/`,
-        `/${lang}/facebook-downloader/`,
-        `/${lang}/twitter-downloader/`,
-        `/${lang}/video-to-mp3/`,
-        `/${lang}/thumbnail-grabber/`,
-        `/${lang}/tiktok-sound-downloader/`,
-        `/${lang}/instagram-downloader/`,
-        `/${lang}/blog/`,
-    ]),
 ];
+
+const staticPages = [
+    ...STATIC_BASE_PATHS,
+    ...NON_DEFAULT_LOCALES.flatMap((locale) =>
+        STATIC_BASE_PATHS.map((path) => buildLocalizedPath(path, locale))
+    ),
+];
+
+function ensureTrailingSlash(path: string): string {
+    const withLeadingSlash = path.startsWith('/') ? path : `/${path}`;
+    return withLeadingSlash.endsWith('/') ? withLeadingSlash : `${withLeadingSlash}/`;
+}
+
+function buildLocalizedPath(basePath: string, locale: string): string {
+    const normalizedBasePath = ensureTrailingSlash(basePath);
+    if (locale === 'en') return normalizedBasePath;
+    if (normalizedBasePath === '/') return `/${locale}/`;
+    return `/${locale}${normalizedBasePath}`;
+}
+
+function stripLocalePrefix(path: string): string {
+    const normalizedPath = ensureTrailingSlash(path);
+    const pathSegments = normalizedPath.split('/').filter(Boolean);
+    const maybeLocale = pathSegments[0];
+
+    if (maybeLocale && NON_DEFAULT_LOCALES.includes(maybeLocale)) {
+        const localeAgnosticPath = pathSegments.slice(1).join('/');
+        return localeAgnosticPath ? `/${localeAgnosticPath}/` : '/';
+    }
+
+    return normalizedPath;
+}
+
+function buildAlternateLinks(url: string): string {
+    const basePath = stripLocalePrefix(url);
+    const localeAlternates = LOCALES.map((locale) => {
+        const href = `${BASE_URL}${buildLocalizedPath(basePath, locale)}`;
+        return `    <xhtml:link rel="alternate" hreflang="${locale}" href="${href}" />`;
+    });
+
+    const xDefaultHref = `${BASE_URL}${buildLocalizedPath(basePath, 'en')}`;
+    localeAlternates.push(
+        `    <xhtml:link rel="alternate" hreflang="x-default" href="${xDefaultHref}" />`
+    );
+
+    return localeAlternates.join('\n');
+}
+
+function isLocaleHomepage(url: string): boolean {
+    const localeHomepages = ['/', ...NON_DEFAULT_LOCALES.map((locale) => `/${locale}/`)];
+    return localeHomepages.includes(url);
+}
 
 export async function GET() {
     const allPosts = await getCollection('blog');
+    const enPosts = allPosts.filter((post: any) => post.slug.startsWith('en/'));
 
     // Get all baseline "en" posts and form their English URLs with their authentic dates
-    const enPostsUrls = allPosts
-        .filter((post: any) => post.slug.startsWith('en/'))
-        .map((post: any) => ({
+    const enPostsUrls = enPosts.map((post: any) => ({
             url: `/blog/${post.slug.replace('en/', '')}/`,
             lastmod: (post.data.updatedDate || post.data.pubDate).toISOString(),
-            isBlog: true
+            isBlog: true,
         }));
 
     // All English posts ALSO have localized routes
-    const localizedPostsUrls = LANGS.flatMap(lang =>
-        allPosts
-            .filter((post: any) => post.slug.startsWith('en/'))
-            .map((post: any) => ({
-                url: `/${lang}/blog/${post.slug.replace('en/', '')}/`,
+    const localizedPostsUrls = NON_DEFAULT_LOCALES.flatMap((locale) =>
+        enPosts.map((post: any) => ({
+                url: `/${locale}/blog/${post.slug.replace('en/', '')}/`,
                 lastmod: (post.data.updatedDate || post.data.pubDate).toISOString(),
-                isBlog: true
+                isBlog: true,
             }))
     );
 
@@ -56,20 +91,22 @@ export async function GET() {
     const staticPagesUrls = staticPages.map(url => ({
         url,
         lastmod: '2026-03-02T00:00:00.000Z',
-        isBlog: false
+        isBlog: false,
     }));
 
     const allUrls = [...staticPagesUrls, ...enPostsUrls, ...localizedPostsUrls];
 
     const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
   ${allUrls
             .map(
                 (page) => `<url>
     <loc>${BASE_URL}${page.url}</loc>
+${buildAlternateLinks(page.url)}
     <lastmod>${page.lastmod}</lastmod>
-    <changefreq>${page.url === '/' || page.url === '/es/' || page.url === '/tr/' || page.url === '/fr/' || page.url === '/hi/' || page.url === '/ar/' || page.url === '/ko/' || page.url === '/ja/' || page.url === '/de/' || page.url === '/pt/' ? 'daily' : page.isBlog ? 'monthly' : 'weekly'}</changefreq>
-    <priority>${page.url === '/' || page.url === '/es/' || page.url === '/tr/' || page.url === '/fr/' || page.url === '/hi/' || page.url === '/ar/' || page.url === '/ko/' || page.url === '/ja/' || page.url === '/de/' || page.url === '/pt/' ? '1.0' : page.isBlog ? '0.7' : '0.9'}</priority>
+    <changefreq>${isLocaleHomepage(page.url) ? 'daily' : page.isBlog ? 'monthly' : 'weekly'}</changefreq>
+    <priority>${isLocaleHomepage(page.url) ? '1.0' : page.isBlog ? '0.7' : '0.9'}</priority>
   </url>`
             )
             .join('\n')}
