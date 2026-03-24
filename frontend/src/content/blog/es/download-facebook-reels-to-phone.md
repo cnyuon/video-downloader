@@ -9,6 +9,10 @@ monetization:
   primary_category: "none"
   affiliate_potential: "low"
   geo_restrictions: false
+cluster: "facebook"
+subcluster: "reels"
+primaryTool: "facebook-downloader"
+searchIntent: "informational"
 ---
 
 Encuentras un gran Reel de Facebook —es divertido, informativo o simplemente un recuerdo perfecto— y quieres guardarlo. Pero cuando tocas los tres puntos, no hay un botón de "Descargar". Frustrante, ¿verdad?
@@ -19,9 +23,9 @@ Esta guía te proporciona el mejor método para **descargar cualquier Reel públ
 
 ### Tabla de Contenidos
 - [La mejor manera de descargar Reels de Facebook](#la-mejor-manera-de-descargar-reels-de-facebook)
-- [Guía paso a paso para iPhone](#guia-paso-a-paso-para-iphone)
-- [Guía paso a paso para Android](#guia-paso-a-paso-para-android)
-- [Por qué otros métodos son riesgosos o ineficaces](#por-que-otros-metodos-son-riesgosos-o-ineficaces)
+- [Guía paso a paso para iPhone](#guía-paso-a-paso-para-iphone)
+- [Guía paso a paso para Android](#guía-paso-a-paso-para-android)
+- [Por qué otros métodos son riesgosos o ineficaces](#por-qué-otros-métodos-son-riesgosos-o-ineficaces)
 - [Preguntas frecuentes (FAQ)](#preguntas-frecuentes-faq)
 - [Puntos clave](#puntos-clave)
 

@@ -9,6 +9,10 @@ monetization:
   primary_category: "none"
   affiliate_potential: "low"
   geo_restrictions: false
+cluster: "tiktok"
+subcluster: "mobile-workflow"
+primaryTool: "tiktok-downloader"
+searchIntent: "informational"
 ---
 
 아이폰에서 틱톡 영상을 저장하려고 할 때 답답함을 느낄 수 있습니다. 방해가 되는 워터마크가 남거나, 아예 크리에이터가 "동영상 저장" 버튼을 비활성화했을 수도 있습니다. 앱 스토어에는 다운로더 앱이 가득하지만, 종종 신뢰할 수 없거나, 광고로 가득 차 있거나, 비싼 구독료를 요구하기도 합니다.
@@ -18,12 +22,12 @@ monetization:
 이 가이드에서는 워터마크 없이 어떤 틱톡 영상이든 웹 브라우저만 사용하여 아이폰 카메라 롤에 직접 다운로드하는 가장 빠르고 안전한 방법을 알려드립니다.
 
 ## 목차
-- [인앱 "동영상 저장" 버튼을 사용하면 안 되는 이유](#why-you-shouldnt-use-the-in-app-save-video-button)
-- [아이폰에서 틱톡을 다운로드하는 방법 (앱 필요 없음)](#how-to-download-tiktoks-on-iphone-no-app-needed)
-- [1단계: 틱톡 영상 링크 복사](#step-1-copy-the-tiktok-video-link)
-- [2단계: Safari에서 웹 기반 다운로더 사용](#step-2-use-a-web-based-downloader-in-safari)
-- [3단계: 영상을 카메라 롤에 저장](#step-3-save-the-video-to-your-camera-roll)
-- [자주 묻는 질문 (FAQ)](#frequently-asked-questions-faq)
+- [인앱 "동영상 저장" 버튼을 사용하면 안 되는 이유](#인앱-동영상-저장-버튼을-사용하면-안-되는-이유)
+- [아이폰에서 틱톡을 다운로드하는 방법 (앱 필요 없음)](#아이폰에서-틱톡을-다운로드하는-방법-앱-필요-없음)
+- [1단계: 틱톡 영상 링크 복사](#1단계-틱톡-영상-링크-복사)
+- [2단계: Safari에서 웹 기반 다운로더 사용](#2단계-safari에서-웹-기반-다운로더-사용)
+- [3단계: 영상을 카메라 롤에 저장](#3단계-영상을-카메라-롤에-저장)
+- [자주 묻는 질문 (FAQ)](#자주-묻는-질문-faq)
 
 ## 인앱 "동영상 저장" 버튼을 사용하면 안 되는 이유
 

@@ -1,0 +1,55 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import Navbar from '../../../components/Navbar';
+import Footer from '../../../components/Footer.astro';
+import { ui } from '../../../i18n/ui';
+import { NON_DEFAULT_LOCALES } from '../../../i18n/locales';
+import { useTranslations } from '../../../i18n/utils';
+import { getPhase1Text } from '../../../i18n/phase1-extra';
+import { TOOL_CATEGORY_IDS, getToolCategory } from '../../../lib/tool-categories';
+
+export function getStaticPaths() {
+    return NON_DEFAULT_LOCALES.flatMap((lang) =>
+        TOOL_CATEGORY_IDS.map((category) => ({ params: { lang, category } }))
+    );
+}
+
+const localeParam = String(Astro.params.lang || 'en');
+const locale = (Object.keys(ui).includes(localeParam) ? localeParam : 'en') as keyof typeof ui;
+const localeCode = String(locale);
+const category = String(Astro.params.category || '');
+const categoryData = getToolCategory(category);
+if (!categoryData) {
+    throw new Error(`Unknown tool category: ${category}`);
+}
+
+const t = useTranslations(locale);
+const tx = (key: Parameters<typeof getPhase1Text>[1]) => getPhase1Text(localeCode, key);
+const getHref = (path: string) => (localeCode === 'en' ? path : `/${localeCode}${path === '/' ? '/' : path}`);
+const categoryTitle = category === 'video' ? tx('tools.category.video') : category === 'audio' ? tx('tools.category.audio') : tx('tools.category.image');
+---
+
+<Layout title={`${categoryTitle} | GetMediaTools`} description={tx('tools.hub.desc')}>
+    <Navbar client:idle={{timeout: 3000}} currentPage="tools-menu" lang={locale} />
+
+    <main class="container mx-auto px-4 pt-10 pb-20 max-w-5xl">
+        <div class="mb-10">
+            <a href={getHref('/tools/')} class="text-sm font-bold text-[#405EDB] hover:underline">&larr; {tx('tools.hub.title')}</a>
+            <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight mt-4 mb-4 text-slate-900 dark:text-white">{categoryTitle}</h1>
+            <p class="text-lg text-slate-600 dark:text-slate-400 max-w-3xl">{tx('tools.hub.desc')}</p>
+        </div>
+
+        <div class="grid gap-6 sm:grid-cols-2">
+            {categoryData.tools.map((tool) => (
+                <a href={getHref(tool.href)} class="group rounded-2xl border border-slate-200 dark:border-slate-800 p-7 bg-white dark:bg-slate-900 hover:border-[#405EDB] hover:shadow-lg transition-all">
+                    <h2 class="font-bold text-xl text-slate-900 dark:text-white group-hover:text-[#405EDB] transition-colors">
+                        {tool.id === 'instagram' ? tx('nav.instagram') : t(tool.labelKey)}
+                    </h2>
+                    <p class="mt-3 text-sm text-slate-600 dark:text-slate-400 leading-relaxed" set:html={tool.id === 'instagram' ? tx('tools.instagram.desc') : tool.descriptionKey ? t(tool.descriptionKey) : tool.fallbackDescription} />
+                </a>
+            ))}
+        </div>
+    </main>
+
+    <Footer />
+</Layout>

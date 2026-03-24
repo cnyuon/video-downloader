@@ -9,6 +9,10 @@ monetization:
   primary_category: "none"
   affiliate_potential: "low"
   geo_restrictions: false
+cluster: "audio"
+subcluster: "tiktok-audio"
+primaryTool: "tiktok-sound-downloader"
+searchIntent: "informational"
 ---
 
 TikTok, akılda kalıcı şarkılardan komik ses kliplerine ve trend olan seslendirmelere kadar milyonlarca viral sese ev sahipliği yapıyor. Ancak uygulama, yalnızca ses dosyalarını indirmenize olanak tanımıyor.

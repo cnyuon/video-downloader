@@ -10,6 +10,10 @@ monetization:
   primary_category: "software"
   affiliate_potential: "medium"
   geo_restrictions: false
+cluster: "tiktok"
+subcluster: "viewer-workflow"
+primaryTool: "none"
+searchIntent: "informational"
 ---
 
 よくある不満です。友達からTikTok動画のリンクが送られてきたのに、クリックすると動画ではなくApp Storeにすぐにリダイレクトされてしまう。TikTokのモバイルウェブサイトは、コンテンツの視聴を妨げ、積極的にアプリのダウンロードとアカウント作成を促してきます。

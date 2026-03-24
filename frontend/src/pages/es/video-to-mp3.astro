@@ -64,7 +64,7 @@ const diversePosts = getDiversePosts(displayPosts, 'video-to-mp3', 4);
     description={t('mp3.meta.desc')}
     jsonLd={jsonLd}
 >
-    <Navbar client:idle currentPage="audio" lang={lang as keyof typeof ui} />
+    <Navbar client:idle={{timeout: 3000}} currentPage="audio" lang={lang as keyof typeof ui} />
     
     <main class="container mx-auto px-4 pt-10 pb-4 max-w-2xl">
         <div class="text-center mb-8">

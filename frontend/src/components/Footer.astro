@@ -6,10 +6,12 @@
 import { getLangFromUrl, useTranslations } from '../i18n/utils';
 import { getLocalizedHref } from '../i18n/href';
 import { languages } from '../i18n/ui';
+import { getPhase1Text } from '../i18n/phase1-extra';
 import { getCollection } from 'astro:content';
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
+const tx = (key: Parameters<typeof getPhase1Text>[1]) => getPhase1Text(String(lang), key);
 const pathname = Astro.url.pathname.endsWith('/') ? Astro.url.pathname : `${Astro.url.pathname}/`;
 const localePrefix = lang === 'en' ? '' : `/${lang}`;
 const pathWithoutLocale = localePrefix && pathname.startsWith(localePrefix)
@@ -45,11 +47,13 @@ const localeBlogLinks = Object.entries(languages).map(([code, label]) => ({
     label,
     href: code === 'en' ? '/blog/' : `/${code}/blog/`,
 }));
+
+const BADGE_PLACEHOLDER = 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==';
 ---
 
 <footer class="bg-[#F8FAFC] dark:bg-slate-900/50 py-16 md:py-24 mt-0 border-t border-slate-100 dark:border-slate-800/50">
     <div class="container mx-auto px-4 max-w-7xl">
-        <div class="grid gap-12 md:grid-cols-4 mb-16">
+        <div class="grid gap-12 md:grid-cols-5 mb-16">
             <!-- Brand -->
             <div class="md:col-span-2 md:pr-12">
                 <a href={getHref('/')} class="flex items-center space-x-3 mb-6">
@@ -93,6 +97,18 @@ const localeBlogLinks = Object.entries(languages).map(([code, label]) => ({
                     })}
                 </ul>
             </div>
+
+            <!-- Legal -->
+            <div>
+                <h3 class="font-extrabold mb-6 text-sm uppercase tracking-widest text-[#405EDB]">{tx('footer.legal')}</h3>
+                <ul class="space-y-4 font-bold text-[15px] text-slate-600 dark:text-slate-400">
+                    <li><a href={getHref('/legal/privacy-policy/')} class="hover:text-slate-900 dark:hover:text-white transition-colors">{tx('legal.privacy')}</a></li>
+                    <li><a href={getHref('/legal/terms-of-service/')} class="hover:text-slate-900 dark:hover:text-white transition-colors">{tx('legal.terms')}</a></li>
+                    <li><a href={getHref('/legal/about-us/')} class="hover:text-slate-900 dark:hover:text-white transition-colors">{tx('legal.about')}</a></li>
+                    <li><a href={getHref('/legal/contact-us/')} class="hover:text-slate-900 dark:hover:text-white transition-colors">{tx('legal.contact')}</a></li>
+                    <li><a href={getHref('/legal/refund-policy/')} class="hover:text-slate-900 dark:hover:text-white transition-colors">{tx('legal.refund')}</a></li>
+                </ul>
+            </div>
         </div>
 
         <div class="border-t border-slate-200 dark:border-slate-800/50 pt-10 mb-12">
@@ -108,65 +124,28 @@ const localeBlogLinks = Object.entries(languages).map(([code, label]) => ({
 
         <!-- Featured Badges -->
         <div class="py-10 border-t border-slate-200 dark:border-slate-800/50 overflow-hidden relative w-full group">
-            <div class="flex w-max animate-marquee hover:[animation-play-state:paused] gap-8">
-                <!-- Original Set -->
-                <div class="flex items-center gap-8 px-4 opacity-50 hover:opacity-100 transition-opacity duration-500 grayscale hover:grayscale-0">
-                    <a href="https://fazier.com/launches/getmediatools.com" target="_blank" rel="noopener noreferrer" class="hover:scale-105 transition-transform duration-300">
-                        <img src="https://fazier.com/api/v1//public/badges/launch_badges.svg?badge_type=featured&theme=light" width="250" height="54" alt="Fazier badge" class="h-[36px] w-auto drop-shadow-sm dark:hidden" />
-                        <img src="https://fazier.com/api/v1//public/badges/launch_badges.svg?badge_type=featured&theme=dark" width="250" height="54" alt="Fazier badge" class="h-[36px] w-auto drop-shadow-sm hidden dark:block" />
-                    </a>
-                    <a href="https://twelve.tools" target="_blank" rel="noopener noreferrer" class="hover:scale-105 transition-transform duration-300">
-                        <img src="https://twelve.tools/badge0-dark.svg" alt="Featured on Twelve Tools" width="200" height="54" class="h-[36px] w-auto drop-shadow-sm" />
-                    </a>
-                    <a href="https://wired.business" target="_blank" rel="noopener noreferrer" class="hover:scale-105 transition-transform duration-300">
-                        <img src="https://wired.business/badge0-dark.svg" alt="Featured on Wired Business" width="200" height="54" class="h-[36px] w-auto drop-shadow-sm" />
-                    </a>
-                    <a href="https://saastool.site/item/getmediatools" target="_blank" rel="noopener noreferrer" class="hover:scale-105 transition-transform duration-300">
-                        <img src="https://saastool.site/badges/saastool-light.svg" alt="Featured on SaaSTool.site" height="54" width="auto" class="h-[36px] w-auto drop-shadow-sm dark:hidden" />
-                        <img src="https://saastool.site/badges/saastool-dark.svg" alt="Featured on SaaSTool.site" height="54" width="auto" class="h-[36px] w-auto drop-shadow-sm hidden dark:block" />
-                    </a>
-                    <a href="https://turbo0.com/item/getmediatools" target="_blank" rel="noopener noreferrer" class="hover:scale-105 transition-transform duration-300">
-                        <img src="https://img.turbo0.com/badge-listed-light.svg" alt="Listed on Turbo0" class="h-[36px] w-auto drop-shadow-sm dark:hidden" />
-                        <img src="https://img.turbo0.com/badge-listed-dark.svg" alt="Listed on Turbo0" class="h-[36px] w-auto drop-shadow-sm hidden dark:block" />
-                    </a>
-                    <a href="https://findly.tools/getmediatools?utm_source=getmediatools" target="_blank" rel="noopener noreferrer" class="hover:scale-105 transition-transform duration-300">
-                        <img src="https://findly.tools/badges/findly-tools-badge-light.svg" alt="Featured on Findly.tools" width="175" height="55" class="h-[36px] w-auto drop-shadow-sm dark:hidden" />
-                        <img src="https://findly.tools/badges/findly-tools-badge-dark.svg" alt="Featured on Findly.tools" width="175" height="55" class="h-[36px] w-auto drop-shadow-sm hidden dark:block" />
-                    </a>
-                    <a href="https://launchigniter.com/product/getmediatools?ref=badge-getmediatools" target="_blank" rel="noopener noreferrer" class="hover:scale-105 transition-transform duration-300">
-                        <img src="https://launchigniter.com/api/badge/getmediatools?theme=light" alt="Featured on LaunchIgniter" width="212" height="55" class="h-[36px] w-auto drop-shadow-sm dark:hidden" />
-                        <img src="https://launchigniter.com/api/badge/getmediatools?theme=dark" alt="Featured on LaunchIgniter" width="212" height="55" class="h-[36px] w-auto drop-shadow-sm hidden dark:block" />
-                    </a>
-                </div>
-                <!-- Duplicate Set -->
-                <div class="flex items-center gap-8 px-4 opacity-50 hover:opacity-100 transition-opacity duration-500 grayscale hover:grayscale-0" aria-hidden="true">
-                    <a href="https://fazier.com/launches/getmediatools.com" target="_blank" rel="noopener noreferrer" class="hover:scale-105 transition-transform duration-300">
-                        <img src="https://fazier.com/api/v1//public/badges/launch_badges.svg?badge_type=featured&theme=light" width="250" height="54" alt="Fazier badge" class="h-[36px] w-auto drop-shadow-sm dark:hidden" />
-                        <img src="https://fazier.com/api/v1//public/badges/launch_badges.svg?badge_type=featured&theme=dark" width="250" height="54" alt="Fazier badge" class="h-[36px] w-auto drop-shadow-sm hidden dark:block" />
-                    </a>
-                    <a href="https://twelve.tools" target="_blank" rel="noopener noreferrer" class="hover:scale-105 transition-transform duration-300">
-                        <img src="https://twelve.tools/badge0-dark.svg" alt="Featured on Twelve Tools" width="200" height="54" class="h-[36px] w-auto drop-shadow-sm" />
-                    </a>
-                    <a href="https://wired.business" target="_blank" rel="noopener noreferrer" class="hover:scale-105 transition-transform duration-300">
-                        <img src="https://wired.business/badge0-dark.svg" alt="Featured on Wired Business" width="200" height="54" class="h-[36px] w-auto drop-shadow-sm" />
-                    </a>
-                    <a href="https://saastool.site/item/getmediatools" target="_blank" rel="noopener noreferrer" class="hover:scale-105 transition-transform duration-300">
-                        <img src="https://saastool.site/badges/saastool-light.svg" alt="Featured on SaaSTool.site" height="54" width="auto" class="h-[36px] w-auto drop-shadow-sm dark:hidden" />
-                        <img src="https://saastool.site/badges/saastool-dark.svg" alt="Featured on SaaSTool.site" height="54" width="auto" class="h-[36px] w-auto drop-shadow-sm hidden dark:block" />
-                    </a>
-                    <a href="https://turbo0.com/item/getmediatools" target="_blank" rel="noopener noreferrer" class="hover:scale-105 transition-transform duration-300">
-                        <img src="https://img.turbo0.com/badge-listed-light.svg" alt="Listed on Turbo0" class="h-[36px] w-auto drop-shadow-sm dark:hidden" />
-                        <img src="https://img.turbo0.com/badge-listed-dark.svg" alt="Listed on Turbo0" class="h-[36px] w-auto drop-shadow-sm hidden dark:block" />
-                    </a>
-                    <a href="https://findly.tools/getmediatools?utm_source=getmediatools" target="_blank" rel="noopener noreferrer" class="hover:scale-105 transition-transform duration-300">
-                        <img src="https://findly.tools/badges/findly-tools-badge-light.svg" alt="Featured on Findly.tools" width="175" height="55" class="h-[36px] w-auto drop-shadow-sm dark:hidden" />
-                        <img src="https://findly.tools/badges/findly-tools-badge-dark.svg" alt="Featured on Findly.tools" width="175" height="55" class="h-[36px] w-auto drop-shadow-sm hidden dark:block" />
-                    </a>
-                    <a href="https://launchigniter.com/product/getmediatools?ref=badge-getmediatools" target="_blank" rel="noopener noreferrer" class="hover:scale-105 transition-transform duration-300">
-                        <img src="https://launchigniter.com/api/badge/getmediatools?theme=light" alt="Featured on LaunchIgniter" width="212" height="55" class="h-[36px] w-auto drop-shadow-sm dark:hidden" />
-                        <img src="https://launchigniter.com/api/badge/getmediatools?theme=dark" alt="Featured on LaunchIgniter" width="212" height="55" class="h-[36px] w-auto drop-shadow-sm hidden dark:block" />
-                    </a>
-                </div>
+            <div class="flex flex-wrap items-center justify-center gap-8 px-4 opacity-60 hover:opacity-100 transition-opacity duration-500 grayscale hover:grayscale-0">
+                <a href="https://fazier.com/launches/getmediatools.com" target="_blank" rel="nofollow noopener noreferrer" class="hover:scale-105 transition-transform duration-300">
+                    <img loading="lazy" decoding="async" fetchpriority="low" src={BADGE_PLACEHOLDER} data-src="https://fazier.com/api/v1//public/badges/launch_badges.svg?badge_type=featured&theme=light" data-defer-badge width="250" height="54" alt="Fazier badge" class="h-[36px] w-auto drop-shadow-sm" />
+                </a>
+                <a href="https://twelve.tools" target="_blank" rel="nofollow noopener noreferrer" class="hover:scale-105 transition-transform duration-300">
+                    <img loading="lazy" decoding="async" fetchpriority="low" src={BADGE_PLACEHOLDER} data-src="https://twelve.tools/badge0-dark.svg" data-defer-badge alt="Featured on Twelve Tools" width="200" height="54" class="h-[36px] w-auto drop-shadow-sm" />
+                </a>
+                <a href="https://wired.business" target="_blank" rel="nofollow noopener noreferrer" class="hover:scale-105 transition-transform duration-300">
+                    <img loading="lazy" decoding="async" fetchpriority="low" src={BADGE_PLACEHOLDER} data-src="https://wired.business/badge0-dark.svg" data-defer-badge alt="Featured on Wired Business" width="200" height="54" class="h-[36px] w-auto drop-shadow-sm" />
+                </a>
+                <a href="https://saastool.site/item/getmediatools" target="_blank" rel="nofollow noopener noreferrer" class="hover:scale-105 transition-transform duration-300">
+                    <img loading="lazy" decoding="async" fetchpriority="low" src={BADGE_PLACEHOLDER} data-src="https://saastool.site/badges/saastool-light.svg" data-defer-badge alt="Featured on SaaSTool.site" height="54" width="auto" class="h-[36px] w-auto drop-shadow-sm" />
+                </a>
+                <a href="https://turbo0.com/item/getmediatools" target="_blank" rel="nofollow noopener noreferrer" class="hover:scale-105 transition-transform duration-300">
+                    <img loading="lazy" decoding="async" fetchpriority="low" src={BADGE_PLACEHOLDER} data-src="https://img.turbo0.com/badge-listed-light.svg" data-defer-badge alt="Listed on Turbo0" class="h-[36px] w-auto drop-shadow-sm" />
+                </a>
+                <a href="https://findly.tools/getmediatools?utm_source=getmediatools" target="_blank" rel="nofollow noopener noreferrer" class="hover:scale-105 transition-transform duration-300">
+                    <img loading="lazy" decoding="async" fetchpriority="low" src={BADGE_PLACEHOLDER} data-src="https://findly.tools/badges/findly-tools-badge-light.svg" data-defer-badge alt="Featured on Findly.tools" width="175" height="55" class="h-[36px] w-auto drop-shadow-sm" />
+                </a>
+                <a href="https://launchigniter.com/product/getmediatools?ref=badge-getmediatools" target="_blank" rel="nofollow noopener noreferrer" class="hover:scale-105 transition-transform duration-300">
+                    <img loading="lazy" decoding="async" fetchpriority="low" src={BADGE_PLACEHOLDER} data-src="https://launchigniter.com/api/badge/getmediatools?theme=light" data-defer-badge alt="Featured on LaunchIgniter" width="212" height="55" class="h-[36px] w-auto drop-shadow-sm" />
+                </a>
             </div>
         </div>
 
@@ -175,3 +154,35 @@ const localeBlogLinks = Object.entries(languages).map(([code, label]) => ({
         </div>
     </div>
 </footer>
+
+<script is:inline>
+    (() => {
+        const badgeImages = Array.from(document.querySelectorAll('img[data-defer-badge]'));
+        if (badgeImages.length === 0) return;
+
+        let loaded = false;
+        const loadBadges = () => {
+            if (loaded) return;
+            loaded = true;
+            badgeImages.forEach((img) => {
+                const src = img.getAttribute('data-src');
+                if (src) img.setAttribute('src', src);
+            });
+            window.removeEventListener('scroll', onTrigger);
+            window.removeEventListener('pointerdown', onTrigger);
+            window.removeEventListener('keydown', onTrigger);
+        };
+
+        const onTrigger = () => {
+            if ('requestIdleCallback' in window) {
+                window.requestIdleCallback(loadBadges, { timeout: 2000 });
+                return;
+            }
+            window.setTimeout(loadBadges, 500);
+        };
+
+        window.addEventListener('scroll', onTrigger, { once: true, passive: true });
+        window.addEventListener('pointerdown', onTrigger, { once: true, passive: true });
+        window.addEventListener('keydown', onTrigger, { once: true });
+    })();
+</script>

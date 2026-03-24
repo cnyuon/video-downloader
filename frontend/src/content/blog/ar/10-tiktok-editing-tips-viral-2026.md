@@ -9,6 +9,10 @@ monetization:
   primary_category: "creator-tools"
   affiliate_potential: "high"
   geo_restrictions: false
+cluster: "creator-growth"
+subcluster: "editing"
+primaryTool: "none"
+searchIntent: "informational"
 ---
 
 في عام 2026، لا تكفي الفكرة الرائعة لتحقيق انتشار واسع على تيك توك. لدى الخوارزمية هوس أساسي واحد: **وقت المشاهدة**. إذا قام المشاهدون بالتمرير بعيدًا، فإن وصول الفيديو الخاص بك يموت على الفور.

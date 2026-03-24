@@ -9,6 +9,10 @@ monetization:
   primary_category: "none"
   affiliate_potential: "low"
   geo_restrictions: false
+cluster: "twitter"
+subcluster: "download-basics"
+primaryTool: "twitter-downloader"
+searchIntent: "informational"
 ---
 
 Vous avez trouvé un clip viral, une actualité incontournable ou un moment hilarant sur Twitter (désormais X) que vous souhaitez conserver pour toujours. Mais il y a un problème : l'application n'a pas de bouton de téléchargement intégré. Alors, comment enregistrer une vidéo de Twitter sur votre téléphone ou votre ordinateur ?
@@ -16,7 +20,7 @@ Vous avez trouvé un clip viral, une actualité incontournable ou un moment hila
 Ce guide vous montrera la méthode la plus rapide et la plus sûre qui fonctionne sur n'importe quel appareil, y compris l'iPhone, Android et le PC.
 
 ### Table des matières
-- [La méthode n°1 : Utiliser un téléchargeur en ligne gratuit](#la-méthode-n1-utiliser-un-téléchargeur-en-ligne-gratuit)
+- [La méthode n°1 : Utiliser un téléchargeur en ligne gratuit](#la-méthode-n1--utiliser-un-téléchargeur-en-ligne-gratuit)
 - [Comment enregistrer des vidéos Twitter (étape par étape)](#comment-enregistrer-des-vidéos-twitter-étape-par-étape)
   - [Sur iPhone et iPad](#sur-iphone-et-ipad)
   - [Sur Android](#sur-android)

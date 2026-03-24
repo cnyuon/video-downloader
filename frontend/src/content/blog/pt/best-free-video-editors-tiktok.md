@@ -9,6 +9,10 @@ monetization:
   primary_category: "software"
   affiliate_potential: "high"
   geo_restrictions: false
+cluster: "creator-growth"
+subcluster: "editing-tools"
+primaryTool: "none"
+searchIntent: "commercial"
 ---
 
 Criar um TikTok que chame a atenção exige mais do que apenas uma boa ideia — você precisa das ferramentas certas. Um editor de vídeo poderoso pode transformar filmagens simples em um clipe digno de viralizar, com transições suaves, legendas perfeitas e efeitos de alta qualidade. Mas você não precisa gastar uma fortuna para obter resultados profissionais.
@@ -16,24 +20,24 @@ Criar um TikTok que chame a atenção exige mais do que apenas uma boa ideia —
 Este guia detalha os melhores **editores de vídeo gratuitos para TikTok**, classificados para criadores de todos os níveis de habilidade.
 
 ### Sumário
-- [Comparação Rápida: Os 5 Melhores Editores Gratuitos para TikTok](#comparacao-rapida-os-5-melhores-editores-gratuitos-para-tiktok)
+- [Comparação Rápida: Os 5 Melhores Editores Gratuitos para TikTok](#comparação-rápida-os-5-melhores-editores-gratuitos-para-tiktok)
 - [#1. CapCut: Melhor no Geral para Criadores de TikTok](#1-capcut-melhor-no-geral-para-criadores-de-tiktok)
 - [#2. DaVinci Resolve: Melhor para Qualidade Profissional](#2-davinci-resolve-melhor-para-qualidade-profissional)
-- [#3. iMovie: Melhor para Usuários Apple](#3-imovie-melhor-para-usuarios-apple)
-- [#4. Canva Video: Melhor para Conteúdo Rápido e com Modelos](#4-canva-video-melhor-para-conteudo-rapido-e-com-modelos)
-- [#5. InShot: Melhor para Edições Móveis Simples](#5-inshot-melhor-para-edicoes-moveis-simples)
-- [Dica Profissional: O Fluxo de Trabalho de Edição Ideal](#dica-profissional-o-fluxo-de-trabalho-de-edicao-ideal)
+- [#3. iMovie: Melhor para Usuários Apple](#3-imovie-melhor-para-usuários-apple)
+- [#4. Canva Video: Melhor para Conteúdo Rápido e com Modelos](#4-canva-video-melhor-para-conteúdo-rápido-e-com-modelos)
+- [#5. InShot: Melhor para Edições Móveis Simples](#5-inshot-melhor-para-edições-móveis-simples)
+- [Dica Profissional: O Fluxo de Trabalho de Edição Ideal](#dica-profissional-o-fluxo-de-trabalho-de-edição-ideal)
 - [Perguntas Frequentes (FAQ)](#perguntas-frequentes-faq)
 
 ## Comparação Rápida: Os 5 Melhores Editores Gratuitos para TikTok
 
 | Editor                                                        | Melhor Para                  | Plataformas               | Marca d'Água? | Recurso Chave                               |
 | ------------------------------------------------------------- | ------------------------- | ----------------------- | ---------- | ----------------------------------------- |
-| **[CapCut](#1-capcut-melhor-no-geral-para-criadores-de-tiktok)**        | Recursos Nativos do TikTok    | iOS, Android, PC, Web   | Não         | Legendas automáticas e modelos em alta        |
-| **[DaVinci Resolve](#2-davinci-resolve-melhor-para-qualidade-profissional)** | Qualidade Cinematográfica      | Windows, Mac, Linux     | Não         | Correção de cor e áudio de nível Hollywood     |
-| **[iMovie](#3-imovie-melhor-para-usuarios-apple)**                    | Simplicidade em Dispositivos Apple       | Mac, iOS                | Não         | Integração perfeita com dispositivos Apple   |
-| **[Canva Video](#4-canva-video-melhor-para-conteudo-rapido-e-com-modelos)** | Gráficos e Sobreposições de Texto  | Web, iOS, Android       | Não         | Grande biblioteca de modelos e ativos de estoque  |
-| **[InShot](#5-inshot-melhor-para-edicoes-moveis-simples)**            | Edição Móvel Rápida       | iOS, Android            | Removível  | Interface intuitiva para edições em movimento   |
+| **[CapCut](https://www.capcut.com/)**        | Recursos Nativos do TikTok    | iOS, Android, PC, Web   | Não         | Legendas automáticas e modelos em alta        |
+| **[DaVinci Resolve](https://www.blackmagicdesign.com/products/davinciresolve)** | Qualidade Cinematográfica      | Windows, Mac, Linux     | Não         | Correção de cor e áudio de nível Hollywood     |
+| **[iMovie](https://www.apple.com/imovie/)**                    | Simplicidade em Dispositivos Apple       | Mac, iOS                | Não         | Integração perfeita com dispositivos Apple   |
+| **[Canva Video](https://www.canva.com/video-editor/)** | Gráficos e Sobreposições de Texto  | Web, iOS, Android       | Não         | Grande biblioteca de modelos e ativos de estoque  |
+| **[InShot](https://inshot.com/)**            | Edição Móvel Rápida       | iOS, Android            | Removível  | Interface intuitiva para edições em movimento   |
 
 ---
 

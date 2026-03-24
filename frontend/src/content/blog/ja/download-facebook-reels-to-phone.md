@@ -9,6 +9,10 @@ monetization:
   primary_category: "none"
   affiliate_potential: "low"
   geo_restrictions: false
+cluster: "facebook"
+subcluster: "reels"
+primaryTool: "facebook-downloader"
+searchIntent: "informational"
 ---
 
 素晴らしいFacebookリールを見つけましたか？面白い、ためになる、あるいはただの完璧な思い出で、それを保存したい。しかし、3つの点をタップしても「ダウンロード」ボタンがない。イライラしますよね？
@@ -18,12 +22,12 @@ Facebookは、リールをスマホのギャラリーにダウンロードする
 このガイドでは、**公開されているFacebookリールをiPhoneまたはAndroidのカメラロールに直接、迅速、安全、かつ無料でダウンロードする**ための唯一の最良の方法を提供します。
 
 ### 目次
-- [Facebookリールをダウンロードする最良の方法](#the-best-way-to-download-facebook-reels)
-- [iPhone向けステップバイステップガイド](#step-by-step-guide-for-iphone)
-- [Android向けステップバイステップガイド](#step-by-step-guide-for-android)
-- [他の方法が危険または非効率な理由](#why-other-methods-are-risky-or-ineffective)
-- [よくある質問（FAQ）](#frequently-asked-questions-faq)
-- [主要なポイント](#key-takeaways)
+- [Facebookリールをダウンロードする最良の方法](#facebookリールをダウンロードする最良の方法)
+- [iPhone向けステップバイステップガイド](#iphone向けステップバイステップガイド)
+- [Android向けステップバイステップガイド](#android向けステップバイステップガイド)
+- [他の方法が危険または非効率な理由](#他の方法が危険または非効率な理由)
+- [よくある質問（FAQ）](#よくある質問faq)
+- [主要なポイント](#主要なポイント)
 
 ---
 

@@ -9,6 +9,10 @@ monetization:
   primary_category: "none"
   affiliate_potential: "low"
   geo_restrictions: false
+cluster: "twitter"
+subcluster: "download-basics"
+primaryTool: "twitter-downloader"
+searchIntent: "informational"
 ---
 
 Você encontrou um clipe viral, uma atualização de notícia imperdível ou um momento hilário no Twitter (agora X) que deseja guardar para sempre. Mas há um problema: o aplicativo não possui um botão de download integrado. Então, como você salva um vídeo do Twitter no seu celular ou computador?
@@ -16,12 +20,12 @@ Você encontrou um clipe viral, uma atualização de notícia imperdível ou um 
 Este guia mostrará o método mais rápido e seguro que funciona em qualquer dispositivo, incluindo iPhone, Android e PC.
 
 ### Sumário
-- [O Método #1: Usando um Downloader Online Gratuito](#o-1-metodo-usando-um-downloader-online-gratuito)
-- [Como Salvar Vídeos do Twitter (Passo a Passo)](#como-salvar-videos-do-twitter-passo-a-passo)
+- [O Método #1: Usando um Downloader Online Gratuito](#o-método-1-usando-um-downloader-online-gratuito)
+- [Como Salvar Vídeos do Twitter (Passo a Passo)](#como-salvar-vídeos-do-twitter-passo-a-passo)
   - [No iPhone e iPad](#no-iphone-e-ipad)
   - [No Android](#no-android)
   - [No Desktop (PC/Mac)](#no-desktop-pcmac)
-- [Métodos Alternativos (e Seus Riscos)](#metodos-alternativos-e-seus-riscos)
+- [Métodos Alternativos (e Seus Riscos)](#métodos-alternativos-e-seus-riscos)
 - [Perguntas Frequentes (FAQ)](#perguntas-frequentes-faq)
 
 ## O Método #1: Usando um Downloader Online Gratuito

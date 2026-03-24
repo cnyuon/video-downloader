@@ -9,6 +9,10 @@ monetization:
   primary_category: "none"
   affiliate_potential: "low"
   geo_restrictions: false
+cluster: "twitter"
+subcluster: "download-basics"
+primaryTool: "twitter-downloader"
+searchIntent: "informational"
 ---
 
 Sie haben einen viralen Clip, eine wichtige Nachrichtenmeldung oder einen lustigen Moment auf Twitter (jetzt X) gefunden, den Sie für immer behalten möchten. Aber es gibt ein Problem: Die App hat keine integrierte Download-Schaltfläche. Wie speichern Sie also ein Video von Twitter auf Ihrem Handy oder Computer?

@@ -9,6 +9,10 @@ monetization:
   primary_category: "none"
   affiliate_potential: "low"
   geo_restrictions: false
+cluster: "audio"
+subcluster: "tiktok-audio"
+primaryTool: "tiktok-sound-downloader"
+searchIntent: "informational"
 ---
 
 TikTok लाखों वायरल साउंड्स का घर है - जिनमें आकर्षक गाने, मजेदार ऑडियो क्लिप और ट्रेंडिंग वॉइसओवर शामिल हैं। लेकिन ऐप आपको सिर्फ ऑडियो डाउनलोड करने का विकल्प नहीं देता है।

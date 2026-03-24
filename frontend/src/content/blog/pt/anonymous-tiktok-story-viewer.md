@@ -5,6 +5,10 @@ pubDate: 2026-02-21
 heroImage: "../../../assets/blog-images/tiktok-anonymous-story-viewer.png"
 heroAlt: "A phone displaying the TikTok app with an anonymous mask icon over it, representing an anonymous TikTok story viewer."
 tags: ["TikTok", "Guides", "Privacy"]
+cluster: "tiktok"
+subcluster: "privacy"
+primaryTool: "none"
+searchIntent: "informational"
 ---
 
 Já quis assistir ao Story de alguém no TikTok, mas hesitou, preocupado que seu nome aparecesse na lista de visualizadores? É uma pergunta comum: você pode ver Stories do TikTok anonimamente?

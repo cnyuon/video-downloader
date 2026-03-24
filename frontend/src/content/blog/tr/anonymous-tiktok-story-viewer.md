@@ -5,6 +5,10 @@ pubDate: 2026-02-21
 heroImage: "../../../assets/blog-images/tiktok-anonymous-story-viewer.png"
 heroAlt: "Anonim bir TikTok hikaye görüntüleyiciyi temsil eden, üzerinde anonim bir maske simgesi bulunan TikTok uygulamasını gösteren bir telefon."
 tags: ["TikTok", "Guides", "Privacy"]
+cluster: "tiktok"
+subcluster: "privacy"
+primaryTool: "none"
+searchIntent: "informational"
 ---
 
 Birinin TikTok Hikayesini izlemek istediniz ama izleyici listesinde adınızı görmelerinden endişe ederek tereddüt mü ettiniz? Bu yaygın bir soru: TikTok hikayelerini anonim olarak izleyebilir misiniz?
@@ -16,9 +20,9 @@ TikTok hesabınıza giriş yapmışken bir hikaye izlerseniz, içerik oluşturuc
 Neyse ki, basit çözümler var. Bu rehber size, herhangi bir herkese açık hikayeyi iz bırakmadan izlemek için bir **anonim TikTok hikaye görüntüleyiciyi** tam olarak nasıl kullanacağınızı gösterecek.
 
 ## İçindekiler
-- [En İyi Yöntem: Anonim Bir TikTok Hikaye Görüntüleyici Kullanın](#the-best-method-use-an-anonymous-tiktok-story-viewer)
-- [TikTok Hikayelerini Anonim Olarak Görüntülemenin Diğer Yolları](#other-ways-to-view-tiktok-stories-anonymously)
-- [Sıkça Sorulan Sorular (SSS)](#frequently-asked-questions-faq)
+- [En İyi Yöntem: Anonim Bir TikTok Hikaye Görüntüleyici Kullanın](#en-i̇yi-yöntem-anonim-bir-tiktok-hikaye-görüntüleyici-kullanın)
+- [TikTok Hikayelerini Anonim Olarak Görüntülemenin Diğer Yolları](#tiktok-hikayelerini-anonim-olarak-görüntülemenin-diğer-yolları)
+- [Sıkça Sorulan Sorular (SSS)](#sıkça-sorulan-sorular-sss)
 
 ## En İyi Yöntem: Anonim Bir TikTok Hikaye Görüntüleyici Kullanın
 

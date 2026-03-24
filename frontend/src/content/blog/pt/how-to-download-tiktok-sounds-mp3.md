@@ -9,6 +9,10 @@ monetization:
   primary_category: "none"
   affiliate_potential: "low"
   geo_restrictions: false
+cluster: "audio"
+subcluster: "tiktok-audio"
+primaryTool: "tiktok-sound-downloader"
+searchIntent: "informational"
 ---
 
 O TikTok é o lar de milhões de sons virais — de músicas cativantes a clipes de áudio hilários e dublagens populares. Mas o aplicativo não oferece uma maneira de baixar apenas o áudio.

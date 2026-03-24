@@ -9,6 +9,10 @@ monetization:
   primary_category: "creator-tools"
   affiliate_potential: "low"
   geo_restrictions: false
+cluster: "tiktok"
+subcluster: "thumbnails"
+primaryTool: "thumbnail-grabber"
+searchIntent: "informational"
 ---
 
 Çarpıcı bir küçük resim, bir TikTok videosunun viral olmasını sağlayabilir, ancak platform bu kapak görselini kaydetmek için basit bir yol sunmaz. İster bir içerik oluşturucu, ister bir sosyal medya yöneticisi olun, ister sadece harika bir tasarımı arşivlemek isteyin, o yüksek kaliteli görseli almanın bir yoluna ihtiyacınız var.
@@ -16,11 +20,11 @@ monetization:
 Ekran üstü metin ve simgelerle dolu bulanık ekran görüntülerini unutun. Bu rehber, herhangi bir videodan orijinal, yüksek çözünürlüklü kapak görselini kaydetmek için **ücretsiz bir TikTok küçük resim indiricisini** nasıl kullanacağınızı gösterecek.
 
 ### İçindekiler
-- [Neden Yüksek Kaliteli Bir TikTok Küçük Resmi Çok Önemli?](#why-crucial)
-- [Herhangi Bir TikTok Küçük Resmini 3 Basit Adımda Nasıl İndirirsiniz?](#how-to-download)
-- [Ekran Görüntüleri Neden İşe Yaramaz (Ve Bunun Yerine Ne Yapmalısınız)?](#why-screenshots-fail)
-- [İndirilen TikTok Küçük Resimlerini Kullanmanın 3 Akıllı Yolu](#smart-ways)
-- [Sıkça Sorulan Sorular (SSS)](#faq)
+- [Neden Yüksek Kaliteli Bir TikTok Küçük Resmi Çok Önemli?](#neden-yüksek-kaliteli-bir-tiktok-küçük-resmi-çok-önemli)
+- [Herhangi Bir TikTok Küçük Resmini 3 Basit Adımda Nasıl İndirirsiniz?](#herhangi-bir-tiktok-küçük-resmini-3-basit-adımda-nasıl-i̇ndirirsiniz)
+- [Ekran Görüntüleri Neden İşe Yaramaz (Ve Bunun Yerine Ne Yapmalısınız)?](#ekran-görüntüleri-neden-i̇şe-yaramaz-ve-bunun-yerine-ne-yapmalısınız)
+- [İndirilen TikTok Küçük Resimlerini Kullanmanın 3 Akıllı Yolu](#i̇ndirilen-tiktok-küçük-resimlerini-kullanmanın-3-akıllı-yolu)
+- [Sıkça Sorulan Sorular (SSS)](#sıkça-sorulan-sorular-sss)
 
 ---
 

@@ -9,6 +9,10 @@ monetization:
   primary_category: "creator-tools"
   affiliate_potential: "high"
   geo_restrictions: false
+cluster: "creator-growth"
+subcluster: "editing"
+primaryTool: "none"
+searchIntent: "informational"
 ---
 
 2026년에는 훌륭한 아이디어만으로는 틱톡에서 바이럴이 되기 어렵습니다. 알고리즘은 한 가지에만 집착합니다: 바로 **시청 시간**입니다. 시청자가 스와이프하여 넘겨버리면 영상의 도달률은 즉시 죽습니다.
@@ -18,11 +22,11 @@ monetization:
 이 가이드는 최고의 크리에이터들이 시청자를 처음부터 끝까지 사로잡기 위해 사용하는 정확한 편집 기술을 분석합니다. 기본적인 팁은 잊으세요. 지금 바로 효과가 있는 전문적인 전략들입니다.
 
 ## 목차
-- [파트 1: 바이럴 편집의 핵심 원칙](#part-1-the-core-principles-of-a-viral-edit)
-- [파트 2: 시각적 스토리텔링 및 시청자 유지 전략](#part-2-visual-storytelling--retention-tactics)
-- [파트 3: 전문적인 완성도를 위한 고급 기술](#part-3-advanced-techniques-for-a-professional-polish)
-- [파트 4: 편집 워크플로우 및 툴킷](#part-4-your-editing-workflow--toolkit)
-- [자주 묻는 질문 (FAQ)](#frequently-asked-questions-faq)
+- [파트 1: 바이럴 편집의 핵심 원칙](#파트-1-바이럴-편집의-핵심-원칙)
+- [파트 2: 시각적 스토리텔링 및 시청자 유지 전략](#파트-2-시각적-스토리텔링-및-시청자-유지-전략)
+- [파트 3: 전문적인 완성도를 위한 고급 기술](#파트-3-전문적인-완성도를-위한-고급-기술)
+- [파트 4: 편집 워크플로우 및 툴킷](#파트-4-편집-워크플로우-및-툴킷)
+- [자주 묻는 질문 (FAQ)](#자주-묻는-질문-faq)
 
 ---
 

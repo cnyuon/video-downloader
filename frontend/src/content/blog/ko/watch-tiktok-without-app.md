@@ -10,6 +10,10 @@ monetization:
   primary_category: "software"
   affiliate_potential: "medium"
   geo_restrictions: false
+cluster: "tiktok"
+subcluster: "viewer-workflow"
+primaryTool: "none"
+searchIntent: "informational"
 ---
 
 친구가 틱톡 영상 링크를 보냈는데, 클릭하면 영상 대신 바로 앱 스토어로 리디렉션되는 흔한 불편함입니다. 틱톡 모바일 웹사이트는 종종 콘텐츠 시청을 막고, 앱을 다운로드하고 계정을 만들도록 강하게 유도합니다.
@@ -17,11 +21,11 @@ monetization:
 휴대폰 저장 공간을 절약하고 싶거나, 개인 정보를 보호하고 싶거나, 단순히 앱 설치 없이 하나의 영상을 보고 싶다면 제대로 찾아오셨습니다. 이 가이드에서는 **앱 없이 틱톡 영상을 시청하는** 가장 좋은 방법을 다룹니다.
 
 ## 목차
-- [틱톡은 왜 앱 사용을 강요할까요?](#why-does-tiktok-force-you-to-use-the-app)
-- [방법 1: 데스크톱에서 공식 틱톡 웹사이트 사용하기](#method-1-use-the-official-tiktok-website-on-desktop)
-- [방법 2: 모바일 브라우저에서 "데스크톱 사이트 요청" 사용하기](#method-2-use-request-desktop-site-on-mobile-browsers)
-- [방법 3: 익명 온라인 틱톡 뷰어 사용하기](#method-3-use-an-anonymous-online-tiktok-viewer)
-- [자주 묻는 질문 (FAQ)](#frequently-asked-questions-faq)
+- [틱톡은 왜 앱 사용을 강요할까요?](#틱톡은-왜-앱-사용을-강요할까요)
+- [방법 1: 데스크톱에서 공식 틱톡 웹사이트 사용하기](#방법-1-데스크톱에서-공식-틱톡-웹사이트-사용하기)
+- [방법 2: 모바일 브라우저에서 "데스크톱 사이트 요청" 사용하기](#방법-2-모바일-브라우저에서-데스크톱-사이트-요청-사용하기)
+- [방법 3: 익명 온라인 틱톡 뷰어 사용하기](#방법-3-익명-온라인-틱톡-뷰어-사용하기)
+- [자주 묻는 질문 (FAQ)](#자주-묻는-질문-faq)
 
 ## 틱톡은 왜 앱 사용을 강요할까요?
 

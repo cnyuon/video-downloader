@@ -9,6 +9,10 @@ monetization:
   primary_category: "software"
   affiliate_potential: "high"
   geo_restrictions: false
+cluster: "tiktok"
+subcluster: "bulk-download"
+primaryTool: "tiktok-downloader"
+searchIntent: "informational"
 ---
 
 잠재적인 [틱톡 금지](/ko/blog/tiktok-banned-how-to-access-download/)를 우려하는 크리에이터든, 단순히 개인 콘텐츠 백업을 원하는 사용자든, 수백 개의 영상을 하나씩 다운로드하는 것은 실용적인 해결책이 아닙니다. 효율적이고 안전하게 **모든 틱톡 영상을 대량 다운로드**할 방법이 필요합니다.

@@ -9,6 +9,10 @@ monetization:
   primary_category: "none"
   affiliate_potential: "low"
   geo_restrictions: false
+cluster: "audio"
+subcluster: "tiktok-audio"
+primaryTool: "tiktok-sound-downloader"
+searchIntent: "informational"
 ---
 
 틱톡에는 중독성 있는 노래부터 재미있는 오디오 클립, 유행하는 음성 해설까지 수백만 개의 인기 있는 사운드가 있습니다. 하지만 이 앱은 오디오만 따로 다운로드할 수 있는 기능을 제공하지 않습니다.

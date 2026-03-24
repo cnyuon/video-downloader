@@ -9,6 +9,10 @@ monetization:
   primary_category: "none"
   affiliate_potential: "low"
   geo_restrictions: false
+cluster: "facebook"
+subcluster: "reels"
+primaryTool: "facebook-downloader"
+searchIntent: "informational"
 ---
 
 You find a great Facebook Reel—it's funny, informative, or just a perfect memory—and you want to save it. But when you tap the three dots, there's no "Download" button. Frustrating, right?

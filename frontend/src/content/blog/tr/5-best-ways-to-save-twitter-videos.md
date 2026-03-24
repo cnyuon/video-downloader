@@ -9,6 +9,10 @@ monetization:
   primary_category: "none"
   affiliate_potential: "low"
   geo_restrictions: false
+cluster: "twitter"
+subcluster: "download-basics"
+primaryTool: "twitter-downloader"
+searchIntent: "informational"
 ---
 
 Twitter'da (şimdi X) viral bir klip, mutlaka görülmesi gereken bir haber güncellemesi veya sonsuza dek saklamak istediğiniz komik bir an buldunuz. Ancak bir sorun var: uygulamanın yerleşik bir indirme düğmesi yok. Peki, bir videoyu Twitter'dan telefonunuza veya bilgisayarınıza nasıl kaydedersiniz?
@@ -16,7 +20,7 @@ Twitter'da (şimdi X) viral bir klip, mutlaka görülmesi gereken bir haber gün
 Bu rehber, iPhone, Android ve PC dahil olmak üzere herhangi bir cihazda çalışan en hızlı ve en güvenli yöntemi size gösterecek.
 
 ### İçindekiler
-- [1 Numaralı Yöntem: Ücretsiz Bir Çevrimiçi İndirici Kullanmak](#1-numaralı-yöntem-ücretsiz-bir-çevrimiçi-indirici-kullanmak)
+- [1 Numaralı Yöntem: Ücretsiz Bir Çevrimiçi İndirici Kullanmak](#1-numaralı-yöntem-ücretsiz-bir-çevrimiçi-i̇ndirici-kullanmak)
 - [Twitter Videoları Nasıl Kaydedilir (Adım Adım)](#twitter-videoları-nasıl-kaydedilir-adım-adım)
   - [iPhone ve iPad'de](#iphone-ve-ipadde)
   - [Android'de](#androidde)

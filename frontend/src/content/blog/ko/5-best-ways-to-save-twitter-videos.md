@@ -9,6 +9,10 @@ monetization:
   primary_category: "none"
   affiliate_potential: "low"
   geo_restrictions: false
+cluster: "twitter"
+subcluster: "download-basics"
+primaryTool: "twitter-downloader"
+searchIntent: "informational"
 ---
 
 트위터(현재 X)에서 영원히 간직하고 싶은 바이럴 클립, 꼭 봐야 할 뉴스 업데이트, 또는 재미있는 순간을 발견하셨나요? 하지만 문제가 있습니다. 앱에는 내장된 다운로드 버튼이 없습니다. 그렇다면 트위터 동영상을 휴대폰이나 컴퓨터에 어떻게 저장할 수 있을까요?

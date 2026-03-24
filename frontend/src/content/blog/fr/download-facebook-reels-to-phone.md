@@ -9,6 +9,10 @@ monetization:
   primary_category: "none"
   affiliate_potential: "low"
   geo_restrictions: false
+cluster: "facebook"
+subcluster: "reels"
+primaryTool: "facebook-downloader"
+searchIntent: "informational"
 ---
 
 Vous trouvez un super Facebook Reel — il est drôle, informatif, ou juste un souvenir parfait — et vous voulez le sauvegarder. Mais lorsque vous appuyez sur les trois points, il n'y a pas de bouton "Télécharger". Frustrant, n'est-ce pas ?

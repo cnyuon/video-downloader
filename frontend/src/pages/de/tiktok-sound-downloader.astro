@@ -65,7 +65,7 @@ const diversePosts = getDiversePosts(displayPosts, 'tiktok-sound-downloader', 4)
     jsonLd={jsonLd}
 >
     <!-- Target Keywords: tiktok sound downloader, download tiktok audio, save tiktok mp3, tiktok to mp3 converter, extract tiktok sound -->
-    <Navbar client:idle currentPage="sound" lang={lang as keyof typeof ui} />
+    <Navbar client:idle={{timeout: 3000}} currentPage="sound" lang={lang as keyof typeof ui} />
     
     <main class="container mx-auto px-4 pt-10 pb-4 max-w-2xl">
         <div class="text-center mb-8">

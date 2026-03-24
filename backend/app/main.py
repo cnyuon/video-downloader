@@ -6,6 +6,7 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
 from app.routes.video import router as video_router
+from app.routes.contact import router as contact_router
 
 
 app = FastAPI(
@@ -28,6 +29,7 @@ app.add_middleware(
 
 # Include routers
 app.include_router(video_router)
+app.include_router(contact_router)
 
 
 @app.get("/")
@@ -40,6 +42,7 @@ async def root():
         "endpoints": {
             "info": "POST /api/info - Get video metadata",
             "download": "POST /api/download - Download video",
+            "contact": "POST /api/contact - Secure contact submission",
             "limit": "GET /api/limit - Check rate limit status",
             "health": "GET /api/health - Health check",
         }

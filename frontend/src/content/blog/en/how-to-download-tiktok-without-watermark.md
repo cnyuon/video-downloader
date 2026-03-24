@@ -9,6 +9,10 @@ monetization:
   primary_category: "none"
   affiliate_potential: "low"
   geo_restrictions: false
+cluster: "tiktok"
+subcluster: "download-basics"
+primaryTool: "tiktok-downloader"
+searchIntent: "informational"
 ---
 
 When you download a video directly from the TikTok app, it comes with a distracting watermark that bounces around the screen. This can be a problem if you want to repurpose your own content for other platforms like Instagram Reels or YouTube Shorts, or simply save a clean copy for offline viewing.

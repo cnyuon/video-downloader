@@ -10,6 +10,10 @@ monetization:
   primary_category: "creator-tools"
   affiliate_potential: "medium"
   geo_restrictions: false
+cluster: "creator-growth"
+subcluster: "beginner-guides"
+primaryTool: "none"
+searchIntent: "informational"
 ---
 
 İçerik üreticisi ekonomisi, milyarlarca dolarlık, hızla büyüyen bir sektör, ancak bu alana girmek bunaltıcı gelebilir. Birçok hevesli içerik üreticisi, nereden başlayacakları veya ne paylaşacakları konusunda kararsız kalır. Her şeyi bir anda yapmaya çalışırken tükenirler ve tutkularını sürdürülebilir bir işe dönüştürmekte başarısız olurlar.
@@ -17,18 +21,18 @@ monetization:
 İyi haber mi? Başarılı olmak için pahalı Hollywood ekipmanlarına veya büyük bir takipçi kitlesine ihtiyacınız yok. Bu rehber, yeni başlayanlar için net, adım adım bir yol haritası sunarak belirsizliği ortadan kaldırır, böylece bir kitle ve gelir elde edebilirsiniz.
 
 ### İçindekiler
-- [İçerik Üreticisi Olmak İçin 10 Adımlık Yol Haritası](#içerik-üreticisi-olmak-için-10-adımlık-yol-haritası)
+- [İçerik Üreticisi Olmak İçin 10 Adımlık Yol Haritası](#i̇çerik-üreticisi-olmak-i̇çin-10-adımlık-yol-haritası)
   - [Adım 1: Nişinizi Bulun ve Kitlenizi Tanımlayın](#adım-1-nişinizi-bulun-ve-kitlenizi-tanımlayın)
   - [Adım 2: Birincil Platformunuzu Seçin](#adım-2-birincil-platformunuzu-seçin)
-  - [Adım 3: İçerik Stratejinizi Geliştirin](#adım-3-içerik-stratejinizi-geliştirin)
+  - [Adım 3: İçerik Stratejinizi Geliştirin](#adım-3-i̇çerik-stratejinizi-geliştirin)
   - [Adım 4: Temel Ekipmanlarınızı Toplayın](#adım-4-temel-ekipmanlarınızı-toplayın)
-  - [Adım 5: İçeriğinizi Planlayın ve Senaryolaştırın](#adım-5-içeriğinizi-planlayın-ve-senaryolaştırın)
+  - [Adım 5: İçeriğinizi Planlayın ve Senaryolaştırın](#adım-5-i̇çeriğinizi-planlayın-ve-senaryolaştırın)
   - [Adım 6: Videolarınızı Toplu Olarak Kaydedin](#adım-6-videolarınızı-toplu-olarak-kaydedin)
-  - [Adım 7: Maksimum Elde Tutma İçin Düzenleyin](#adım-7-maksimum-elde-tutma-için-düzenleyin)
+  - [Adım 7: Maksimum Elde Tutma İçin Düzenleyin](#adım-7-maksimum-elde-tutma-i̇çin-düzenleyin)
   - [Adım 8: Gönderilerinizi Optimize Edin ve Planlayın](#adım-8-gönderilerinizi-optimize-edin-ve-planlayın)
   - [Adım 9: Etkileşim Kurun ve Bir Topluluk Oluşturun](#adım-9-etkileşim-kurun-ve-bir-topluluk-oluşturun)
   - [Adım 10: Analiz Edin, Tekrarlayın ve Büyüyün](#adım-10-analiz-edin-tekrarlayın-ve-büyüyün)
-- [İçeriğinizden Nasıl Para Kazanılır](#içeriğinizden-nasıl-para-kazanılır)
+- [İçeriğinizden Nasıl Para Kazanılır](#i̇çeriğinizden-nasıl-para-kazanılır)
 - [Kaçınılması Gereken Yaygın Hatalar](#kaçınılması-gereken-yaygın-hatalar)
 - [GetMediaTools Entegrasyonu](#getmediatools-entegrasyonu)
 - [Sıkça Sorulan Sorular](#sıkça-sorulan-sorular)

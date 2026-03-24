@@ -9,6 +9,10 @@ monetization:
   primary_category: "none"
   affiliate_potential: "low"
   geo_restrictions: false
+cluster: "facebook"
+subcluster: "reels"
+primaryTool: "facebook-downloader"
+searchIntent: "informational"
 ---
 
 멋진 페이스북 릴스를 발견했습니다. 재미있거나, 유익하거나, 아니면 그저 완벽한 추억이어서 저장하고 싶습니다. 하지만 점 세 개를 탭해도 "다운로드" 버튼이 없습니다. 답답하시죠?

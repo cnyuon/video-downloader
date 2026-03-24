@@ -10,6 +10,10 @@ monetization:
   primary_category: "creator-tools"
   affiliate_potential: "medium"
   geo_restrictions: false
+cluster: "creator-growth"
+subcluster: "beginner-guides"
+primaryTool: "none"
+searchIntent: "informational"
 ---
 
 A economia dos criadores é uma indústria multibilionária em expansão, mas entrar nela pode parecer avassalador. Muitos aspirantes a criadores ficam presos, paralisados sem saber por onde começar ou o que postar. Eles se esgotam tentando fazer tudo de uma vez e falham em transformar sua paixão em um negócio sustentável.

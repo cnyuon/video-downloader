@@ -9,6 +9,10 @@ monetization:
   primary_category: "software"
   affiliate_potential: "medium"
   geo_restrictions: false
+cluster: "creator-growth"
+subcluster: "channel-strategy"
+primaryTool: "none"
+searchIntent: "informational"
 ---
 
 Démarrer une chaîne YouTube sans visage est un moyen attrayant de générer des revenus sans apparaître à l'écran. Mais avec 90 % des nouvelles chaînes qui échouent, le succès n'est pas garanti. De nombreux créateurs tombent dans le piège du contenu "vache à lait" à faible effort, pour être ensuite pénalisés par les algorithmes de YouTube pour manque d'originalité.

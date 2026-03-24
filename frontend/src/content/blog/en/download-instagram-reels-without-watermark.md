@@ -9,6 +9,10 @@ monetization:
   primary_category: "none"
   affiliate_potential: "medium"
   geo_restrictions: false
+cluster: "instagram"
+subcluster: "reels"
+primaryTool: "instagram-downloader"
+searchIntent: "informational"
 ---
 
 You hit "Download" on an Instagram Reel, but when you check your camera roll, you find a video plastered with a watermark and stripped of its trending audio. It's a common frustration for both creators and casual users.

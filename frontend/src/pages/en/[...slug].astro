@@ -7,13 +7,31 @@ export async function getStaticPaths() {
   
   const pages = [
     { slug: undefined, redirect: '/' },
+    { slug: 'tools', redirect: '/tools/' },
+    { slug: 'tools/video', redirect: '/tools/video/' },
+    { slug: 'tools/audio', redirect: '/tools/audio/' },
+    { slug: 'tools/image', redirect: '/tools/image/' },
     { slug: 'twitter-downloader', redirect: '/twitter-downloader/' },
     { slug: 'tiktok-sound-downloader', redirect: '/tiktok-sound-downloader/' },
     { slug: 'tiktok-downloader', redirect: '/tiktok-downloader/' },
     { slug: 'facebook-downloader', redirect: '/facebook-downloader/' },
     { slug: 'thumbnail-grabber', redirect: '/thumbnail-grabber/' },
     { slug: 'video-to-mp3', redirect: '/video-to-mp3/' },
+    { slug: 'instagram-downloader', redirect: '/instagram-downloader/' },
     { slug: 'blog', redirect: '/blog/' },
+    { slug: 'blog/topic/tiktok', redirect: '/blog/topic/tiktok/' },
+    { slug: 'blog/topic/instagram', redirect: '/blog/topic/instagram/' },
+    { slug: 'blog/topic/twitter', redirect: '/blog/topic/twitter/' },
+    { slug: 'blog/topic/facebook', redirect: '/blog/topic/facebook/' },
+    { slug: 'blog/topic/audio', redirect: '/blog/topic/audio/' },
+    { slug: 'blog/topic/creator-growth', redirect: '/blog/topic/creator-growth/' },
+    { slug: 'blog/topic/privacy-security', redirect: '/blog/topic/privacy-security/' },
+    { slug: 'blog/topic/general', redirect: '/blog/topic/general/' },
+    { slug: 'legal/privacy-policy', redirect: '/legal/privacy-policy/' },
+    { slug: 'legal/terms-of-service', redirect: '/legal/terms-of-service/' },
+    { slug: 'legal/about-us', redirect: '/legal/about-us/' },
+    { slug: 'legal/contact-us', redirect: '/legal/contact-us/' },
+    { slug: 'legal/refund-policy', redirect: '/legal/refund-policy/' },
   ];
 
   enPosts.forEach(post => {

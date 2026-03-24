@@ -9,6 +9,10 @@ monetization:
   primary_category: "none"
   affiliate_potential: "low"
   geo_restrictions: false
+cluster: "tiktok"
+subcluster: "mobile-workflow"
+primaryTool: "tiktok-downloader"
+searchIntent: "informational"
 ---
 
 iPhone'unuzda bir TikTok videosunu kaydetmeye çalışmak sinir bozucu olabilir. Ya dikkat dağıtıcı bir filigranla karşılaşırsınız ya da içerik oluşturucu "Videoyu Kaydet" düğmesini tamamen devre dışı bırakmıştır. App Store indirme uygulamalarıyla dolu olsa da, bunlar genellikle güvenilmezdir, reklamlarla doludur veya pahalı abonelikler gerektirir.
@@ -18,10 +22,10 @@ iPhone'unuzda bir TikTok videosunu kaydetmeye çalışmak sinir bozucu olabilir.
 Bu kılavuz, herhangi bir TikTok videosunu filigransız olarak, doğrudan iPhone'unuzun Film Rulosuna yalnızca web tarayıcınızı kullanarak indirmenin en hızlı ve en güvenli yöntemini gösterecek.
 
 ## İçindekiler
-- [Uygulama İçi "Videoyu Kaydet" Düğmesini Neden Kullanmamalısınız?](#uygulama-içi-videoyu-kaydet-düğmesini-neden-kullanmamalısınız)
-- [iPhone'da TikTok Videoları Nasıl İndirilir (Uygulama Gerekmez)](#iphoneda-tiktok-videoları-nasıl-indirilir-uygulama-gerekmez)
+- [Uygulama İçi "Videoyu Kaydet" Düğmesini Neden Kullanmamalısınız?](#uygulama-i̇çi-videoyu-kaydet-düğmesini-neden-kullanmamalısınız)
+- [iPhone'da TikTok Videoları Nasıl İndirilir (Uygulama Gerekmez)](#iphoneda-tiktok-videoları-nasıl-i̇ndirilir-uygulama-gerekmez)
 - [Adım 1: TikTok Video Bağlantısını Kopyalayın](#adım-1-tiktok-video-bağlantısını-kopyalayın)
-- [Adım 2: Safari'de Web Tabanlı Bir İndirici Kullanın](#adım-2-safaride-web-tabanlı-bir-indirici-kullanın)
+- [Adım 2: Safari'de Web Tabanlı Bir İndirici Kullanın](#adım-2-safaride-web-tabanlı-bir-i̇ndirici-kullanın)
 - [Adım 3: Videoyu Film Rulonuza Kaydedin](#adım-3-videoyu-film-rulonuza-kaydedin)
 - [Sıkça Sorulan Sorular (SSS)](#sıkça-sorulan-sorular-sss)
 

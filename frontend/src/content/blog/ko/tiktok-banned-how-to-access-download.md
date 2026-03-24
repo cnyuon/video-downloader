@@ -9,6 +9,10 @@ monetization:
   primary_category: "vpn"
   affiliate_potential: "high"
   geo_restrictions: true
+cluster: "privacy-security"
+subcluster: "access-restrictions"
+primaryTool: "none"
+searchIntent: "informational"
 ---
 
 틱톡이 여러 국가에서 금지 및 제한 조치에 직면하면서, 사용자들과 크리에이터들은 플랫폼에 어떻게 접속하고, 더 중요하게는 자신의 콘텐츠를 어떻게 저장해야 할지 궁금해하고 있습니다. 완전 금지 국가에 있든, 아니면 단순히 대비하고 싶든, 이 가이드가 모든 것을 알려드립니다.

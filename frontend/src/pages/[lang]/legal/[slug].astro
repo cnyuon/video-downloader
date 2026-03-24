@@ -1,0 +1,58 @@
+---
+import { getCollection, getEntry } from 'astro:content';
+import Layout from '../../../layouts/Layout.astro';
+import Navbar from '../../../components/Navbar';
+import Footer from '../../../components/Footer.astro';
+import ContactForm from '../../../components/ContactForm';
+import { ui } from '../../../i18n/ui';
+import { NON_DEFAULT_LOCALES } from '../../../i18n/locales';
+import { isLegalSlug } from '../../../lib/legal';
+
+export async function getStaticPaths() {
+    const entries = await getCollection('legal', ({ id }) => id.startsWith('en/'));
+    const slugs = entries.map((entry) => entry.id.replace(/^en\//, '').replace(/\.md$/, ''));
+    return NON_DEFAULT_LOCALES.flatMap((lang) =>
+        slugs.map((slug) => ({
+            params: { lang, slug },
+        }))
+    );
+}
+
+const lang = String(Astro.params.lang || 'en');
+const slug = String(Astro.params.slug || '');
+if (!isLegalSlug(slug)) {
+    throw new Error(`Invalid legal slug: ${slug}`);
+}
+
+const locale = (Object.keys(ui).includes(lang) ? lang : 'en') as keyof typeof ui;
+const localizedEntry = await getEntry('legal', `${locale}/${slug}`);
+const fallbackEntry = await getEntry('legal', `en/${slug}`);
+const entry = localizedEntry || fallbackEntry;
+
+if (!entry) {
+    throw new Error(`Legal page not found for slug: ${slug}`);
+}
+
+const { Content } = await entry.render();
+const title = entry.data.seoTitle || `${entry.data.title} | GetMediaTools`;
+const description = entry.data.seoDescription || entry.data.description;
+---
+
+<Layout title={title} description={description}>
+    <Navbar client:idle={{timeout: 3000}} currentPage="home" lang={locale} />
+
+    <main class="container mx-auto px-4 pt-10 pb-20 max-w-4xl">
+        <div class="mb-10">
+            <h1 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-slate-900 dark:text-white">{entry.data.title}</h1>
+            <p class="mt-4 text-lg text-slate-600 dark:text-slate-400 max-w-3xl leading-relaxed">{entry.data.description}</p>
+        </div>
+
+        <article class="prose max-w-none text-slate-800 dark:text-slate-300 prose-headings:text-slate-900 dark:prose-headings:text-white prose-a:text-[#405EDB]">
+            <Content />
+        </article>
+
+        {slug === 'contact-us' && <ContactForm client:load lang={locale} />}
+    </main>
+
+    <Footer />
+</Layout>

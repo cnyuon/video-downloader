@@ -9,6 +9,10 @@ monetization:
   primary_category: "none"
   affiliate_potential: "medium"
   geo_restrictions: false
+cluster: "instagram"
+subcluster: "reels"
+primaryTool: "instagram-downloader"
+searchIntent: "informational"
 ---
 
 Pulsas "Descargar" en un Reel de Instagram, pero cuando revisas tu carrete, encuentras un video con una marca de agua y sin su audio de tendencia. Es una frustración común tanto para creadores como para usuarios ocasionales.

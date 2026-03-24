@@ -9,6 +9,10 @@ monetization:
   primary_category: "creator-tools"
   affiliate_potential: "high"
   geo_restrictions: false
+cluster: "creator-growth"
+subcluster: "editing"
+primaryTool: "none"
+searchIntent: "informational"
 ---
 
 Em 2026, uma ótima ideia não é suficiente para viralizar no TikTok. O algoritmo tem uma obsessão principal: **tempo de visualização**. Se os espectadores deslizarem para o próximo vídeo, o alcance do seu vídeo morre instantaneamente.
@@ -18,11 +22,11 @@ O segredo para prender a atenção e dominar a Página Para Você (FYP) não é 
 Este guia detalha as técnicas exatas de edição que os principais criadores usam para manter os espectadores fisgados do primeiro ao último segundo. Esqueça as dicas básicas; estas são as estratégias profissionais que funcionam agora.
 
 ## Sumário
-- [Parte 1: Os Princípios Fundamentais de uma Edição Viral](#part-1-the-core-principles-of-a-viral-edit)
-- [Parte 2: Narrativa Visual e Táticas de Retenção](#part-2-visual-storytelling--retention-tactics)
-- [Parte 3: Técnicas Avançadas para um Acabamento Profissional](#part-3-advanced-techniques-for-a-professional-polish)
-- [Parte 4: Seu Fluxo de Trabalho e Kit de Ferramentas de Edição](#part-4-your-editing-workflow--toolkit)
-- [Perguntas Frequentes (FAQ)](#frequently-asked-questions-faq)
+- [Parte 1: Os Princípios Fundamentais de uma Edição Viral](#parte-1-os-princípios-fundamentais-de-uma-edição-viral)
+- [Parte 2: Narrativa Visual e Táticas de Retenção](#parte-2-narrativa-visual-e-táticas-de-retenção)
+- [Parte 3: Técnicas Avançadas para um Acabamento Profissional](#parte-3-técnicas-avançadas-para-um-acabamento-profissional)
+- [Parte 4: Seu Fluxo de Trabalho e Kit de Ferramentas de Edição](#parte-4-seu-fluxo-de-trabalho-e-kit-de-ferramentas-de-edição)
+- [Perguntas Frequentes (FAQ)](#perguntas-frequentes-faq)
 
 ---
 

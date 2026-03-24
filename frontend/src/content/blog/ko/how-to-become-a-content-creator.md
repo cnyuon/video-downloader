@@ -10,6 +10,10 @@ monetization:
   primary_category: "creator-tools"
   affiliate_potential: "medium"
   geo_restrictions: false
+cluster: "creator-growth"
+subcluster: "beginner-guides"
+primaryTool: "none"
+searchIntent: "informational"
 ---
 
 크리에이터 이코노미는 수십억 달러 규모로 급성장하는 산업이지만, 진입하는 것은 압도적으로 느껴질 수 있습니다. 많은 예비 크리에이터들이 어디서부터 시작해야 할지, 무엇을 게시해야 할지 몰라 막막해합니다. 그들은 한 번에 모든 것을 하려다 지쳐버리고, 자신의 열정을 지속 가능한 사업으로 전환하는 데 실패합니다.

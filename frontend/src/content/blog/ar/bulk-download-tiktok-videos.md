@@ -9,6 +9,10 @@ monetization:
   primary_category: "software"
   affiliate_potential: "high"
   geo_restrictions: false
+cluster: "tiktok"
+subcluster: "bulk-download"
+primaryTool: "tiktok-downloader"
+searchIntent: "informational"
 ---
 
 سواء كنت صانع محتوى تخشى حظرًا محتملاً لتيك توك [حظر تيك توك: كيفية الوصول والتنزيل](/ar/blog/tiktok-banned-how-to-access-download/) أو ترغب فقط في الحصول على نسخة احتياطية شخصية لمحتواك، فإن تنزيل مئات الفيديوهات واحدًا تلو الآخر ليس حلاً عمليًا. أنت بحاجة إلى طريقة لـ **تنزيل جميع فيديوهات تيك توك الخاصة بك دفعة واحدة** بكفاءة وأمان.

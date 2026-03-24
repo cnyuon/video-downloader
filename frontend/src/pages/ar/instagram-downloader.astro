@@ -50,7 +50,7 @@ const diversePosts = getDiversePosts(displayPosts, 'instagram-downloader', 4);
     description="Download Instagram Reels, Stories, and videos in HD quality. Free, no watermark, works on iPhone, Android & desktop."
     jsonLd={jsonLd}
 >
-    <Navbar client:idle currentPage="home" lang={lang as keyof typeof ui} />
+    <Navbar client:idle={{timeout: 3000}} currentPage="home" lang={lang as keyof typeof ui} />
 
     <main class="container mx-auto px-4 pt-10 pb-4 max-w-2xl">
         <div class="text-center mb-8">

@@ -9,6 +9,10 @@ monetization:
   primary_category: "creator-tools"
   affiliate_potential: "high"
   geo_restrictions: false
+cluster: "creator-growth"
+subcluster: "editing"
+primaryTool: "none"
+searchIntent: "informational"
 ---
 
 In 2026, a great idea isn't enough to go viral on TikTok. The algorithm has one primary obsession: **watch time**. If viewers swipe away, your video's reach dies instantly.

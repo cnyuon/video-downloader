@@ -9,6 +9,10 @@ monetization:
   primary_category: "vpn"
   affiliate_potential: "high"
   geo_restrictions: true
+cluster: "privacy-security"
+subcluster: "access-restrictions"
+primaryTool: "none"
+searchIntent: "informational"
 ---
 
 TikTok'un çeşitli ülkelerde yasaklar ve kısıtlamalarla karşı karşıya kalmasıyla birlikte, kullanıcılar ve içerik oluşturucular genellikle platforma nasıl erişeceklerini ve daha da önemlisi içeriklerini nasıl kaydedeceklerini merak ediyorlar. İster tamamen yasaklı bir ülkede olun ister sadece hazırlıklı olmak isteyin, bu kılavuz size yardımcı olacaktır.
@@ -16,10 +20,10 @@ TikTok'un çeşitli ülkelerde yasaklar ve kısıtlamalarla karşı karşıya ka
 İki temel çözümü açıklayacağız: **TikTok'a erişmek için bir VPN kullanmak** ve **videolarınızı yedeklemek için bir indirici kullanmak**.
 
 ## İçindekiler
-- [Bölüm 1: Kısıtlı Bir Ülkede TikTok'a Nasıl Erişilir](#part-1-how-to-access-tiktok-in-a-restricted-country)
-- [Bölüm 2: TikTok Videolarınızı Nasıl İndirir ve Yedeklersiniz](#part-2-how-to-download-and-back-up-your-tiktok-videos)
-- [Hangi Ülkeler TikTok'u Yasakladı veya Kısıtladı?](#which-countries-have-banned-or-restricted-tiktok)
-- [Sıkça Sorulan Sorular (SSS)](#frequently-asked-questions-faq)
+- [Bölüm 1: Kısıtlı Bir Ülkede TikTok'a Nasıl Erişilir](#bölüm-1-kısıtlı-bir-ülkede-tiktoka-nasıl-erişilir)
+- [Bölüm 2: TikTok Videolarınızı Nasıl İndirir ve Yedeklersiniz](#bölüm-2-tiktok-videolarınızı-nasıl-i̇ndirir-ve-yedeklersiniz)
+- [Hangi Ülkeler TikTok'u Yasakladı veya Kısıtladı?](#hangi-ülkeler-tiktoku-yasakladı-veya-kısıtladı)
+- [Sıkça Sorulan Sorular (SSS)](#sıkça-sorulan-sorular-sss)
 
 ## Bölüm 1: Kısıtlı Bir Ülkede TikTok'a Nasıl Erişilir
 

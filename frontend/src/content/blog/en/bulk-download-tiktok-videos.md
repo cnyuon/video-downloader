@@ -9,6 +9,10 @@ monetization:
   primary_category: "software"
   affiliate_potential: "high"
   geo_restrictions: false
+cluster: "tiktok"
+subcluster: "bulk-download"
+primaryTool: "tiktok-downloader"
+searchIntent: "informational"
 ---
 
 Whether you're a creator fearing a potential [TikTok ban](/blog/tiktok-banned-how-to-access-download/) or just want a personal backup of your content, downloading hundreds of videos one by one is not a practical solution. You need a way to **bulk download all your TikTok videos** efficiently and safely.

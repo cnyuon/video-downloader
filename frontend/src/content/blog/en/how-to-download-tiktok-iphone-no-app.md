@@ -9,6 +9,10 @@ monetization:
   primary_category: "none"
   affiliate_potential: "low"
   geo_restrictions: false
+cluster: "tiktok"
+subcluster: "mobile-workflow"
+primaryTool: "tiktok-downloader"
+searchIntent: "informational"
 ---
 
 Trying to save a TikTok video on your iPhone can be frustrating. You either end up with a distracting watermark, or the creator has disabled the "Save Video" button entirely. While the App Store is filled with downloader apps, they are often unreliable, loaded with ads, or require expensive subscriptions.

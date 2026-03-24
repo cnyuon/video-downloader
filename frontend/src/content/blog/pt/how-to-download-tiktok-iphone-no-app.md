@@ -9,6 +9,10 @@ monetization:
   primary_category: "none"
   affiliate_potential: "low"
   geo_restrictions: false
+cluster: "tiktok"
+subcluster: "mobile-workflow"
+primaryTool: "tiktok-downloader"
+searchIntent: "informational"
 ---
 
 Tentar salvar um vídeo do TikTok no seu iPhone pode ser frustrante. Você acaba com uma marca d'água que distrai, ou o criador desativou completamente o botão "Salvar Vídeo". Embora a App Store esteja cheia de aplicativos de download, eles são frequentemente pouco confiáveis, cheios de anúncios ou exigem assinaturas caras.
@@ -18,12 +22,12 @@ A boa notícia é que **você não precisa de um aplicativo**.
 Este guia mostrará o método mais rápido e seguro para baixar qualquer vídeo do TikTok — sem marca d'água — diretamente para o Rolo da Câmera do seu iPhone usando apenas seu navegador da web.
 
 ## Sumário
-- [Por Que Você Não Deve Usar o Botão "Salvar Vídeo" do Aplicativo](#why-you-shouldnt-use-the-in-app-save-video-button)
-- [Como Baixar TikToks no iPhone (Sem Aplicativo)](#how-to-download-tiktoks-on-iphone-no-app-needed)
-- [Passo 1: Copie o Link do Vídeo do TikTok](#step-1-copy-the-tiktok-video-link)
-- [Passo 2: Use um Downloader Baseado na Web no Safari](#step-2-use-a-web-based-downloader-in-safari)
-- [Passo 3: Salve o Vídeo no Rolo da Câmera](#step-3-save-the-video-to-your-camera-roll)
-- [Perguntas Frequentes (FAQ)](#frequently-asked-questions-faq)
+- [Por Que Você Não Deve Usar o Botão "Salvar Vídeo" do Aplicativo](#por-que-você-não-deve-usar-o-botão-salvar-vídeo-do-aplicativo)
+- [Como Baixar TikToks no iPhone (Sem Aplicativo)](#como-baixar-tiktoks-no-iphone-sem-aplicativo)
+- [Passo 1: Copie o Link do Vídeo do TikTok](#passo-1-copie-o-link-do-vídeo-do-tiktok)
+- [Passo 2: Use um Downloader Baseado na Web no Safari](#passo-2-use-um-downloader-baseado-na-web-no-safari)
+- [Passo 3: Salve o Vídeo no Rolo da Câmera](#passo-3-salve-o-vídeo-no-rolo-da-câmera)
+- [Perguntas Frequentes (FAQ)](#perguntas-frequentes-faq)
 
 ## Por Que Você Não Deve Usar o Botão "Salvar Vídeo" do Aplicativo
 

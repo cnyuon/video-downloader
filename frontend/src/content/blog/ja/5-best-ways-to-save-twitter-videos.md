@@ -9,6 +9,10 @@ monetization:
   primary_category: "none"
   affiliate_potential: "low"
   geo_restrictions: false
+cluster: "twitter"
+subcluster: "download-basics"
+primaryTool: "twitter-downloader"
+searchIntent: "informational"
 ---
 
 Twitter（現在はX）で、バズっているクリップ、見逃せないニュース速報、あるいは面白い瞬間を見つけて、永久に保存しておきたいと思ったことはありませんか？しかし、問題があります。アプリにはダウンロードボタンが内蔵されていません。では、Twitterの動画をスマートフォンやコンピューターに保存するにはどうすればよいのでしょうか？
@@ -16,13 +20,13 @@ Twitter（現在はX）で、バズっているクリップ、見逃せないニ
 このガイドでは、iPhone、Android、PCを含むあらゆるデバイスで機能する、最速かつ最も安全な方法をご紹介します。
 
 ### 目次
-- [最善の方法：無料のオンラインダウンローダーを利用する](#the-1-method-using-a-free-online-downloader)
-- [Twitter動画を保存する方法（ステップバイステップ）](#how-to-save-twitter-videos-step-by-step)
-  - [iPhoneとiPadの場合](#on-iphone--ipad)
-  - [Androidの場合](#on-android)
-  - [デスクトップ（PC/Mac）の場合](#on-desktop-pcmac)
-- [代替方法（とそのリスク）](#alternative-methods-and-their-risks)
-- [よくある質問（FAQ）](#frequently-asked-questions-faq)
+- [最善の方法：無料のオンラインダウンローダーを利用する](#最善の方法無料のオンラインダウンローダーを利用する)
+- [Twitter動画を保存する方法（ステップバイステップ）](#twitter動画を保存する方法ステップバイステップ)
+  - [iPhoneとiPadの場合](#iphoneとipadの場合)
+  - [Androidの場合](#androidの場合)
+  - [デスクトップ（PC/Mac）の場合](#デスクトップpcmacの場合)
+- [代替方法（とそのリスク）](#代替方法とそのリスク)
+- [よくある質問（FAQ）](#よくある質問faq)
 
 ## 最善の方法：無料のオンラインダウンローダーを利用する
 

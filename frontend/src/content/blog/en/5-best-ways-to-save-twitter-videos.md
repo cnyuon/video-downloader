@@ -9,6 +9,10 @@ monetization:
   primary_category: "none"
   affiliate_potential: "low"
   geo_restrictions: false
+cluster: "twitter"
+subcluster: "download-basics"
+primaryTool: "twitter-downloader"
+searchIntent: "informational"
 ---
 
 You've found a viral clip, a must-see news update, or a hilarious moment on Twitter (now X) that you want to keep forever. But there's a problem: the app has no built-in download button. So, how do you save a video from Twitter to your phone or computer?

@@ -12,6 +12,65 @@ const REDIRECT_RULES = {
     '/blog/tiktok-thumbnail-download/': '/blog/how-to-download-tiktok-thumbnails/',
 };
 
+const INTERNAL_HOSTS = new Set(['getmediatools.com', 'www.getmediatools.com']);
+
+function isExternalHref(href) {
+    if (typeof href !== 'string' || href.length === 0) return false;
+    if (href.startsWith('#') || href.startsWith('/')) return false;
+    if (href.startsWith('mailto:') || href.startsWith('tel:')) return false;
+    if (!/^https?:\/\//i.test(href) && !href.startsWith('//')) return false;
+
+    try {
+        const parsed = new URL(href, 'https://getmediatools.com');
+        return !INTERNAL_HOSTS.has(parsed.hostname);
+    } catch {
+        return false;
+    }
+}
+
+function rehypeNofollowExternalLinks() {
+    return (tree) => {
+        const visit = (node) => {
+            if (!node || typeof node !== 'object') return;
+
+            if (node.type === 'element' && node.tagName === 'a') {
+                const props = node.properties ?? (node.properties = {});
+                const href = Array.isArray(props.href) ? props.href[0] : props.href;
+
+                if (isExternalHref(href)) {
+                    const rel = new Set();
+                    const existing = props.rel;
+
+                    if (Array.isArray(existing)) {
+                        for (const value of existing) {
+                            String(value)
+                                .split(/\s+/)
+                                .filter(Boolean)
+                                .forEach((token) => rel.add(token));
+                        }
+                    } else if (typeof existing === 'string') {
+                        existing
+                            .split(/\s+/)
+                            .filter(Boolean)
+                            .forEach((token) => rel.add(token));
+                    }
+
+                    rel.add('nofollow');
+                    rel.add('noopener');
+                    rel.add('noreferrer');
+                    props.rel = Array.from(rel).join(' ');
+                }
+            }
+
+            if (Array.isArray(node.children)) {
+                for (const child of node.children) visit(child);
+            }
+        };
+
+        visit(tree);
+    };
+}
+
 // Build the full redirects map: English root + all locales
 const allRedirects = { ...REDIRECT_RULES };
 for (const locale of REDIRECT_LOCALES) {
@@ -31,6 +90,9 @@ export default defineConfig({
         }
     },
     redirects: allRedirects,
+    markdown: {
+        rehypePlugins: [rehypeNofollowExternalLinks],
+    },
     integrations: [
         react(),
         tailwind({

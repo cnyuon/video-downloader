@@ -5,6 +5,10 @@ pubDate: 2026-02-21
 heroImage: "../../../assets/blog-images/tiktok-anonymous-story-viewer.png"
 heroAlt: "익명 틱톡 스토리 뷰어를 나타내는, 익명 마스크 아이콘이 겹쳐진 틱톡 앱이 표시된 휴대폰."
 tags: ["TikTok", "Guides", "Privacy"]
+cluster: "tiktok"
+subcluster: "privacy"
+primaryTool: "none"
+searchIntent: "informational"
 ---
 
 누군가의 틱톡 스토리를 보고 싶었지만, 시청자 목록에 내 이름이 보일까 봐 망설인 적이 있나요? 흔한 질문입니다: 틱톡 스토리를 익명으로 볼 수 있을까요?
@@ -16,9 +20,9 @@ tags: ["TikTok", "Guides", "Privacy"]
 다행히도 간단한 해결책이 있습니다. 이 가이드에서는 흔적을 남기지 않고 공개 스토리를 시청하기 위해 **익명 틱톡 스토리 뷰어**를 사용하는 방법을 정확히 알려드립니다.
 
 ## 목차
-- [가장 좋은 방법: 익명 틱톡 스토리 뷰어 사용하기](#the-best-method-use-an-anonymous-tiktok-story-viewer)
-- [틱톡 스토리를 익명으로 시청하는 다른 방법](#other-ways-to-view-tiktok-stories-anonymously)
-- [자주 묻는 질문 (FAQ)](#frequently-asked-questions-faq)
+- [가장 좋은 방법: 익명 틱톡 스토리 뷰어 사용하기](#가장-좋은-방법-익명-틱톡-스토리-뷰어-사용하기)
+- [틱톡 스토리를 익명으로 시청하는 다른 방법](#틱톡-스토리를-익명으로-시청하는-다른-방법)
+- [자주 묻는 질문 (FAQ)](#자주-묻는-질문-faq)
 
 ## 가장 좋은 방법: 익명 틱톡 스토리 뷰어 사용하기
 

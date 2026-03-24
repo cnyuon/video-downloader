@@ -55,7 +55,7 @@ const diversePosts = getDiversePosts(displayPosts, 'thumbnail-grabber', 4);
     description={ui.en['tg.meta.desc']}
     jsonLd={jsonLd}
 >
-    <Navbar client:idle currentPage="thumbnail" lang={lang as keyof typeof ui} />
+    <Navbar client:idle={{timeout: 3000}} currentPage="thumbnail" lang={lang as keyof typeof ui} />
     
     <main class="container mx-auto px-4 pt-10 pb-4 max-w-2xl">
         <div class="text-center mb-10">

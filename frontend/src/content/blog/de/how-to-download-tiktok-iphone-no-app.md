@@ -9,6 +9,10 @@ monetization:
   primary_category: "none"
   affiliate_potential: "low"
   geo_restrictions: false
+cluster: "tiktok"
+subcluster: "mobile-workflow"
+primaryTool: "tiktok-downloader"
+searchIntent: "informational"
 ---
 
 Der Versuch, ein TikTok-Video auf deinem iPhone zu speichern, kann frustrierend sein. Entweder landest du mit einem störenden Wasserzeichen, oder der Ersteller hat die Schaltfläche „Video speichern“ komplett deaktiviert. Obwohl der App Store voller Downloader-Apps ist, sind diese oft unzuverlässig, mit Werbung überladen oder erfordern teure Abonnements.
@@ -18,12 +22,12 @@ Die gute Nachricht ist: **Du brauchst keine App**.
 Dieser Leitfaden zeigt dir die schnellste und sicherste Methode, jedes TikTok-Video – ohne Wasserzeichen – direkt in die Kamerarolle deines iPhones herunterzuladen, indem du nur deinen Webbrowser verwendest.
 
 ## Inhaltsverzeichnis
-- [Warum du die In-App-Schaltfläche „Video speichern“ nicht verwenden solltest](#why-you-shouldnt-use-the-in-app-save-video-button)
-- [So lädst du TikToks auf dem iPhone herunter (Keine App erforderlich)](#how-to-download-tiktoks-on-iphone-no-app-needed)
-- [Schritt 1: Den TikTok-Videolink kopieren](#step-1-copy-the-tiktok-video-link)
-- [Schritt 2: Einen webbasierten Downloader in Safari verwenden](#step-2-use-a-web-based-downloader-in-safari)
-- [Schritt 3: Das Video in der Kamerarolle speichern](#step-3-save-the-video-to-your-camera-roll)
-- [Häufig gestellte Fragen (FAQ)](#frequently-asked-questions-faq)
+- [Warum du die In-App-Schaltfläche „Video speichern“ nicht verwenden solltest](#warum-du-die-in-app-schaltfläche-video-speichern-nicht-verwenden-solltest)
+- [So lädst du TikToks auf dem iPhone herunter (Keine App erforderlich)](#so-lädst-du-tiktoks-auf-dem-iphone-herunter-keine-app-erforderlich)
+- [Schritt 1: Den TikTok-Videolink kopieren](#schritt-1-den-tiktok-videolink-kopieren)
+- [Schritt 2: Einen webbasierten Downloader in Safari verwenden](#schritt-2-einen-webbasierten-downloader-in-safari-verwenden)
+- [Schritt 3: Das Video in der Kamerarolle speichern](#schritt-3-das-video-in-der-kamerarolle-speichern)
+- [Häufig gestellte Fragen (FAQ)](#häufig-gestellte-fragen-faq)
 
 ## Warum du die In-App-Schaltfläche „Video speichern“ nicht verwenden solltest
 

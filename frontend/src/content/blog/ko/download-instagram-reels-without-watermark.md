@@ -9,6 +9,10 @@ monetization:
   primary_category: "none"
   affiliate_potential: "medium"
   geo_restrictions: false
+cluster: "instagram"
+subcluster: "reels"
+primaryTool: "instagram-downloader"
+searchIntent: "informational"
 ---
 
 인스타그램 릴스에서 "다운로드"를 눌렀지만, 카메라 롤을 확인해 보면 워터마크가 덕지덕지 붙어 있고 유행하는 오디오가 제거된 영상을 발견하게 됩니다. 이는 크리에이터와 일반 사용자 모두에게 흔한 불만입니다.

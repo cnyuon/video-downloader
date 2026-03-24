@@ -8,5 +8,10 @@
 /en/video-to-mp3/ /video-to-mp3/ 301
 /en/tiktok-sound-downloader/ /tiktok-sound-downloader/ 301
 /en/thumbnail-grabber/ /thumbnail-grabber/ 301
+/en/instagram-downloader/ /instagram-downloader/ 301
+/en/tools/ /tools/ 301
+/en/tools/* /tools/:splat 301
 /en/blog/ /blog/ 301
+/en/blog/topic/* /blog/topic/:splat 301
 /en/blog/* /blog/:splat 301
+/en/legal/* /legal/:splat 301

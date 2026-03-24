@@ -9,6 +9,10 @@ monetization:
   primary_category: "vpn"
   affiliate_potential: "high"
   geo_restrictions: true
+cluster: "privacy-security"
+subcluster: "access-restrictions"
+primaryTool: "none"
+searchIntent: "informational"
 ---
 
 With TikTok facing bans and restrictions in various countries, users and creators are often left wondering how to access the platform and, more importantly, how to save their content. Whether you're in a country with a full ban or just want to be prepared, this guide has you covered.

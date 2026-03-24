@@ -10,6 +10,10 @@ monetization:
   primary_category: "software"
   affiliate_potential: "medium"
   geo_restrictions: false
+cluster: "tiktok"
+subcluster: "viewer-workflow"
+primaryTool: "none"
+searchIntent: "informational"
 ---
 
 C'est une frustration courante : un ami vous envoie un lien vers une vidéo TikTok, mais lorsque vous cliquez dessus, vous êtes immédiatement redirigé vers l'App Store au lieu de la vidéo. Le site web mobile de TikTok vous empêche souvent de regarder du contenu, vous poussant agressivement à télécharger l'application et à créer un compte.

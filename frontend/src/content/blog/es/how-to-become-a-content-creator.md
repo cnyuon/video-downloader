@@ -10,6 +10,10 @@ monetization:
   primary_category: "creator-tools"
   affiliate_potential: "medium"
   geo_restrictions: false
+cluster: "creator-growth"
+subcluster: "beginner-guides"
+primaryTool: "none"
+searchIntent: "informational"
 ---
 
 La economía de los creadores es una industria en auge de miles de millones de dólares, pero irrumpir en ella puede parecer abrumador. Muchos aspirantes a creadores se quedan estancados, paralizados por dónde empezar o qué publicar. Se agotan intentando hacerlo todo a la vez y no logran convertir su pasión en un negocio sostenible.
@@ -21,16 +25,16 @@ La economía de los creadores es una industria en auge de miles de millones de d
   - [Paso 1: Encuentra tu nicho y define tu audiencia](#paso-1-encuentra-tu-nicho-y-define-tu-audiencia)
   - [Paso 2: Elige tu plataforma principal](#paso-2-elige-tu-plataforma-principal)
   - [Paso 3: Desarrolla tu estrategia de contenido](#paso-3-desarrolla-tu-estrategia-de-contenido)
-  - [Paso 4: Reúne tu equipo esencial](#paso-4-reune-tu-equipo-esencial)
+  - [Paso 4: Reúne tu equipo esencial](#paso-4-reúne-tu-equipo-esencial)
   - [Paso 5: Planifica y guioniza tu contenido](#paso-5-planifica-y-guioniza-tu-contenido)
   - [Paso 6: Graba tus videos en lotes](#paso-6-graba-tus-videos-en-lotes)
-  - [Paso 7: Edita para una máxima retención](#paso-7-edita-para-una-maxima-retencion)
+  - [Paso 7: Edita para una máxima retención](#paso-7-edita-para-una-máxima-retención)
   - [Paso 8: Optimiza y programa tus publicaciones](#paso-8-optimiza-y-programa-tus-publicaciones)
-  - [Paso 9: Interactúa y construye una comunidad](#paso-9-interactua-y-construye-una-comunidad)
+  - [Paso 9: Interactúa y construye una comunidad](#paso-9-interactúa-y-construye-una-comunidad)
   - [Paso 10: Analiza, itera y crece](#paso-10-analiza-itera-y-crece)
-- [Cómo monetizar tu contenido](#como-monetizar-tu-contenido)
+- [Cómo monetizar tu contenido](#cómo-monetizar-tu-contenido)
 - [Errores comunes a evitar](#errores-comunes-a-evitar)
-- [Integración de GetMediaTools](#integracion-de-getmediatools)
+- [Integración de GetMediaTools](#integración-de-getmediatools)
 - [Preguntas frecuentes](#preguntas-frecuentes)
 
 ---

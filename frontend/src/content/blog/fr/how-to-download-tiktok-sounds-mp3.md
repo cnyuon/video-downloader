@@ -9,6 +9,10 @@ monetization:
   primary_category: "none"
   affiliate_potential: "low"
   geo_restrictions: false
+cluster: "audio"
+subcluster: "tiktok-audio"
+primaryTool: "tiktok-sound-downloader"
+searchIntent: "informational"
 ---
 
 TikTok regorge de millions de sons viraux : chansons entraînantes, extraits audio hilarants et voix off populaires. Mais l’application ne permet pas de télécharger uniquement l’audio.

@@ -1,7 +1,5 @@
 import { ui } from './ui';
 
-const NON_DEFAULT_LOCALES = ['es', 'tr', 'pt', 'fr', 'de', 'ja', 'ko', 'ar', 'hi'];
-
 /**
  * Centralized locale-aware URL builder. 
  * SINGLE SOURCE OF TRUTH for all internal links across the entire site.

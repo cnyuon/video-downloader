@@ -7,6 +7,7 @@ import { useTranslations } from '../../../i18n/utils';
 import { ui } from '../../../i18n/ui';
 import { Image } from 'astro:assets';
 import { getDiversePosts } from '../../../lib/blog-utils';
+import { getPhase1Text } from '../../../i18n/phase1-extra';
 
 export async function getStaticPaths() {
   const allPosts = await getCollection('blog');
@@ -48,6 +49,7 @@ const category = post.data.monetization?.primary_category
 
 const lang = 'ar';
 const t = useTranslations(lang);
+const tx = (key: Parameters<typeof getPhase1Text>[1]) => getPhase1Text(String(lang), key);
 const getHref = (path: string) => {
     let href = `/${lang}${path === '/' ? '' : path}`;
     return href.endsWith('/') ? href : href + '/';
@@ -81,12 +83,12 @@ const diversePosts = getDiversePosts(displayPosts, originalSlug, 4);
 	pubDate={post.data.pubDate}
 	updatedDate={post.data.updatedDate}
 >
-	<Navbar client:idle currentPage="blog" lang={lang as any} />
+	<Navbar client:idle={{timeout: 3000}} currentPage="blog" lang={lang as any} />
 	
 	<main class="container mx-auto px-4 pt-10 pb-20 max-w-7xl">
         <!-- Breadcrumb -->
         <nav class="flex items-center text-sm font-bold text-slate-500 mb-8 overflow-hidden whitespace-nowrap" aria-label="Breadcrumb">
-            <a href={getHref('/')} class="hover:text-slate-900 dark:hover:text-white transition-colors shrink-0">Home</a>
+            <a href={getHref('/')} class="hover:text-slate-900 dark:hover:text-white transition-colors shrink-0">{tx('blog.detail.home')}</a>
             <svg class="w-4 h-4 mx-2 text-slate-400 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7" /></svg>
             <a href={getHref('/blog/')} class="hover:text-slate-900 dark:hover:text-white transition-colors shrink-0">{t('nav.blog')}</a>
             <svg class="w-4 h-4 mx-2 text-slate-400 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7" /></svg>
@@ -114,10 +116,10 @@ const diversePosts = getDiversePosts(displayPosts, originalSlug, 4);
                             <Image 
                                 src={post.data.heroImage as any} 
                                 alt={post.data.heroAlt || post.data.title} 
-                                class="w-full h-full object-cover"
+                                class="w-full h-full object-contain"
                                 loading="eager"
-                                width={1000}
-                                height={562}
+                                width={1600}
+                                height={900}
                                 format="webp"
                             />
                         </div>
@@ -147,7 +149,7 @@ const diversePosts = getDiversePosts(displayPosts, originalSlug, 4);
                         <div class="mb-10">
                             <h3 class="font-bold text-[13px] text-slate-500 dark:text-slate-400 uppercase tracking-widest mb-4 flex items-center gap-2">
                                 <div class="w-1 h-4 bg-[#405EDB] rounded-full"></div>
-                                Post content
+                                {tx('blog.detail.toc')}
                             </h3>
                             <ul class="space-y-3 m-0 p-0 list-none border-l-2 border-slate-100 dark:border-slate-800 pl-4 py-1">
                                 {headings.filter(h => h.depth <= 3).map((heading) => (
@@ -164,7 +166,7 @@ const diversePosts = getDiversePosts(displayPosts, originalSlug, 4);
                     <!-- Related Topics & Offers -->
                     <div>
                         <h3 class="font-bold text-[13px] text-slate-500 dark:text-slate-400 uppercase tracking-widest mb-4">
-                            Related Blog Posts
+                            {tx('blog.detail.related_posts')}
                         </h3>
                         <div class="space-y-4">
                             {diversePosts.slice(0, 3).map((p: any) => {
@@ -176,10 +178,10 @@ const diversePosts = getDiversePosts(displayPosts, originalSlug, 4);
                                         <div class="absolute right-[-8px] top-1/2 -translate-y-1/2 w-4 h-4 bg-white dark:bg-slate-950 rounded-full border-l border-slate-200 dark:border-slate-800 z-10 group-hover:border-[#405EDB] transition-colors"></div>
                                         
                                         <h4 class="font-bold text-slate-900 dark:text-white group-hover:text-[#405EDB] transition-colors line-clamp-2 text-[15px] mb-2 leading-snug px-2">{p.data.title}</h4>
-                                        <p class="text-[13px] text-slate-500 dark:text-slate-400 px-2 line-clamp-2 mb-4">Read to learn more about this topic.</p>
+                                        <p class="text-[13px] text-slate-500 dark:text-slate-400 px-2 line-clamp-2 mb-4">{tx('blog.detail.related_teaser')}</p>
                                         
                                         <div class="mx-2 border-t border-dashed border-slate-200 dark:border-slate-800 pt-3 flex justify-center items-center group-hover:border-[#405EDB]/50 transition-colors bg-slate-50 dark:bg-slate-900/50 rounded-xl mt-4 px-4 py-2 hover:bg-[#405EDB]/10 hover:text-[#405EDB]">
-                                            <span class="text-[13px] font-bold text-slate-700 dark:text-slate-300 group-hover:text-[#405EDB] transition-colors">Read Article</span>
+                                            <span class="text-[13px] font-bold text-slate-700 dark:text-slate-300 group-hover:text-[#405EDB] transition-colors">{tx('blog.detail.read_article')}</span>
                                         </div>
                                     </a>
                                 );
@@ -193,7 +195,7 @@ const diversePosts = getDiversePosts(displayPosts, originalSlug, 4);
         <!-- Sidebar Mobile / Fallback below content -->
         <div class="mt-16 lg:hidden w-full bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 p-6 sm:p-8 rounded-2xl shadow-sm">
             <h3 class="font-extrabold text-xl text-slate-900 dark:text-white mb-6">
-                Related Blog Posts
+                {tx('blog.detail.related_posts')}
             </h3>
             <div class="grid gap-4 sm:grid-cols-2">
                 {diversePosts.slice(0, 4).map((p: any) => {
@@ -212,7 +214,7 @@ const diversePosts = getDiversePosts(displayPosts, originalSlug, 4);
                             </div>
                             <div>
                                 <h4 class="font-bold text-slate-900 dark:text-white group-hover:text-[#405EDB] transition-colors line-clamp-2 text-sm leading-snug">{p.data.title}</h4>
-                                <span class="text-xs text-slate-500 dark:text-slate-400 font-medium mt-1 inline-block">Read Article &rarr;</span>
+                                <span class="text-xs text-slate-500 dark:text-slate-400 font-medium mt-1 inline-block">{tx('blog.detail.read_article')} &rarr;</span>
                             </div>
                         </a>
                     );
@@ -222,7 +224,7 @@ const diversePosts = getDiversePosts(displayPosts, originalSlug, 4);
 
         <!-- Related Tools Section -->
         <div class="mt-16 pt-16 border-t border-slate-100 dark:border-slate-800 w-full lg:w-[68%]">
-            <h2 class="text-2xl sm:text-3xl font-extrabold mb-6 sm:mb-8 text-slate-900 dark:text-white">Explore Free Video Tools</h2>
+            <h2 class="text-2xl sm:text-3xl font-extrabold mb-6 sm:mb-8 text-slate-900 dark:text-white">{tx('blog.detail.explore_tools')}</h2>
             <div class="grid gap-4 sm:gap-6 sm:grid-cols-2">
                 <a href={getHref('/tiktok-downloader/')} class="group flex items-center gap-4 sm:gap-5 p-4 sm:p-6 rounded-2xl bg-[#F8FAFC] dark:bg-slate-800/50 hover:bg-white dark:hover:bg-slate-700 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border border-transparent">
                     <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-black flex items-center justify-center text-white shrink-0 group-hover:scale-110 transition-transform">

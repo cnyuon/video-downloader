@@ -9,6 +9,10 @@ monetization:
   primary_category: "none"
   affiliate_potential: "low"
   geo_restrictions: false
+cluster: "tiktok"
+subcluster: "mobile-workflow"
+primaryTool: "tiktok-downloader"
+searchIntent: "informational"
 ---
 
 Intentar guardar un video de TikTok en tu iPhone puede ser frustrante. O terminas con una marca de agua que distrae, o el creador ha deshabilitado el botón "Guardar video" por completo. Aunque la App Store está llena de aplicaciones de descarga, a menudo son poco fiables, están cargadas de anuncios o requieren suscripciones caras.
@@ -18,12 +22,12 @@ La buena noticia es que **no necesitas una aplicación**.
 Esta guía te mostrará el método más rápido y seguro para descargar cualquier video de TikTok —sin marca de agua— directamente al Carrete de tu iPhone usando solo tu navegador web.
 
 ## Tabla de Contenidos
-- [Por qué no deberías usar el botón "Guardar video" integrado en la app](#why-you-shouldnt-use-the-in-app-save-video-button)
-- [Cómo descargar TikToks en iPhone (sin necesidad de una app)](#how-to-download-tiktoks-on-iphone-no-app-needed)
-- [Paso 1: Copiar el enlace del video de TikTok](#step-1-copy-the-tiktok-video-link)
-- [Paso 2: Usar un descargador web en Safari](#step-2-use-a-web-based-downloader-in-safari)
-- [Paso 3: Guardar el video en tu Carrete](#step-3-save-the-video-to-your-camera-roll)
-- [Preguntas Frecuentes (FAQ)](#frequently-asked-questions-faq)
+- [Por qué no deberías usar el botón "Guardar video" integrado en la app](#por-qué-no-deberías-usar-el-botón-guardar-video-integrado-en-la-app)
+- [Cómo descargar TikToks en iPhone (sin necesidad de una app)](#cómo-descargar-tiktoks-en-iphone-sin-necesidad-de-una-app)
+- [Paso 1: Copiar el enlace del video de TikTok](#paso-1-copiar-el-enlace-del-video-de-tiktok)
+- [Paso 2: Usar un descargador web en Safari](#paso-2-usar-un-descargador-web-en-safari)
+- [Paso 3: Guardar el video en tu Carrete](#paso-3-guardar-el-video-en-tu-carrete)
+- [Preguntas Frecuentes (FAQ)](#preguntas-frecuentes-faq)
 
 ## Por qué no deberías usar el botón "Guardar video" integrado en la app
 

@@ -9,6 +9,10 @@ monetization:
   primary_category: "software"
   affiliate_potential: "medium"
   geo_restrictions: false
+cluster: "creator-growth"
+subcluster: "channel-strategy"
+primaryTool: "none"
+searchIntent: "informational"
 ---
 
 Starting a faceless YouTube channel is an appealing way to generate income without being on camera. But with 90% of new channels failing, success isn't guaranteed. Many creators fall into the trap of low-effort "cash cow" content, only to be penalized by YouTube's algorithms for being unoriginal.

@@ -1,7 +1,6 @@
 ---
 import '../styles/globals.css';
 import HreflangTags from '../components/i18n/HreflangTags.astro';
-import LanguagePicker from '../components/i18n/LanguagePicker.astro';
 import { getLangFromUrl } from '../i18n/utils';
 
 interface Props {
@@ -56,6 +55,16 @@ const BREADCRUMB_LABELS: Record<string, string> = {
     'video-to-mp3': 'Video to MP3',
     'thumbnail-grabber': 'Thumbnail Grabber',
     'blog': 'Blog',
+    'tools': 'Tools',
+    'legal': 'Legal',
+    'privacy-policy': 'Privacy Policy',
+    'terms-of-service': 'Terms of Service',
+    'about-us': 'About Us',
+    'contact-us': 'Contact Us',
+    'refund-policy': 'Refund Policy',
+    'topic': 'Topics',
+    'creator-growth': 'Creator Growth',
+    'privacy-security': 'Privacy & Security',
 };
 
 const breadcrumbItems = [
@@ -108,12 +117,6 @@ const websiteSchema = (isHomepage && !jsonLdHasWebSite) ? {
         <link rel="manifest" href="/manifest.json" />
         <meta name="theme-color" content="#7c3aed" />
         
-        <!-- Fonts -->
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-        <style>@font-face { font-family: 'Inter'; font-display: swap; }</style>
-        
         <!-- SEO -->
         <link rel="canonical" href={canonicalUrl} />
         <meta name="yandex-verification" content="cdcc6f25a321137f" />
@@ -151,59 +154,88 @@ const websiteSchema = (isHomepage && !jsonLdHasWebSite) ? {
             <script type="application/ld+json" set:html={JSON.stringify(websiteSchema)} />
         )}
         
-        <!-- Google Analytics -->
-        <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-7GYZ72XSW7"></script>
-        <script is:inline>
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-7GYZ72XSW7');
-        </script>
-        
-        <style>
-            body {
-                font-family: 'Inter', system-ui, sans-serif;
-            }
-        </style>
     </head>
     <body class="min-h-screen bg-background">
         <slot />
 
-        <!-- Yandex.Metrika counter (deferred to body for CWV) -->
-        <script is:inline type="text/javascript">
-            (function(m,e,t,r,i,k,a){
-                m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-                m[i].l=1*new Date();
-                for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
-                k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
-            })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=107148029', 'ym');
-            ym(107148029, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
-            (new MutationObserver(function(mutations) {
-                mutations.forEach(function(m) {
-                    m.addedNodes.forEach(function(n) {
-                        if (n.tagName === 'IMG' && n.src && n.src.indexOf('mc.yandex.ru') !== -1 && !n.alt) {
-                            n.alt = '';
-                            n.setAttribute('role', 'presentation');
-                        }
-                        if (n.querySelectorAll) {
-                            n.querySelectorAll('img[src*="mc.yandex.ru"]').forEach(function(img) {
-                                if (!img.alt) { img.alt = ''; img.setAttribute('role', 'presentation'); }
-                            });
-                        }
+        <!-- Deferred analytics loading (kept out of critical render path for mobile CWV) -->
+        <script is:inline>
+            (() => {
+                const onIdle = (cb, timeout = 3500) => {
+                    if ('requestIdleCallback' in window) {
+                        window.requestIdleCallback(cb, { timeout });
+                        return;
+                    }
+                    window.setTimeout(cb, Math.min(timeout, 2000));
+                };
+
+                const onLoad = (cb) => {
+                    if (document.readyState === 'complete') {
+                        cb();
+                        return;
+                    }
+                    window.addEventListener('load', cb, { once: true });
+                };
+
+                const loadGoogleAnalytics = () => {
+                    if (window.__gaLoaded) return;
+                    window.__gaLoaded = true;
+
+                    window.dataLayer = window.dataLayer || [];
+                    window.gtag = window.gtag || function () {
+                        window.dataLayer.push(arguments);
+                    };
+
+                    window.gtag('js', new Date());
+                    window.gtag('config', 'G-7GYZ72XSW7', {
+                        anonymize_ip: true,
+                        transport_type: 'beacon',
+                    });
+
+                    const gaScript = document.createElement('script');
+                    gaScript.async = true;
+                    gaScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-7GYZ72XSW7';
+                    document.head.appendChild(gaScript);
+                };
+
+                const loadYandexMetrika = () => {
+                    if (window.__ymLoaded) return;
+                    window.__ymLoaded = true;
+
+                    (function (m, e, t, r, i, k, a) {
+                        m[i] =
+                            m[i] ||
+                            function () {
+                                (m[i].a = m[i].a || []).push(arguments);
+                            };
+                        m[i].l = 1 * new Date();
+                        k = e.createElement(t);
+                        a = e.getElementsByTagName(t)[0];
+                        k.async = 1;
+                        k.src = r;
+                        a.parentNode.insertBefore(k, a);
+                    })(window, document, 'script', 'https://mc.yandex.ru/metrika/tag.js?id=107148029', 'ym');
+
+                    window.ym(107148029, 'init', {
+                        ssr: true,
+                        webvisor: false,
+                        clickmap: false,
+                        ecommerce: 'dataLayer',
+                        referrer: document.referrer,
+                        url: location.href,
+                        accurateTrackBounce: true,
+                        trackLinks: true,
+                    });
+                };
+
+                onLoad(() => {
+                    onIdle(() => {
+                        loadGoogleAnalytics();
+                        loadYandexMetrika();
                     });
                 });
-            })).observe(document.documentElement, {childList: true, subtree: true});
+            })();
         </script>
         <noscript><div><img src="https://mc.yandex.ru/watch/107148029" style="position:absolute; left:-9999px;" alt="" role="presentation" /></div></noscript>
-
-        <!-- PostHog Analytics (deferred to body for CWV) -->
-        <script is:inline>
-            !function(t,e){var o,n,p,r;e.__SV||(window.posthog && window.posthog.__loaded)||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.crossOrigin="anonymous",p.async=!0,p.src=s.api_host.replace(".i.posthog.com","-assets.i.posthog.com")+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="vi init Ti Ci ft Ri Oi ki capture calculateEventProperties Li register register_once register_for_session unregister unregister_for_session zi getFeatureFlag getFeatureFlagPayload getFeatureFlagResult isFeatureEnabled reloadFeatureFlags updateFlags updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures on onFeatureFlags onSurveysLoaded onSessionId getSurveys getActiveMatchingSurveys renderSurvey displaySurvey cancelPendingSurvey canRenderSurvey canRenderSurveyAsync identify setPersonProperties group resetGroups setPersonPropertiesForFlags resetPersonPropertiesForFlags setGroupPropertiesForFlags resetGroupPropertiesForFlags reset get_distinct_id getGroups get_session_id get_session_replay_url alias set_config startSessionRecording stopSessionRecording sessionRecordingStarted captureException startExceptionAutocapture stopExceptionAutocapture loadToolbar get_property getSessionProperty Ni Ai createPersonProfile setInternalOrTestUser Ui Si Hi opt_in_capturing opt_out_capturing has_opted_in_capturing has_opted_out_capturing get_explicit_consent_status is_capturing clear_opt_in_out_capturing Fi debug bt ji getPageViewId captureTraceFeedback captureTraceMetric wi".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
-            posthog.init('phc_2hUBYnemilhiWeu1JuSGkZXKNoQbUGQs6841B1i4qI0', {
-                api_host: 'https://us.i.posthog.com',
-                defaults: '2026-01-30',
-                person_profiles: 'identified_only',
-            })
-        </script>
     </body>
 </html>

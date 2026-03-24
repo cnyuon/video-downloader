@@ -9,6 +9,10 @@ monetization:
   primary_category: "software"
   affiliate_potential: "medium"
   geo_restrictions: false
+cluster: "creator-growth"
+subcluster: "channel-strategy"
+primaryTool: "none"
+searchIntent: "informational"
 ---
 
 Iniciar un canal de YouTube sin rostro es una forma atractiva de generar ingresos sin aparecer en cámara. Pero con el 90% de los canales nuevos fracasando, el éxito no está garantizado. Muchos creadores caen en la trampa del contenido de "vaca de efectivo" de bajo esfuerzo, solo para ser penalizados por los algoritmos de YouTube por ser poco originales.
@@ -24,7 +28,7 @@ El secreto para construir un canal sin rostro rentable reside en elegir el nicho
   - [4. Montajes y Guías de Videojuegos](#4-montajes-y-guías-de-videojuegos)
   - [5. Documentales de Crímenes Reales y Misterio](#5-documentales-de-crímenes-reales-y-misterio)
   - [6. Bricolaje y Manualidades (Vista Cenital)](#6-bricolaje-y-manualidades-vista-cenital)
-  - [7. Guías de Cocina y Recetas (Estilo ASMR)](#7-guías-de-cocina-y-recetas-asmr)
+  - [7. Guías de Cocina y Recetas (Estilo ASMR)](#7-guías-de-cocina-y-recetas-estilo-asmr)
   - [8. Contenido Educativo Animado](#8-contenido-educativo-animado)
   - [9. Compilaciones de Material de Archivo con Narración](#9-compilaciones-de-material-de-archivo-con-narración)
   - [10. Canales de Música (Lofi, Ambiental)](#10-canales-de-música-lofi-ambiental)

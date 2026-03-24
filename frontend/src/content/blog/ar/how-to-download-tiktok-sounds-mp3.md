@@ -9,6 +9,10 @@ monetization:
   primary_category: "none"
   affiliate_potential: "low"
   geo_restrictions: false
+cluster: "audio"
+subcluster: "tiktok-audio"
+primaryTool: "tiktok-sound-downloader"
+searchIntent: "informational"
 ---
 
 يضم تطبيق تيك توك ملايين المقاطع الصوتية الرائجة، من الأغاني الجذابة إلى المقاطع الصوتية المضحكة والتعليقات الصوتية الشائعة. لكن التطبيق لا يتيح لك تحميل الصوت فقط.

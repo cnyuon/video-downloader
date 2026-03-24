@@ -9,6 +9,10 @@ monetization:
   primary_category: "none"
   affiliate_potential: "low"
   geo_restrictions: false
+cluster: "tiktok"
+subcluster: "mobile-workflow"
+primaryTool: "tiktok-downloader"
+searchIntent: "informational"
 ---
 
 قد يكون حفظ فيديو تيك توك على جهاز الآيفون الخاص بك أمرًا محبطًا. فإما أن ينتهي بك الأمر بعلامة مائية مشتتة للانتباه، أو أن يكون منشئ المحتوى قد عطل زر "حفظ الفيديو" بالكامل. وبينما يمتلئ متجر التطبيقات بتطبيقات التنزيل، إلا أنها غالبًا ما تكون غير موثوقة، أو مليئة بالإعلانات، أو تتطلب اشتراكات باهظة الثمن.

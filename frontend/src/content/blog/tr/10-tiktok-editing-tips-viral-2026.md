@@ -9,6 +9,10 @@ monetization:
   primary_category: "creator-tools"
   affiliate_potential: "high"
   geo_restrictions: false
+cluster: "creator-growth"
+subcluster: "editing"
+primaryTool: "none"
+searchIntent: "informational"
 ---
 
 2026'da TikTok'ta viral olmak için harika bir fikir yeterli değil. Algoritmanın tek bir birincil takıntısı var: **izlenme süresi**. İzleyiciler videonuzu kaydırıp geçerse, videonuzun erişimi anında ölür.
@@ -18,11 +22,11 @@ Dikkat çekmenin ve Sizin İçin Sayfası'na (FYP) hükmetmenin sırrı sadece *
 Bu rehber, en iyi içerik üreticilerinin izleyicileri ilk saniyeden son saniyeye kadar bağlı tutmak için kullandığı kesin düzenleme tekniklerini açıklıyor. Temel ipuçlarını unutun; bunlar şu anda işe yarayan profesyonel stratejilerdir.
 
 ## İçindekiler
-- [Bölüm 1: Viral Bir Düzenlemenin Temel İlkeleri](#part-1-the-core-principles-of-a-viral-edit)
-- [Bölüm 2: Görsel Hikaye Anlatımı ve Elde Tutma Taktikleri](#part-2-visual-storytelling--retention-tactics)
-- [Bölüm 3: Profesyonel Bir Dokunuş İçin Gelişmiş Teknikler](#part-3-advanced-techniques-for-a-professional-polish)
-- [Bölüm 4: Düzenleme İş Akışınız ve Araç Kitiniz](#part-4-your-editing-workflow--toolkit)
-- [Sıkça Sorulan Sorular (SSS)](#frequently-asked-questions-faq)
+- [Bölüm 1: Viral Bir Düzenlemenin Temel İlkeleri](#bölüm-1-viral-bir-düzenlemenin-temel-i̇lkeleri)
+- [Bölüm 2: Görsel Hikaye Anlatımı ve Elde Tutma Taktikleri](#bölüm-2-görsel-hikaye-anlatımı-ve-elde-tutma-taktikleri)
+- [Bölüm 3: Profesyonel Bir Dokunuş İçin Gelişmiş Teknikler](#bölüm-3-profesyonel-bir-dokunuş-i̇çin-gelişmiş-teknikler)
+- [Bölüm 4: Düzenleme İş Akışınız ve Araç Kitiniz](#bölüm-4-düzenleme-i̇ş-akışınız-ve-araç-kitiniz)
+- [Sıkça Sorulan Sorular (SSS)](#sıkça-sorulan-sorular-sss)
 
 ---
 

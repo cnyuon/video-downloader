@@ -11,7 +11,7 @@ const lang = 'en';
     title="Page Not Found | MediaTools"
     description="The page you're looking for doesn't exist. Browse our free tools for downloading videos, extracting audio, and more."
 >
-    <Navbar client:idle currentPage="" lang={lang as any} />
+    <Navbar client:idle={{timeout: 3000}} currentPage="" lang={lang as any} />
     
     <main class="container mx-auto px-4 pt-20 pb-16 max-w-2xl text-center">
         <div class="text-6xl mb-6">🔍</div>
