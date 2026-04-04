@@ -54,6 +54,11 @@ const BREADCRUMB_LABELS: Record<string, string> = {
     'tiktok-sound-downloader': 'TikTok Sound Downloader',
     'video-to-mp3': 'Video to MP3',
     'thumbnail-grabber': 'Thumbnail Grabber',
+    'aspect-ratio-calculator': 'Aspect Ratio Calculator',
+    'safe-zone-planner': 'Safe Zone Planner',
+    'export-preset-helper': 'Export Preset Helper',
+    'pricing': 'Pricing',
+    'account': 'Account',
     'blog': 'Blog',
     'tools': 'Tools',
     'legal': 'Legal',
@@ -154,6 +159,8 @@ const websiteSchema = (isHomepage && !jsonLdHasWebSite) ? {
             <script type="application/ld+json" set:html={JSON.stringify(websiteSchema)} />
         )}
         
+        <!-- Google AdSense -->
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3097071261671376" crossorigin="anonymous"></script>
     </head>
     <body class="min-h-screen bg-background">
         <slot />
