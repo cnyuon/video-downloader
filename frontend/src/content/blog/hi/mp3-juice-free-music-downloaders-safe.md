@@ -5,7 +5,7 @@ pubDate: 2026-02-21
 heroImage: "../../../assets/blog-images/mp3-juice-free-music-downloader.png"
 heroAlt: "एक स्मार्टफोन स्क्रीन जिस पर MP3 जूस वेबसाइट एक चेतावनी चिह्न के साथ दिख रही है, जो इसके असुरक्षित होने का संकेत दे रही है।"
 tags: ["Audio", "Guides", "Safety"]
-cluster: "audio"
+cluster: "audio-conversion"
 subcluster: "music-download"
 primaryTool: "video-to-mp3"
 searchIntent: "commercial"

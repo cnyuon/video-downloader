@@ -9,7 +9,7 @@ monetization:
   primary_category: "none"
   affiliate_potential: "medium"
   geo_restrictions: false
-cluster: "instagram"
+cluster: "downloading-media"
 subcluster: "reels"
 primaryTool: "instagram-downloader"
 searchIntent: "informational"

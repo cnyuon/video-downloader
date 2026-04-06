@@ -102,7 +102,7 @@ Great editing requires the right tools and a smart process.
 
 ### 8. The Essential TikTok Editing Stack for 2026
 - **CapCut:** This is the undisputed king of TikTok editing. It's free, powerful, and made by the same parent company as TikTok, so its features are perfectly integrated.
-- **MediaTools:** Essential for sourcing clean, high-quality assets. You can [download TikToks](/tiktok-downloader/), [grab sounds](/tiktok-sound-downloader/), or even [get HD thumbnails](/thumbnail-grabber/) for inspiration.
+- **MediaTools:** Essential for sourcing clean, high-quality assets. You can [download TikToks](/blog/best-tiktok-downloaders-2026/), [grab sounds](/blog/how-to-download-tiktok-sounds-mp3/), or even [get HD thumbnails](/blog/how-to-download-tiktok-thumbnails/) for inspiration.
 - **Other Options:** While CapCut is recommended, you can explore other tools in our complete guide to the [best free video editors for TikTok](/blog/best-free-video-editors-tiktok/).
 
 ### 9. Study Your Retention Graph

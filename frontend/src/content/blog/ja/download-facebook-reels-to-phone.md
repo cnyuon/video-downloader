@@ -9,7 +9,7 @@ monetization:
   primary_category: "none"
   affiliate_potential: "low"
   geo_restrictions: false
-cluster: "facebook"
+cluster: "downloading-media"
 subcluster: "reels"
 primaryTool: "facebook-downloader"
 searchIntent: "informational"
@@ -52,7 +52,7 @@ Facebookは、リールをスマホのギャラリーにダウンロードする
 iPhoneで動画を保存するのは、iOSのセキュリティのため、時に難しい場合があります。リールを写真アプリ（カメラロール）に入れるための確実な方法を以下に示します。
 
 1.  Facebookアプリでリールを見つけ、**シェア → リンクをコピー**をタップします。
-2.  **Safari**ブラウザを開き、`getmediatools.com/facebook-downloader/`にアクセスします。
+2.  **Safari**ブラウザを開き、`getmediatools.com/blog/download-facebook-reels-to-phone/`にアクセスします。
 3.  検索ボックスに**リンクを貼り付け**、「**動画を取得**」をタップします。
 4.  動画のプレビューが表示されたら、「**ダウンロード**」ボタンをタップします。
 5.  確認のポップアップが表示されます。「**ダウンロード**」をもう一度タップします。
@@ -69,7 +69,7 @@ FacebookリールがiPhoneの**写真**アプリに保存されました。
 Androidのファイルシステムは、このプロセスをもう少し簡単にしてくれます。
 
 1.  Facebookアプリでリールを見つけ、**シェア → リンクをコピー**をタップします。
-2.  **Chrome**ブラウザ（または他のブラウザ）を開き、`getmediatools.com/facebook-downloader/`にアクセスします。
+2.  **Chrome**ブラウザ（または他のブラウザ）を開き、`getmediatools.com/blog/download-facebook-reels-to-phone/`にアクセスします。
 3.  ボックスに**リンクを貼り付け**、「**動画を取得**」をタップします。
 4.  「**ダウンロード**」ボタンをタップします。
 5.  動画は自動的にスマホの「**ダウンロード**」フォルダに保存されます。

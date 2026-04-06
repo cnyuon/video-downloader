@@ -9,7 +9,7 @@ monetization:
   primary_category: "none"
   affiliate_potential: "medium"
   geo_restrictions: false
-cluster: "instagram"
+cluster: "downloading-media"
 subcluster: "reels"
 primaryTool: "instagram-downloader"
 searchIntent: "informational"
@@ -52,7 +52,7 @@ Diese Methode ruft die originale Videodatei von den Instagram-Servern ab und ste
 Aufgrund der iOS-Sicherheit erfordert das Speichern von Dateien aus einem Browser ein paar zusätzliche Schritte, um das Video in deine Haupt-Fotos-App zu bekommen.
 
 1.  Tippe in der Instagram-App auf das **Teilen-Symbol** des Reels und **kopiere den Link**.
-2.  Öffne den **Safari**-Browser und navigiere zu `getmediatools.com/instagram-downloader/`.
+2.  Öffne den **Safari**-Browser und navigiere zu `getmediatools.com/blog/download-instagram-reels-without-watermark/`.
 3.  **Füge den Link ein** und tippe auf **„Video abrufen“**.
 4.  Tippe auf den Button **„Herunterladen“**. Wenn das Bestätigungs-Pop-up erscheint, tippe erneut auf **„Herunterladen“**.
 5.  Ein Download-Fortschrittssymbol erscheint in der Safari-Adressleiste. Sobald der Download abgeschlossen ist, tippe darauf und wähle dann **„Downloads“** aus.
@@ -68,7 +68,7 @@ Das wasserzeichenfreie Reel ist nun in der **Fotos**-App (Kamerarolle) deines iP
 Der Vorgang auf Android ist direkter, da heruntergeladene Dateien normalerweise automatisch in deiner Galerie erscheinen.
 
 1.  Tippe in der Instagram-App auf das **Teilen-Symbol** des Reels und **kopiere den Link**.
-2.  Öffne den **Chrome**-Browser und gehe zu `getmediatools.com/instagram-downloader/`.
+2.  Öffne den **Chrome**-Browser und gehe zu `getmediatools.com/blog/download-instagram-reels-without-watermark/`.
 3.  **Füge den Link ein** und tippe auf **„Video abrufen“**.
 4.  Tippe auf den Button **„Herunterladen“**.
 5.  Das Video wird im Ordner „Downloads“ deines Telefons gespeichert.

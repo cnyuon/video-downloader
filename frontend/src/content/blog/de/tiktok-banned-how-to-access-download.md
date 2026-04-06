@@ -9,7 +9,7 @@ monetization:
   primary_category: "vpn"
   affiliate_potential: "high"
   geo_restrictions: true
-cluster: "privacy-security"
+cluster: "anonymous-viewing"
 subcluster: "access-restrictions"
 primaryTool: "none"
 searchIntent: "informational"

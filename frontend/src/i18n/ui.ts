@@ -61,6 +61,9 @@ export const ui = {
         'tools.category.video': 'Video Tools',
         'tools.category.audio': 'Audio Tools',
         'tools.category.image': 'Image Tools',
+        'tools.client.aspect.title': 'Aspect Ratio Calculator',
+        'tools.client.safezone.title': 'Safe Zone Planner',
+        'tools.client.export.title': 'Export Preset Helper',
 
         'blog.cluster.title': 'Topical Clusters',
         'blog.cluster.tiktok': 'TikTok Guides',

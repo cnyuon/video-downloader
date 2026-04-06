@@ -5,7 +5,7 @@ pubDate: 2026-02-21
 heroImage: "../../../assets/blog-images/tiktok-anonymous-story-viewer.png"
 heroAlt: "एक फोन जिस पर टिकटॉक ऐप दिख रहा है, उसके ऊपर एक गुमनाम मास्क आइकन है, जो एक गुमनाम टिकटॉक स्टोरी व्यूअर को दर्शाता है।"
 tags: ["TikTok", "Guides", "Privacy"]
-cluster: "tiktok"
+cluster: "anonymous-viewing"
 subcluster: "privacy"
 primaryTool: "none"
 searchIntent: "informational"

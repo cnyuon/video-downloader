@@ -9,7 +9,7 @@ monetization:
   primary_category: "none"
   affiliate_potential: "low"
   geo_restrictions: false
-cluster: "facebook"
+cluster: "downloading-media"
 subcluster: "reels"
 primaryTool: "facebook-downloader"
 searchIntent: "informational"
@@ -52,7 +52,7 @@ searchIntent: "informational"
 قد يكون حفظ الفيديوهات على الآيفون صعبًا أحيانًا بسبب قيود أمان iOS. إليك الطريقة المضمونة للحصول على الفيديو في تطبيق الصور الخاص بك (ألبوم الكاميرا).
 
 1.  في تطبيق فيسبوك، ابحث عن الفيديو الخاص بك واضغط على **مشاركة → نسخ الرابط**.
-2.  افتح متصفح **سفاري** وانتقل إلى `getmediatools.com/facebook-downloader/`.
+2.  افتح متصفح **سفاري** وانتقل إلى `getmediatools.com/blog/download-facebook-reels-to-phone/`.
 3.  **الصق الرابط** في مربع البحث واضغط على **"الحصول على الفيديو."**
 4.  عندما يظهر معاينة الفيديو، اضغط على زر **"تنزيل"**.
 5.  ستظهر نافذة منبثقة للتأكيد. اضغط على **"تنزيل"** مرة أخرى.
@@ -69,7 +69,7 @@ searchIntent: "informational"
 نظام ملفات أندرويد يجعل هذه العملية أكثر بساطة.
 
 1.  في تطبيق فيسبوك، ابحث عن الفيديو الخاص بك واضغط على **مشاركة → نسخ الرابط**.
-2.  افتح متصفح **كروم** (أو أي متصفح آخر) وانتقل إلى `getmediatools.com/facebook-downloader/`.
+2.  افتح متصفح **كروم** (أو أي متصفح آخر) وانتقل إلى `getmediatools.com/blog/download-facebook-reels-to-phone/`.
 3.  **الصق الرابط** في المربع واضغط على **"الحصول على الفيديو."**
 4.  اضغط على زر **"تنزيل"**.
 5.  سيتم حفظ الفيديو تلقائيًا في مجلد **"التنزيلات"** بهاتفك.

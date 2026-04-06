@@ -9,7 +9,7 @@ monetization:
   primary_category: "none"
   affiliate_potential: "low"
   geo_restrictions: false
-cluster: "facebook"
+cluster: "downloading-media"
 subcluster: "reels"
 primaryTool: "facebook-downloader"
 searchIntent: "informational"
@@ -52,7 +52,7 @@ Bu yöntem, herhangi bir ek filigran olmadan temiz, yüksek çözünürlüklü b
 iPhone'da video kaydetmek, iOS güvenliği nedeniyle bazen zor olabilir. İşte Reel'i Fotoğraflar uygulamanıza (film rulosu) almanın kesin yolu.
 
 1.  Facebook uygulamasında Reel'inizi bulun ve **Paylaş → Bağlantıyı kopyala** seçeneğine dokunun.
-2.  **Safari** tarayıcısını açın ve `getmediatools.com/facebook-downloader/` adresine gidin.
+2.  **Safari** tarayıcısını açın ve `getmediatools.com/blog/download-facebook-reels-to-phone/` adresine gidin.
 3.  Bağlantıyı arama kutusuna yapıştırın ve **"Videoyu Al"** seçeneğine dokunun.
 4.  Video önizlemesi göründüğünde, **"İndir"** düğmesine dokunun.
 5.  Bir onay açılır penceresi görünecektir. Tekrar **"İndir"** seçeneğine dokunun.
@@ -69,7 +69,7 @@ Facebook Reel'i artık iPhone'unuzun **Fotoğraflar** uygulamasına kaydedilmiş
 Android'in dosya sistemi bu süreci biraz daha basit hale getirir.
 
 1.  Facebook uygulamasında Reel'inizi bulun ve **Paylaş → Bağlantıyı kopyala** seçeneğine dokunun.
-2.  **Chrome** tarayıcısını (veya başka bir tarayıcıyı) açın ve `getmediatools.com/facebook-downloader/` adresine gidin.
+2.  **Chrome** tarayıcısını (veya başka bir tarayıcıyı) açın ve `getmediatools.com/blog/download-facebook-reels-to-phone/` adresine gidin.
 3.  Bağlantıyı kutuya yapıştırın ve **"Videoyu Al"** seçeneğine dokunun.
 4.  **"İndir"** düğmesine dokunun.
 5.  Video otomatik olarak telefonunuzun **"İndirilenler"** klasörüne kaydedilecektir.

@@ -8,6 +8,8 @@ import { ui } from '../../i18n/ui';
 import { Image } from 'astro:assets';
 import { getDiversePosts } from '../../lib/blog-utils';
 import { getPhase1Text } from '../../i18n/phase1-extra';
+import { getClusterMeta, getPostCluster } from '../../lib/blog-taxonomy';
+import type { BlogClusterId } from '../../lib/blog-taxonomy';
 
 export async function getStaticPaths() {
   const allPosts = await getCollection('blog');
@@ -70,14 +72,27 @@ const allPostsList = await getCollection('blog');
 const enPosts = allPostsList.filter((p: any) => p.slug.startsWith('en/'));
 const localPosts = allPostsList.filter((p: any) => p.slug.startsWith('en/'));
 const displayPosts = localPosts.length > 0 ? localPosts : enPosts;
-const diversePosts = getDiversePosts(displayPosts, originalSlug, 4);
+const currentCluster = getPostCluster(post);
+const clusterMeta = getClusterMeta(currentCluster);
+const diversePosts = getDiversePosts(displayPosts, originalSlug, 4, currentCluster);
+
+const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://getmediatools.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://getmediatools.com/blog/" },
+        { "@type": "ListItem", "position": 3, "name": clusterMeta.title, "item": `https://getmediatools.com/blog/${currentCluster}/` },
+        { "@type": "ListItem", "position": 4, "name": post.data.title }
+    ]
+};
 ---
 
 <Layout 
 	title={post.data.title}
 	description={post.data.description}
 	ogImage={post.data.heroImage ? (post.data.heroImage as any).src : undefined}
-	jsonLd={jsonLd}
+	jsonLd={[jsonLd, breadcrumbJsonLd]}
 	keywords={post.data.keywords}
 	pubDate={post.data.pubDate}
 	updatedDate={post.data.updatedDate}
@@ -90,6 +105,8 @@ const diversePosts = getDiversePosts(displayPosts, originalSlug, 4);
             <a href={getHref('/')} class="hover:text-slate-900 dark:hover:text-white transition-colors shrink-0">{tx('blog.detail.home')}</a>
             <svg class="w-4 h-4 mx-2 text-slate-400 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7" /></svg>
             <a href={getHref('/blog/')} class="hover:text-slate-900 dark:hover:text-white transition-colors shrink-0">{t('nav.blog')}</a>
+            <svg class="w-4 h-4 mx-2 text-slate-400 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7" /></svg>
+            <a href={getHref(`/blog/${currentCluster}/`)} class="hover:text-slate-900 dark:hover:text-white transition-colors shrink-0">{clusterMeta.title}</a>
             <svg class="w-4 h-4 mx-2 text-slate-400 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7" /></svg>
             <span class="text-slate-900 dark:text-white truncate">{post.data.title}</span>
         </nav>

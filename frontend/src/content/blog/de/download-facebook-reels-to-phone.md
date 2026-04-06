@@ -9,7 +9,7 @@ monetization:
   primary_category: "none"
   affiliate_potential: "low"
   geo_restrictions: false
-cluster: "facebook"
+cluster: "downloading-media"
 subcluster: "reels"
 primaryTool: "facebook-downloader"
 searchIntent: "informational"
@@ -52,7 +52,7 @@ Diese Methode stellt sicher, dass Sie eine saubere, hochauflösende Videodatei o
 Das Speichern von Videos auf einem iPhone kann aufgrund der iOS-Sicherheit manchmal knifflig sein. Hier ist der narrensichere Weg, das Reel in Ihre Fotos-App (Kamerarolle) zu bekommen.
 
 1.  Suchen Sie in der Facebook-App Ihr Reel und tippen Sie auf **Teilen → Link kopieren**.
-2.  Öffnen Sie den **Safari**-Browser und navigieren Sie zu `getmediatools.com/facebook-downloader/`.
+2.  Öffnen Sie den **Safari**-Browser und navigieren Sie zu `getmediatools.com/blog/download-facebook-reels-to-phone/`.
 3.  **Fügen Sie den Link** in das Suchfeld ein und tippen Sie auf **„Video abrufen“**.
 4.  Wenn die Videovorschau erscheint, tippen Sie auf den Button **„Herunterladen“**.
 5.  Ein Bestätigungs-Pop-up wird angezeigt. Tippen Sie erneut auf **„Herunterladen“**.
@@ -69,7 +69,7 @@ Das Facebook Reel ist nun in der **Fotos**-App Ihres iPhones gespeichert.
 Das Dateisystem von Android macht diesen Prozess etwas einfacher.
 
 1.  Suchen Sie in der Facebook-App Ihr Reel und tippen Sie auf **Teilen → Link kopieren**.
-2.  Öffnen Sie den **Chrome**-Browser (oder einen anderen Browser) und gehen Sie zu `getmediatools.com/facebook-downloader/`.
+2.  Öffnen Sie den **Chrome**-Browser (oder einen anderen Browser) und gehen Sie zu `getmediatools.com/blog/download-facebook-reels-to-phone/`.
 3.  **Fügen Sie den Link** in das Feld ein und tippen Sie auf **„Video abrufen“**.
 4.  Tippen Sie auf den Button **„Herunterladen“**.
 5.  Das Video wird automatisch im Ordner **„Downloads“** Ihres Telefons gespeichert.

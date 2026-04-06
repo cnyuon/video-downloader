@@ -5,7 +5,7 @@ pubDate: 2026-02-21
 heroImage: "../../../assets/blog-images/mp3-juice-free-music-downloader.png"
 heroAlt: "شاشة هاتف ذكي تعرض موقع MP3 Juice مع علامة تحذير، تشير إلى أنه غير آمن."
 tags: ["Audio", "Guides", "Safety"]
-cluster: "audio"
+cluster: "audio-conversion"
 subcluster: "music-download"
 primaryTool: "video-to-mp3"
 searchIntent: "commercial"

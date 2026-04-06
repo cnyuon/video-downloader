@@ -5,7 +5,7 @@ pubDate: 2026-02-21
 heroImage: "../../../assets/blog-images/reddit-video-downloader-with-audio.png"
 heroAlt: "دليل يوضح كيفية تنزيل فيديوهات ريديت بالصوت الكامل على أي جهاز."
 tags: ["Reddit", "Guides", "Fixes"]
-cluster: "audio"
+cluster: "downloading-media"
 subcluster: "reddit-audio"
 primaryTool: "video-to-mp3"
 searchIntent: "informational"

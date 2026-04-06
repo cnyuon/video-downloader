@@ -5,7 +5,7 @@ pubDate: 2026-02-21
 heroImage: "../../../assets/blog-images/tiktok-anonymous-story-viewer.png"
 heroAlt: "هاتف يعرض تطبيق تيك توك مع أيقونة قناع مجهول فوقه، تمثل مشاهد قصص تيك توك المجهول."
 tags: ["TikTok", "Guides", "Privacy"]
-cluster: "tiktok"
+cluster: "anonymous-viewing"
 subcluster: "privacy"
 primaryTool: "none"
 searchIntent: "informational"

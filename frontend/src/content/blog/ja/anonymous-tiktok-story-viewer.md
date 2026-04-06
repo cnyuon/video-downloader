@@ -5,7 +5,7 @@ pubDate: 2026-02-21
 heroImage: "../../../assets/blog-images/tiktok-anonymous-story-viewer.png"
 heroAlt: "TikTokアプリが表示されたスマートフォンに匿名マスクのアイコンが重なっており、匿名TikTokストーリービューアを表しています。"
 tags: ["TikTok", "Guides", "Privacy"]
-cluster: "tiktok"
+cluster: "anonymous-viewing"
 subcluster: "privacy"
 primaryTool: "none"
 searchIntent: "informational"

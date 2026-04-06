@@ -5,7 +5,7 @@ pubDate: 2026-02-21
 heroImage: "../../../assets/blog-images/mp3-juice-free-music-downloader.png"
 heroAlt: "경고 표시가 있는 MP3 Juice 웹사이트를 보여주는 스마트폰 화면, 안전하지 않음을 나타냅니다."
 tags: ["Audio", "Guides", "Safety"]
-cluster: "audio"
+cluster: "audio-conversion"
 subcluster: "music-download"
 primaryTool: "video-to-mp3"
 searchIntent: "commercial"

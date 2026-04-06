@@ -1,9 +1,12 @@
 /**
  * Blog utility functions for SEO-optimized post selection.
  * 
- * Provides deterministic, diversified post picking so different pages
- * show different related posts — spreading internal link equity evenly.
+ * Provides cluster-aware related post selection that reinforces
+ * topical authority by prioritizing posts from the same cluster,
+ * then adjacent clusters, before falling back to other content.
  */
+
+import { getPostCluster, ADJACENT_CLUSTERS } from './blog-taxonomy';
 
 interface BlogPost {
     slug: string;
@@ -31,21 +34,28 @@ function hashString(str: string): number {
 }
 
 /**
- * Returns a diversified selection of blog posts for internal linking.
+ * Returns a cluster-aware selection of related blog posts.
  * 
- * Instead of always showing the same top-N posts, this function uses
- * a hash of the current page slug to pick a different starting offset,
- * ensuring different pages link to different posts.
+ * Priority order:
+ * 1. Posts from the SAME cluster (topical relevance)
+ * 2. Posts from ADJACENT clusters (cross-pillar linking)
+ * 3. Posts from ANY cluster (fill remaining slots)
+ * 
+ * Within each priority tier, posts are sorted by recency.
+ * Uses a hash of the current slug for deterministic offset
+ * so different pages show different posts.
  * 
  * @param posts - All available blog posts (already filtered by locale)
  * @param currentSlug - The slug of the current page (used for hashing & exclusion)
  * @param count - Number of posts to return (default: 4)
- * @returns Diversified array of posts
+ * @param currentCluster - The cluster of the current post (optional but recommended)
+ * @returns Cluster-aware array of related posts
  */
 export function getDiversePosts(
     posts: BlogPost[],
     currentSlug: string,
-    count: number = 4
+    count: number = 4,
+    currentCluster?: string
 ): BlogPost[] {
     // Sort by most recently updated first
     const sorted = [...posts]
@@ -59,7 +69,43 @@ export function getDiversePosts(
 
     if (sorted.length <= count) return sorted;
 
-    // Use hash to determine starting offset
+    // If no cluster info, fall back to hash-based diverse selection
+    if (!currentCluster) {
+        return hashDiverseSelect(sorted, currentSlug, count);
+    }
+
+    const result: BlogPost[] = [];
+
+    // Step 1: Same cluster posts (highest priority for topical authority)
+    const sameCluster = sorted.filter(p => getPostCluster(p) === currentCluster);
+    result.push(...sameCluster.slice(0, count));
+
+    // Step 2: Fill from adjacent clusters if needed
+    if (result.length < count) {
+        const adjacentIds = ADJACENT_CLUSTERS[currentCluster] || [];
+        const adjacentPosts = sorted.filter(p =>
+            adjacentIds.includes(getPostCluster(p)) && !result.includes(p)
+        );
+        result.push(...adjacentPosts.slice(0, count - result.length));
+    }
+
+    // Step 3: Fill remaining from any cluster (deterministic offset)
+    if (result.length < count) {
+        const remaining = sorted.filter(p => !result.includes(p));
+        const offset = hashString(currentSlug) % Math.max(1, remaining.length);
+        for (let i = 0; i < remaining.length && result.length < count; i++) {
+            const index = (offset + i) % remaining.length;
+            result.push(remaining[index]);
+        }
+    }
+
+    return result;
+}
+
+/**
+ * Hash-based diverse selection (fallback when no cluster is available).
+ */
+function hashDiverseSelect(sorted: BlogPost[], currentSlug: string, count: number): BlogPost[] {
     const offset = hashString(currentSlug) % sorted.length;
     const result: BlogPost[] = [];
     const step = Math.max(1, Math.floor(sorted.length / count));

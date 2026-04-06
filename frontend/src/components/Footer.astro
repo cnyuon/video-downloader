@@ -1,13 +1,14 @@
 ---
 /**
- * Footer - Site-wide footer with tool links, blog, and legal
- * Used on every page for consistent internal linking and crawlability
+ * Footer - Site-wide footer with blog topics, recent posts, and language hubs.
+ * Used on every page for consistent internal linking and crawlability.
  */
 import { getLangFromUrl, useTranslations } from '../i18n/utils';
 import { getLocalizedHref } from '../i18n/href';
 import { languages } from '../i18n/ui';
 import { getPhase1Text } from '../i18n/phase1-extra';
 import { getCollection } from 'astro:content';
+import { BLOG_CLUSTERS } from '../lib/blog-taxonomy';
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
@@ -53,9 +54,9 @@ const BADGE_PLACEHOLDER = 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAA
 
 <footer class="bg-[#F8FAFC] dark:bg-slate-900/50 py-16 md:py-24 mt-0 border-t border-slate-100 dark:border-slate-800/50">
     <div class="container mx-auto px-4 max-w-7xl">
-        <div class="grid gap-12 md:grid-cols-5 mb-16">
+        <div class="grid gap-12 md:grid-cols-4 mb-16">
             <!-- Brand -->
-            <div class="md:col-span-2 md:pr-12">
+            <div class="md:col-span-1 md:pr-8">
                 <a href={getHref('/')} class="flex items-center space-x-3 mb-6">
                     <div class="h-8 w-8 rounded-xl bg-gradient-to-br from-[#405EDB] to-blue-600 flex items-center justify-center shadow-md">
                         <svg class="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -64,23 +65,20 @@ const BADGE_PLACEHOLDER = 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAA
                     </div>
                     <span class="font-extrabold text-xl tracking-tight text-slate-900 dark:text-white">GetMediaTools</span>
                 </a>
-                <p class="text-[15px] leading-loose text-slate-600 dark:text-slate-400 font-medium max-w-md">{t('footer.desc')}</p>
+                <p class="text-[15px] leading-loose text-slate-600 dark:text-slate-400 font-medium max-w-md">Your go-to resource for social media guides, creator tips, and content strategy.</p>
             </div>
 
-            <!-- Tools -->
+            <!-- Topics -->
             <div>
-                <h3 class="font-extrabold mb-6 text-sm uppercase tracking-widest text-[#405EDB]">{t('footer.tools')}</h3>
+                <h3 class="font-extrabold mb-6 text-sm uppercase tracking-widest text-[#405EDB]">Topics</h3>
                 <ul class="space-y-4 font-bold text-[15px] text-slate-600 dark:text-slate-400">
-                    <li><a href={getHref('/tiktok-downloader/')} class="hover:text-slate-900 dark:hover:text-white transition-colors">{t('nav.tiktok')}</a></li>
-                    <li><a href={getHref('/twitter-downloader/')} class="hover:text-slate-900 dark:hover:text-white transition-colors">{t('nav.twitter')}</a></li>
-                    <li><a href={getHref('/facebook-downloader/')} class="hover:text-slate-900 dark:hover:text-white transition-colors">{t('nav.facebook')}</a></li>
-                    <li><a href={getHref('/tiktok-sound-downloader/')} class="hover:text-slate-900 dark:hover:text-white transition-colors">{t('nav.sound')}</a></li>
-                    <li><a href={getHref('/video-to-mp3/')} class="hover:text-slate-900 dark:hover:text-white transition-colors">{t('nav.audio')}</a></li>
-                    <li><a href={getHref('/thumbnail-grabber/')} class="hover:text-slate-900 dark:hover:text-white transition-colors">{t('nav.thumbnail')}</a></li>
+                    {BLOG_CLUSTERS.map((cluster) => (
+                        <li><a href={getHref(`/blog/${cluster.id}/`)} class="hover:text-slate-900 dark:hover:text-white transition-colors">{cluster.title}</a></li>
+                    ))}
                 </ul>
             </div>
 
-            <!-- Resources -->
+            <!-- Recent Posts -->
             <div>
                 <h3 class="font-extrabold mb-6 text-sm uppercase tracking-widest text-[#405EDB]">{t('footer.resources')}</h3>
                 <ul class="space-y-4 font-bold text-[15px] text-slate-600 dark:text-slate-400">
@@ -98,15 +96,12 @@ const BADGE_PLACEHOLDER = 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAA
                 </ul>
             </div>
 
-            <!-- Legal -->
+            <!-- Quick Links -->
             <div>
-                <h3 class="font-extrabold mb-6 text-sm uppercase tracking-widest text-[#405EDB]">{tx('footer.legal')}</h3>
+                <h3 class="font-extrabold mb-6 text-sm uppercase tracking-widest text-[#405EDB]">Quick Links</h3>
                 <ul class="space-y-4 font-bold text-[15px] text-slate-600 dark:text-slate-400">
-                    <li><a href={getHref('/legal/privacy-policy/')} class="hover:text-slate-900 dark:hover:text-white transition-colors">{tx('legal.privacy')}</a></li>
-                    <li><a href={getHref('/legal/terms-of-service/')} class="hover:text-slate-900 dark:hover:text-white transition-colors">{tx('legal.terms')}</a></li>
-                    <li><a href={getHref('/legal/about-us/')} class="hover:text-slate-900 dark:hover:text-white transition-colors">{tx('legal.about')}</a></li>
-                    <li><a href={getHref('/legal/contact-us/')} class="hover:text-slate-900 dark:hover:text-white transition-colors">{tx('legal.contact')}</a></li>
-                    <li><a href={getHref('/legal/refund-policy/')} class="hover:text-slate-900 dark:hover:text-white transition-colors">{tx('legal.refund')}</a></li>
+                    <li><a href={getHref('/')} class="hover:text-slate-900 dark:hover:text-white transition-colors">Home</a></li>
+                    <li><a href={getHref('/blog/')} class="hover:text-slate-900 dark:hover:text-white transition-colors">{t('nav.blog')}</a></li>
                 </ul>
             </div>
         </div>

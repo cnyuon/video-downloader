@@ -5,7 +5,7 @@ pubDate: 2026-02-21
 heroImage: "../../../assets/blog-images/reddit-video-downloader-with-audio.png"
 heroAlt: "किसी भी डिवाइस पर पूर्ण ऑडियो के साथ Reddit वीडियो डाउनलोड करने का तरीका दिखाने वाली एक मार्गदर्शिका।"
 tags: ["Reddit", "Guides", "Fixes"]
-cluster: "audio"
+cluster: "downloading-media"
 subcluster: "reddit-audio"
 primaryTool: "video-to-mp3"
 searchIntent: "informational"

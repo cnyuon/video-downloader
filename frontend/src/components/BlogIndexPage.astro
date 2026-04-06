@@ -61,17 +61,33 @@ const jsonLd = {
             </p>
         </div>
 
-        <div class="mb-12">
-            <p class="text-xs font-extrabold uppercase tracking-widest text-slate-500 mb-4">{tx('blog.cluster.pick')}</p>
-            <div class="flex flex-wrap gap-2.5">
-                {BLOG_CLUSTERS.map((cluster) => (
-                    <a
-                        href={getHref(`/blog/topic/${cluster.id}/`)}
-                        class="inline-flex items-center px-3 py-1.5 rounded-full text-xs sm:text-sm font-bold border border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-900 transition-colors"
-                    >
-                        {tx(`blog.cluster.${cluster.id}` as any)}
-                    </a>
-                ))}
+        <div class="mb-16">
+            <p class="text-xs font-extrabold uppercase tracking-widest text-slate-500 mb-6">{tx('blog.cluster.pick')}</p>
+            <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+                {BLOG_CLUSTERS.filter(c => c.id !== 'general').map((cluster) => {
+                    const clusterPostCount = localizedPosts.filter(p => getPostCluster(p) === cluster.id).length;
+                    return (
+                        <a
+                            href={getHref(`/blog/${cluster.id}/`)}
+                            class="group p-5 rounded-2xl bg-[#F4F7FB] dark:bg-slate-800/50 border border-transparent hover:bg-white dark:hover:bg-slate-700 hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
+                        >
+                            <div class="flex items-center gap-3 mb-3">
+                                <span class="text-2xl">{(cluster as any).icon || '📚'}</span>
+                                <h3 class="font-bold text-base text-slate-900 dark:text-white group-hover:text-[#405EDB] transition-colors leading-tight">
+                                    {tx(`blog.cluster.${cluster.id}` as any)}
+                                </h3>
+                            </div>
+                            <p class="text-sm text-slate-600 dark:text-slate-400 line-clamp-2 leading-relaxed mb-3">
+                                {tx(`blog.cluster_desc.${cluster.id}` as any)}
+                            </p>
+                            {clusterPostCount > 0 && (
+                                <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-[#405EDB]/10 text-[#405EDB]">
+                                    {clusterPostCount} {clusterPostCount === 1 ? 'article' : 'articles'}
+                                </span>
+                            )}
+                        </a>
+                    );
+                })}
             </div>
         </div>
 

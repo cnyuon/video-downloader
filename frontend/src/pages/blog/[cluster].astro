@@ -1,0 +1,143 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+import Navbar from '../../components/Navbar';
+import Footer from '../../components/Footer.astro';
+import { Image } from 'astro:assets';
+import { BLOG_CLUSTERS, getClusterMeta, getPostCluster, ADJACENT_CLUSTERS } from '../../lib/blog-taxonomy';
+import type { BlogClusterId, BlogClusterMeta } from '../../lib/blog-taxonomy';
+import { getPhase1Text } from '../../i18n/phase1-extra';
+
+export function getStaticPaths() {
+    return BLOG_CLUSTERS.map((cluster: (typeof BLOG_CLUSTERS)[number]) => ({ params: { cluster: cluster.id } }));
+}
+
+const clusterId = String(Astro.params.cluster || '') as BlogClusterId;
+const clusterMeta = getClusterMeta(clusterId);
+const tx = (key: Parameters<typeof getPhase1Text>[1]) => getPhase1Text('en', key);
+
+const allPosts = await getCollection('blog');
+const posts = allPosts
+    .filter((post) => post.slug.startsWith('en/'))
+    .filter((post) => getPostCluster(post) === clusterMeta.id)
+    .sort((a, b) => (b.data.updatedDate || b.data.pubDate).valueOf() - (a.data.updatedDate || a.data.pubDate).valueOf());
+
+// Get related clusters for cross-linking
+const adjacentIds = ADJACENT_CLUSTERS[clusterId] || [];
+const adjacentClusters = adjacentIds
+    .map(id => BLOG_CLUSTERS.find(c => c.id === id))
+    .filter((c): c is BlogClusterMeta => c !== undefined);
+
+const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    name: clusterMeta.title,
+    description: clusterMeta.description,
+    url: `https://getmediatools.com/blog/${clusterMeta.id}/`,
+    isPartOf: { "@type": "WebSite", name: "GetMediaTools", url: "https://getmediatools.com" },
+    publisher: { "@type": "Organization", name: "GetMediaTools" },
+    numberOfItems: posts.length,
+};
+---
+
+<Layout
+    title={`${clusterMeta.title} | GetMediaTools Blog`}
+    description={clusterMeta.description}
+    jsonLd={jsonLd}
+>
+    <Navbar client:idle={{timeout: 3000}} currentPage="blog" lang={'en'} />
+
+    <main class="container mx-auto px-4 pt-10 pb-16 max-w-6xl">
+        <!-- Breadcrumb -->
+        <nav class="flex items-center text-sm font-bold text-slate-500 mb-8" aria-label="Breadcrumb">
+            <a href="/" class="hover:text-slate-900 dark:hover:text-white transition-colors shrink-0">Home</a>
+            <svg class="w-4 h-4 mx-2 text-slate-400 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7" /></svg>
+            <a href="/blog/" class="hover:text-slate-900 dark:hover:text-white transition-colors shrink-0">Blog</a>
+            <svg class="w-4 h-4 mx-2 text-slate-400 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7" /></svg>
+            <span class="text-slate-900 dark:text-white">{clusterMeta.title}</span>
+        </nav>
+
+        <!-- Pillar Header -->
+        <div class="mb-12">
+            <div class="flex items-center gap-4 mb-4">
+                <span class="text-4xl">{clusterMeta.icon}</span>
+                <div>
+                    <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight text-slate-900 dark:text-white">{clusterMeta.title}</h1>
+                </div>
+            </div>
+            <p class="text-lg text-slate-600 dark:text-slate-400 max-w-3xl leading-relaxed">{clusterMeta.description}</p>
+            <div class="mt-4 flex items-center gap-3">
+                <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-bold bg-[#405EDB]/10 text-[#405EDB]">
+                    {posts.length} {posts.length === 1 ? 'article' : 'articles'}
+                </span>
+            </div>
+        </div>
+
+        <!-- Article Grid -->
+        {posts.length > 0 ? (
+            <div class="grid gap-6 sm:gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+                {posts.map((post) => {
+                    const trueSlug = post.slug.replace(/^en\//, '');
+                    return (
+                        <article class="group bg-[#F8FAFC] dark:bg-slate-800/50 rounded-2xl sm:rounded-3xl border border-transparent shadow-sm hover:bg-white dark:hover:bg-slate-700 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 h-full flex flex-col overflow-hidden">
+                            <a href={`/blog/${trueSlug}/`} class="block w-full aspect-[16/9] overflow-hidden bg-slate-100 dark:bg-slate-800 relative shrink-0">
+                                {post.data.heroImage ? (
+                                    <Image
+                                        src={post.data.heroImage as any}
+                                        alt={post.data.title}
+                                        class="w-full h-full object-contain group-hover:scale-[1.01] transition-transform duration-500"
+                                        loading="lazy"
+                                        width={1600}
+                                        height={900}
+                                        format="webp"
+                                    />
+                                ) : (
+                                    <div class="w-full h-full flex items-center justify-center bg-gradient-to-br from-slate-100 to-slate-200 dark:from-slate-800 dark:to-slate-900">
+                                        <span class="text-5xl opacity-50">📄</span>
+                                    </div>
+                                )}
+                            </a>
+                            <div class="p-5 sm:p-8 flex-1 flex flex-col">
+                                <h2 class="text-xl sm:text-2xl font-extrabold mb-2 sm:mb-4 line-clamp-2 text-slate-900 dark:text-white group-hover:text-[#405EDB] transition-colors leading-tight">
+                                    <a href={`/blog/${trueSlug}/`}>{post.data.title}</a>
+                                </h2>
+                                <p class="text-slate-600 dark:text-slate-400 mb-4 sm:mb-8 line-clamp-3 flex-1 text-sm sm:text-base leading-relaxed">{post.data.description}</p>
+                                <div class="pt-2 sm:pt-4 mt-auto">
+                                    <a href={`/blog/${trueSlug}/`} class="inline-flex items-center px-4 sm:px-5 py-2 sm:py-2.5 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-white font-bold text-xs sm:text-sm hover:bg-[#405EDB] hover:text-white transition-all duration-300">
+                                        Read Article
+                                    </a>
+                                </div>
+                            </div>
+                        </article>
+                    );
+                })}
+            </div>
+        ) : (
+            <div class="text-center py-16">
+                <span class="text-6xl mb-6 block opacity-30">📝</span>
+                <p class="text-xl font-bold text-slate-400 dark:text-slate-500 mb-2">Articles Coming Soon</p>
+                <p class="text-slate-500 dark:text-slate-600">We're working on expert guides for this topic. Check back soon!</p>
+            </div>
+        )}
+
+        <!-- Related Topics Section -->
+        {adjacentClusters.length > 0 && (
+            <div class="mt-20 pt-12 border-t border-slate-100 dark:border-slate-800">
+                <h2 class="text-2xl font-extrabold mb-6 text-slate-900 dark:text-white">Related Topics</h2>
+                <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+                    {adjacentClusters.map((adj) => (
+                        <a href={`/blog/${adj.id}/`} class="group flex items-start gap-4 p-6 rounded-2xl bg-[#F8FAFC] dark:bg-slate-800/50 hover:bg-white dark:hover:bg-slate-700 hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300 border border-transparent">
+                            <span class="text-2xl shrink-0 mt-0.5">{adj.icon}</span>
+                            <div>
+                                <h3 class="font-bold text-lg text-slate-900 dark:text-white group-hover:text-[#405EDB] transition-colors">{adj.title}</h3>
+                                <p class="text-sm text-slate-600 dark:text-slate-400 line-clamp-2 mt-1">{adj.description}</p>
+                            </div>
+                        </a>
+                    ))}
+                </div>
+            </div>
+        )}
+    </main>
+
+    <Footer />
+</Layout>

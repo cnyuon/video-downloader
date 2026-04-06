@@ -5,7 +5,7 @@ pubDate: 2026-02-21
 heroImage: "../../../assets/blog-images/tiktok-anonymous-story-viewer.png"
 heroAlt: "익명 틱톡 스토리 뷰어를 나타내는, 익명 마스크 아이콘이 겹쳐진 틱톡 앱이 표시된 휴대폰."
 tags: ["TikTok", "Guides", "Privacy"]
-cluster: "tiktok"
+cluster: "anonymous-viewing"
 subcluster: "privacy"
 primaryTool: "none"
 searchIntent: "informational"

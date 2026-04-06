@@ -9,7 +9,7 @@ monetization:
   primary_category: "creator-tools"
   affiliate_potential: "low"
   geo_restrictions: false
-cluster: "tiktok"
+cluster: "downloading-media"
 subcluster: "thumbnails"
 primaryTool: "thumbnail-grabber"
 searchIntent: "informational"

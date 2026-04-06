@@ -5,6 +5,8 @@ import Navbar from './Navbar';
 import Footer from './Footer.astro';
 import { useTranslations } from '../i18n/utils';
 import { getLocalizedHref } from '../i18n/href';
+import { BLOG_CLUSTERS, getPostCluster } from '../lib/blog-taxonomy';
+import { Image } from 'astro:assets';
 import type { ui } from '../i18n/ui';
 
 interface Props {
@@ -19,27 +21,30 @@ const getHref = (path: string) => getLocalizedHref(path, lang);
 const allPosts = await getCollection('blog');
 const localizedPosts = allPosts.filter((post) => post.slug.startsWith(`${localeCode}/`));
 const fallbackPosts = allPosts.filter((post) => post.slug.startsWith('en/'));
-const guidePosts = (localizedPosts.length > 0 ? localizedPosts : fallbackPosts)
-    .sort((a, b) => (b.data.updatedDate || b.data.pubDate).valueOf() - (a.data.updatedDate || a.data.pubDate).valueOf())
-    .slice(0, 4)
-    .map((post) => ({
-        slug: post.slug.replace(/^[a-z]{2}\//, ''),
-        title: post.data.title,
-        description: post.data.description,
-    }));
+const sortedPosts = (localizedPosts.length > 0 ? localizedPosts : fallbackPosts)
+    .sort((a, b) => (b.data.updatedDate || b.data.pubDate).valueOf() - (a.data.updatedDate || a.data.pubDate).valueOf());
+
+const featuredPosts = sortedPosts.slice(0, 6).map((post) => ({
+    slug: post.slug.replace(/^[a-z]{2}\//, ''),
+    title: post.data.title,
+    description: post.data.description,
+    heroImage: post.data.heroImage,
+    pubDate: post.data.updatedDate || post.data.pubDate,
+    cluster: getPostCluster(post),
+}));
 
 const jsonLd = {
     '@context': 'https://schema.org',
     '@graph': [
         {
             '@type': 'WebSite',
-            name: 'MediaTools',
+            name: 'GetMediaTools',
             url: 'https://getmediatools.com',
             description: t('index.meta.desc'),
         },
         {
             '@type': 'Organization',
-            name: 'MediaTools',
+            name: 'GetMediaTools',
             url: 'https://getmediatools.com',
             logo: 'https://getmediatools.com/icon-512.png',
             description: t('index.meta.desc'),
@@ -47,6 +52,8 @@ const jsonLd = {
         },
     ],
 };
+
+const clusterMeta = BLOG_CLUSTERS.find((c) => c.id !== 'general');
 ---
 
 <Layout title={t('index.meta.title')} description={t('index.meta.desc')} jsonLd={jsonLd}>
@@ -58,7 +65,7 @@ const jsonLd = {
         <div class="container mx-auto max-w-4xl text-center relative z-10">
             <div class="mb-8">
                 <span class="inline-block bg-[#405EDB]/20 text-[#8DA0FF] border border-[#405EDB]/30 text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-wider backdrop-blur-sm">
-                    {t('tools.free_tools')}
+                    {t('blog.title')}
                 </span>
             </div>
             <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight mb-8 leading-[1.1] text-white">
@@ -68,85 +75,70 @@ const jsonLd = {
             <p class="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto leading-relaxed">
                 {t('index.hero.desc')}
             </p>
+            <div class="mt-10 flex flex-wrap gap-4 justify-center">
+                <a href={getHref('/blog/')} class="inline-flex items-center px-8 py-3.5 rounded-full bg-[#405EDB] text-white font-bold text-sm hover:bg-[#3249B8] transition-colors shadow-lg shadow-[#405EDB]/25">
+                    Browse Articles
+                    <svg class="w-4 h-4 ml-2 rtl:rotate-180" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg>
+                </a>
+            </div>
         </div>
     </div>
 
     <main class="container mx-auto px-4 -mt-16 pb-24 relative z-20">
+        <!-- Featured Articles Grid -->
         <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 max-w-5xl mx-auto">
-            <a href={getHref('/tiktok-downloader/')} class="group block p-8 rounded-2xl bg-[#F4F7FB] dark:bg-slate-800 border border-transparent hover:bg-white dark:hover:bg-slate-700 hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
-                <div class="w-14 h-14 rounded-xl bg-black flex items-center justify-center mb-6 relative overflow-hidden shadow-sm">
-                    <svg class="w-8 h-8 absolute" style="left: 13px; top: 12px;" viewBox="0 0 24 24" fill="#00f2ea">
-                        <path d="M19.321 5.562a5.124 5.124 0 0 1-.443-.258 6.228 6.228 0 0 1-1.137-.966c-.849-.849-1.18-1.69-1.333-2.338h.003c-.11-.467-.073-.77-.066-.77h-3.547v13.473c0 .181 0 .359-.008.534a3.874 3.874 0 0 1-.022.287l-.001.021v.011a2.9 2.9 0 0 1-.881 1.838 2.87 2.87 0 0 1-2.028.824 2.9 2.9 0 0 1-2.9-2.9 2.9 2.9 0 0 1 2.9-2.9c.304 0 .596.049.868.138v-3.6a6.391 6.391 0 0 0-.868-.059 6.45 6.45 0 0 0-4.568 1.868A6.387 6.387 0 0 0 3.4 15.9a6.4 6.4 0 0 0 .389 2.187 6.452 6.452 0 0 0 1.5 2.1 6.437 6.437 0 0 0 4.568 1.88 6.45 6.45 0 0 0 4.568-1.88 6.394 6.394 0 0 0 1.89-4.568V9.55a9.372 9.372 0 0 0 5.49 1.77V7.77s-2.485.097-4.484-2.208z"/>
-                    </svg>
-                    <svg class="w-8 h-8 absolute" style="left: 15px; top: 14px;" viewBox="0 0 24 24" fill="#ff0050">
-                        <path d="M19.321 5.562a5.124 5.124 0 0 1-.443-.258 6.228 6.228 0 0 1-1.137-.966c-.849-.849-1.18-1.69-1.333-2.338h.003c-.11-.467-.073-.77-.066-.77h-3.547v13.473c0 .181 0 .359-.008.534a3.874 3.874 0 0 1-.022.287l-.001.021v.011a2.9 2.9 0 0 1-.881 1.838 2.87 2.87 0 0 1-2.028.824 2.9 2.9 0 0 1-2.9-2.9 2.9 2.9 0 0 1 2.9-2.9c.304 0 .596.049.868.138v-3.6a6.391 6.391 0 0 0-.868-.059 6.45 6.45 0 0 0-4.568 1.868A6.387 6.387 0 0 0 3.4 15.9a6.4 6.4 0 0 0 .389 2.187 6.452 6.452 0 0 0 1.5 2.1 6.437 6.437 0 0 0 4.568 1.88 6.45 6.45 0 0 0 4.568-1.88 6.394 6.394 0 0 0 1.89-4.568V9.55a9.372 9.372 0 0 0 5.49 1.77V7.77s-2.485.097-4.484-2.208z"/>
-                    </svg>
-                    <svg class="w-8 h-8 relative z-10" viewBox="0 0 24 24" fill="white">
-                        <path d="M19.321 5.562a5.124 5.124 0 0 1-.443-.258 6.228 6.228 0 0 1-1.137-.966c-.849-.849-1.18-1.69-1.333-2.338h.003c-.11-.467-.073-.77-.066-.77h-3.547v13.473c0 .181 0 .359-.008.534a3.874 3.874 0 0 1-.022.287l-.001.021v.011a2.9 2.9 0 0 1-.881 1.838 2.87 2.87 0 0 1-2.028.824 2.9 2.9 0 0 1-2.9-2.9 2.9 2.9 0 0 1 2.9-2.9c.304 0 .596.049.868.138v-3.6a6.391 6.391 0 0 0-.868-.059 6.45 6.45 0 0 0-4.568 1.868A6.387 6.387 0 0 0 3.4 15.9a6.4 6.4 0 0 0 .389 2.187 6.452 6.452 0 0 0 1.5 2.1 6.437 6.437 0 0 0 4.568 1.88 6.45 6.45 0 0 0 4.568-1.88 6.394 6.394 0 0 0 1.89-4.568V9.55a9.372 9.372 0 0 0 5.49 1.77V7.77s-2.485.097-4.484-2.208z"/>
-                    </svg>
-                </div>
-                <h2 class="font-bold text-xl mb-2 text-slate-900 dark:text-white group-hover:text-[#405EDB] transition-colors">{t('index.tools.tt.title')}</h2>
-                <p class="text-[16px] text-slate-600 dark:text-slate-400 leading-relaxed">{t('index.tools.tt.desc')}</p>
-            </a>
-
-            <a href={getHref('/twitter-downloader/')} class="group block p-8 rounded-2xl bg-[#F4F7FB] dark:bg-slate-800 border border-transparent hover:bg-white dark:hover:bg-slate-700 hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
-                <div class="w-14 h-14 rounded-xl bg-black flex items-center justify-center mb-6 shadow-sm">
-                    <svg class="w-7 h-7 text-white" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
-                    </svg>
-                </div>
-                <h2 class="font-bold text-xl mb-2 text-slate-900 dark:text-white group-hover:text-[#405EDB] transition-colors">{t('index.tools.tw.title')}</h2>
-                <p class="text-[16px] text-slate-600 dark:text-slate-400 leading-relaxed">{t('index.tools.tw.desc')}</p>
-            </a>
-
-            <a href={getHref('/facebook-downloader/')} class="group block p-8 rounded-2xl bg-[#F4F7FB] dark:bg-slate-800 border border-transparent hover:bg-white dark:hover:bg-slate-700 hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
-                <div class="w-14 h-14 rounded-xl bg-blue-600 flex items-center justify-center mb-6 shadow-sm">
-                    <svg class="w-7 h-7 text-white" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
-                    </svg>
-                </div>
-                <h2 class="font-bold text-xl mb-2 text-slate-900 dark:text-white group-hover:text-[#405EDB] transition-colors">{t('index.tools.fb.title')}</h2>
-                <p class="text-[16px] text-slate-600 dark:text-slate-400 leading-relaxed">{t('index.tools.fb.desc')}</p>
-            </a>
-
-            <div class="block p-8 rounded-2xl bg-[#F4F7FB] dark:bg-slate-800 opacity-60 cursor-not-allowed border border-transparent">
-                <div class="w-14 h-14 rounded-xl bg-red-600 flex items-center justify-center mb-6 shadow-sm">
-                    <svg class="w-7 h-7 text-white" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
-                    </svg>
-                </div>
-                <h2 class="font-bold text-xl mb-2 text-slate-900 dark:text-white">{t('index.tools.yt.title')}</h2>
-                <p class="text-[16px] text-slate-600 dark:text-slate-400 leading-relaxed mb-3">{t('index.tools.yt.desc')}</p>
-                <span class="inline-block text-xs font-semibold px-3 py-1 rounded-full bg-slate-200 dark:bg-slate-700 text-slate-600 dark:text-slate-300">{t('index.tools.yt.badge')}</span>
-            </div>
-
-            <a href={getHref('/video-to-mp3/')} class="group block p-8 rounded-2xl bg-[#F4F7FB] dark:bg-slate-800 border border-transparent hover:bg-white dark:hover:bg-slate-700 hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
-                <div class="w-14 h-14 rounded-xl bg-[#405EDB] flex items-center justify-center mb-6 shadow-sm">
-                    <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3"/>
-                    </svg>
-                </div>
-                <h2 class="font-bold text-xl mb-2 text-slate-900 dark:text-white group-hover:text-[#405EDB] transition-colors">{t('index.tools.mp3.title')}</h2>
-                <p class="text-[16px] text-slate-600 dark:text-slate-400 leading-relaxed">{t('index.tools.mp3.desc')}</p>
-            </a>
-
-            <a href={getHref('/thumbnail-grabber/')} class="group block p-8 rounded-2xl bg-[#F4F7FB] dark:bg-slate-800 border border-transparent hover:bg-white dark:hover:bg-slate-700 hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
-                <div class="w-14 h-14 rounded-xl bg-[#405EDB] flex items-center justify-center mb-6 shadow-sm">
-                    <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/>
-                    </svg>
-                </div>
-                <h2 class="font-bold text-xl mb-2 text-slate-900 dark:text-white group-hover:text-[#405EDB] transition-colors">{t('index.tools.thumbnail.title')}</h2>
-                <p class="text-[16px] text-slate-600 dark:text-slate-400 leading-relaxed">{t('index.tools.thumbnail.desc')}</p>
-            </a>
+            {featuredPosts.map((post, i) => (
+                <a href={getHref(`/blog/${post.slug}/`)} class="group block rounded-2xl bg-[#F4F7FB] dark:bg-slate-800 border border-transparent hover:bg-white dark:hover:bg-slate-700 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 overflow-hidden">
+                    <div class="w-full aspect-[16/9] overflow-hidden bg-slate-100 dark:bg-slate-800 relative shrink-0">
+                        {post.heroImage ? (
+                            <Image
+                                src={post.heroImage as any}
+                                alt={post.title}
+                                class="w-full h-full object-contain group-hover:scale-[1.02] transition-transform duration-500"
+                                loading={i < 3 ? 'eager' : 'lazy'}
+                                width={800}
+                                height={450}
+                                format="webp"
+                            />
+                        ) : (
+                            <div class="w-full h-full flex items-center justify-center bg-gradient-to-br from-slate-100 to-slate-200 dark:from-slate-800 dark:to-slate-900">
+                                <span class="text-5xl opacity-50">📝</span>
+                            </div>
+                        )}
+                    </div>
+                    <div class="p-6">
+                        <span class="inline-block text-xs font-bold px-3 py-1 rounded-full bg-[#405EDB]/10 text-[#405EDB] dark:bg-[#405EDB]/20 dark:text-[#8DA0FF] mb-3 uppercase tracking-wider">
+                            {BLOG_CLUSTERS.find(c => c.id === post.cluster)?.title || 'Guide'}
+                        </span>
+                        <h2 class="font-bold text-lg mb-2 text-slate-900 dark:text-white group-hover:text-[#405EDB] transition-colors line-clamp-2">{post.title}</h2>
+                        <p class="text-[14px] text-slate-600 dark:text-slate-400 leading-relaxed line-clamp-2">{post.description}</p>
+                    </div>
+                </a>
+            ))}
         </div>
 
+        <!-- Topic Clusters Section -->
+        <div class="mt-32 max-w-5xl mx-auto">
+            <h2 class="text-3xl font-extrabold text-center mb-4 text-slate-900 dark:text-white">Explore by Topic</h2>
+            <p class="text-center text-slate-600 dark:text-slate-400 mb-12 max-w-2xl mx-auto">Dive deep into expert guides organized by action and strategy.</p>
+            <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+                {BLOG_CLUSTERS.filter(c => c.id !== 'general').map((cluster) => (
+                    <a href={getHref(`/blog/${cluster.id}/`)} class="group p-6 rounded-2xl bg-[#F4F7FB] dark:bg-slate-800 border border-transparent hover:bg-white dark:hover:bg-slate-700 hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+                        <span class="text-3xl block mb-3">{cluster.icon}</span>
+                        <h3 class="font-bold text-lg mb-2 text-slate-900 dark:text-white group-hover:text-[#405EDB] transition-colors">{cluster.title}</h3>
+                        <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed line-clamp-2">{cluster.description}</p>
+                    </a>
+                ))}
+            </div>
+        </div>
+
+        <!-- Why Section (repurposed) -->
         <div class="mt-32 max-w-5xl mx-auto">
             <h2 class="text-3xl font-extrabold text-center mb-12 text-slate-900 dark:text-white">{t('index.why.title')}</h2>
             <div class="grid gap-8 md:grid-cols-3">
                 <div class="text-center p-6 border-none bg-transparent">
                     <div class="w-16 h-16 rounded-2xl bg-[#405EDB]/10 dark:bg-[#405EDB]/20 flex items-center justify-center mx-auto mb-6 transform hover:scale-110 transition-transform">
-                        <span class="text-3xl">🆓</span>
+                        <span class="text-3xl">📚</span>
                     </div>
                     <h3 class="font-bold text-xl mb-3 text-slate-900 dark:text-white">{t('index.why.1.title')}</h3>
                     <p class="text-[16px] text-slate-600 dark:text-slate-400 leading-relaxed">{t('index.why.1.desc')}</p>
@@ -165,18 +157,6 @@ const jsonLd = {
                     <h3 class="font-bold text-xl mb-3 text-slate-900 dark:text-white">{t('index.why.3.title')}</h3>
                     <p class="text-[16px] text-slate-600 dark:text-slate-400 leading-relaxed">{t('index.why.3.desc')}</p>
                 </div>
-            </div>
-        </div>
-
-        <div class="mt-32 max-w-5xl mx-auto">
-            <h2 class="text-3xl font-extrabold text-center mb-12 text-slate-900 dark:text-white">{t('blog.title')}</h2>
-            <div class="grid gap-6 sm:grid-cols-2">
-                {guidePosts.map((post) => (
-                    <a href={getHref(`/blog/${post.slug}/`)} class="group p-8 rounded-2xl bg-[#F4F7FB] dark:bg-slate-800 border border-transparent hover:bg-white dark:hover:bg-slate-700 hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
-                        <h3 class="font-bold text-xl mb-3 text-slate-900 dark:text-white group-hover:text-[#405EDB] transition-colors">{post.title}</h3>
-                        <p class="text-[16px] text-slate-600 dark:text-slate-400 leading-relaxed">{post.description}</p>
-                    </a>
-                ))}
             </div>
         </div>
     </main>
