@@ -58,6 +58,8 @@ export const phase1Extra = {
         'blog.detail.related_teaser': 'Read to learn more about this topic.',
         'blog.detail.read_article': 'Read Article',
         'blog.detail.explore_tools': 'Explore Free Video Tools',
+        'blog.detail.coming_soon_title': 'Articles Coming Soon',
+        'blog.detail.coming_soon_desc': 'We\'re working on expert guides for this topic. Check back soon!',
     },
     es: {
         'nav.tools': 'Herramientas',
@@ -569,5 +571,5 @@ type Phase1Key = keyof typeof phase1Extra.en;
 
 export function getPhase1Text(lang: string, key: Phase1Key): string {
     const locale = (lang in phase1Extra ? lang : 'en') as keyof typeof phase1Extra;
-    return phase1Extra[locale][key] || phase1Extra.en[key];
+    return (phase1Extra[locale] as any)[key] || phase1Extra.en[key];
 }

@@ -91,7 +91,7 @@ const jsonLd = {
                         <div class="flex items-center gap-3 mb-3 text-sm text-slate-500 font-sans">
                             <span class="font-bold uppercase tracking-wider text-[#405EDB] text-[11px] bg-[#405EDB]/10 px-2 py-0.5 rounded-sm">{tx(`blog.cluster.${getPostCluster(post)}` as any)}</span>
                             <span class="text-slate-400">&bull;</span>
-                            <time dateTime={post.data.pubDate.toISOString()} class="text-[13px] font-medium">
+                            <time datetime={post.data.pubDate.toISOString()} class="text-[13px] font-medium">
                                 {post.data.pubDate.toLocaleDateString(localeCode, { month: 'short', day: 'numeric', year: 'numeric' })}
                             </time>
                         </div>
