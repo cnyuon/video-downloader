@@ -5,7 +5,7 @@ pubDate: 2026-02-21
 heroImage: "../../../assets/blog-images/mp3-juice-free-music-downloader.png"
 heroAlt: "Una pantalla de smartphone mostrando un sitio web de MP3 Juice con una señal de advertencia, indicando que no es seguro."
 tags: ["Audio", "Guides", "Safety"]
-cluster: "audio"
+cluster: "audio-conversion"
 subcluster: "music-download"
 primaryTool: "video-to-mp3"
 searchIntent: "commercial"

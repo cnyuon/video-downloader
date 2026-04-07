@@ -9,7 +9,7 @@ monetization:
   primary_category: "software"
   affiliate_potential: "medium"
   geo_restrictions: false
-cluster: "tiktok"
+cluster: "downloading-media"
 subcluster: "tool-comparisons"
 primaryTool: "tiktok-downloader"
 searchIntent: "commercial"

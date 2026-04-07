@@ -1,7 +1,5 @@
 import { getCollection } from 'astro:content';
-// @ts-expect-error Node built-ins are available during Astro build runtime.
 import fs from 'fs/promises';
-// @ts-expect-error Node built-ins are available during Astro build runtime.
 import path from 'path';
 import { BLOG_CLUSTERS } from '../lib/blog-taxonomy';
 
@@ -10,48 +8,19 @@ const LOCALES = ['en', 'es', 'tr', 'pt', 'fr', 'de', 'ja', 'ko', 'ar', 'hi'];
 const NON_DEFAULT_LOCALES = LOCALES.filter((locale) => locale !== 'en');
 const BUILD_FALLBACK_LASTMOD = new Date().toISOString();
 const SOURCE_CACHE = new Map<string, string>();
-const TOOL_CATEGORY_SLUGS = ['video', 'audio', 'image'];
-const TOOL_PAGE_SLUGS = [
-    'tiktok-downloader',
-    'facebook-downloader',
-    'twitter-downloader',
-    'video-to-mp3',
-    'thumbnail-grabber',
-    'tiktok-sound-downloader',
-    'instagram-downloader',
-];
+
 const STATIC_BASE_PATHS = [
     '/',
-    '/tools/',
-    '/tools/video/',
-    '/tools/audio/',
-    '/tools/image/',
     '/blog/',
-    '/legal/privacy-policy/',
-    '/legal/terms-of-service/',
-    '/legal/about-us/',
-    '/legal/contact-us/',
-    '/legal/refund-policy/',
-    '/tiktok-downloader/',
-    '/facebook-downloader/',
-    '/twitter-downloader/',
-    '/video-to-mp3/',
-    '/thumbnail-grabber/',
-    '/tiktok-sound-downloader/',
-    '/instagram-downloader/',
 ];
 
-const TOPIC_BASE_PATHS = BLOG_CLUSTERS.map((cluster) => `/blog/topic/${cluster.id}/`);
-const TOPIC_CLUSTER_IDS = new Set(BLOG_CLUSTERS.map((cluster) => cluster.id));
-// `import.meta.url` points to a built chunk during Astro build, so resolve source
-// paths from the project cwd to keep lastmod stable and accurate long-term.
-const SRC_ROOT = path.resolve('src');
+const CLUSTER_BASE_PATHS = BLOG_CLUSTERS.map((cluster) => `/blog/${cluster.id}/`);
 
 const staticPages = [
     ...STATIC_BASE_PATHS,
-    ...TOPIC_BASE_PATHS,
+    ...CLUSTER_BASE_PATHS,
     ...NON_DEFAULT_LOCALES.flatMap((locale) =>
-        [...STATIC_BASE_PATHS, ...TOPIC_BASE_PATHS].map((path) => buildLocalizedPath(path, locale))
+        [...STATIC_BASE_PATHS, ...CLUSTER_BASE_PATHS].map((path) => buildLocalizedPath(path, locale))
     ),
 ];
 
@@ -117,6 +86,9 @@ function isLocaleHomepage(url: string): boolean {
     return localeHomepages.includes(url);
 }
 
+const SRC_ROOT = path.resolve('src');
+const CLUSTER_IDS = new Set(BLOG_CLUSTERS.map((cluster) => cluster.id));
+
 function getSourceCandidatesForRoute(urlPath: string): string[] {
     const { locale, basePath } = extractLocaleAndBasePath(urlPath);
     const common = ['components/Navbar.tsx', 'components/Footer.astro', 'layouts/Layout.astro'];
@@ -141,48 +113,12 @@ function getSourceCandidatesForRoute(urlPath: string): string[] {
         ];
     }
 
-    if (basePath.startsWith('/blog/topic/')) {
-        const cluster = basePath.replace(/^\/blog\/topic\/|\/$/g, '');
-        if (!TOPIC_CLUSTER_IDS.has(cluster as any)) return common;
+    const clusterMatch = basePath.replace(/^\/blog\/|\/$/, '');
+    if (CLUSTER_IDS.has(clusterMatch as any)) {
         return [
-            locale === 'en' ? 'pages/blog/topic/[cluster].astro' : 'pages/[lang]/blog/topic/[cluster].astro',
+            locale === 'en' ? 'pages/blog/[cluster].astro' : 'pages/[lang]/blog/[cluster].astro',
             'lib/blog-taxonomy.ts',
             'i18n/phase1-extra.ts',
-            ...common,
-        ];
-    }
-
-    if (basePath === '/tools/') {
-        return [
-            locale === 'en' ? 'pages/tools/index.astro' : 'pages/[lang]/tools/index.astro',
-            'lib/tool-categories.ts',
-            'i18n/ui.ts',
-            'i18n/phase1-extra.ts',
-            ...common,
-        ];
-    }
-
-    if (basePath.startsWith('/tools/')) {
-        const category = basePath.replace(/^\/tools\/|\/$/g, '');
-        if (!TOOL_CATEGORY_SLUGS.includes(category)) return common;
-        return [
-            locale === 'en' ? 'pages/tools/[category].astro' : 'pages/[lang]/tools/[category].astro',
-            'lib/tool-categories.ts',
-            'i18n/ui.ts',
-            'i18n/phase1-extra.ts',
-            ...common,
-        ];
-    }
-
-    if (basePath.startsWith('/legal/')) {
-        return [];
-    }
-
-    const toolSlug = basePath.replace(/^\/|\/$/g, '');
-    if (TOOL_PAGE_SLUGS.includes(toolSlug)) {
-        return [
-            locale === 'en' ? `pages/${toolSlug}.astro` : `pages/${locale}/${toolSlug}.astro`,
-            'i18n/ui.ts',
             ...common,
         ];
     }
@@ -208,21 +144,13 @@ async function getLatestMtimeIso(relativePaths: string[]): Promise<string | null
     return maxMtimeMs > 0 ? new Date(maxMtimeMs).toISOString() : null;
 }
 
-async function getRouteLastmodIso(urlPath: string, legalLastmodByKey: Map<string, string>): Promise<string> {
+async function getRouteLastmodIso(urlPath: string): Promise<string> {
     if (SOURCE_CACHE.has(urlPath)) {
         return SOURCE_CACHE.get(urlPath)!;
     }
 
-    const { locale, basePath } = extractLocaleAndBasePath(urlPath);
-    let lastmod: string | null = null;
-
-    if (basePath.startsWith('/legal/')) {
-        const legalSlug = basePath.replace(/^\/legal\/|\/$/g, '');
-        lastmod = legalLastmodByKey.get(`${locale}/${legalSlug}`) || legalLastmodByKey.get(`en/${legalSlug}`) || null;
-    } else {
-        const candidates = getSourceCandidatesForRoute(urlPath);
-        lastmod = await getLatestMtimeIso(candidates);
-    }
+    const candidates = getSourceCandidatesForRoute(urlPath);
+    const lastmod = await getLatestMtimeIso(candidates);
 
     const resolved = lastmod || BUILD_FALLBACK_LASTMOD;
     SOURCE_CACHE.set(urlPath, resolved);
@@ -231,13 +159,6 @@ async function getRouteLastmodIso(urlPath: string, legalLastmodByKey: Map<string
 
 export async function GET() {
     const allPosts = await getCollection('blog');
-    const allLegalEntries = await getCollection('legal');
-    const legalLastmodByKey = new Map<string, string>();
-
-    allLegalEntries.forEach((entry) => {
-        const normalizedId = entry.id.replace(/\.md$/, '');
-        legalLastmodByKey.set(normalizedId, toIsoDate(entry.data.lastUpdated));
-    });
 
     const enPosts = allPosts.filter((post: any) => post.slug.startsWith('en/'));
     const postBySlug = new Map(allPosts.map((post: any) => [post.slug, post]));
@@ -264,7 +185,7 @@ export async function GET() {
 
     const staticPagesUrls = await Promise.all(staticPages.map(async (url) => ({
         url,
-        lastmod: await getRouteLastmodIso(url, legalLastmodByKey),
+        lastmod: await getRouteLastmodIso(url),
         isBlog: false,
     })));
 

@@ -1,0 +1,63 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Erland UI Test" description="Testing the Erland UI blocks.">
+    <main class="container mx-auto px-4 py-16 max-w-3xl">
+        <h1 class="text-3xl font-serif font-bold mb-8">Erland UI Components Test</h1>
+
+        <div class="prose max-w-none">
+            <p>This is standard text before the decision block.</p>
+            
+            <p class="erland-label">Decision</p>
+            <div class="erland-decision-box">
+                Adopt a remote-first model where all meetings and collaboration assume remote participation, with optional office space for those who prefer it
+            </div>
+            
+            <p class="erland-label">Alternatives Considered</p>
+            
+            <div class="erland-alt-card">
+                <h4 class="erland-alt-title">Return to office-first</h4>
+                <div class="erland-proscons">
+                    <div>
+                        <p class="erland-pro-title">Pros</p>
+                        <ul class="erland-list">
+                            <li>Easier spontaneous collaboration</li>
+                            <li>Clearer work-life boundaries</li>
+                            <li>Existing office infrastructure</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <p class="erland-con-title">Cons</p>
+                        <ul class="erland-list">
+                            <li>Limits hiring to local candidates</li>
+                            <li>Some team members strongly prefer remote</li>
+                            <li>Commute time reduces productivity</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="erland-alt-card">
+                <h4 class="erland-alt-title">Hybrid with required office days</h4>
+                <div class="erland-proscons">
+                    <div>
+                        <p class="erland-pro-title">Pros</p>
+                        <ul class="erland-list">
+                            <li>Balance of remote and in-person</li>
+                            <li>Maintains some office culture</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <p class="erland-con-title">Cons</p>
+                        <ul class="erland-list">
+                            <li>Creates two-tier experience</li>
+                            <li>Remote workers miss hallway conversations</li>
+                            <li>Scheduling complexity</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</Layout>

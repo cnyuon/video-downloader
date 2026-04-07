@@ -10,7 +10,7 @@ monetization:
   primary_category: "software"
   affiliate_potential: "medium"
   geo_restrictions: false
-cluster: "tiktok"
+cluster: "anonymous-viewing"
 subcluster: "viewer-workflow"
 primaryTool: "none"
 searchIntent: "informational"

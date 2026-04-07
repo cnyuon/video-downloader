@@ -9,7 +9,7 @@ monetization:
   primary_category: "none"
   affiliate_potential: "low"
   geo_restrictions: false
-cluster: "tiktok"
+cluster: "downloading-media"
 subcluster: "mobile-workflow"
 primaryTool: "tiktok-downloader"
 searchIntent: "informational"
@@ -55,7 +55,7 @@ First, you need the link to the video.
 
 Next, you'll use a free online tool to process the link.
 - Open the **Safari** app on your iPhone.
-- Go to a TikTok downloader website like MediaTools' [TikTok Downloader](/tiktok-downloader/).
+- Go to a TikTok downloader website like MediaTools' [TikTok Downloader](/blog/best-tiktok-downloaders-2026/).
 - Tap the input box, then select **Paste** to insert the link you copied.
 - Tap the **Get Video** button. The tool will analyze the link and prepare the video file.
 
@@ -85,8 +85,8 @@ This method only works for public TikTok videos. If a user's account is private,
 By default, Safari saves all downloaded files to the "Downloads" folder within the **Files app** on your iPhone. You can open the Files app, navigate to that folder, and move the video to your Photos from there.
 
 **4. Can I download just the audio or sound from a TikTok?**
-Yes, the process is very similar. You can use a specialized tool like our [TikTok Sound Downloader](/tiktok-sound-downloader/) to extract the audio and save it as an MP3 file to your Files app.
+Yes, the process is very similar. You can use a specialized tool like our [TikTok Sound Downloader](/blog/how-to-download-tiktok-sounds-mp3/) to extract the audio and save it as an MP3 file to your Files app.
 
 ---
 
-**Ready to try it yourself?** Head over to the [MediaTools TikTok Downloader](/tiktok-downloader/) and save your first watermark-free video in seconds.
+**Ready to try it yourself?** Head over to the [MediaTools TikTok Downloader](/blog/best-tiktok-downloaders-2026/) and save your first watermark-free video in seconds.

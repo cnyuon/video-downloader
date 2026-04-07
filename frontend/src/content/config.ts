@@ -13,26 +13,17 @@ const blogCollection = defineCollection({
         keywords: z.array(z.string()).optional(),
         // SEO topical clustering taxonomy
         cluster: z.enum([
-            'tiktok',
-            'instagram',
-            'twitter',
-            'facebook',
-            'audio',
+            'anonymous-viewing',
+            'audio-conversion',
+            'downloading-media',
+            'social-media-tools',
+            'creator-assets',
             'creator-growth',
-            'privacy-security',
+            'social-commerce',
             'general'
         ]).optional(),
         subcluster: z.string().optional(),
-        primaryTool: z.enum([
-            'tiktok-downloader',
-            'twitter-downloader',
-            'facebook-downloader',
-            'video-to-mp3',
-            'tiktok-sound-downloader',
-            'thumbnail-grabber',
-            'instagram-downloader',
-            'none'
-        ]).optional(),
+        primaryTool: z.string().optional(),
         searchIntent: z.enum(['informational', 'commercial', 'transactional', 'navigational']).optional(),
         // Monetization Tags
         monetization: z.object({
@@ -44,15 +35,5 @@ const blogCollection = defineCollection({
     }),
 });
 
-const legalCollection = defineCollection({
-    type: 'content',
-    schema: z.object({
-        title: z.string(),
-        description: z.string(),
-        lastUpdated: z.date(),
-        seoTitle: z.string().optional(),
-        seoDescription: z.string().optional(),
-    }),
-});
+export const collections = { blog: blogCollection };
 
-export const collections = { blog: blogCollection, legal: legalCollection };

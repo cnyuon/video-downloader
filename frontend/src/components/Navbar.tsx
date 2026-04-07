@@ -1,19 +1,14 @@
 /**
- * Navbar - Main navigation with grouped tool and blog-topic IA
+ * Navbar - Editorial blog navigation with topics + locale/theme controls.
  */
-import { useState, useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 import { getPhase1Text } from '../i18n/phase1-extra';
+import { BLOG_CLUSTERS } from '../lib/blog-taxonomy';
 
 interface NavbarProps {
     currentPage: string;
     lang: string;
-}
-
-interface NavLink {
-    id: string;
-    label: string;
-    href: string;
 }
 
 const LOCALES = ['en', 'es', 'tr', 'pt', 'fr', 'de', 'ja', 'ko', 'ar', 'hi'] as const;
@@ -70,6 +65,26 @@ function IconX({ className }: IconProps) {
 export default function Navbar({ currentPage, lang }: NavbarProps) {
     const locale = LOCALES.includes(lang as LocaleCode) ? (lang as LocaleCode) : 'en';
     const tx = (key: Parameters<typeof getPhase1Text>[1]) => getPhase1Text(locale, key);
+    const readStoredTheme = (): string | null => {
+        if (typeof window === 'undefined') return null;
+        const storage = window.localStorage as Partial<Storage> | undefined;
+        if (!storage || typeof storage.getItem !== 'function') return null;
+        try {
+            return storage.getItem('theme');
+        } catch {
+            return null;
+        }
+    };
+    const persistTheme = (value: 'dark' | 'light') => {
+        if (typeof window === 'undefined') return;
+        const storage = window.localStorage as Partial<Storage> | undefined;
+        if (!storage || typeof storage.setItem !== 'function') return;
+        try {
+            storage.setItem('theme', value);
+        } catch {
+            // Ignore storage failures in restricted contexts.
+        }
+    };
 
     const getHref = (path: string) => {
         const normalized = path === '/' ? '/' : (path.endsWith('/') ? path : `${path}/`);
@@ -94,35 +109,16 @@ export default function Navbar({ currentPage, lang }: NavbarProps) {
         window.location.href = target;
     };
 
-    const videoTools: NavLink[] = [
-        { id: 'video', label: 'TikTok', href: '/tiktok-downloader/' },
-        { id: 'twitter', label: 'Twitter/X', href: '/twitter-downloader/' },
-        { id: 'facebook', label: 'Facebook', href: '/facebook-downloader/' },
-        { id: 'instagram', label: tx('nav.instagram'), href: '/instagram-downloader/' },
-    ];
-
-    const audioTools: NavLink[] = [
-        { id: 'sound', label: 'TikTok Sound', href: '/tiktok-sound-downloader/' },
-        { id: 'audio', label: 'Video to MP3', href: '/video-to-mp3/' },
-    ];
-
-    const imageTools: NavLink[] = [
-        { id: 'thumbnail', label: 'Thumbnails', href: '/thumbnail-grabber/' },
-    ];
-
-    const allToolsPageIds = new Set(['tools']);
-    const toolsMenuPageIds = new Set(['video', 'twitter', 'facebook', 'sound', 'audio', 'thumbnail', 'instagram', 'tools-menu']);
-    const isAllToolsActive = allToolsPageIds.has(currentPage);
-    const isToolsActive = toolsMenuPageIds.has(currentPage);
     const isBlogActive = currentPage === 'blog';
+    const isHomeActive = currentPage === 'home';
 
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
     const [darkMode, setDarkMode] = useState(false);
-    const [desktopToolsOpen, setDesktopToolsOpen] = useState(false);
+    const [desktopTopicsOpen, setDesktopTopicsOpen] = useState(false);
     const closeMenuTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
     useEffect(() => {
-        const stored = localStorage.getItem('theme');
+        const stored = readStoredTheme();
         if (stored === 'dark') {
             setDarkMode(true);
             document.documentElement.classList.add('dark');
@@ -139,20 +135,20 @@ export default function Navbar({ currentPage, lang }: NavbarProps) {
         };
     }, []);
 
-    const openToolsMenu = () => {
+    const openTopicsMenu = () => {
         if (closeMenuTimerRef.current) {
             clearTimeout(closeMenuTimerRef.current);
             closeMenuTimerRef.current = null;
         }
-        setDesktopToolsOpen(true);
+        setDesktopTopicsOpen(true);
     };
 
-    const closeToolsMenu = () => {
+    const closeTopicsMenu = () => {
         if (closeMenuTimerRef.current) {
             clearTimeout(closeMenuTimerRef.current);
         }
         closeMenuTimerRef.current = setTimeout(() => {
-            setDesktopToolsOpen(false);
+            setDesktopTopicsOpen(false);
             closeMenuTimerRef.current = null;
         }, 120);
     };
@@ -162,114 +158,83 @@ export default function Navbar({ currentPage, lang }: NavbarProps) {
         setDarkMode(newMode);
         if (newMode) {
             document.documentElement.classList.add('dark');
-            localStorage.setItem('theme', 'dark');
+            persistTheme('dark');
         } else {
             document.documentElement.classList.remove('dark');
-            localStorage.setItem('theme', 'light');
+            persistTheme('light');
         }
     };
 
     return (
-        <header className="sticky top-0 z-50 w-full transition-all duration-300 bg-white/80 dark:bg-slate-950/80 backdrop-blur-xl border-b border-slate-100 dark:border-slate-800/50">
-            <div className="container flex h-20 items-center justify-between mx-auto px-4 max-w-7xl">
-                <a href={getHref('/')} className="flex items-center space-x-3 hover:opacity-80 transition-opacity">
-                    <div className="h-8 w-8 rounded-xl bg-gradient-to-br from-[#405EDB] to-blue-600 flex items-center justify-center shadow-md">
-                        <svg className="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
-                        </svg>
-                    </div>
-                    <span className="font-extrabold text-lg sm:text-xl tracking-tight text-slate-900 dark:text-white">GetMediaTools</span>
+        <header className="sticky top-0 z-50 w-full transition-all duration-300 bg-white/95 dark:bg-slate-950/95 backdrop-blur-sm border-b border-slate-200 dark:border-slate-800/80">
+            <div className="container flex h-16 items-center justify-between mx-auto px-4 max-w-5xl">
+                <a href={getHref('/')} className="flex items-center hover:opacity-80 transition-opacity">
+                    <span className="font-bold text-lg tracking-tight text-slate-900 dark:text-white">GetMediaTools</span>
                 </a>
 
-                <nav className="hidden lg:flex items-center justify-end space-x-1 text-sm font-bold flex-1 ml-8">
+                <nav className="hidden lg:flex items-center justify-end space-x-6 text-[13px] font-medium tracking-wide uppercase flex-1 ml-8 font-sans">
                     <a
-                        href={getHref('/tools/')}
-                        className={`px-4 py-2.5 rounded-full transition-all duration-300 ${isAllToolsActive
-                            ? 'bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-white'
-                            : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800/50'
+                        href={getHref('/')}
+                        className={`transition-colors duration-200 ${isHomeActive
+                            ? 'text-slate-900 dark:text-white'
+                            : 'text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white'
                             }`}
                     >
-                        {tx('tools.hub.title')}
+                        Home
                     </a>
-
-                    <div className="relative" onMouseEnter={openToolsMenu} onMouseLeave={closeToolsMenu}>
-                        <button
-                            type="button"
-                            onFocus={openToolsMenu}
-                            onBlur={closeToolsMenu}
-                            aria-haspopup="menu"
-                            aria-expanded={desktopToolsOpen}
-                            className={`inline-flex items-center gap-1 px-4 py-2.5 rounded-full transition-all duration-300 ${isToolsActive
-                                ? 'bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-white'
-                                : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800/50'
-                                }`}
-                        >
-                            {tx('nav.tools')}
-                            <IconChevronDown className="h-4 w-4" />
-                        </button>
-
-                        <div
-                            className={`absolute right-0 top-full pt-2 w-[420px] max-w-[calc(100vw-2rem)] transition-all duration-200 ${desktopToolsOpen
-                                ? 'opacity-100 pointer-events-auto translate-y-0'
-                                : 'opacity-0 pointer-events-none translate-y-1'
-                                }`}
-                        >
-                            <div className="rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 shadow-2xl p-5">
-                                <div className="grid grid-cols-3 gap-4">
-                                <div>
-                                    <p className="text-[11px] font-extrabold uppercase tracking-widest text-slate-500 mb-3">{tx('nav.video_tools')}</p>
-                                    <div className="space-y-2">
-                                        {videoTools.map((item) => (
-                                            <a key={item.id} href={getHref(item.href)} className="block text-sm text-slate-700 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white">
-                                                {item.label}
-                                            </a>
-                                        ))}
-                                    </div>
-                                </div>
-
-                                <div>
-                                    <p className="text-[11px] font-extrabold uppercase tracking-widest text-slate-500 mb-3">{tx('nav.audio_tools')}</p>
-                                    <div className="space-y-2">
-                                        {audioTools.map((item) => (
-                                            <a key={item.id} href={getHref(item.href)} className="block text-sm text-slate-700 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white">
-                                                {item.label}
-                                            </a>
-                                        ))}
-                                    </div>
-                                </div>
-
-                                <div>
-                                    <p className="text-[11px] font-extrabold uppercase tracking-widest text-slate-500 mb-3">{tx('nav.image_tools')}</p>
-                                    <div className="space-y-2">
-                                        {imageTools.map((item) => (
-                                            <a key={item.id} href={getHref(item.href)} className="block text-sm text-slate-700 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white">
-                                                {item.label}
-                                            </a>
-                                        ))}
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        </div>
-                    </div>
 
                     <a
                         href={getHref('/blog/')}
-                        className={`px-4 py-2.5 rounded-full transition-all duration-300 ${isBlogActive
-                            ? 'bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-white'
-                            : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800/50'
+                        className={`transition-colors duration-200 ${isBlogActive
+                            ? 'text-slate-900 dark:text-white'
+                            : 'text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white'
                             }`}
                     >
                         Blog
                     </a>
 
-                    <div className="flex items-center pl-4 ml-2 border-l border-slate-200 dark:border-slate-800 gap-1">
+                    <div className="relative" onMouseEnter={openTopicsMenu} onMouseLeave={closeTopicsMenu}>
+                        <button
+                            type="button"
+                            onFocus={openTopicsMenu}
+                            onBlur={closeTopicsMenu}
+                            aria-haspopup="menu"
+                            aria-expanded={desktopTopicsOpen}
+                            className={`inline-flex items-center gap-1 transition-colors duration-200 text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white uppercase`}
+                        >
+                            TOPICS
+                            <IconChevronDown className="h-3 w-3" />
+                        </button>
+
+                        <div
+                            className={`absolute right-0 top-full pt-4 w-[240px] max-w-[calc(100vw-2rem)] transition-all duration-200 ${desktopTopicsOpen
+                                ? 'opacity-100 pointer-events-auto translate-y-0'
+                                : 'opacity-0 pointer-events-none translate-y-1'
+                                }`}
+                        >
+                            <div className="rounded border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 shadow-lg p-2">
+                                <div className="flex flex-col">
+                                    {BLOG_CLUSTERS.filter(c => c.id !== 'general').map((cluster) => (
+                                        <a
+                                            key={cluster.id}
+                                            href={getHref(`/blog/${cluster.id}/`)}
+                                            className="px-3 py-2 rounded text-[11px] font-bold tracking-widest uppercase font-sans text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800/50 hover:text-slate-900 dark:hover:text-white transition-colors"
+                                        >
+                                            {cluster.title}
+                                        </a>
+                                    ))}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="flex items-center pl-6 ml-2 border-l border-slate-200 dark:border-slate-800 gap-3">
                         <div className="relative">
                             <select
                                 value={locale}
                                 onChange={(e) => switchLanguage(e.target.value)}
-                                className="bg-transparent text-[13px] font-bold text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white cursor-pointer focus:outline-none transition-colors appearance-none pr-5 py-2 uppercase tracking-widest relative z-10"
-                                style={{ backgroundImage: 'url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'currentColor\' stroke-width=\'2.5\' stroke-linecap=\'round\' stroke-linejoin=\'round\'%3e%3cpolyline points=\'6 9 12 15 18 9\'%3e%3c/polyline%3e%3c/svg%3e")', backgroundRepeat: 'no-repeat', backgroundPosition: 'right 2px center', backgroundSize: '0.8em' }}
+                                className="bg-transparent text-[13px] font-medium tracking-wide text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white cursor-pointer focus:outline-none transition-colors appearance-none pr-4 uppercase relative z-10"
+                                style={{ backgroundImage: 'url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'currentColor\' stroke-width=\'2\' stroke-linecap=\'round\' stroke-linejoin=\'round\'%3e%3cpolyline points=\'6 9 12 15 18 9\'%3e%3c/polyline%3e%3c/svg%3e")', backgroundRepeat: 'no-repeat', backgroundPosition: 'right center', backgroundSize: '0.8em' }}
                                 aria-label="Select language"
                             >
                                 <option value="en" className="bg-white dark:bg-slate-900 text-slate-900 dark:text-white">EN</option>
@@ -287,10 +252,10 @@ export default function Navbar({ currentPage, lang }: NavbarProps) {
 
                         <button
                             onClick={toggleDarkMode}
-                            className="p-2 rounded-full text-slate-500 hover:text-slate-900 dark:text-slate-400 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800/50 transition-colors"
+                            className="text-slate-500 hover:text-slate-900 dark:text-slate-400 dark:hover:text-white transition-colors"
                             aria-label="Toggle dark mode"
                         >
-                            {darkMode ? <IconSun className="h-[18px] w-[18px]" /> : <IconMoon className="h-[18px] w-[18px]" />}
+                            {darkMode ? <IconSun className="h-[15px] w-[15px]" /> : <IconMoon className="h-[15px] w-[15px]" />}
                         </button>
                     </div>
                 </nav>
@@ -335,59 +300,38 @@ export default function Navbar({ currentPage, lang }: NavbarProps) {
                 <div className="lg:hidden border-t border-slate-100 dark:border-slate-800 bg-white dark:bg-slate-950 shadow-2xl absolute w-full left-0">
                     <nav className="container mx-auto px-4 py-4 space-y-4 max-h-[75vh] overflow-y-auto">
                         <a
-                            href={getHref('/tools/')}
-                            className={`block px-4 py-3 rounded-xl text-base font-bold transition-colors ${isAllToolsActive
-                                ? 'bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-white'
-                                : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white hover:bg-slate-50 dark:hover:bg-slate-900'
+                            href={getHref('/')}
+                            className={`block px-2 py-3 text-lg transition-colors ${isHomeActive
+                                ? 'text-slate-900 dark:text-white font-black'
+                                : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white'
                                 }`}
                             onClick={() => setMobileMenuOpen(false)}
                         >
-                            {tx('tools.hub.title')}
+                            Home
                         </a>
-
-                        <div className="px-4 pt-2">
-                            <p className="text-[11px] font-extrabold uppercase tracking-widest text-slate-500 mb-2">{tx('nav.video_tools')}</p>
-                            <div className="space-y-1">
-                                {videoTools.map((item) => (
-                                    <a key={item.id} href={getHref(item.href)} onClick={() => setMobileMenuOpen(false)} className="block px-3 py-2 rounded-lg text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-900 hover:text-slate-900 dark:hover:text-white">
-                                        {item.label}
-                                    </a>
-                                ))}
-                            </div>
-                        </div>
-
-                        <div className="px-4 pt-1">
-                            <p className="text-[11px] font-extrabold uppercase tracking-widest text-slate-500 mb-2">{tx('nav.audio_tools')}</p>
-                            <div className="space-y-1">
-                                {audioTools.map((item) => (
-                                    <a key={item.id} href={getHref(item.href)} onClick={() => setMobileMenuOpen(false)} className="block px-3 py-2 rounded-lg text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-900 hover:text-slate-900 dark:hover:text-white">
-                                        {item.label}
-                                    </a>
-                                ))}
-                            </div>
-                        </div>
-
-                        <div className="px-4 pt-1">
-                            <p className="text-[11px] font-extrabold uppercase tracking-widest text-slate-500 mb-2">{tx('nav.image_tools')}</p>
-                            <div className="space-y-1">
-                                {imageTools.map((item) => (
-                                    <a key={item.id} href={getHref(item.href)} onClick={() => setMobileMenuOpen(false)} className="block px-3 py-2 rounded-lg text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-900 hover:text-slate-900 dark:hover:text-white">
-                                        {item.label}
-                                    </a>
-                                ))}
-                            </div>
-                        </div>
 
                         <a
                             href={getHref('/blog/')}
-                            className={`block px-4 py-3 rounded-xl text-base font-bold transition-colors ${isBlogActive
-                                ? 'bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-white'
-                                : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white hover:bg-slate-50 dark:hover:bg-slate-900'
+                            className={`block px-2 py-3 text-lg transition-colors ${isBlogActive
+                                ? 'text-slate-900 dark:text-white font-black'
+                                : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white'
                                 }`}
                             onClick={() => setMobileMenuOpen(false)}
                         >
                             Blog
                         </a>
+
+                        <div className="px-4 pt-2">
+                            <p className="text-[11px] font-extrabold uppercase tracking-widest text-slate-500 mb-2">Topics</p>
+                            <div className="space-y-1">
+                                {BLOG_CLUSTERS.map((cluster) => (
+                                    <a key={cluster.id} href={getHref(`/blog/${cluster.id}/`)} onClick={() => setMobileMenuOpen(false)} className="flex items-center gap-2 px-3 py-2 rounded-lg text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-900 hover:text-slate-900 dark:hover:text-white">
+                                        <span className="text-base">{(cluster as any).icon || '📚'}</span>
+                                        {cluster.title}
+                                    </a>
+                                ))}
+                            </div>
+                        </div>
                     </nav>
                 </div>
             )}

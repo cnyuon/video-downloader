@@ -82,52 +82,37 @@ a, button, input, select, textarea,
 /* In-article Table of Contents card styling */
 .prose :where(h2[id^="table-of-contents"], h3[id^="table-of-contents"]) {
   margin-top: 2rem;
-  margin-bottom: 0;
-  padding: 1.1rem 1.35rem 0.55rem;
-  border: 1px solid rgb(226 232 240 / 0.95);
-  border-bottom: 0;
-  border-radius: 1rem 1rem 0 0;
-  background: linear-gradient(180deg, rgb(248 250 252 / 0.96) 0%, rgb(241 245 249 / 0.88) 100%);
+  margin-bottom: 1rem;
+  font-family: theme('fontFamily.sans');
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: theme('colors.slate.500');
 }
 
 .prose :where(h2[id^="table-of-contents"], h3[id^="table-of-contents"]) + ul {
   margin-top: 0;
   margin-bottom: 2rem;
-  padding: 0.2rem 1.35rem 1.2rem;
+  padding: 0;
   list-style: none;
-  border: 1px solid rgb(226 232 240 / 0.95);
-  border-top: 0;
-  border-radius: 0 0 1rem 1rem;
-  background: linear-gradient(180deg, rgb(248 250 252 / 0.96) 0%, rgb(241 245 249 / 0.88) 100%);
+  font-family: theme('fontFamily.sans');
 }
 
 .prose :where(h2[id^="table-of-contents"], h3[id^="table-of-contents"]) + ul > li {
   position: relative;
-  margin: 0.42rem 0;
-  padding-left: 1rem;
-}
-
-.prose :where(h2[id^="table-of-contents"], h3[id^="table-of-contents"]) + ul > li::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0.58em;
-  width: 0.34rem;
-  height: 0.34rem;
-  border-radius: 9999px;
-  background: rgb(148 163 184 / 0.9);
+  margin: 0.5rem 0;
+  padding-left: 0;
 }
 
 .prose :where(h2[id^="table-of-contents"], h3[id^="table-of-contents"]) + ul a {
-  color: #405EDB;
-  font-weight: 700;
+  color: theme('colors.slate.600');
+  font-weight: 500;
   text-decoration: none;
-  text-underline-offset: 4px;
 }
 
 .prose :where(h2[id^="table-of-contents"], h3[id^="table-of-contents"]) + ul a:hover {
-  color: #2f4ac2;
   text-decoration: underline;
+  text-underline-offset: 4px;
 }
 
 .prose :where(h2[id^="table-of-contents"], h3[id^="table-of-contents"]) + ul ul {
@@ -143,35 +128,150 @@ a, button, input, select, textarea,
   padding-left: 0.9rem;
 }
 
-.prose :where(h2[id^="table-of-contents"], h3[id^="table-of-contents"]) + ul ul > li::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0.58em;
-  width: 0.28rem;
-  height: 0.28rem;
-  border-radius: 9999px;
-  background: rgb(156 163 175 / 0.9);
-}
-
-.dark .prose :where(h2[id^="table-of-contents"], h3[id^="table-of-contents"]) {
-  border-color: rgb(71 85 105 / 0.8);
-  background: linear-gradient(180deg, rgb(30 41 59 / 0.72) 0%, rgb(30 41 59 / 0.52) 100%);
-}
-
-.dark .prose :where(h2[id^="table-of-contents"], h3[id^="table-of-contents"]) + ul {
-  border-color: rgb(71 85 105 / 0.8);
-  background: linear-gradient(180deg, rgb(30 41 59 / 0.72) 0%, rgb(30 41 59 / 0.52) 100%);
-}
-
-.dark .prose :where(h2[id^="table-of-contents"], h3[id^="table-of-contents"]) + ul > li::before {
-  background: rgb(148 163 184 / 0.85);
-}
-
 .dark .prose :where(h2[id^="table-of-contents"], h3[id^="table-of-contents"]) + ul a {
-  color: #8ea2ff;
+  color: theme('colors.slate.400');
 }
 
 .dark .prose :where(h2[id^="table-of-contents"], h3[id^="table-of-contents"]) + ul a:hover {
-  color: #b2c0ff;
+  color: theme('colors.slate.200');
+}
+
+/* Erland Custom UI Blocks */
+.erland-label {
+  font-family: theme('fontFamily.sans');
+  font-size: 11px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: theme('colors.slate.400');
+  margin-bottom: 0.5rem;
+  margin-top: 2rem;
+}
+
+/* Natively map standard Markdown Blockquotes to the Erland Decision Box */
+.prose blockquote,
+.erland-decision-box {
+  background-color: theme('colors.slate.50');
+  border-left: 4px solid theme('colors.blue.600');
+  padding: 1.5rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  border-radius: 0 0.5rem 0.5rem 0;
+  font-family: theme('fontFamily.sans') !important;
+  font-style: normal !important;
+  font-weight: 500;
+  color: theme('colors.slate.900') !important;
+  font-size: 17px;
+  line-height: 1.5;
+  quotes: none;
+}
+.prose blockquote p {
+  color: inherit !important;
+  margin: 0 !important;
+}
+.prose blockquote p::before,
+.prose blockquote p::after {
+  content: none !important;
+}
+.dark .prose blockquote,
+.dark .erland-decision-box {
+  background-color: theme('colors.slate.900');
+  color: theme('colors.slate.100') !important;
+}
+
+/* Native Markdown List Styling */
+.prose ul:not([class*="erland-"]) > li::marker {
+  color: theme('colors.slate.400');
+  content: "· ";
+  font-weight: 800;
+}
+
+/* Natively Map HR tags */
+.prose hr {
+  border-top-color: theme('colors.slate.200');
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+.dark .prose hr {
+  border-top-color: theme('colors.slate.800');
+}
+
+
+.erland-alt-card {
+  background-color: theme('colors.slate.50');
+  border: 1px solid theme('colors.slate.200');
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  font-family: theme('fontFamily.sans');
+}
+.dark .erland-alt-card {
+  background-color: theme('colors.slate.900');
+  border-color: theme('colors.slate.800');
+}
+
+.erland-alt-title {
+  font-weight: 700;
+  color: theme('colors.slate.900');
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  margin-top: 0 !important;
+}
+.dark .erland-alt-title {
+  color: theme('colors.white');
+}
+
+.erland-proscons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+@media (max-width: 640px) {
+  .erland-proscons {
+    grid-template-columns: 1fr;
+  }
+}
+
+.erland-pro-title {
+  font-size: 11px;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: theme('colors.emerald.500');
+  letter-spacing: 0.05em;
+  margin-bottom: 0.75rem;
+}
+
+.erland-con-title {
+  font-size: 11px;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: theme('colors.rose.500');
+  letter-spacing: 0.05em;
+  margin-bottom: 0.75rem;
+}
+
+.erland-list {
+  list-style: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.erland-list li {
+  position: relative;
+  padding-left: 1rem !important;
+  margin-bottom: 0.5rem !important;
+  font-size: 14px;
+  color: theme('colors.slate.600');
+  line-height: 1.5;
+}
+.dark .erland-list li {
+  color: theme('colors.slate.400');
+}
+
+.erland-list li::before {
+  content: "·";
+  position: absolute;
+  left: 0;
+  color: theme('colors.slate.400');
 }

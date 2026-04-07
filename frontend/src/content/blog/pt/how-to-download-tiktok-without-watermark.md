@@ -9,7 +9,7 @@ monetization:
   primary_category: "none"
   affiliate_potential: "low"
   geo_restrictions: false
-cluster: "tiktok"
+cluster: "downloading-media"
 subcluster: "download-basics"
 primaryTool: "tiktok-downloader"
 searchIntent: "informational"

@@ -9,7 +9,7 @@ monetization:
   primary_category: "none"
   affiliate_potential: "low"
   geo_restrictions: false
-cluster: "facebook"
+cluster: "downloading-media"
 subcluster: "reels"
 primaryTool: "facebook-downloader"
 searchIntent: "informational"

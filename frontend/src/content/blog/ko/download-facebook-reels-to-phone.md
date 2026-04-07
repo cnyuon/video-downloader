@@ -9,7 +9,7 @@ monetization:
   primary_category: "none"
   affiliate_potential: "low"
   geo_restrictions: false
-cluster: "facebook"
+cluster: "downloading-media"
 subcluster: "reels"
 primaryTool: "facebook-downloader"
 searchIntent: "informational"
@@ -52,7 +52,7 @@ searchIntent: "informational"
 iOS 보안으로 인해 iPhone에서 동영상을 저장하는 것이 때때로 까다로울 수 있습니다. 다음은 릴스를 사진 앱(카메라 롤)에 넣는 확실한 방법입니다.
 
 1.  페이스북 앱에서 릴스를 찾고 **공유 → 링크 복사**를 탭합니다.
-2.  **Safari** 브라우저를 열고 `getmediatools.com/facebook-downloader/`로 이동합니다.
+2.  **Safari** 브라우저를 열고 `getmediatools.com/blog/download-facebook-reels-to-phone/`로 이동합니다.
 3.  검색 상자에 **링크를 붙여넣고** **"동영상 가져오기"**를 탭합니다.
 4.  동영상 미리보기가 나타나면 **"다운로드"** 버튼을 탭합니다.
 5.  확인 팝업이 나타납니다. **"다운로드"**를 다시 탭합니다.
@@ -69,7 +69,7 @@ iOS 보안으로 인해 iPhone에서 동영상을 저장하는 것이 때때로 
 Android의 파일 시스템은 이 과정을 좀 더 간단하게 만듭니다.
 
 1.  페이스북 앱에서 릴스를 찾고 **공유 → 링크 복사**를 탭합니다.
-2.  **Chrome** 브라우저(또는 다른 브라우저)를 열고 `getmediatools.com/facebook-downloader/`로 이동합니다.
+2.  **Chrome** 브라우저(또는 다른 브라우저)를 열고 `getmediatools.com/blog/download-facebook-reels-to-phone/`로 이동합니다.
 3.  상자에 **링크를 붙여넣고** **"동영상 가져오기"**를 탭합니다.
 4.  **"다운로드"** 버튼을 탭합니다.
 5.  동영상은 휴대폰의 **"다운로드"** 폴더에 자동으로 저장됩니다.

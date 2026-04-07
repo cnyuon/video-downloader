@@ -9,7 +9,7 @@ monetization:
   primary_category: "none"
   affiliate_potential: "medium"
   geo_restrictions: false
-cluster: "instagram"
+cluster: "downloading-media"
 subcluster: "reels"
 primaryTool: "instagram-downloader"
 searchIntent: "informational"
@@ -52,7 +52,7 @@ Cette méthode extrait le fichier vidéo original des serveurs d'Instagram, vous
 En raison de la sécurité d'iOS, l'enregistrement de fichiers depuis un navigateur nécessite quelques étapes supplémentaires pour que la vidéo arrive dans votre application Photos principale.
 
 1.  Depuis l'application Instagram, appuyez sur l'**icône Partager** sur le Reel et **Copiez le lien**.
-2.  Ouvrez le navigateur **Safari** et accédez à `getmediatools.com/instagram-downloader/`.
+2.  Ouvrez le navigateur **Safari** et accédez à `getmediatools.com/blog/download-instagram-reels-without-watermark/`.
 3.  **Collez le lien** et appuyez sur **« Obtenir la vidéo »**.
 4.  Appuyez sur le bouton **« Télécharger »**. Lorsque la fenêtre contextuelle de confirmation apparaît, appuyez à nouveau sur **« Télécharger »**.
 5.  Une icône de progression du téléchargement apparaîtra dans la barre d'adresse de Safari. Une fois terminé, appuyez dessus, puis sélectionnez **« Téléchargements »**.
@@ -68,7 +68,7 @@ Le Reel sans filigrane est maintenant enregistré dans l'application **Photos** 
 Le processus sur Android est plus direct, car les fichiers téléchargés apparaissent généralement automatiquement dans votre galerie.
 
 1.  Depuis l'application Instagram, appuyez sur l'**icône Partager** sur le Reel et **Copiez le lien**.
-2.  Ouvrez le navigateur **Chrome** et accédez à `getmediatools.com/instagram-downloader/`.
+2.  Ouvrez le navigateur **Chrome** et accédez à `getmediatools.com/blog/download-instagram-reels-without-watermark/`.
 3.  **Collez le lien** et appuyez sur **« Obtenir la vidéo »**.
 4.  Appuyez sur le bouton **« Télécharger »**.
 5.  La vidéo sera enregistrée dans le dossier « Téléchargements » de votre téléphone.

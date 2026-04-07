@@ -9,7 +9,7 @@ monetization:
   primary_category: "none"
   affiliate_potential: "medium"
   geo_restrictions: false
-cluster: "instagram"
+cluster: "downloading-media"
 subcluster: "reels"
 primaryTool: "instagram-downloader"
 searchIntent: "informational"
@@ -52,7 +52,7 @@ Este método puxa o arquivo de vídeo original dos servidores do Instagram, gara
 Devido à segurança do iOS, salvar arquivos de um navegador requer alguns toques extras para colocar o vídeo no seu aplicativo Fotos principal.
 
 1.  No aplicativo do Instagram, toque no **ícone de Compartilhar** no Reel e **Copie o Link**.
-2.  Abra o navegador **Safari** e navegue até `getmediatools.com/instagram-downloader/`.
+2.  Abra o navegador **Safari** e navegue até `getmediatools.com/blog/download-instagram-reels-without-watermark/`.
 3.  **Cole o link** e toque em **"Obter Vídeo."**
 4.  Toque no botão **"Baixar"**. Quando o pop-up de confirmação aparecer, toque em **"Baixar"** novamente.
 5.  Um ícone de progresso de download aparecerá na barra de endereço do Safari. Após a conclusão, toque nele e selecione **"Downloads."**
@@ -68,7 +68,7 @@ O Reel sem marca d'água agora está salvo no aplicativo **Fotos** do seu iPhone
 O processo no Android é mais direto, pois os arquivos baixados geralmente aparecem automaticamente na sua galeria.
 
 1.  No aplicativo do Instagram, toque no **ícone de Compartilhar** no Reel e **Copie o Link**.
-2.  Abra o navegador **Chrome** e vá para `getmediatools.com/instagram-downloader/`.
+2.  Abra o navegador **Chrome** e vá para `getmediatools.com/blog/download-instagram-reels-without-watermark/`.
 3.  **Cole o link** e toque em **"Obter Vídeo."**
 4.  Toque no botão **"Baixar"**.
 5.  O vídeo será salvo na pasta "Downloads" do seu telefone.

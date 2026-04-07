@@ -61,6 +61,9 @@ export const ui = {
         'tools.category.video': 'Video Tools',
         'tools.category.audio': 'Audio Tools',
         'tools.category.image': 'Image Tools',
+        'tools.client.aspect.title': 'Aspect Ratio Calculator',
+        'tools.client.safezone.title': 'Safe Zone Planner',
+        'tools.client.export.title': 'Export Preset Helper',
 
         'blog.cluster.title': 'Topical Clusters',
         'blog.cluster.tiktok': 'TikTok Guides',
@@ -75,9 +78,9 @@ export const ui = {
         // Index / All Tools Page
         'index.meta.title': 'Free Online Video Downloader — Save Any Video',
         'index.meta.desc': 'Download videos from TikTok (no watermark), Twitter/X, and Facebook in HD — free, instant, no signup. Extract audio to MP3 too. Works on iPhone, Android & desktop.',
-        'index.hero.title': 'Every tool you need to download videos, ',
-        'index.hero.highlight': 'in one place',
-        'index.hero.desc': 'Download videos, extract audio, grab thumbnails, and more. All tools are 100% FREE and easy to use!',
+        'index.hero.title': 'Strategies, insights, and expert guides for ',
+        'index.hero.highlight': 'digital creators.',
+        'index.hero.desc': 'Master your craft with deep dives into platform algorithms, creator tools, and video strategies. All 100% free.',
         'index.tools.tt.title': 'TikTok Downloader',
         'index.tools.tt.desc': 'Download TikTok videos without watermark in HD quality',
         'index.tools.tw.title': 'Twitter/X Downloader',

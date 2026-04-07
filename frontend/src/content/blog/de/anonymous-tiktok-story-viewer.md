@@ -5,7 +5,7 @@ pubDate: 2024-08-26
 heroImage: "../../../assets/blog-images/tiktok-anonymous-story-viewer.png"
 heroAlt: "Ein Telefon zeigt die TikTok-App mit einem anonymen Maskensymbol darüber, das einen anonymen TikTok Story Viewer darstellt."
 tags: ["TikTok", "Guides", "Privacy"]
-cluster: "tiktok"
+cluster: "anonymous-viewing"
 subcluster: "privacy"
 primaryTool: "none"
 searchIntent: "informational"

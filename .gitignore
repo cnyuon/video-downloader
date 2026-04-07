@@ -2,3 +2,14 @@
 .firecrawl/
 pipeline/
 update_row_3.py
+
+# Environment files with secrets — NEVER commit
+backend/.env
+frontend/.env
+
+# Local build/test artifacts
+**/__pycache__/
+*.py[cod]
+.pytest_cache/
+backend/.venv/
+frontend/.astro/

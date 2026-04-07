@@ -9,7 +9,7 @@ monetization:
   primary_category: "creator-tools"
   affiliate_potential: "low"
   geo_restrictions: false
-cluster: "tiktok"
+cluster: "downloading-media"
 subcluster: "thumbnails"
 primaryTool: "thumbnail-grabber"
 searchIntent: "informational"
@@ -41,7 +41,7 @@ A thumbnail is your video's first impression. A clean, HD version is a valuable 
 <a name="how-to-download"></a>
 ## How to Download Any TikTok Thumbnail in 3 Simple Steps
 
-We built our [Thumbnail Grabber](/thumbnail-grabber/) tool to make this process instant and easy.
+We built our [Thumbnail Grabber](/blog/how-to-download-tiktok-thumbnails/) tool to make this process instant and easy.
 
 ### Step 1: Copy the TikTok Video Link
 Open the TikTok app or website, find the video you want, and tap the **Share** button. Then, select **Copy Link**.
@@ -49,7 +49,7 @@ Open the TikTok app or website, find the video you want, and tap the **Share** b
 ![Step 1: Copy the TikTok Video Link](../../../assets/blog-images/copy-tiktok-link.png)
 
 ### Step 2: Paste the Link into the Downloader
-Navigate to the [MediaTools Thumbnail Grabber](/thumbnail-grabber/). Paste the URL you copied into the input box.
+Navigate to the [MediaTools Thumbnail Grabber](/blog/how-to-download-tiktok-thumbnails/). Paste the URL you copied into the input box.
 
 ![Step 2: Paste the link into the downloader](../../../assets/blog-images/paste-link-thumbnail.png)
 
@@ -100,11 +100,11 @@ Yes, the MediaTools Thumbnail Grabber is 100% free and unlimited. There are no h
 
 Stop settling for blurry, cluttered screenshots. Elevate your content strategy by using the original, high-quality thumbnail for any TikTok video.
 
-**[Try Our Free TikTok Thumbnail Downloader Now](/thumbnail-grabber/)**
+**[Try Our Free TikTok Thumbnail Downloader Now](/blog/how-to-download-tiktok-thumbnails/)**
 
 ---
 
 **Related MediaTools:**
-- [TikTok Video Downloader](/tiktok-downloader/)
-- [TikTok Sound Downloader](/tiktok-sound-downloader/)
-- [YouTube Thumbnail Grabber](/thumbnail-grabber/)
+- [TikTok Video Downloader](/blog/best-tiktok-downloaders-2026/)
+- [TikTok Sound Downloader](/blog/how-to-download-tiktok-sounds-mp3/)
+- [YouTube Thumbnail Grabber](/blog/how-to-download-tiktok-thumbnails/)

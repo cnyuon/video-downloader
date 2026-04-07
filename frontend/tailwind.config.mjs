@@ -11,6 +11,10 @@ export default {
             },
         },
         extend: {
+            fontFamily: {
+                sans: ['Inter Variable', 'sans-serif'],
+                serif: ['Lora', 'serif'],
+            },
             colors: {
                 border: 'hsl(var(--border))',
                 input: 'hsl(var(--input))',

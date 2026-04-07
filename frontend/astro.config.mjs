@@ -5,11 +5,49 @@ import tailwind from '@astrojs/tailwind';
 // Generate redirect rules for all locales programmatically
 const REDIRECT_LOCALES = ['es', 'tr', 'pt', 'fr', 'de', 'ja', 'ko', 'ar', 'hi'];
 const REDIRECT_RULES = {
-    // Twitter GIF Consolidation
+    // ── Legacy blog consolidation ───────────────────────────────────────
     '/blog/how-to-download-twitter-gifs-2026/': '/blog/5-best-ways-to-save-twitter-videos/',
     '/blog/how-to-download-twitter-gifs/': '/blog/5-best-ways-to-save-twitter-videos/',
-    // TikTok Thumbnail Consolidation
     '/blog/tiktok-thumbnail-download/': '/blog/how-to-download-tiktok-thumbnails/',
+
+    // ── Tool pages → best-matching blog post ────────────────────────────
+    '/tiktok-downloader/': '/blog/best-tiktok-downloaders-2026/',
+    '/twitter-downloader/': '/blog/5-best-ways-to-save-twitter-videos/',
+    '/facebook-downloader/': '/blog/download-facebook-reels-to-phone/',
+    '/instagram-downloader/': '/blog/download-instagram-reels-without-watermark/',
+    '/tiktok-sound-downloader/': '/blog/how-to-download-tiktok-sounds-mp3/',
+    '/video-to-mp3/': '/blog/how-to-download-tiktok-sounds-mp3/',
+    '/thumbnail-grabber/': '/blog/how-to-download-tiktok-thumbnails/',
+    '/aspect-ratio-calculator/': '/blog/',
+    '/safe-zone-planner/': '/blog/',
+    '/export-preset-helper/': '/blog/',
+
+    // ── Tool hub / category pages → blog ────────────────────────────────
+    '/tools/': '/blog/',
+    '/tools/video/': '/blog/tiktok/',
+    '/tools/audio/': '/blog/audio/',
+    '/tools/image/': '/blog/',
+
+    // ── Blog topic URL restructure → flat /blog/{cluster}/ ──────────────
+    '/blog/topic/tiktok/': '/blog/tiktok/',
+    '/blog/topic/instagram/': '/blog/instagram/',
+    '/blog/topic/twitter/': '/blog/twitter/',
+    '/blog/topic/facebook/': '/blog/facebook/',
+    '/blog/topic/audio/': '/blog/audio/',
+    '/blog/topic/creator-growth/': '/blog/creator-growth/',
+    '/blog/topic/privacy-security/': '/blog/privacy-security/',
+    '/blog/topic/general/': '/blog/general/',
+
+    // ── Legal pages → homepage ──────────────────────────────────────────
+    '/legal/privacy-policy/': '/',
+    '/legal/terms-of-service/': '/',
+    '/legal/about-us/': '/',
+    '/legal/contact-us/': '/',
+    '/legal/refund-policy/': '/',
+
+    // ── Pricing & Account → homepage ────────────────────────────────────
+    '/pricing/': '/',
+    '/account/': '/',
 };
 
 const INTERNAL_HOSTS = new Set(['getmediatools.com', 'www.getmediatools.com']);

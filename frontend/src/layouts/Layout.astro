@@ -1,4 +1,10 @@
 ---
+import '@fontsource-variable/inter';
+import '@fontsource/lora/400.css';
+import '@fontsource/lora/500.css';
+import '@fontsource/lora/600.css';
+import '@fontsource/lora/700.css';
+import '@fontsource/lora/400-italic.css';
 import '../styles/globals.css';
 import HreflangTags from '../components/i18n/HreflangTags.astro';
 import { getLangFromUrl } from '../i18n/utils';
@@ -16,9 +22,9 @@ interface Props {
 
 const lang = getLangFromUrl(Astro.url);
 
-const { 
-    title = "MediaTools - Download Videos, Extract Audio & More",
-    description = "Free online tools to download videos, extract audio, and more from TikTok, YouTube, Twitter, and Facebook.",
+const {
+    title = "GetMediaTools - Social Media Guides & Creator Tips",
+    description = "Expert guides, tips, and tutorials for social media content creators. TikTok, Instagram, Twitter, Facebook and more.",
     ogImage = "/icon-512.png",
     robots = "index, follow",
     jsonLd,
@@ -48,26 +54,7 @@ const contentSegments = allSegments.length > 0 && NON_DEFAULT_LOCALES.includes(a
 const localeHome = lang === 'en' ? '/' : `/${lang}/`;
 
 const BREADCRUMB_LABELS: Record<string, string> = {
-    'tiktok-downloader': 'TikTok Downloader',
-    'twitter-downloader': 'Twitter/X Downloader',
-    'facebook-downloader': 'Facebook Downloader',
-    'tiktok-sound-downloader': 'TikTok Sound Downloader',
-    'video-to-mp3': 'Video to MP3',
-    'thumbnail-grabber': 'Thumbnail Grabber',
-    'aspect-ratio-calculator': 'Aspect Ratio Calculator',
-    'safe-zone-planner': 'Safe Zone Planner',
-    'export-preset-helper': 'Export Preset Helper',
-    'pricing': 'Pricing',
-    'account': 'Account',
     'blog': 'Blog',
-    'tools': 'Tools',
-    'legal': 'Legal',
-    'privacy-policy': 'Privacy Policy',
-    'terms-of-service': 'Terms of Service',
-    'about-us': 'About Us',
-    'contact-us': 'Contact Us',
-    'refund-policy': 'Refund Policy',
-    'topic': 'Topics',
     'creator-growth': 'Creator Growth',
     'privacy-security': 'Privacy & Security',
 };

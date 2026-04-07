@@ -9,7 +9,7 @@ monetization:
   primary_category: "none"
   affiliate_potential: "low"
   geo_restrictions: false
-cluster: "facebook"
+cluster: "downloading-media"
 subcluster: "reels"
 primaryTool: "facebook-downloader"
 searchIntent: "informational"
@@ -52,7 +52,7 @@ Este método garante que você obtenha um arquivo de vídeo limpo e em alta defi
 Salvar vídeos em um iPhone pode ser complicado devido à segurança do iOS. Aqui está a maneira infalível de obter o Reel no seu aplicativo Fotos (rolo da câmera).
 
 1.  No aplicativo do Facebook, encontre seu Reel e toque em **Compartilhar → Copiar link**.
-2.  Abra o navegador **Safari** e navegue até `getmediatools.com/facebook-downloader/`.
+2.  Abra o navegador **Safari** e navegue até `getmediatools.com/blog/download-facebook-reels-to-phone/`.
 3.  **Cole o link** na caixa de busca e toque em **"Obter Vídeo."**
 4.  Quando a prévia do vídeo aparecer, toque no botão **"Baixar"**.
 5.  Um pop-up de confirmação aparecerá. Toque em **"Baixar"** novamente.
@@ -69,7 +69,7 @@ O Facebook Reel agora está salvo no aplicativo **Fotos** do seu iPhone.
 O sistema de arquivos do Android torna este processo um pouco mais direto.
 
 1.  No aplicativo do Facebook, encontre seu Reel e toque em **Compartilhar → Copiar link**.
-2.  Abra o navegador **Chrome** (ou qualquer outro navegador) e vá para `getmediatools.com/facebook-downloader/`.
+2.  Abra o navegador **Chrome** (ou qualquer outro navegador) e vá para `getmediatools.com/blog/download-facebook-reels-to-phone/`.
 3.  **Cole o link** na caixa e toque em **"Obter Vídeo."**
 4.  Toque no botão **"Baixar"**.
 5.  O vídeo será salvo automaticamente na pasta **"Downloads"** do seu celular.

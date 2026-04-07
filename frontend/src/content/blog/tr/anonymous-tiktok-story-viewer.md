@@ -5,7 +5,7 @@ pubDate: 2026-02-21
 heroImage: "../../../assets/blog-images/tiktok-anonymous-story-viewer.png"
 heroAlt: "Anonim bir TikTok hikaye görüntüleyiciyi temsil eden, üzerinde anonim bir maske simgesi bulunan TikTok uygulamasını gösteren bir telefon."
 tags: ["TikTok", "Guides", "Privacy"]
-cluster: "tiktok"
+cluster: "anonymous-viewing"
 subcluster: "privacy"
 primaryTool: "none"
 searchIntent: "informational"
