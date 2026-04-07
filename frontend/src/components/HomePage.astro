@@ -59,106 +59,77 @@ const clusterMeta = BLOG_CLUSTERS.find((c) => c.id !== 'general');
 <Layout title={t('index.meta.title')} description={t('index.meta.desc')} jsonLd={jsonLd}>
     <Navbar client:idle currentPage="home" lang={lang} />
 
-    <div class="w-full bg-[#1A1A2E] text-white pt-24 pb-32 px-4 relative overflow-hidden">
-        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-3xl h-64 bg-[#405EDB] rounded-full mix-blend-screen filter blur-[100px] opacity-20"></div>
-
-        <div class="container mx-auto max-w-4xl text-center relative z-10">
+    <div class="w-full bg-white dark:bg-slate-950 pt-16 pb-12 md:pt-20 md:pb-16 px-4 border-b border-slate-100 dark:border-slate-800/80">
+        <div class="container mx-auto max-w-4xl text-center">
             <div class="mb-8">
-                <span class="inline-block bg-[#405EDB]/20 text-[#8DA0FF] border border-[#405EDB]/30 text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-wider backdrop-blur-sm">
+                <span class="inline-block text-slate-500 text-[11px] font-extrabold px-3 py-1 uppercase tracking-[0.2em] font-sans">
                     {t('blog.title')}
                 </span>
             </div>
-            <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight mb-8 leading-[1.1] text-white">
+            <h1 class="text-4xl md:text-6xl lg:text-7xl font-serif font-bold tracking-tight mb-8 leading-[1.1] text-slate-900 dark:text-white">
                 {t('index.hero.title')} <br class="hidden sm:block" />
                 <span class="text-[#405EDB]">{t('index.hero.highlight')}</span>
             </h1>
-            <p class="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto leading-relaxed">
+            <p class="text-lg md:text-xl text-slate-600 dark:text-slate-400 max-w-2xl mx-auto leading-relaxed font-serif">
                 {t('index.hero.desc')}
             </p>
-            <div class="mt-10 flex flex-wrap gap-4 justify-center">
-                <a href={getHref('/blog/')} class="inline-flex items-center px-8 py-3.5 rounded-full bg-[#405EDB] text-white font-bold text-sm hover:bg-[#3249B8] transition-colors shadow-lg shadow-[#405EDB]/25">
+            <div class="mt-12 flex flex-wrap gap-4 justify-center">
+                <a href={getHref('/blog/')} class="inline-flex items-center px-6 py-3 border border-slate-900 dark:border-white text-slate-900 dark:text-white font-bold text-[13px] hover:bg-slate-900 hover:text-white dark:hover:bg-white dark:hover:text-slate-900 transition-colors uppercase tracking-widest font-sans">
                     Browse Articles
-                    <svg class="w-4 h-4 ml-2 rtl:rotate-180" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg>
                 </a>
             </div>
         </div>
     </div>
 
-    <main class="container mx-auto px-4 -mt-16 pb-24 relative z-20">
+    <main class="container mx-auto px-4 pt-12 pb-16 md:pt-16 md:pb-20 relative z-20">
         <!-- Featured Articles Grid -->
         <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 max-w-5xl mx-auto">
             {featuredPosts.map((post, i) => (
-                <a href={getHref(`/blog/${post.slug}/`)} class="group block rounded-2xl bg-[#F4F7FB] dark:bg-slate-800 border border-transparent hover:bg-white dark:hover:bg-slate-700 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 overflow-hidden">
-                    <div class="w-full aspect-[16/9] overflow-hidden bg-slate-100 dark:bg-slate-800 relative shrink-0">
+                <a href={getHref(`/blog/${post.slug}/`)} class="group flex flex-col border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 hover:border-slate-400 dark:hover:border-slate-600 transition-colors duration-300">
+                    <div class="w-full aspect-[4/3] overflow-hidden bg-slate-50 dark:bg-slate-900/50 border-b border-slate-100 dark:border-slate-800">
                         {post.heroImage ? (
                             <Image
                                 src={post.heroImage as any}
                                 alt={post.title}
-                                class="w-full h-full object-contain group-hover:scale-[1.02] transition-transform duration-500"
+                                class="w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-500"
                                 loading={i < 3 ? 'eager' : 'lazy'}
                                 width={800}
-                                height={450}
+                                height={600}
                                 format="webp"
                             />
                         ) : (
-                            <div class="w-full h-full flex items-center justify-center bg-gradient-to-br from-slate-100 to-slate-200 dark:from-slate-800 dark:to-slate-900">
-                                <span class="text-5xl opacity-50">📝</span>
+                            <div class="w-full h-full flex items-center justify-center bg-slate-50 dark:bg-slate-900/50">
+                                <span class="text-3xl opacity-20">📝</span>
                             </div>
                         )}
                     </div>
-                    <div class="p-6">
-                        <span class="inline-block text-xs font-bold px-3 py-1 rounded-full bg-[#405EDB]/10 text-[#405EDB] dark:bg-[#405EDB]/20 dark:text-[#8DA0FF] mb-3 uppercase tracking-wider">
+                    <div class="p-6 flex flex-col flex-grow">
+                        <span class="text-[10px] font-extrabold text-[#405EDB] mb-4 uppercase tracking-[0.15em] font-sans">
                             {BLOG_CLUSTERS.find(c => c.id === post.cluster)?.title || 'Guide'}
                         </span>
-                        <h2 class="font-bold text-lg mb-2 text-slate-900 dark:text-white group-hover:text-[#405EDB] transition-colors line-clamp-2">{post.title}</h2>
-                        <p class="text-[14px] text-slate-600 dark:text-slate-400 leading-relaxed line-clamp-2">{post.description}</p>
+                        <h2 class="font-serif font-bold text-xl mb-3 text-slate-900 dark:text-white group-hover:text-[#405EDB] transition-colors leading-[1.3]">{post.title}</h2>
+                        <p class="text-[15px] font-serif text-slate-600 dark:text-slate-400 leading-relaxed line-clamp-2 mt-auto">{post.description}</p>
                     </div>
                 </a>
             ))}
         </div>
 
         <!-- Topic Clusters Section -->
-        <div class="mt-32 max-w-5xl mx-auto">
-            <h2 class="text-3xl font-extrabold text-center mb-4 text-slate-900 dark:text-white">Explore by Topic</h2>
-            <p class="text-center text-slate-600 dark:text-slate-400 mb-12 max-w-2xl mx-auto">Dive deep into expert guides organized by action and strategy.</p>
-            <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        <div class="mt-20 pt-10 border-t border-slate-100 dark:border-slate-800 max-w-5xl mx-auto">
+            <h2 class="text-3xl font-serif font-bold text-center mb-4 text-slate-900 dark:text-white">Explore by Topic</h2>
+            <p class="text-center font-serif text-slate-600 dark:text-slate-400 mb-12 max-w-2xl mx-auto">Dive deep into expert guides organized by action and strategy.</p>
+            <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
                 {BLOG_CLUSTERS.filter(c => c.id !== 'general').map((cluster) => (
-                    <a href={getHref(`/blog/${cluster.id}/`)} class="group p-6 rounded-2xl bg-[#F4F7FB] dark:bg-slate-800 border border-transparent hover:bg-white dark:hover:bg-slate-700 hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
-                        <span class="text-3xl block mb-3">{cluster.icon}</span>
-                        <h3 class="font-bold text-lg mb-2 text-slate-900 dark:text-white group-hover:text-[#405EDB] transition-colors">{cluster.title}</h3>
-                        <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed line-clamp-2">{cluster.description}</p>
+                    <a href={getHref(`/blog/${cluster.id}/`)} class="group p-6 border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-900 hover:border-slate-400 dark:hover:border-slate-600 transition-colors duration-300">
+                        <span class="text-3xl block mb-4">{cluster.icon}</span>
+                        <h3 class="font-sans font-bold text-[13px] uppercase tracking-widest mb-3 text-slate-900 dark:text-white group-hover:text-[#405EDB] transition-colors">{cluster.title}</h3>
+                        <p class="font-serif text-[14px] text-slate-600 dark:text-slate-400 leading-relaxed line-clamp-3">{cluster.description}</p>
                     </a>
                 ))}
             </div>
         </div>
 
-        <!-- Why Section (repurposed) -->
-        <div class="mt-32 max-w-5xl mx-auto">
-            <h2 class="text-3xl font-extrabold text-center mb-12 text-slate-900 dark:text-white">{t('index.why.title')}</h2>
-            <div class="grid gap-8 md:grid-cols-3">
-                <div class="text-center p-6 border-none bg-transparent">
-                    <div class="w-16 h-16 rounded-2xl bg-[#405EDB]/10 dark:bg-[#405EDB]/20 flex items-center justify-center mx-auto mb-6 transform hover:scale-110 transition-transform">
-                        <span class="text-3xl">📚</span>
-                    </div>
-                    <h3 class="font-bold text-xl mb-3 text-slate-900 dark:text-white">{t('index.why.1.title')}</h3>
-                    <p class="text-[16px] text-slate-600 dark:text-slate-400 leading-relaxed">{t('index.why.1.desc')}</p>
-                </div>
-                <div class="text-center p-6 border-none bg-transparent">
-                    <div class="w-16 h-16 rounded-2xl bg-[#405EDB]/10 dark:bg-[#405EDB]/20 flex items-center justify-center mx-auto mb-6 transform hover:scale-110 transition-transform">
-                        <span class="text-3xl">🔒</span>
-                    </div>
-                    <h3 class="font-bold text-xl mb-3 text-slate-900 dark:text-white">{t('index.why.2.title')}</h3>
-                    <p class="text-[16px] text-slate-600 dark:text-slate-400 leading-relaxed">{t('index.why.2.desc')}</p>
-                </div>
-                <div class="text-center p-6 border-none bg-transparent">
-                    <div class="w-16 h-16 rounded-2xl bg-[#405EDB]/10 dark:bg-[#405EDB]/20 flex items-center justify-center mx-auto mb-6 transform hover:scale-110 transition-transform">
-                        <span class="text-3xl">⚡</span>
-                    </div>
-                    <h3 class="font-bold text-xl mb-3 text-slate-900 dark:text-white">{t('index.why.3.title')}</h3>
-                    <p class="text-[16px] text-slate-600 dark:text-slate-400 leading-relaxed">{t('index.why.3.desc')}</p>
-                </div>
-            </div>
-        </div>
+
     </main>
 
     <Footer />

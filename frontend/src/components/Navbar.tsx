@@ -166,23 +166,18 @@ export default function Navbar({ currentPage, lang }: NavbarProps) {
     };
 
     return (
-        <header className="sticky top-0 z-50 w-full transition-all duration-300 bg-white/80 dark:bg-slate-950/80 backdrop-blur-xl border-b border-slate-100 dark:border-slate-800/50">
-            <div className="container flex h-20 items-center justify-between mx-auto px-4 max-w-7xl">
-                <a href={getHref('/')} className="flex items-center space-x-3 hover:opacity-80 transition-opacity">
-                    <div className="h-8 w-8 rounded-xl bg-gradient-to-br from-[#405EDB] to-blue-600 flex items-center justify-center shadow-md">
-                        <svg className="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
-                        </svg>
-                    </div>
-                    <span className="font-extrabold text-lg sm:text-xl tracking-tight text-slate-900 dark:text-white">GetMediaTools</span>
+        <header className="sticky top-0 z-50 w-full transition-all duration-300 bg-white/95 dark:bg-slate-950/95 backdrop-blur-sm border-b border-slate-200 dark:border-slate-800/80">
+            <div className="container flex h-16 items-center justify-between mx-auto px-4 max-w-5xl">
+                <a href={getHref('/')} className="flex items-center hover:opacity-80 transition-opacity">
+                    <span className="font-bold text-lg tracking-tight text-slate-900 dark:text-white">GetMediaTools</span>
                 </a>
 
-                <nav className="hidden lg:flex items-center justify-end space-x-1 text-sm font-bold flex-1 ml-8">
+                <nav className="hidden lg:flex items-center justify-end space-x-6 text-[13px] font-medium tracking-wide uppercase flex-1 ml-8 font-sans">
                     <a
                         href={getHref('/')}
-                        className={`px-4 py-2.5 rounded-full transition-all duration-300 ${isHomeActive
-                            ? 'bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-white'
-                            : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800/50'
+                        className={`transition-colors duration-200 ${isHomeActive
+                            ? 'text-slate-900 dark:text-white'
+                            : 'text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white'
                             }`}
                     >
                         Home
@@ -190,9 +185,9 @@ export default function Navbar({ currentPage, lang }: NavbarProps) {
 
                     <a
                         href={getHref('/blog/')}
-                        className={`px-4 py-2.5 rounded-full transition-all duration-300 ${isBlogActive
-                            ? 'bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-white'
-                            : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800/50'
+                        className={`transition-colors duration-200 ${isBlogActive
+                            ? 'text-slate-900 dark:text-white'
+                            : 'text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white'
                             }`}
                     >
                         Blog
@@ -205,27 +200,26 @@ export default function Navbar({ currentPage, lang }: NavbarProps) {
                             onBlur={closeTopicsMenu}
                             aria-haspopup="menu"
                             aria-expanded={desktopTopicsOpen}
-                            className={`inline-flex items-center gap-1 px-4 py-2.5 rounded-full transition-all duration-300 text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800/50`}
+                            className={`inline-flex items-center gap-1 transition-colors duration-200 text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white uppercase`}
                         >
-                            Topics
-                            <IconChevronDown className="h-4 w-4" />
+                            TOPICS
+                            <IconChevronDown className="h-3 w-3" />
                         </button>
 
                         <div
-                            className={`absolute right-0 top-full pt-2 w-[320px] max-w-[calc(100vw-2rem)] transition-all duration-200 ${desktopTopicsOpen
+                            className={`absolute right-0 top-full pt-4 w-[240px] max-w-[calc(100vw-2rem)] transition-all duration-200 ${desktopTopicsOpen
                                 ? 'opacity-100 pointer-events-auto translate-y-0'
                                 : 'opacity-0 pointer-events-none translate-y-1'
                                 }`}
                         >
-                            <div className="rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 shadow-2xl p-5">
-                                <div className="grid grid-cols-2 gap-2">
+                            <div className="rounded border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 shadow-lg p-2">
+                                <div className="flex flex-col">
                                     {BLOG_CLUSTERS.filter(c => c.id !== 'general').map((cluster) => (
                                         <a
                                             key={cluster.id}
                                             href={getHref(`/blog/${cluster.id}/`)}
-                                            className="flex items-center gap-2 px-3 py-2 rounded-lg text-sm text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-slate-900 dark:hover:text-white transition-colors"
+                                            className="px-3 py-2 rounded text-[11px] font-bold tracking-widest uppercase font-sans text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800/50 hover:text-slate-900 dark:hover:text-white transition-colors"
                                         >
-                                            <span className="text-base shrink-0">{(cluster as any).icon || '📚'}</span>
                                             {cluster.title}
                                         </a>
                                     ))}
@@ -234,13 +228,13 @@ export default function Navbar({ currentPage, lang }: NavbarProps) {
                         </div>
                     </div>
 
-                    <div className="flex items-center pl-4 ml-2 border-l border-slate-200 dark:border-slate-800 gap-1">
+                    <div className="flex items-center pl-6 ml-2 border-l border-slate-200 dark:border-slate-800 gap-3">
                         <div className="relative">
                             <select
                                 value={locale}
                                 onChange={(e) => switchLanguage(e.target.value)}
-                                className="bg-transparent text-[13px] font-bold text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white cursor-pointer focus:outline-none transition-colors appearance-none pr-5 py-2 uppercase tracking-widest relative z-10"
-                                style={{ backgroundImage: 'url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'currentColor\' stroke-width=\'2.5\' stroke-linecap=\'round\' stroke-linejoin=\'round\'%3e%3cpolyline points=\'6 9 12 15 18 9\'%3e%3c/polyline%3e%3c/svg%3e")', backgroundRepeat: 'no-repeat', backgroundPosition: 'right 2px center', backgroundSize: '0.8em' }}
+                                className="bg-transparent text-[13px] font-medium tracking-wide text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white cursor-pointer focus:outline-none transition-colors appearance-none pr-4 uppercase relative z-10"
+                                style={{ backgroundImage: 'url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'currentColor\' stroke-width=\'2\' stroke-linecap=\'round\' stroke-linejoin=\'round\'%3e%3cpolyline points=\'6 9 12 15 18 9\'%3e%3c/polyline%3e%3c/svg%3e")', backgroundRepeat: 'no-repeat', backgroundPosition: 'right center', backgroundSize: '0.8em' }}
                                 aria-label="Select language"
                             >
                                 <option value="en" className="bg-white dark:bg-slate-900 text-slate-900 dark:text-white">EN</option>
@@ -258,10 +252,10 @@ export default function Navbar({ currentPage, lang }: NavbarProps) {
 
                         <button
                             onClick={toggleDarkMode}
-                            className="p-2 rounded-full text-slate-500 hover:text-slate-900 dark:text-slate-400 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800/50 transition-colors"
+                            className="text-slate-500 hover:text-slate-900 dark:text-slate-400 dark:hover:text-white transition-colors"
                             aria-label="Toggle dark mode"
                         >
-                            {darkMode ? <IconSun className="h-[18px] w-[18px]" /> : <IconMoon className="h-[18px] w-[18px]" />}
+                            {darkMode ? <IconSun className="h-[15px] w-[15px]" /> : <IconMoon className="h-[15px] w-[15px]" />}
                         </button>
                     </div>
                 </nav>
@@ -307,9 +301,9 @@ export default function Navbar({ currentPage, lang }: NavbarProps) {
                     <nav className="container mx-auto px-4 py-4 space-y-4 max-h-[75vh] overflow-y-auto">
                         <a
                             href={getHref('/')}
-                            className={`block px-4 py-3 rounded-xl text-base font-bold transition-colors ${isHomeActive
-                                ? 'bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-white'
-                                : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white hover:bg-slate-50 dark:hover:bg-slate-900'
+                            className={`block px-2 py-3 text-lg transition-colors ${isHomeActive
+                                ? 'text-slate-900 dark:text-white font-black'
+                                : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white'
                                 }`}
                             onClick={() => setMobileMenuOpen(false)}
                         >
@@ -318,9 +312,9 @@ export default function Navbar({ currentPage, lang }: NavbarProps) {
 
                         <a
                             href={getHref('/blog/')}
-                            className={`block px-4 py-3 rounded-xl text-base font-bold transition-colors ${isBlogActive
-                                ? 'bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-white'
-                                : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white hover:bg-slate-50 dark:hover:bg-slate-900'
+                            className={`block px-2 py-3 text-lg transition-colors ${isBlogActive
+                                ? 'text-slate-900 dark:text-white font-black'
+                                : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white'
                                 }`}
                             onClick={() => setMobileMenuOpen(false)}
                         >
