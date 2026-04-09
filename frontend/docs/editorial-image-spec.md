@@ -1,19 +1,19 @@
 # GetMediaTools Editorial Image Spec
 
-Last updated: 2026-03-24
+Last updated: 2026-04-09
 
 ## Core Ratios
 
-- Blog hero images: `16:9`
-- In-article primary visuals: `4:3`
-- In-article wide walkthrough visuals: `16:9`
+- Blog hero images (homepage cards, `/blog` cards, cluster cards, article hero): `16:9`
+- In-article visuals (default): `16:9`
+- In-article UI step/screenshot visuals (optional): `4:3`
 
 ## Recommended Export Sizes
 
 - Blog hero (standard): `1600x900`
 - Blog hero (retina): `2400x1350`
-- In-article primary: `1200x900`
-- In-article wide: `1600x900`
+- In-article default: `1600x900`
+- In-article UI screenshot fallback: `1440x1080`
 
 ## Safe Area Rules
 
@@ -29,8 +29,8 @@ Last updated: 2026-03-24
 
 ## Legacy Asset Compatibility
 
-- Existing square assets are currently rendered with `object-contain` in `16:9` wrappers.
-- This prevents hard cropping while migration to native `16:9` assets is in progress.
+- Existing square assets can still render, but they may crop in list/card contexts.
+- For predictable cross-page composition, migrate legacy square files to `16:9` canvases.
 
 ## Naming Convention
 
