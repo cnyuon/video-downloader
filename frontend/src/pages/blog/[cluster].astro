@@ -100,14 +100,14 @@ const jsonLd = {
                             </div>
 
                             {post.data.heroImage && (
-                                <a href={`/blog/${trueSlug}/`} class="w-full sm:w-[260px] shrink-0 aspect-[4/3] rounded-xl overflow-hidden bg-slate-100 dark:bg-slate-800 relative shadow-sm border border-slate-100 dark:border-slate-800">
+                                <a href={`/blog/${trueSlug}/`} class="w-full sm:w-[260px] shrink-0 aspect-[16/9] rounded-xl overflow-hidden bg-slate-100 dark:bg-slate-800 relative shadow-sm border border-slate-100 dark:border-slate-800">
                                     <Image
                                         src={post.data.heroImage as any}
                                         alt={post.data.title}
                                         class="w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-500"
                                         loading="lazy"
-                                        width={520}
-                                        height={390}
+                                        width={640}
+                                        height={360}
                                         format="webp"
                                     />
                                 </a>
