@@ -66,9 +66,15 @@ function stripLocalePrefix(path: string): string {
     return normalizedPath;
 }
 
-function buildAlternateLinks(url: string): string {
+function buildAlternateLinks(url: string, availableLocales?: Set<string>): string {
     const basePath = stripLocalePrefix(url);
-    const localeAlternates = LOCALES.map((locale) => {
+    // If availableLocales is provided (blog posts), only include those locales.
+    // Otherwise (static pages), include all locales.
+    const localesToInclude = availableLocales
+        ? LOCALES.filter((locale) => availableLocales.has(locale))
+        : LOCALES;
+
+    const localeAlternates = localesToInclude.map((locale) => {
         const href = `${BASE_URL}${buildLocalizedPath(basePath, locale)}`;
         return `    <xhtml:link rel="alternate" hreflang="${locale}" href="${href}" />`;
     });
@@ -163,30 +169,54 @@ export async function GET() {
     const enPosts = allPosts.filter((post: any) => post.slug.startsWith('en/'));
     const postBySlug = new Map(allPosts.map((post: any) => [post.slug, post]));
 
-    const enPostsUrls = enPosts.map((post: any) => ({
-            url: `/blog/${post.slug.replace('en/', '')}/`,
+    // Build a map of which locales have actual translations for each slug
+    const translatedLocalesMap = new Map<string, Set<string>>();
+    for (const enPost of enPosts) {
+        const normalizedSlug = enPost.slug.replace(/^en\//, '');
+        const available = new Set<string>(['en']); // English always available
+        for (const locale of NON_DEFAULT_LOCALES) {
+            if (postBySlug.has(`${locale}/${normalizedSlug}`)) {
+                available.add(locale);
+            }
+        }
+        translatedLocalesMap.set(normalizedSlug, available);
+    }
+
+    const enPostsUrls = enPosts.map((post: any) => {
+        const normalizedSlug = post.slug.replace('en/', '');
+        return {
+            url: `/blog/${normalizedSlug}/`,
             lastmod: toIsoDate(post.data.updatedDate || post.data.pubDate),
             isBlog: true,
-        }));
+            availableLocales: translatedLocalesMap.get(normalizedSlug),
+        };
+    });
 
+    // Only include locale blog URLs when actual translations exist
     const localizedPostsUrls = NON_DEFAULT_LOCALES.flatMap((locale) =>
-        enPosts.map((enPost: any) => {
-            const normalizedSlug = enPost.slug.replace(/^en\//, '');
-            const localizedPost = postBySlug.get(`${locale}/${normalizedSlug}`);
-            const sourcePost = localizedPost || enPost;
+        enPosts
+            .filter((enPost: any) => {
+                const normalizedSlug = enPost.slug.replace(/^en\//, '');
+                return postBySlug.has(`${locale}/${normalizedSlug}`);
+            })
+            .map((enPost: any) => {
+                const normalizedSlug = enPost.slug.replace(/^en\//, '');
+                const localizedPost = postBySlug.get(`${locale}/${normalizedSlug}`)!;
 
-            return {
-                url: `/${locale}/blog/${normalizedSlug}/`,
-                lastmod: toIsoDate(sourcePost.data.updatedDate || sourcePost.data.pubDate),
-                isBlog: true,
-            };
-        })
+                return {
+                    url: `/${locale}/blog/${normalizedSlug}/`,
+                    lastmod: toIsoDate(localizedPost.data.updatedDate || localizedPost.data.pubDate),
+                    isBlog: true,
+                    availableLocales: translatedLocalesMap.get(normalizedSlug),
+                };
+            })
     );
 
     const staticPagesUrls = await Promise.all(staticPages.map(async (url) => ({
         url,
         lastmod: await getRouteLastmodIso(url),
         isBlog: false,
+        availableLocales: undefined as Set<string> | undefined,
     })));
 
     const allUrls = [...staticPagesUrls, ...enPostsUrls, ...localizedPostsUrls];
@@ -199,7 +229,7 @@ export async function GET() {
             .map(
                 (page) => `<url>
     <loc>${BASE_URL}${page.url}</loc>
-${buildAlternateLinks(page.url)}
+${buildAlternateLinks(page.url, page.availableLocales)}
     <lastmod>${page.lastmod}</lastmod>
     <changefreq>${isLocaleHomepage(page.url) ? 'daily' : page.isBlog ? 'monthly' : 'weekly'}</changefreq>
     <priority>${isLocaleHomepage(page.url) ? '1.0' : page.isBlog ? '0.7' : '0.9'}</priority>

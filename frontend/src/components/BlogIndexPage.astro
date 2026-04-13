@@ -23,17 +23,21 @@ const allBlogPosts = await getCollection('blog');
 const baselinePosts = allBlogPosts.filter((post) => post.slug.startsWith('en/'));
 const sortedBaseline = baselinePosts.sort((a, b) => (b.data.updatedDate || b.data.pubDate).valueOf() - (a.data.updatedDate || a.data.pubDate).valueOf());
 
-const localizedPosts = sortedBaseline.map((enPost) => {
-    const trueSlug = enPost.slug.replace('en/', '');
-    if (localeCode === 'en') {
-        return { ...enPost, slug: trueSlug };
-    }
-    const nativePost = allBlogPosts.find((p) => p.slug === `${localeCode}/${trueSlug}`);
-    return {
-        ...(nativePost || enPost),
-        slug: trueSlug,
-    };
-});
+const localizedPosts = sortedBaseline
+    .map((enPost) => {
+        const trueSlug = enPost.slug.replace('en/', '');
+        if (localeCode === 'en') {
+            return { ...enPost, slug: trueSlug };
+        }
+        const nativePost = allBlogPosts.find((p) => p.slug === `${localeCode}/${trueSlug}`);
+        // Only include posts that have actual translations for this locale
+        if (!nativePost) return null;
+        return {
+            ...nativePost,
+            slug: trueSlug,
+        };
+    })
+    .filter((post): post is NonNullable<typeof post> => post !== null);
 
 const getHref = (path: string) => getLocalizedHref(path, lang);
 

@@ -13,18 +13,24 @@ export async function getStaticPaths() {
   const allPosts = await getCollection('blog');
   const enPosts = allPosts.filter(post => post.slug.startsWith('en/'));
   
-  return enPosts.map((enPost) => {
-    const trueSlug = enPost.slug.replace('en/', '');
-    const nativePost = allPosts.find(p => p.slug === `ja/${trueSlug}`);
+  // Only generate pages for posts that have actual translations
+  return enPosts
+    .filter((enPost) => {
+      const trueSlug = enPost.slug.replace('en/', '');
+      return allPosts.some(p => p.slug === `ja/${trueSlug}`);
+    })
+    .map((enPost) => {
+      const trueSlug = enPost.slug.replace('en/', '');
+      const nativePost = allPosts.find(p => p.slug === `ja/${trueSlug}`)!;
     
-    return {
-      params: { slug: trueSlug },
-      props: {
-          post: nativePost || enPost,
-          originalSlug: trueSlug
-      },
-    };
-  });
+      return {
+        params: { slug: trueSlug },
+        props: {
+            post: nativePost,
+            originalSlug: trueSlug
+        },
+      };
+    });
 }
 
 const { post, originalSlug } = Astro.props;
