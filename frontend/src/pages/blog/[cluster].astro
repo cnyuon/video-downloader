@@ -20,7 +20,15 @@ const allPosts = await getCollection('blog');
 const posts = allPosts
     .filter((post) => post.slug.startsWith('en/'))
     .filter((post) => getPostCluster(post) === clusterMeta.id)
-    .sort((a, b) => (b.data.updatedDate || b.data.pubDate).valueOf() - (a.data.updatedDate || a.data.pubDate).valueOf());
+    .sort((a, b) => {
+        const aPillar = a.data.isPillar ? 1 : 0;
+        const bPillar = b.data.isPillar ? 1 : 0;
+        if (aPillar !== bPillar) return bPillar - aPillar;
+
+        const aDate = a.data.updatedDate || a.data.pubDate;
+        const bDate = b.data.updatedDate || b.data.pubDate;
+        return bDate.valueOf() - aDate.valueOf();
+    });
 
 // Get related clusters for cross-linking
 const adjacentIds = ADJACENT_CLUSTERS[clusterId] || [];

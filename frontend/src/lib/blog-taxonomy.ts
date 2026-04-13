@@ -83,10 +83,38 @@ export const ADJACENT_CLUSTERS: Record<string, string[]> = {
 };
 
 const SLUG_CLUSTER_MAP: Record<string, BlogClusterId> = {
-    // Anonymous Viewing & Privacy
+    // Anonymous Viewing & Privacy — Cluster 1A: TikTok Story Viewing
     'anonymous-tiktok-story-viewer': 'anonymous-viewing',
+    'tiktok-anonymous-story-viewer-how-to-watch-without-being-seen': 'anonymous-viewing',
+    'how-to-view-tiktok-stories-anonymously-without-getting-caught': 'anonymous-viewing',
+    'best-free-tiktok-viewer-tools-watch-browse-anonymously-no-account-needed': 'anonymous-viewing',
+
+    // Anonymous Viewing & Privacy — Cluster 1B: TikTok Access Without App/Account
     'watch-tiktok-without-app': 'anonymous-viewing',
     'tiktok-banned-how-to-access-download': 'anonymous-viewing',
+    'tiktok-unblocked-how-to-bypass-school-work-and-geo-bans-instantly': 'anonymous-viewing',
+    'how-to-watch-tiktok-on-a-desktop-browser-without-the-app-or-an-account': 'anonymous-viewing',
+    'how-to-use-tiktok-without-an-account-bypass-login-app-prompts': 'anonymous-viewing',
+
+    // Anonymous Viewing & Privacy — Cluster 1C: TikTok Private Profile Viewing
+    'private-tiktok-viewers-exposed-can-you-really-see-private-accounts': 'anonymous-viewing',
+
+    // Anonymous Viewing & Privacy — Cluster 1D: Instagram Anonymous Viewing
+    'how-to-view-instagram-without-an-account-bypass-the-login-wall-safely': 'anonymous-viewing',
+    'instagram-tagged-photos-viewer-how-to-see-tagged-posts-anonymously-even-if-hidden': 'anonymous-viewing',
+    'instagram-screenshot-notifications-2026-what-triggers-them-how-to-bypass-alerts': 'anonymous-viewing',
+    'do-private-instagram-viewers-really-work-exposing-scams-legit-alternatives': 'anonymous-viewing',
+    'pixwox-instagram-viewer-is-it-safe-privacy-tracking-guide': 'anonymous-viewing',
+
+    // Anonymous Viewing & Privacy — Cluster 1E: YouTube Deleted & Hidden Videos
+    'how-to-find-and-watch-deleted-youtube-videos-with-or-without-the-url': 'anonymous-viewing',
+    'how-to-watch-hidden-videos-on-youtube-unlisted-private-unavailable': 'anonymous-viewing',
+
+    // Anonymous Viewing & Privacy — Cluster 1F: Facebook Anonymous Viewing
+    'how-to-view-facebook-profiles-anonymously-without-an-account': 'anonymous-viewing',
+
+    // Anonymous Viewing & Privacy — Cluster 1G: Wayback Machine for Social Media
+    'how-to-use-the-wayback-machine-to-find-deleted-youtube-videos-instagram-posts': 'anonymous-viewing',
 
     // Audio & Format Conversion
     'how-to-download-tiktok-sounds-mp3': 'audio-conversion',

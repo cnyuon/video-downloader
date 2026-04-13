@@ -25,6 +25,9 @@ const blogCollection = defineCollection({
         subcluster: z.string().optional(),
         primaryTool: z.string().optional(),
         searchIntent: z.enum(['informational', 'commercial', 'transactional', 'navigational']).optional(),
+        // Explicit pillar relationship metadata for topical authority workflows
+        isPillar: z.boolean().optional(),
+        pillarSlug: z.string().optional(),
         // Monetization Tags
         monetization: z.object({
             primary_category: z.enum(['none', 'vpn', 'software', 'hosting', 'storage', 'creator-tools']),
@@ -36,4 +39,3 @@ const blogCollection = defineCollection({
 });
 
 export const collections = { blog: blogCollection };
-
