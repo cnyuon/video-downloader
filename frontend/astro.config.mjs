@@ -24,18 +24,18 @@ const REDIRECT_RULES = {
 
     // ── Tool hub / category pages → blog ────────────────────────────────
     '/tools/': '/blog/',
-    '/tools/video/': '/blog/tiktok/',
-    '/tools/audio/': '/blog/audio/',
-    '/tools/image/': '/blog/',
+    '/tools/video/': '/blog/downloading-media/',
+    '/tools/audio/': '/blog/audio-conversion/',
+    '/tools/image/': '/blog/creator-assets/',
 
     // ── Blog topic URL restructure → flat /blog/{cluster}/ ──────────────
-    '/blog/topic/tiktok/': '/blog/tiktok/',
-    '/blog/topic/instagram/': '/blog/instagram/',
-    '/blog/topic/twitter/': '/blog/twitter/',
-    '/blog/topic/facebook/': '/blog/facebook/',
-    '/blog/topic/audio/': '/blog/audio/',
+    '/blog/topic/tiktok/': '/blog/downloading-media/',
+    '/blog/topic/instagram/': '/blog/downloading-media/',
+    '/blog/topic/twitter/': '/blog/downloading-media/',
+    '/blog/topic/facebook/': '/blog/downloading-media/',
+    '/blog/topic/audio/': '/blog/audio-conversion/',
     '/blog/topic/creator-growth/': '/blog/creator-growth/',
-    '/blog/topic/privacy-security/': '/blog/privacy-security/',
+    '/blog/topic/privacy-security/': '/blog/anonymous-viewing/',
     '/blog/topic/general/': '/blog/general/',
 
     // ── Legal pages → homepage ──────────────────────────────────────────
