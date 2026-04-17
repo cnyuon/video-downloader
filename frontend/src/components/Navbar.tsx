@@ -168,8 +168,9 @@ export default function Navbar({ currentPage, lang }: NavbarProps) {
     return (
         <header className="sticky top-0 z-50 w-full transition-all duration-300 bg-white/95 dark:bg-slate-950/95 backdrop-blur-sm border-b border-slate-200 dark:border-slate-800/80">
             <div className="container flex h-16 items-center justify-between mx-auto px-4 max-w-5xl">
-                <a href={getHref('/')} className="flex items-center hover:opacity-80 transition-opacity">
-                    <span className="font-bold text-lg tracking-tight text-slate-900 dark:text-white">GetMediaTools</span>
+                <a href={getHref('/')} className="flex items-center gap-2 hover:opacity-80 transition-opacity">
+                    <img src="/logo.png" alt="GetMediaTools Logo" className="h-8 w-auto rounded-sm" />
+                    <span className="font-garet font-black text-lg tracking-tight text-slate-900 dark:text-white hidden sm:block">GetMediaTools</span>
                 </a>
 
                 <nav className="hidden lg:flex items-center justify-end space-x-6 text-[13px] font-medium tracking-wide uppercase flex-1 ml-8 font-sans">
