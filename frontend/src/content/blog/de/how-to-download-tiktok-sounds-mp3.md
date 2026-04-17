@@ -108,7 +108,7 @@ Das Herunterladen für den persönlichen Gebrauch ist im Allgemeinen unproblemat
 - **Urheberrechtlich geschützte Musik darf nicht ohne entsprechende Lizenz kommerziell weiterverbreitet werden**.
 - **Original creator audio** (voiceovers, original sounds) belongs to the creator. Use with respect and credit when sharing.
 - **Trending songs** gehören in der Regel Plattenfirmen. Die Verwendung in privaten Projekten ist meist unproblematisch, monetarisierte Inhalte können jedoch von den Content-ID-Systemen der Plattformen beanstandet werden.
-- Die vollständigen Nutzungsbedingungen von TikTok finden Sie in den [TikToks Nutzungsbedingungen](https://www.tiktok.com/legal/terms-of-service)].
+- Die vollständigen Nutzungsbedingungen von TikTok finden Sie in den [TikToks Nutzungsbedingungen](https://www.tiktok.com/legal/terms-of-service).
 
 ## Häufig gestellte Fragen
 

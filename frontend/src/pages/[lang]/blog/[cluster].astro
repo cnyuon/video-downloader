@@ -9,7 +9,6 @@ import { useTranslations } from '../../../i18n/utils';
 import { NON_DEFAULT_LOCALES } from '../../../i18n/locales';
 import { getPhase1Text } from '../../../i18n/phase1-extra';
 import {  BLOG_CLUSTERS, getClusterMeta, getPostCluster, ADJACENT_CLUSTERS  } from '../../../lib/blog-taxonomy';
-import type { BlogClusterMeta } from '../../../lib/blog-taxonomy';
 
 export function getStaticPaths() {
     return NON_DEFAULT_LOCALES.flatMap((lang) =>
@@ -33,13 +32,8 @@ const adjacentClusters = (ADJACENT_CLUSTERS[clusterMeta.id as keyof typeof ADJAC
 
 const allPosts = await getCollection('blog');
 const posts = allPosts
-    .filter((post) => post.slug.startsWith(`${localeCode}/`) || (localeCode !== 'en' && post.slug.startsWith('en/')))
-    .filter((post) => {
-        const normalized = post.slug.replace(/^[a-z]{2}\//, '');
-        const hasLocalizedVersion = allPosts.some((p) => p.slug === `${localeCode}/${normalized}`);
-        if (post.slug.startsWith('en/') && localeCode !== 'en' && hasLocalizedVersion) return false;
-        return true;
-    })
+    // Localized cluster pages should only render translated posts.
+    .filter((post) => post.slug.startsWith(`${localeCode}/`))
     .filter((post) => getPostCluster(post) === clusterMeta.id)
     .sort((a, b) => {
         const aPillar = a.data.isPillar ? 1 : 0;

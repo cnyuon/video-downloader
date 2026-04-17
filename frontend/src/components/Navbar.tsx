@@ -91,7 +91,47 @@ export default function Navbar({ currentPage, lang }: NavbarProps) {
         return locale === 'en' ? normalized : `/${locale}${normalized === '/' ? '/' : normalized}`;
     };
 
-    const switchLanguage = (nextLang: string) => {
+    const BLOG_CLUSTER_IDS = new Set(BLOG_CLUSTERS.map((cluster) => cluster.id));
+
+    const isBlogPostPath = (localeAgnosticPath: string) => {
+        const match = /^\/blog\/([^/]+)\/$/.exec(localeAgnosticPath);
+        if (!match) return false;
+        const slug = match[1];
+        return !BLOG_CLUSTER_IDS.has(slug as (typeof BLOG_CLUSTERS)[number]['id']);
+    };
+
+    const routeExists = async (pathToCheck: string) => {
+        const checkPath = pathToCheck.endsWith('/') ? pathToCheck : `${pathToCheck}/`;
+
+        try {
+            const headRes = await fetch(checkPath, {
+                method: 'HEAD',
+                cache: 'no-store',
+                credentials: 'same-origin',
+            });
+
+            if (headRes.ok) return true;
+            if (headRes.status !== 405 && headRes.status !== 501) return false;
+        } catch {
+            // Fallback to GET below.
+        }
+
+        try {
+            const getRes = await fetch(checkPath, {
+                method: 'GET',
+                cache: 'no-store',
+                credentials: 'same-origin',
+            });
+            if (!getRes.ok) return false;
+
+            const finalPath = new URL(getRes.url, window.location.origin).pathname;
+            return !/^\/404(?:\.html)?\/?$/.test(finalPath);
+        } catch {
+            return false;
+        }
+    };
+
+    const switchLanguage = async (nextLang: string) => {
         const path = window.location.pathname;
         const segments = path.split('/').filter(Boolean);
 
@@ -105,6 +145,16 @@ export default function Navbar({ currentPage, lang }: NavbarProps) {
         const target = nextLang === 'en'
             ? localeAgnosticPath
             : `/${nextLang}${localeAgnosticPath === '/' ? '/' : localeAgnosticPath}`;
+
+        // For blog post detail pages, only navigate to translated slug if it exists.
+        // Otherwise, fall back to the selected locale's blog index to avoid 404s
+        // for new English-only posts.
+        if (nextLang !== 'en' && isBlogPostPath(localeAgnosticPath)) {
+            const exists = await routeExists(target);
+            const fallback = `/${nextLang}/blog/`;
+            window.location.href = exists ? target : fallback;
+            return;
+        }
 
         window.location.href = target;
     };

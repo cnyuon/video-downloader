@@ -1,9 +1,208 @@
 {
-  "generated_at": "2026-04-07T21:26:46.362Z",
-  "total_html_files": 631,
-  "total_anchor_links": 15876,
-  "total_internal_anchor_links": 10315,
-  "unresolved_internal_links": 0,
-  "unresolved_by_target": [],
-  "unresolved_details": []
+  "generated_at": "2026-04-17T20:18:20.817Z",
+  "total_html_files": 669,
+  "total_anchor_links": 17197,
+  "total_internal_anchor_links": 11139,
+  "unresolved_internal_links": 14,
+  "intentional_unresolved_internal_links": 14,
+  "unexpected_unresolved_internal_links": 0,
+  "unresolved_by_target": [
+    {
+      "target": "/blog/how-to-view-social-media-anonymously-complete-privacy-guide/",
+      "count": 7
+    },
+    {
+      "target": "/blog/mp3-juice-free-music-downloaders-are-they-safe/",
+      "count": 2
+    },
+    {
+      "target": "/blog/youtube-to-webm-converter/",
+      "count": 2
+    },
+    {
+      "target": "/blog/youtube-playlist-to-mp3-download-entire-playlists/",
+      "count": 2
+    },
+    {
+      "target": "/blog/how-to-download-beats-from-youtube/",
+      "count": 1
+    }
+  ],
+  "intentional_unresolved_by_target": [
+    {
+      "target": "/blog/how-to-view-social-media-anonymously-complete-privacy-guide/",
+      "count": 7
+    },
+    {
+      "target": "/blog/mp3-juice-free-music-downloaders-are-they-safe/",
+      "count": 2
+    },
+    {
+      "target": "/blog/youtube-to-webm-converter/",
+      "count": 2
+    },
+    {
+      "target": "/blog/youtube-playlist-to-mp3-download-entire-playlists/",
+      "count": 2
+    },
+    {
+      "target": "/blog/how-to-download-beats-from-youtube/",
+      "count": 1
+    }
+  ],
+  "unexpected_unresolved_by_target": [],
+  "unresolved_details": [
+    {
+      "source": "/blog/best-free-tiktok-viewer-tools-watch-browse-anonymously-no-account-needed/",
+      "target": "/blog/how-to-view-social-media-anonymously-complete-privacy-guide/",
+      "href": "/blog/how-to-view-social-media-anonymously-complete-privacy-guide/"
+    },
+    {
+      "source": "/blog/how-to-find-and-watch-deleted-youtube-videos-with-or-without-the-url/",
+      "target": "/blog/how-to-view-social-media-anonymously-complete-privacy-guide/",
+      "href": "/blog/how-to-view-social-media-anonymously-complete-privacy-guide/"
+    },
+    {
+      "source": "/blog/how-to-find-and-watch-deleted-youtube-videos-with-or-without-the-url/",
+      "target": "/blog/how-to-view-social-media-anonymously-complete-privacy-guide/",
+      "href": "/blog/how-to-view-social-media-anonymously-complete-privacy-guide/"
+    },
+    {
+      "source": "/blog/how-to-use-the-wayback-machine-to-find-deleted-youtube-videos-instagram-posts/",
+      "target": "/blog/how-to-view-social-media-anonymously-complete-privacy-guide/",
+      "href": "/blog/how-to-view-social-media-anonymously-complete-privacy-guide/"
+    },
+    {
+      "source": "/blog/how-to-watch-hidden-videos-on-youtube-unlisted-private-unavailable/",
+      "target": "/blog/how-to-view-social-media-anonymously-complete-privacy-guide/",
+      "href": "/blog/how-to-view-social-media-anonymously-complete-privacy-guide/"
+    },
+    {
+      "source": "/blog/private-tiktok-viewers-exposed-can-you-really-see-private-accounts/",
+      "target": "/blog/how-to-view-social-media-anonymously-complete-privacy-guide/",
+      "href": "/blog/how-to-view-social-media-anonymously-complete-privacy-guide/"
+    },
+    {
+      "source": "/blog/tiktok-anonymous-story-viewer-how-to-watch-without-being-seen/",
+      "target": "/blog/how-to-view-social-media-anonymously-complete-privacy-guide/",
+      "href": "/blog/how-to-view-social-media-anonymously-complete-privacy-guide/"
+    },
+    {
+      "source": "/blog/youtube-to-ogg-converter-free-online-tool/",
+      "target": "/blog/mp3-juice-free-music-downloaders-are-they-safe/",
+      "href": "/blog/mp3-juice-free-music-downloaders-are-they-safe/"
+    },
+    {
+      "source": "/blog/youtube-to-ogg-converter-free-online-tool/",
+      "target": "/blog/youtube-to-webm-converter/",
+      "href": "/blog/youtube-to-webm-converter/"
+    },
+    {
+      "source": "/blog/youtube-to-wav-best-free-converters/",
+      "target": "/blog/youtube-to-webm-converter/",
+      "href": "/blog/youtube-to-webm-converter/"
+    },
+    {
+      "source": "/blog/youtube-to-wav-best-free-converters/",
+      "target": "/blog/youtube-playlist-to-mp3-download-entire-playlists/",
+      "href": "/blog/youtube-playlist-to-mp3-download-entire-playlists/"
+    },
+    {
+      "source": "/blog/youtube-to-wav-converter-online-tools-compared/",
+      "target": "/blog/how-to-download-beats-from-youtube/",
+      "href": "/blog/how-to-download-beats-from-youtube/"
+    },
+    {
+      "source": "/blog/youtube-to-wav-converter-online-tools-compared/",
+      "target": "/blog/mp3-juice-free-music-downloaders-are-they-safe/",
+      "href": "/blog/mp3-juice-free-music-downloaders-are-they-safe/"
+    },
+    {
+      "source": "/blog/youtube-to-wav-converter-online-tools-compared/",
+      "target": "/blog/youtube-playlist-to-mp3-download-entire-playlists/",
+      "href": "/blog/youtube-playlist-to-mp3-download-entire-playlists/"
+    }
+  ],
+  "intentional_unresolved_details": [
+    {
+      "source": "/blog/best-free-tiktok-viewer-tools-watch-browse-anonymously-no-account-needed/",
+      "target": "/blog/how-to-view-social-media-anonymously-complete-privacy-guide/",
+      "href": "/blog/how-to-view-social-media-anonymously-complete-privacy-guide/"
+    },
+    {
+      "source": "/blog/how-to-find-and-watch-deleted-youtube-videos-with-or-without-the-url/",
+      "target": "/blog/how-to-view-social-media-anonymously-complete-privacy-guide/",
+      "href": "/blog/how-to-view-social-media-anonymously-complete-privacy-guide/"
+    },
+    {
+      "source": "/blog/how-to-find-and-watch-deleted-youtube-videos-with-or-without-the-url/",
+      "target": "/blog/how-to-view-social-media-anonymously-complete-privacy-guide/",
+      "href": "/blog/how-to-view-social-media-anonymously-complete-privacy-guide/"
+    },
+    {
+      "source": "/blog/how-to-use-the-wayback-machine-to-find-deleted-youtube-videos-instagram-posts/",
+      "target": "/blog/how-to-view-social-media-anonymously-complete-privacy-guide/",
+      "href": "/blog/how-to-view-social-media-anonymously-complete-privacy-guide/"
+    },
+    {
+      "source": "/blog/how-to-watch-hidden-videos-on-youtube-unlisted-private-unavailable/",
+      "target": "/blog/how-to-view-social-media-anonymously-complete-privacy-guide/",
+      "href": "/blog/how-to-view-social-media-anonymously-complete-privacy-guide/"
+    },
+    {
+      "source": "/blog/private-tiktok-viewers-exposed-can-you-really-see-private-accounts/",
+      "target": "/blog/how-to-view-social-media-anonymously-complete-privacy-guide/",
+      "href": "/blog/how-to-view-social-media-anonymously-complete-privacy-guide/"
+    },
+    {
+      "source": "/blog/tiktok-anonymous-story-viewer-how-to-watch-without-being-seen/",
+      "target": "/blog/how-to-view-social-media-anonymously-complete-privacy-guide/",
+      "href": "/blog/how-to-view-social-media-anonymously-complete-privacy-guide/"
+    },
+    {
+      "source": "/blog/youtube-to-ogg-converter-free-online-tool/",
+      "target": "/blog/mp3-juice-free-music-downloaders-are-they-safe/",
+      "href": "/blog/mp3-juice-free-music-downloaders-are-they-safe/"
+    },
+    {
+      "source": "/blog/youtube-to-ogg-converter-free-online-tool/",
+      "target": "/blog/youtube-to-webm-converter/",
+      "href": "/blog/youtube-to-webm-converter/"
+    },
+    {
+      "source": "/blog/youtube-to-wav-best-free-converters/",
+      "target": "/blog/youtube-to-webm-converter/",
+      "href": "/blog/youtube-to-webm-converter/"
+    },
+    {
+      "source": "/blog/youtube-to-wav-best-free-converters/",
+      "target": "/blog/youtube-playlist-to-mp3-download-entire-playlists/",
+      "href": "/blog/youtube-playlist-to-mp3-download-entire-playlists/"
+    },
+    {
+      "source": "/blog/youtube-to-wav-converter-online-tools-compared/",
+      "target": "/blog/how-to-download-beats-from-youtube/",
+      "href": "/blog/how-to-download-beats-from-youtube/"
+    },
+    {
+      "source": "/blog/youtube-to-wav-converter-online-tools-compared/",
+      "target": "/blog/mp3-juice-free-music-downloaders-are-they-safe/",
+      "href": "/blog/mp3-juice-free-music-downloaders-are-they-safe/"
+    },
+    {
+      "source": "/blog/youtube-to-wav-converter-online-tools-compared/",
+      "target": "/blog/youtube-playlist-to-mp3-download-entire-playlists/",
+      "href": "/blog/youtube-playlist-to-mp3-download-entire-playlists/"
+    }
+  ],
+  "unexpected_unresolved_details": [],
+  "expected_unresolved_targets": [
+    "/blog/how-to-download-beats-from-youtube/",
+    "/blog/how-to-view-social-media-anonymously-complete-privacy-guide/",
+    "/blog/mp3-juice-free-music-downloaders-are-they-safe/",
+    "/blog/youtube-playlist-to-mp3-download-entire-playlists/",
+    "/blog/youtube-to-webm-converter/"
+  ],
+  "malformed_markdown_links": 0,
+  "malformed_markdown_details": []
 }
