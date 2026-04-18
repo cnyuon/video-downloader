@@ -72,3 +72,7 @@ searchIntent: "informational"
 
 **هل استخدام مشاهد قصص تيك توك المجهول مجاني؟**
 نعم، الأدوات الموثوقة مثل [MediaTools TikTok Viewer](/ar/tiktok-downloader/) مجانية تماماً للاستخدام ولا تتطلب أي تثبيت لبرامج.
+
+## Related Guide (English)
+
+For the full cross-platform privacy framework, read [How to View Social Media Anonymously: Complete Privacy Guide](/blog/how-to-view-social-media-anonymously-complete-privacy-guide/).

@@ -72,3 +72,7 @@ searchIntent: "informational"
 
 **क्या गुमनाम टिकटॉक स्टोरी व्यूअर का उपयोग करना मुफ्त है?**
 हाँ, [MediaTools TikTok Viewer](/hi/tiktok-downloader/) जैसे प्रतिष्ठित टूल का उपयोग करना पूरी तरह से मुफ्त है और इसके लिए किसी सॉफ्टवेयर इंस्टॉलेशन की आवश्यकता नहीं होती है।
+
+## Related Guide (English)
+
+For the full cross-platform privacy framework, read [How to View Social Media Anonymously: Complete Privacy Guide](/blog/how-to-view-social-media-anonymously-complete-privacy-guide/).

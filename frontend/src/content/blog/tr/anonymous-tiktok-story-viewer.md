@@ -82,3 +82,7 @@ TikTok'un kendi ayarları **hikayeleri anonim olarak izlemenin** bir yolunu sunm
 ## Bonus: VPN ile Gerçekten Anonim Kalın
 
 Anonim görüntüleyici aracı kullanmak TikTok *hesabınızı* gizler, ancak gerçek IP adresiniz ISS'nize ve ziyaret ettiğiniz web sitelerine hâlâ görünür. Tam çevrimiçi gizlilik için — TikTok'a göz atarken, halka açık Wi-Fi kullanırken veya yalnızca verilerinizi korurken — **[NordVPN](https://go.nordvpn.net/aff_c?offer_id=15&aff_id=141075&url_id=902)** 'i araç kutunuza eklemeyi düşünün. Tüm internet bağlantınızı şifreleyerek konumunuzu ve kimliğinizi herkesten gizler.
+
+## Related Guide (English)
+
+For the full cross-platform privacy framework, read [How to View Social Media Anonymously: Complete Privacy Guide](/blog/how-to-view-social-media-anonymously-complete-privacy-guide/).

@@ -112,7 +112,7 @@ The definitive verdict is clear: web-based private Instagram viewers are technic
 
 Protecting your personal data from phishing loops and malware is far more important than viewing a hidden profile. OSINT footprinting and cached data searches remain the only safe, legitimate workarounds to finding hidden digital footprints. 
 
-Curious about your digital footprint elsewhere? Read our [Anonymous TikTok Story Viewer Guide](/blog/tiktok-anonymous-story-viewer-how-to-watch-without-being-seen/) or learn [How to View Instagram Without an Account](/blog/how-to-view-instagram-without-an-account-bypass-the-login-wall-safely/) safely.
+Curious about your digital footprint elsewhere? Read our [Anonymous TikTok Story Viewer Guide](/blog/tiktok-anonymous-story-viewer-how-to-watch-without-being-seen/), learn [How to View Instagram Without an Account](/blog/how-to-view-instagram-without-an-account-bypass-the-login-wall-safely/) safely, and use the pillar roadmap [How to View Social Media Anonymously: Complete Privacy Guide](/blog/how-to-view-social-media-anonymously-complete-privacy-guide/).
 
 ## FAQ
 

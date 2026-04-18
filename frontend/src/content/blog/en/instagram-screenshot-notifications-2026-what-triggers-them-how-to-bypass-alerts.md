@@ -115,7 +115,7 @@ Navigating Instagram's privacy features doesn't have to be a guessing game. The 
 
 By understanding exactly how visual indicators like the sunburst icon work, you now possess the definitive rulebook to avoid awkward digital encounters. Furthermore, by utilizing tested stealth methods like the Airplane Mode cache-clear or PC emulators, you can protect your digital privacy and capture ephemeral content undetected. 
 
-Explore our full suite of tools for anonymous social media viewing, including our comprehensive guide on [How to View Facebook Profiles Anonymously](/blog/how-to-view-facebook-profiles-anonymously-without-an-account/).
+Explore our full suite of tools for anonymous social media viewing, including the pillar guide [How to View Social Media Anonymously: Complete Privacy Guide](/blog/how-to-view-social-media-anonymously-complete-privacy-guide/) and our comprehensive guide on [How to View Facebook Profiles Anonymously](/blog/how-to-view-facebook-profiles-anonymously-without-an-account/).
 
 ## FAQ
 

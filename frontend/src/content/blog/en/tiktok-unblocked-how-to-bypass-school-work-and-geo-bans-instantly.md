@@ -121,7 +121,7 @@ Bypassing network restrictions requires matching the right tool to your specific
 
 You now possess the tactical tools to bypass local firewalls and geo-blocks instantly without getting caught. However, network access is only the first step in digital privacy. 
 
-Explore our full suite of privacy tools and learn [How to View TikTok Stories Anonymously](/blog/how-to-view-tiktok-stories-anonymously-without-getting-caught/) to complete your stealth setup.
+Explore our full suite of privacy tools, learn [How to View TikTok Stories Anonymously](/blog/how-to-view-tiktok-stories-anonymously-without-getting-caught/) to complete your stealth setup, and use the pillar guide [How to View Social Media Anonymously: Complete Privacy Guide](/blog/how-to-view-social-media-anonymously-complete-privacy-guide/) for broader cross-platform defenses.
 
 ## FAQ
 

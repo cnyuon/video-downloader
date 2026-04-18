@@ -82,3 +82,7 @@ Embora as próprias configurações do TikTok não ofereçam uma maneira de **as
 ## Bônus: Fique verdadeiramente anônimo com uma VPN
 
 Usar uma ferramenta de visualização anônima oculta sua *conta* do TikTok, mas seu endereço IP real ainda é visível para seu provedor e os sites que você visita. Para privacidade online completa — seja navegando no TikTok, usando Wi-Fi público ou simplesmente protegendo seus dados — considere adicionar **[NordVPN](https://go.nordvpn.net/aff_c?offer_id=15&aff_id=141075&url_id=902)** ao seu arsenal. Ele criptografa toda a sua conexão à internet, ocultando sua localização e identidade de todos.
+
+## Related Guide (English)
+
+For the full cross-platform privacy framework, read [How to View Social Media Anonymously: Complete Privacy Guide](/blog/how-to-view-social-media-anonymously-complete-privacy-guide/).

@@ -72,3 +72,7 @@ searchIntent: "informational"
 
 **익명 틱톡 스토리 뷰어를 사용하는 것은 무료인가요?**
 네, [MediaTools 틱톡 뷰어](/ko/tiktok-downloader/)와 같은 평판 좋은 도구는 완전히 무료로 사용할 수 있으며 어떤 소프트웨어 설치도 필요하지 않습니다.
+
+## Related Guide (English)
+
+For the full cross-platform privacy framework, read [How to View Social Media Anonymously: Complete Privacy Guide](/blog/how-to-view-social-media-anonymously-complete-privacy-guide/).
