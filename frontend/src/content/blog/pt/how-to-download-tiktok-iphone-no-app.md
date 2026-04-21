@@ -1,4 +1,4 @@
----
+﻿---
 title: "Como Baixar Vídeos do TikTok no iPhone (Sem Aplicativo)"
 description: "Aprenda a maneira mais segura e rápida de salvar qualquer vídeo do TikTok no Rolo da Câmera do seu iPhone sem marca d'água. Nenhum aplicativo ou atalho é necessário — apenas seu navegador."
 pubDate: 2026-02-12
@@ -55,7 +55,7 @@ Primeiro, você precisa do link para o vídeo.
 
 Em seguida, você usará uma ferramenta online gratuita para processar o link.
 - Abra o aplicativo **Safari** no seu iPhone.
-- Vá para um site de download de TikTok como o [TikTok Downloader](/pt/tiktok-downloader/) da MediaTools.
+- Vá para um site de download de TikTok como o TikTok Downloader da MediaTools.
 - Toque na caixa de entrada e selecione **Colar** para inserir o link que você copiou.
 - Toque no botão **Obter Vídeo**. A ferramenta analisará o link e preparará o arquivo de vídeo.
 
@@ -85,8 +85,8 @@ Este método funciona apenas para vídeos públicos do TikTok. Se a conta de um 
 Por padrão, o Safari salva todos os arquivos baixados na pasta "Downloads" dentro do **aplicativo Arquivos** no seu iPhone. Você pode abrir o aplicativo Arquivos, navegar até essa pasta e mover o vídeo para suas Fotos de lá.
 
 **4. Posso baixar apenas o áudio ou som de um TikTok?**
-Sim, o processo é muito semelhante. Você pode usar uma ferramenta especializada como nosso [TikTok Sound Downloader](/pt/tiktok-sound-downloader/) para extrair o áudio e salvá-lo como um arquivo MP3 no seu aplicativo Arquivos.
+Sim, o processo é muito semelhante. Você pode usar uma ferramenta especializada como nosso TikTok Sound Downloader para extrair o áudio e salvá-lo como um arquivo MP3 no seu aplicativo Arquivos.
 
 ---
 
-**Pronto para experimentar?** Acesse o [TikTok Downloader da MediaTools](/pt/tiktok-downloader/) e salve seu primeiro vídeo sem marca d'água em segundos.
+**Pronto para experimentar?** Acesse o TikTok Downloader da MediaTools e salve seu primeiro vídeo sem marca d'água em segundos.

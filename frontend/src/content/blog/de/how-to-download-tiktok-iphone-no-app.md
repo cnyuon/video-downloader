@@ -1,4 +1,4 @@
----
+﻿---
 title: "Wie man TikTok-Videos auf dem iPhone herunterlädt (Ohne App)"
 description: "Erfahre, wie du jedes TikTok-Video auf die sicherste und schnellste Weise ohne Wasserzeichen in die Kamerarolle deines iPhones speicherst. Keine App oder Verknüpfung erforderlich – nur dein Browser."
 pubDate: 2026-02-12
@@ -55,7 +55,7 @@ Zuerst benötigst du den Link zum Video.
 
 Als Nächstes verwendest du ein kostenloses Online-Tool, um den Link zu verarbeiten.
 - Öffne die **Safari**-App auf deinem iPhone.
-- Gehe zu einer TikTok-Downloader-Website wie dem [TikTok Downloader](/de/tiktok-downloader/) von MediaTools.
+- Gehe zu einer TikTok-Downloader-Website wie dem TikTok Downloader von MediaTools.
 - Tippe auf das Eingabefeld und wähle dann **Einfügen**, um den kopierten Link einzufügen.
 - Tippe auf die Schaltfläche **Video abrufen**. Das Tool analysiert den Link und bereitet die Videodatei vor.
 
@@ -85,8 +85,8 @@ Diese Methode funktioniert nur für öffentliche TikTok-Videos. Wenn das Konto e
 Standardmäßig speichert Safari alle heruntergeladenen Dateien im Ordner „Downloads“ innerhalb der **Dateien-App** auf deinem iPhone. Du kannst die Dateien-App öffnen, zu diesem Ordner navigieren und das Video von dort in deine Fotos verschieben.
 
 **4. Kann ich nur das Audio oder den Sound von einem TikTok herunterladen?**
-Ja, der Vorgang ist sehr ähnlich. Du kannst ein spezialisiertes Tool wie unseren [TikTok Sound Downloader](/de/tiktok-sound-downloader/) verwenden, um das Audio zu extrahieren und es als MP3-Datei in deiner Dateien-App zu speichern.
+Ja, der Vorgang ist sehr ähnlich. Du kannst ein spezialisiertes Tool wie unseren TikTok Sound Downloader verwenden, um das Audio zu extrahieren und es als MP3-Datei in deiner Dateien-App zu speichern.
 
 ---
 
-**Bereit, es selbst auszuprobieren?** Gehe zum [MediaTools TikTok Downloader](/de/tiktok-downloader/) und speichere dein erstes wasserzeichenfreies Video in Sekundenschnelle.
+**Bereit, es selbst auszuprobieren?** Gehe zum MediaTools TikTok Downloader und speichere dein erstes wasserzeichenfreies Video in Sekundenschnelle.

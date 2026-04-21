@@ -8,6 +8,7 @@ import '@fontsource/lora/400-italic.css';
 import '../styles/globals.css';
 import HreflangTags from '../components/i18n/HreflangTags.astro';
 import { getLangFromUrl } from '../i18n/utils';
+import { getCollection } from 'astro:content';
 
 interface Props {
     title?: string;
@@ -34,20 +35,50 @@ const {
 
 // All supported locales for og:locale:alternate tags
 const ALL_LOCALES = ['en', 'es', 'tr', 'pt', 'fr', 'de', 'ja', 'ko', 'ar', 'hi'];
+const NON_DEFAULT_LOCALES_LIST = ALL_LOCALES.filter(l => l !== 'en');
 const OG_LOCALE_MAP: Record<string, string> = {
     en: 'en_US', es: 'es_ES', tr: 'tr_TR', pt: 'pt_BR', fr: 'fr_FR',
     de: 'de_DE', ja: 'ja_JP', ko: 'ko_KR', ar: 'ar_SA', hi: 'hi_IN',
 };
 
-// Ensure canonical URLs always have trailing slashes (Cloudflare Pages enforces them)
+// Determine which locales have content for this page (blog post-aware)
 const pathname = Astro.url.pathname.endsWith('/') ? Astro.url.pathname : Astro.url.pathname + '/';
+const pathSegments = pathname.split('/').filter(Boolean);
+const localeAgnosticSegments = (pathSegments.length > 0 && NON_DEFAULT_LOCALES_LIST.includes(pathSegments[0]))
+    ? pathSegments.slice(1)
+    : pathSegments;
+const localeAgnosticPath = '/' + localeAgnosticSegments.join('/') + (localeAgnosticSegments.length > 0 ? '/' : '');
+
+let ogAvailableLocales: string[] = ALL_LOCALES;
+
+// For blog posts, only include locales that have actual translations
+const blogPostOgMatch = /^\/blog\/([^/]+)\/$/.exec(localeAgnosticPath);
+if (blogPostOgMatch) {
+    const postSlug = blogPostOgMatch[1];
+    const { BLOG_CLUSTERS } = await import('../lib/blog-taxonomy');
+    const clusterIds = new Set(BLOG_CLUSTERS.map((c: any) => c.id));
+
+    if (!clusterIds.has(postSlug)) {
+        const allPosts = await getCollection('blog');
+        const postBySlug = new Map(allPosts.map(post => [post.slug, post])) as Map<string, any>;
+        ogAvailableLocales = ['en'];
+        for (const locale of NON_DEFAULT_LOCALES_LIST) {
+            if (postBySlug.has(`${locale}/${postSlug}`)) {
+                ogAvailableLocales.push(locale);
+            }
+        }
+    }
+}
+
+
+// Ensure canonical URLs always have trailing slashes (Cloudflare Pages enforces them)
 const canonicalUrl = `https://getmediatools.com${pathname}`;
 const fullOgImage = ogImage.startsWith('http') ? ogImage : `https://getmediatools.com${ogImage}`;
 const iconVersion = '20260418';
 
 // Generate BreadcrumbList schema from URL path
 const allSegments = pathname.split('/').filter(Boolean);
-const NON_DEFAULT_LOCALES = ['es', 'tr', 'pt', 'fr', 'de', 'ja', 'ko', 'ar', 'hi'];
+const NON_DEFAULT_LOCALES = NON_DEFAULT_LOCALES_LIST;
 // Skip locale prefix from breadcrumb items
 const contentSegments = allSegments.length > 0 && NON_DEFAULT_LOCALES.includes(allSegments[0])
     ? allSegments.slice(1)
@@ -124,7 +155,7 @@ const websiteSchema = (isHomepage && !jsonLdHasWebSite) ? {
         <meta property="og:image" content={fullOgImage} />
         <meta property="og:site_name" content="GetMediaTools" />
         <meta property="og:locale" content={OG_LOCALE_MAP[lang] || 'en_US'} />
-        {ALL_LOCALES.filter(l => l !== lang).map(l => (
+        {ogAvailableLocales.filter(l => l !== lang).map(l => (
             <meta property="og:locale:alternate" content={OG_LOCALE_MAP[l]} />
         ))}
         {pubDate && (

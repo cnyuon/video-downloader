@@ -111,10 +111,8 @@ If a site requires you to "allow notifications" to download your file, leave imm
 
 WAV files are uncompressed, meaning they take up massive amounts of storage space. If you are a video editor or audio engineer who needs to manipulate the audio in a Digital Audio Workstation (DAW), WAV is the correct choice. However, if you simply want to listen to music or a podcast on your phone, downloading a WAV from a lossy YouTube source is a waste of storage.
 
-If you realize WAV is too large for your needs, consider these safer, more efficient alternatives:
+If you realize WAV is too large for your needs, consider this safer, more efficient alternative:
 * For high-quality, open-source playback: [YouTube to OGG Converter: Free Online Tool](/blog/youtube-to-ogg-converter-free-online-tool/)
-* For browser-friendly audio: [YouTube to WebM Converter](/blog/youtube-to-webm-converter/)
-* For bulk downloading standard audio: [YouTube Playlist to MP3: Download Entire Playlists](/blog/youtube-playlist-to-mp3-download-entire-playlists/)
 
 ## Conclusion
 

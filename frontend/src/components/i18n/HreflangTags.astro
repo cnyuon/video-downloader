@@ -1,5 +1,6 @@
 ---
 import { languages } from '../../i18n/ui';
+import { getCollection } from 'astro:content';
 
 // This is the path WITHOUT the language prefix
 // e.g., if we are on /es/tiktok-downloader, this returns /tiktok-downloader
@@ -16,13 +17,40 @@ if (pathSegments.length > 0 && Object.keys(languages).includes(pathSegments[0]))
 if (!cleanPath.endsWith('/')) {
     cleanPath += '/';
 }
+
+// Determine which locales actually have content for this page.
+// For blog posts, only emit hreflang for locales with a matching translation.
+// For all other pages (homepage, blog index, cluster pages), emit all locales.
+const NON_DEFAULT_LOCALES = Object.keys(languages).filter(l => l !== 'en');
+let availableLocales: string[] = Object.keys(languages);
+
+const blogPostMatch = /^\/blog\/([^/]+)\/$/.exec(cleanPath);
+if (blogPostMatch) {
+    const postSlug = blogPostMatch[1];
+    // Check if this slug is a cluster page (not a blog post)
+    const { BLOG_CLUSTERS } = await import('../../lib/blog-taxonomy');
+    const clusterIds = new Set(BLOG_CLUSTERS.map((c: any) => c.id));
+
+    if (!clusterIds.has(postSlug)) {
+        // This is a blog post — check which locales have a translation
+        const allPosts = await getCollection('blog');
+        const postBySlug = new Map(allPosts.map(post => [post.slug, post])) as Map<string, any>;
+
+        availableLocales = ['en']; // English always available
+        for (const locale of NON_DEFAULT_LOCALES) {
+            if (postBySlug.has(`${locale}/${postSlug}`)) {
+                availableLocales.push(locale);
+            }
+        }
+    }
+}
 ---
 
 <!-- X-Default (Fallback for unidentified languages) -->
 <link rel="alternate" hreflang="x-default" href={`https://getmediatools.com${cleanPath}`} />
 
-<!-- Exact language mappings -->
-{Object.keys(languages).map((code) => {
+<!-- Exact language mappings — only for locales that have actual content -->
+{availableLocales.map((code) => {
     // If cleanPath is '/' and code is 'es', we want '/es/'
     // If cleanPath is '/tiktok-downloader/' and code is 'es', we want '/es/tiktok-downloader/'
     const finalPath = code === 'en' ? cleanPath : `/${code}${cleanPath === '/' ? '' : cleanPath}`;

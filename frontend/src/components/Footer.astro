@@ -1,53 +1,13 @@
 ---
 /**
- * Footer - Site-wide footer with blog topics, recent posts, and language hubs.
- * Used on every page for consistent internal linking and crawlability.
+ * Footer - Site-wide footer with featured badges.
+ * Used on every page for consistent branding.
  */
-import { getLangFromUrl, useTranslations } from '../i18n/utils';
+import { getLangFromUrl } from '../i18n/utils';
 import { getLocalizedHref } from '../i18n/href';
-import { languages } from '../i18n/ui';
-import { getPhase1Text } from '../i18n/phase1-extra';
-import { getCollection } from 'astro:content';
-import { BLOG_CLUSTERS } from '../lib/blog-taxonomy';
 
 const lang = getLangFromUrl(Astro.url);
-const t = useTranslations(lang);
-const tx = (key: Parameters<typeof getPhase1Text>[1]) => getPhase1Text(String(lang), key);
-const pathname = Astro.url.pathname.endsWith('/') ? Astro.url.pathname : `${Astro.url.pathname}/`;
-const localePrefix = lang === 'en' ? '' : `/${lang}`;
-const pathWithoutLocale = localePrefix && pathname.startsWith(localePrefix)
-    ? pathname.slice(localePrefix.length) || '/'
-    : pathname;
-const isBlogPostPage = pathWithoutLocale.startsWith('/blog/') && pathWithoutLocale !== '/blog/';
-const currentBlogSlug = isBlogPostPage
-    ? pathWithoutLocale.replace(/^\/blog\/|\/$/g, '')
-    : null;
-
-// Fetch recently updated blog posts for the current language
-const posts = await getCollection('blog', ({ id }) => {
-    return id.startsWith(`${lang}/`);
-});
-
-const recentPosts = posts
-    .sort((a, b) => {
-        const aDate = a.data.updatedDate || a.data.pubDate;
-        const bDate = b.data.updatedDate || b.data.pubDate;
-        return bDate.valueOf() - aDate.valueOf();
-    })
-    .filter((post) => {
-        if (!currentBlogSlug) return true;
-        const localizedSlug = post.slug.replace(/^[a-z]{2}\//, '');
-        return localizedSlug !== currentBlogSlug;
-    })
-    .slice(0, 3);
-
 const getHref = (path: string) => getLocalizedHref(path, lang);
-
-const localeBlogLinks = Object.entries(languages).map(([code, label]) => ({
-    code,
-    label,
-    href: code === 'en' ? '/blog/' : `/${code}/blog/`,
-}));
 
 const BADGE_PLACEHOLDER = 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==';
 ---
@@ -65,14 +25,7 @@ const BADGE_PLACEHOLDER = 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAA
                 <a href={getHref('/blog/')} class="hover:text-slate-900 dark:hover:text-white transition-colors">Blog</a>
             </div>
         </div>
-        
-        <div class="mt-12 flex flex-wrap gap-x-4 gap-y-2 justify-center text-[11px] text-slate-400 dark:text-slate-400 uppercase tracking-widest font-sans opacity-60 hover:opacity-100 transition-opacity border-b border-slate-100 dark:border-slate-800/50 pb-12">
-            {localeBlogLinks.map(({ code, label, href }) => (
-                <a href={href} class="hover:text-slate-900 dark:hover:text-white transition-colors" hreflang={code}>
-                    {label}
-                </a>
-            ))}
-        </div>
+
 
         <!-- Featured Badges -->
         <div class="py-12 overflow-hidden relative w-full group">

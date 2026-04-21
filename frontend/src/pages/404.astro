@@ -9,7 +9,7 @@ const lang = 'en';
 
 <Layout 
     title="Page Not Found | GetMediaTools"
-    description="The page you're looking for doesn't exist. Browse our free tools for downloading videos, extracting audio, and more."
+    description="The page you're looking for doesn't exist. Browse our creator toolkit guides, social media tips, and expert resources."
     robots="noindex, follow"
 >
     <Navbar client:idle={{timeout: 3000}} currentPage="" lang={lang as any} />
@@ -23,31 +23,31 @@ const lang = 'en';
         
         <div class="grid gap-4 sm:grid-cols-2 max-w-md mx-auto mb-12">
             <a href="/" class="px-6 py-3 rounded-xl bg-primary text-primary-foreground font-semibold hover:opacity-90 transition-opacity">
-                All Tools
+                Home
             </a>
             <a href="/blog/" class="px-6 py-3 rounded-xl border font-semibold hover:bg-accent transition-colors">
-                Read Blog
+                Browse Articles
             </a>
         </div>
 
         <div class="text-left">
-            <h2 class="text-xl font-bold mb-4">Popular Tools</h2>
+            <h2 class="text-xl font-bold mb-4">Popular Guides</h2>
             <div class="grid gap-3 sm:grid-cols-2">
-                <a href="/tiktok-downloader/" class="p-3 rounded-lg border hover:border-primary/50 transition-colors text-sm">
-                    <span class="font-semibold">TikTok Downloader</span>
-                    <p class="text-muted-foreground">Download without watermark</p>
+                <a href="/blog/anonymous-tiktok-story-viewer/" class="p-3 rounded-lg border hover:border-primary/50 transition-colors text-sm">
+                    <span class="font-semibold">Anonymous TikTok Viewer</span>
+                    <p class="text-muted-foreground">Watch stories secretly</p>
                 </a>
-                <a href="/twitter-downloader/" class="p-3 rounded-lg border hover:border-primary/50 transition-colors text-sm">
-                    <span class="font-semibold">Twitter/X Downloader</span>
-                    <p class="text-muted-foreground">Save videos and GIFs</p>
+                <a href="/blog/download-instagram-reels-without-watermark/" class="p-3 rounded-lg border hover:border-primary/50 transition-colors text-sm">
+                    <span class="font-semibold">Download Instagram Reels</span>
+                    <p class="text-muted-foreground">Save Reels without watermark</p>
                 </a>
-                <a href="/facebook-downloader/" class="p-3 rounded-lg border hover:border-primary/50 transition-colors text-sm">
-                    <span class="font-semibold">Facebook Downloader</span>
-                    <p class="text-muted-foreground">Save FB videos & Reels</p>
+                <a href="/blog/how-to-become-a-content-creator/" class="p-3 rounded-lg border hover:border-primary/50 transition-colors text-sm">
+                    <span class="font-semibold">Become a Content Creator</span>
+                    <p class="text-muted-foreground">Complete beginner guide</p>
                 </a>
-                <a href="/video-to-mp3/" class="p-3 rounded-lg border hover:border-primary/50 transition-colors text-sm">
-                    <span class="font-semibold">Video to MP3</span>
-                    <p class="text-muted-foreground">Extract audio from video</p>
+                <a href="/blog/best-tiktok-downloaders-2026/" class="p-3 rounded-lg border hover:border-primary/50 transition-colors text-sm">
+                    <span class="font-semibold">Best TikTok Downloaders</span>
+                    <p class="text-muted-foreground">Top tools compared</p>
                 </a>
             </div>
         </div>

@@ -119,6 +119,9 @@ const SLUG_CLUSTER_MAP: Record<string, BlogClusterId> = {
     // Audio & Format Conversion
     'how-to-download-tiktok-sounds-mp3': 'audio-conversion',
     'mp3-juice-free-music-downloaders-safe': 'audio-conversion',
+    'youtube-to-wav-best-free-converters': 'audio-conversion',
+    'youtube-to-wav-converter-online-tools-compared': 'audio-conversion',
+    'youtube-to-ogg-converter-free-online-tool': 'audio-conversion',
 
     // Downloading & Saving Media
     'how-to-download-tiktok-without-watermark': 'downloading-media',

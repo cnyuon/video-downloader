@@ -1,4 +1,4 @@
----
+﻿---
 title: "iPhone'da TikTok Videolarını Uygulama Kullanmadan Nasıl İndirilir?"
 description: "Herhangi bir TikTok videosunu filigransız olarak iPhone'unuzun Film Rulosuna kaydetmenin en güvenli ve en hızlı yolunu öğrenin. Uygulama veya kısayol gerektirmez—sadece tarayıcınızla."
 pubDate: 2026-02-12
@@ -55,7 +55,7 @@ Bu yöntem doğrudan Safari'de çalışır ve videoyu Fotoğraflar uygulamanıza
 
 Ardından, bağlantıyı işlemek için ücretsiz bir çevrimiçi araç kullanacaksınız.
 - iPhone'unuzda **Safari** uygulamasını açın.
-- MediaTools'un [TikTok İndiricisi](/tr/tiktok-downloader/) gibi bir TikTok indirici web sitesine gidin.
+- MediaTools'un TikTok İndiricisi gibi bir TikTok indirici web sitesine gidin.
 - Giriş kutusuna dokunun, ardından kopyaladığınız bağlantıyı yapıştırmak için **Yapıştır**'ı seçin.
 - **Video Al** düğmesine dokunun. Araç, bağlantıyı analiz edecek ve video dosyasını hazırlayacaktır.
 
@@ -85,8 +85,8 @@ Bu yöntem yalnızca herkese açık TikTok videoları için çalışır. Bir kul
 Varsayılan olarak, Safari indirilen tüm dosyaları iPhone'unuzdaki **Dosyalar uygulaması** içindeki "İndirilenler" klasörüne kaydeder. Dosyalar uygulamasını açabilir, o klasöre gidebilir ve videoyu oradan Fotoğraflarınıza taşıyabilirsiniz.
 
 **4. Sadece TikTok'tan ses veya müzik indirebilir miyim?**
-Evet, süreç çok benzerdir. Sesi çıkarmak ve MP3 dosyası olarak Dosyalar uygulamanıza kaydetmek için [TikTok Ses İndiricimiz](/tr/tiktok-sound-downloader/) gibi özel bir araç kullanabilirsiniz.
+Evet, süreç çok benzerdir. Sesi çıkarmak ve MP3 dosyası olarak Dosyalar uygulamanıza kaydetmek için TikTok Ses İndiricimiz gibi özel bir araç kullanabilirsiniz.
 
 ---
 
-**Kendiniz denemeye hazır mısınız?** [MediaTools TikTok İndiricisi](/tr/tiktok-downloader/) adresine gidin ve ilk filigransız videonuzu saniyeler içinde kaydedin.
+**Kendiniz denemeye hazır mısınız?** MediaTools TikTok İndiricisi adresine gidin ve ilk filigransız videonuzu saniyeler içinde kaydedin.
