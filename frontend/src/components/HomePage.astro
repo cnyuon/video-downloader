@@ -63,7 +63,7 @@ const clusterMeta = BLOG_CLUSTERS.find((c) => c.id !== 'general');
     <div class="w-full bg-white dark:bg-slate-950 pt-16 pb-12 md:pt-20 md:pb-16 px-4 border-b border-slate-100 dark:border-slate-800/80">
         <div class="container mx-auto max-w-4xl text-center">
             <div class="mb-8">
-                <span class="inline-block text-slate-500 text-[11px] font-extrabold px-3 py-1 uppercase tracking-[0.2em] font-sans">
+                <span class="inline-block text-slate-600 text-[11px] font-extrabold px-3 py-1 uppercase tracking-[0.2em] font-sans">
                     {t('blog.title')}
                 </span>
             </div>
@@ -71,7 +71,7 @@ const clusterMeta = BLOG_CLUSTERS.find((c) => c.id !== 'general');
                 {t('index.hero.title')} <br class="hidden sm:block" />
                 <span class="text-[#405EDB]">{t('index.hero.highlight')}</span>
             </h1>
-            <p class="text-lg md:text-xl text-slate-600 dark:text-slate-400 max-w-2xl mx-auto leading-relaxed font-serif">
+            <p class="text-lg md:text-xl text-slate-700 dark:text-slate-300 max-w-2xl mx-auto leading-relaxed font-serif">
                 {t('index.hero.desc')}
             </p>
             <div class="mt-12 flex flex-wrap gap-4 justify-center">
@@ -109,7 +109,7 @@ const clusterMeta = BLOG_CLUSTERS.find((c) => c.id !== 'general');
                             {BLOG_CLUSTERS.find(c => c.id === post.cluster)?.title || 'Guide'}
                         </span>
                         <h2 class="font-serif font-bold text-xl mb-3 text-slate-900 dark:text-white group-hover:text-[#405EDB] transition-colors leading-[1.3]">{post.title}</h2>
-                        <p class="text-[15px] font-serif text-slate-600 dark:text-slate-400 leading-relaxed line-clamp-2 mt-auto">{post.description}</p>
+                        <p class="text-[15px] font-serif text-slate-700 dark:text-slate-300 leading-relaxed line-clamp-2 mt-auto">{post.description}</p>
                     </div>
                 </a>
             ))}
@@ -118,13 +118,13 @@ const clusterMeta = BLOG_CLUSTERS.find((c) => c.id !== 'general');
         <!-- Topic Clusters Section -->
         <div class="mt-20 pt-10 border-t border-slate-100 dark:border-slate-800 max-w-5xl mx-auto">
             <h2 class="text-3xl font-serif font-bold text-center mb-4 text-slate-900 dark:text-white">Explore by Topic</h2>
-            <p class="text-center font-serif text-slate-600 dark:text-slate-400 mb-12 max-w-2xl mx-auto">Dive deep into expert guides organized by action and strategy.</p>
+            <p class="text-center font-serif text-slate-700 dark:text-slate-300 mb-12 max-w-2xl mx-auto">Dive deep into expert guides organized by action and strategy.</p>
             <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
                 {BLOG_CLUSTERS.filter(c => c.id !== 'general').map((cluster) => (
                     <a href={getHref(`/blog/${cluster.id}/`)} class="group p-6 border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-900 hover:border-slate-400 dark:hover:border-slate-600 transition-colors duration-300">
                         <span class="text-3xl block mb-4">{cluster.icon}</span>
                         <h3 class="font-sans font-bold text-[13px] uppercase tracking-widest mb-3 text-slate-900 dark:text-white group-hover:text-[#405EDB] transition-colors">{cluster.title}</h3>
-                        <p class="font-serif text-[14px] text-slate-600 dark:text-slate-400 leading-relaxed line-clamp-3">{cluster.description}</p>
+                        <p class="font-serif text-[14px] text-slate-700 dark:text-slate-300 leading-relaxed line-clamp-3">{cluster.description}</p>
                     </a>
                 ))}
             </div>

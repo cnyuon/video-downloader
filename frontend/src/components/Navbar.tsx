@@ -228,7 +228,7 @@ export default function Navbar({ currentPage, lang }: NavbarProps) {
                         href={getHref('/')}
                         className={`transition-colors duration-200 ${isHomeActive
                             ? 'text-slate-900 dark:text-white'
-                            : 'text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white'
+                            : 'text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white'
                             }`}
                     >
                         Home
@@ -238,7 +238,7 @@ export default function Navbar({ currentPage, lang }: NavbarProps) {
                         href={getHref('/blog/')}
                         className={`transition-colors duration-200 ${isBlogActive
                             ? 'text-slate-900 dark:text-white'
-                            : 'text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white'
+                            : 'text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white'
                             }`}
                     >
                         Blog
@@ -251,7 +251,7 @@ export default function Navbar({ currentPage, lang }: NavbarProps) {
                             onBlur={closeTopicsMenu}
                             aria-haspopup="menu"
                             aria-expanded={desktopTopicsOpen}
-                            className={`inline-flex items-center gap-1 transition-colors duration-200 text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white uppercase`}
+                            className={`inline-flex items-center gap-1 transition-colors duration-200 text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white uppercase`}
                         >
                             TOPICS
                             <IconChevronDown className="h-3 w-3" />
@@ -269,7 +269,7 @@ export default function Navbar({ currentPage, lang }: NavbarProps) {
                                         <a
                                             key={cluster.id}
                                             href={getHref(`/blog/${cluster.id}/`)}
-                                            className="px-3 py-2 rounded text-[11px] font-bold tracking-widest uppercase font-sans text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800/50 hover:text-slate-900 dark:hover:text-white transition-colors"
+                                            className="px-3 py-2 rounded text-[11px] font-bold tracking-widest uppercase font-sans text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800/50 hover:text-slate-900 dark:hover:text-white transition-colors"
                                         >
                                             {cluster.title}
                                         </a>
@@ -284,7 +284,7 @@ export default function Navbar({ currentPage, lang }: NavbarProps) {
                             <select
                                 value={locale}
                                 onChange={(e) => switchLanguage(e.target.value)}
-                                className="bg-transparent text-[13px] font-medium tracking-wide text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white cursor-pointer focus:outline-none transition-colors appearance-none pr-4 uppercase relative z-10"
+                                className="bg-transparent text-[13px] font-medium tracking-wide text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white cursor-pointer focus:outline-none transition-colors appearance-none pr-4 uppercase relative z-10"
                                 style={{ backgroundImage: 'url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'currentColor\' stroke-width=\'2\' stroke-linecap=\'round\' stroke-linejoin=\'round\'%3e%3cpolyline points=\'6 9 12 15 18 9\'%3e%3c/polyline%3e%3c/svg%3e")', backgroundRepeat: 'no-repeat', backgroundPosition: 'right center', backgroundSize: '0.8em' }}
                                 aria-label="Select language"
                             >
@@ -303,7 +303,7 @@ export default function Navbar({ currentPage, lang }: NavbarProps) {
 
                         <button
                             onClick={toggleDarkMode}
-                            className="text-slate-500 hover:text-slate-900 dark:text-slate-400 dark:hover:text-white transition-colors"
+                            className="text-slate-600 hover:text-slate-900 dark:text-slate-300 dark:hover:text-white transition-colors"
                             aria-label="Toggle dark mode"
                         >
                             {darkMode ? <IconSun className="h-[15px] w-[15px]" /> : <IconMoon className="h-[15px] w-[15px]" />}
@@ -333,14 +333,14 @@ export default function Navbar({ currentPage, lang }: NavbarProps) {
                     </div>
                     <button
                         onClick={toggleDarkMode}
-                        className="p-2 rounded-full text-slate-500 hover:text-slate-900 dark:text-slate-400 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800/50"
+                        className="p-2 rounded-full text-slate-600 hover:text-slate-900 dark:text-slate-300 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800/50"
                         aria-label="Toggle dark mode"
                     >
                         {darkMode ? <IconSun className="h-5 w-5" /> : <IconMoon className="h-5 w-5" />}
                     </button>
                     <button
                         onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                        className="p-2 rounded-full text-slate-500 hover:text-slate-900 dark:text-slate-400 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800/50 ml-1"
+                        className="p-2 rounded-full text-slate-600 hover:text-slate-900 dark:text-slate-300 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800/50 ml-1"
                     >
                         {mobileMenuOpen ? <IconX className="h-5 w-5" /> : <IconMenu className="h-5 w-5" />}
                     </button>
@@ -354,7 +354,7 @@ export default function Navbar({ currentPage, lang }: NavbarProps) {
                             href={getHref('/')}
                             className={`block px-2 py-3 text-lg transition-colors ${isHomeActive
                                 ? 'text-slate-900 dark:text-white font-black'
-                                : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white'
+                                : 'text-slate-700 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white'
                                 }`}
                             onClick={() => setMobileMenuOpen(false)}
                         >
@@ -365,7 +365,7 @@ export default function Navbar({ currentPage, lang }: NavbarProps) {
                             href={getHref('/blog/')}
                             className={`block px-2 py-3 text-lg transition-colors ${isBlogActive
                                 ? 'text-slate-900 dark:text-white font-black'
-                                : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white'
+                                : 'text-slate-700 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white'
                                 }`}
                             onClick={() => setMobileMenuOpen(false)}
                         >
@@ -373,7 +373,7 @@ export default function Navbar({ currentPage, lang }: NavbarProps) {
                         </a>
 
                         <div className="px-4 pt-2">
-                            <p className="text-[11px] font-extrabold uppercase tracking-widest text-slate-500 mb-2">Topics</p>
+                            <p className="text-[11px] font-extrabold uppercase tracking-widest text-slate-600 mb-2">Topics</p>
                             <div className="space-y-1">
                                 {BLOG_CLUSTERS.map((cluster) => (
                                     <a key={cluster.id} href={getHref(`/blog/${cluster.id}/`)} onClick={() => setMobileMenuOpen(false)} className="flex items-center gap-2 px-3 py-2 rounded-lg text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-900 hover:text-slate-900 dark:hover:text-white">
