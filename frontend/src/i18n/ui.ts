@@ -76,8 +76,8 @@ export const ui = {
         'blog.cluster.general': 'General Guides',
 
         // Index / All Tools Page
-        'index.meta.title': 'Free Online Video Downloader — Save Any Video',
-        'index.meta.desc': 'Download videos from TikTok (no watermark), Twitter/X, and Facebook in HD — free, instant, no signup. Extract audio to MP3 too. Works on iPhone, Android & desktop.',
+        'index.meta.title': 'GetMediaTools | The Ultimate Social Media & Creator Toolkit',
+        'index.meta.desc': 'The ultimate resource hub for content creators. Access social media templates, software reviews, and step-by-step workflows to maximize your reach and revenue.',
         'index.hero.title': 'Strategies, insights, and expert guides for ',
         'index.hero.highlight': 'digital creators.',
         'index.hero.desc': 'Master your craft with deep dives into platform algorithms, creator tools, and video strategies. All 100% free.',

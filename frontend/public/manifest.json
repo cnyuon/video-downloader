@@ -1,7 +1,7 @@
 {
-    "name": "MediaTools - Download Videos, Extract Audio & More",
+    "name": "GetMediaTools | The Ultimate Social Media & Creator Toolkit",
     "short_name": "MediaTools",
-    "description": "Free online tools to download videos from TikTok, Twitter, and Facebook. Extract audio to MP3 and grab thumbnails.",
+    "description": "The ultimate resource hub for content creators. Access social media templates, software reviews, and step-by-step workflows to maximize your reach and revenue.",
     "start_url": "/",
     "display": "standalone",
     "background_color": "#030712",
